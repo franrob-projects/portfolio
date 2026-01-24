@@ -13,26 +13,20 @@ function AboutMeVideo() {
     <section className={styles.videoSection}>
       <div className="container">
         <div className="row">
-          <div className="col col--8 col--offset-2">
+          <div className="col col--12">
             <div className={styles.videoContainer}>
-              <Heading as="h2" className={styles.videoTitle}>
-                About My Work & Expertise
-              </Heading>
-              <p className={styles.videoDescription}>
-                Learn about my approach to technical writing, career achievements, and how I can add value to your business.
-              </p>
+              <h2 className={styles.videoTitle}>
+                About My Work
+              </h2>
+              
               <div className={styles.videoWrapper}>
                 {/* Placeholder for when video is ready */}
                 <div className={styles.videoPlaceholder}>
                   <div className={styles.placeholderContent}>
-                    <h3>Video Coming Soon</h3>
-                    <p>I'll be adding a personal introduction video here where I discuss:</p>
-                    <ul>
-                      <li>My technical writing methodology and process</li>
-                      <li>Key career achievements and successful projects</li>
-                      <li>How I help businesses improve their documentation</li>
-                      <li>My expertise in API docs, developer experience, and docs-as-code</li>
-                    </ul>
+                    <p className={styles.placeholderText}>
+                      I'll be adding a personal video here discussing my approach to technical writing, 
+                      career achievements, and how I help businesses improve their documentation.
+                    </p>
                   </div>
                 </div>
                 
@@ -42,7 +36,7 @@ function AboutMeVideo() {
                     width="100%" 
                     height="400" 
                     src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                    title="About Francis Roberts - Technical Writing Expertise"
+                    title="About Francis Roberts - Technical Writing"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
