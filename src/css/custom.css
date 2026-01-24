@@ -33,13 +33,13 @@
   --ifm-navbar-background-color: #000000;
   --ifm-footer-background-color: #000000;
   
-  /* Typography system */
-  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  /* Typography system - matching Didier's exact fonts */
+  --ifm-font-family-base: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --ifm-font-weight-light: 300;
   --ifm-font-weight-normal: 400;
-  --ifm-font-weight-semibold: 500;
+  --ifm-font-weight-semibold: 600;
   --ifm-font-weight-bold: 700;
-  --ifm-line-height-base: 1.6;
+  --ifm-line-height-base: 1.7;
   
   /* Code styling */
   --ifm-code-font-size: 95%;
