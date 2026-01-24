@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktechnical_writing_portfolio=globalThis.webpackChunktechnical_writing_portfolio||[]).push([[66],{8583(o){o.exports=JSON.parse('{"metadata":{"permalink":"/technical-writing-portfolio/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
