@@ -41,52 +41,56 @@ function PersonalSite() {
             <div className={styles.imageItem}>
               <div className={styles.placeholderImage}>
                 <span>🚀</span>
-                <p>API Launch</p>
+                <p>API Launch Event</p>
               </div>
             </div>
             <div className={styles.imageItem}>
               <div className={styles.placeholderImage}>
                 <span>👥</span>
-                <p>Team Collaboration</p>
+                <p>Dev Team Collaboration</p>
               </div>
             </div>
           </div>
+          
+          <p style={{marginTop: '20px', fontSize: '16px', color: 'var(--ifm-color-content)'}}>
+            You can reach me on <a href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ifm-color-primary)'}}>GitHub</a> and <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ifm-color-primary)'}}>LinkedIn</a>, where I post frequently about technical writing and developer experience.
+          </p>
         </div>
       </section>
 
-      {/* Professional Journey Timeline */}
+      {/* What I Believe Section */}
       <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>Professional Journey</h2>
+        <h2 className={styles.sectionTitle}>What I believe in</h2>
         <div className={styles.sectionContent}>
-          <div className={styles.timeline}>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2024</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>🎯</span>
-                <p>Launched independent technical writing consultancy, focusing on developer experience</p>
+          <p>Building documentation that developers actually use, one commit at a time.</p>
+        </div>
+      </section>
+
+      {/* GitHub Stats Section */}
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionTitle}>GitHub stats</h2>
+        <div className={styles.sectionContent}>
+          <div className={styles.githubStats}>
+            <div className={styles.githubPlaceholder}>
+              <div className={styles.githubChart}>
+                {/* Simulated GitHub contribution chart */}
+                <div className={styles.chartGrid}>
+                  {Array.from({length: 364}, (_, i) => (
+                    <div 
+                      key={i} 
+                      className={styles.chartSquare} 
+                      style={{
+                        backgroundColor: `var(--ifm-color-primary-${['darkest', 'darker', 'dark', 'light'][Math.floor(Math.random() * 4)]})`
+                      }}
+                    />
+                  ))}
+                </div>
+                <p className={styles.chartLabel}>Contributions in the last year</p>
               </div>
             </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2023</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>📚</span>
-                <p>Led docs-as-code transformation at tech startup, reducing support tickets by 40%</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2022</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>⚡</span>
-                <p>Specialized in API documentation and developer onboarding experiences</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2021</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>🌱</span>
-                <p>Started career in technical writing and developer education</p>
-              </div>
-            </div>
+            <p style={{marginTop: '20px'}}>
+              Follow my progress on <a href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ifm-color-primary)'}}>GitHub</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -121,26 +125,92 @@ function PersonalSite() {
         </div>
       </section>
 
-      {/* Beliefs & Philosophy */}
+      {/* Latest Writing Section */}
       <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>My Philosophy</h2>
+        <h2 className={styles.sectionTitle}>Latest posts.</h2>
         <div className={styles.sectionContent}>
-          <div className={styles.beliefsGrid}>
-            <div className={styles.beliefItem}>
-              <span className={styles.beliefEmoji}>🔍</span>
-              <p><strong>User-First Research</strong><br/>Understanding developer workflows before writing a single word</p>
+          <p>I write so I can think and communicate better.</p>
+          
+          <div className={styles.writingChart}>
+            <div className={styles.chartPlaceholder}>
+              <span>📊</span>
+              <p>Writing activity visualization coming soon</p>
             </div>
-            <div className={styles.beliefItem}>
-              <span className={styles.beliefEmoji}>⚡</span>
-              <p><strong>Test Everything</strong><br/>Every code sample runs, every integration works, every link is valid</p>
+          </div>
+
+          <div className={styles.latestPosts}>
+            <div className={styles.postItem}>
+              <h4>API Documentation Best Practices</h4>
+              <p>A comprehensive guide to creating developer-friendly API documentation</p>
             </div>
-            <div className={styles.beliefItem}>
-              <span className={styles.beliefEmoji}>📚</span>
-              <p><strong>Docs-as-Code</strong><br/>Version-controlled, automated, and developer-friendly workflows</p>
+            <div className={styles.postItem}>
+              <h4>Implementing Docs-as-Code Workflows</h4>
+              <p>How to build scalable documentation systems using modern development practices</p>
             </div>
-            <div className={styles.beliefItem}>
-              <span className={styles.beliefEmoji}>📊</span>
-              <p><strong>Measure Impact</strong><br/>Success through reduced support load and faster onboarding</p>
+            <div className={styles.postItem}>
+              <h4>Measuring Documentation Success</h4>
+              <p>Metrics and strategies for tracking the impact of your technical writing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Outside Work Section */}
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionTitle}>Outside work?</h2>
+        <div className={styles.sectionContent}>
+          <p>In my spare time I enjoy reading tech books, contributing to open source projects, attending developer meetups, and exploring new documentation tools.</p>
+          <br/>
+          <p>Nowadays I put work first. But I intend to speak at conferences in over 20 different countries and help improve developer experiences worldwide.</p>
+        </div>
+      </section>
+
+      {/* My Journey - Comprehensive Timeline */}
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionTitle}>My journey.</h2>
+        <div className={styles.sectionContent}>
+          <div className={styles.timeline}>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineYear}>2024</div>
+              <div className={styles.timelineContent}>
+                <span className={styles.timelineEmoji}>🎯</span>
+                <p>Launched independent technical writing consultancy, focusing on developer experience and API documentation.</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineYear}>2023</div>
+              <div className={styles.timelineContent}>
+                <span className={styles.timelineEmoji}>📚</span>
+                <p>Led docs-as-code transformation at tech startup, reducing support tickets by 40% and improving developer onboarding.</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineYear}>2022</div>
+              <div className={styles.timelineContent}>
+                <span className={styles.timelineEmoji}>⚡</span>
+                <p>Specialized in API documentation and developer onboarding experiences at fast-growing SaaS company.</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineYear}>2021</div>
+              <div className={styles.timelineContent}>
+                <span className={styles.timelineEmoji}>🌱</span>
+                <p>Started career in technical writing and developer education, discovering passion for clear communication.</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineYear}>2020</div>
+              <div className={styles.timelineContent}>
+                <span className={styles.timelineEmoji}>💻</span>
+                <p>Began contributing to open source documentation projects and writing technical tutorials.</p>
+              </div>
+            </div>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineYear}>2019</div>
+              <div className={styles.timelineContent}>
+                <span className={styles.timelineEmoji}>🎓</span>
+                <p>Completed degree and started exploring the intersection of technology and clear communication.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -151,6 +221,16 @@ function PersonalSite() {
         <Link className={styles.primaryButton} to="/docs/intro">
           View Writing Samples
         </Link>
+      </section>
+
+      {/* Contact Section */}
+      <section className={styles.contactSection}>
+        <h2 className={styles.sectionTitle}>Let's stay in touch.</h2>
+        <div className={styles.contactLinks}>
+          <a href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="/docs/intro">Portfolio</a>
+        </div>
       </section>
     </div>
   );
