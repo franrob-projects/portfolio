@@ -4,20 +4,9 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Force dark mode only - all backgrounds black */
+:root,
+[data-theme='light'],
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
@@ -26,5 +15,43 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+  --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Force all backgrounds to black */
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #000000;
+  --ifm-color-content: #ffffff;
+  --ifm-color-content-secondary: rgba(255, 255, 255, 0.7);
+  --ifm-navbar-background-color: #000000;
+  --ifm-footer-background-color: #000000;
+  --ifm-hero-background-color: #000000;
+  --ifm-color-emphasis-0: #000000;
+  --ifm-color-emphasis-100: #000000;
+  --ifm-color-emphasis-200: #000000;
+  --ifm-color-emphasis-300: #000000;
+  --ifm-color-emphasis-400: #000000;
+  --ifm-color-emphasis-500: #000000;
+  --ifm-color-emphasis-600: #000000;
+  --ifm-color-emphasis-700: #000000;
+  --ifm-color-emphasis-800: #000000;
+  --ifm-color-emphasis-900: #000000;
+}
+
+/* Force black background on all elements */
+html,
+body,
+#__docusaurus,
+.main-wrapper,
+.navbar,
+.footer,
+article,
+.container,
+.row,
+.col,
+.hero,
+.hero__title,
+.hero__subtitle,
+main {
+  background-color: #000000 !important;
 }
