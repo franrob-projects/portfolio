@@ -1,60 +1,86 @@
 /**
- * Personal Portfolio - Inspired by Didier Lopes' minimal design
+ * Personal Portfolio - Exactly matching Didier Lopes' design structure
  */
 
-/* Personal Introduction Section */
-.introSection {
-  padding: 4rem 0;
-  max-width: 800px;
+/* Main Site Container */
+.siteContainer {
+  max-width: 680px;
   margin: 0 auto;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
 }
 
-.introContent {
-  padding: 0 2rem;
+/* Header Section */
+.headerSection {
+  padding: 80px 0 60px;
+  text-align: left;
 }
 
-.name {
-  font-size: 3rem;
+.mainTitle {
+  font-size: 48px;
   font-weight: 700;
   color: var(--ifm-color-content);
-  margin-bottom: 0.5rem;
+  margin: 0 0 20px 0;
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-.role {
-  font-size: 1.25rem;
-  color: var(--ifm-color-content-secondary);
-  margin-bottom: 2.5rem;
+.subtitle {
+  font-size: 20px;
   font-weight: 400;
-}
-
-.aboutText {
-  margin-bottom: 3rem;
-}
-
-.aboutText p {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--ifm-color-content);
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.4;
   margin: 0;
 }
 
-/* Video Section - Integrated into intro */
-.videoSection {
-  margin-bottom: 3rem;
+/* Content Sections */
+.contentSection {
+  margin-bottom: 80px;
 }
 
-.videoTitle {
-  font-size: 1.5rem;
-  font-weight: 600;
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
   color: var(--ifm-color-content);
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
 }
 
+.sectionContent {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ifm-color-content);
+}
+
+.sectionContent p {
+  margin: 0 0 16px 0;
+}
+
+.sectionContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* Approach List */
+.approachList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.approachList li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: var(--ifm-color-content);
+}
+
+.approachList li:last-child {
+  margin-bottom: 0;
+}
+
+/* Video Section */
 .videoWrapper {
-  position: relative;
-  width: 100%;
+  margin-top: 20px;
 }
 
 .videoEmbed {
@@ -64,7 +90,6 @@
   overflow: hidden;
   background: #000;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .videoEmbed iframe {
@@ -76,101 +101,312 @@
   border-radius: 8px;
 }
 
-.selfHostedVideo {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
 .videoPlaceholder {
-  background: var(--ifm-background-surface-color);
+  background: var(--ifm-color-emphasis-100);
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 8px;
-  padding: 2.5rem 2rem;
+  padding: 40px 30px;
   text-align: center;
 }
 
 .placeholderText {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--ifm-color-content-secondary);
   margin: 0;
-  font-weight: 400;
 }
 
-/* Call to Action */
-.cta {
-  margin-top: 2rem;
+/* Call to Action Section */
+.ctaSection {
+  margin: 80px 0 60px;
+  text-align: left;
 }
 
 .primaryButton {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 12px 24px;
   background: var(--ifm-color-primary);
   color: white !important;
   text-decoration: none !important;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 16px;
   transition: all 0.2s ease;
+  border: none;
 }
 
 .primaryButton:hover {
   background: var(--ifm-color-primary-dark);
+  color: white !important;
+  text-decoration: none !important;
   transform: translateY(-1px);
 }
 
-/* Responsive Design */
-@media screen and (max-width: 996px) {
-  .introSection {
-    padding: 3rem 0;
-  }
-  
-  .name {
-    font-size: 2.5rem;
-  }
-  
-  .role {
-    font-size: 1.125rem;
-  }
-  
-  .aboutText p {
-    font-size: 1rem;
-  }
-}
-
+/* Responsive Design - Mobile First */
 @media screen and (max-width: 768px) {
-  .introSection {
-    padding: 2rem 0;
+  .siteContainer {
+    padding: 0 16px;
   }
   
-  .introContent {
-    padding: 0 1rem;
+  .headerSection {
+    padding: 60px 0 40px;
   }
   
-  .name {
-    font-size: 2.25rem;
+  .mainTitle {
+    font-size: 36px;
+    margin-bottom: 16px;
   }
   
-  .role {
-    font-size: 1rem;
+  .subtitle {
+    font-size: 18px;
   }
   
-  .videoTitle {
-    font-size: 1.25rem;
+  .contentSection {
+    margin-bottom: 60px;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .sectionContent {
+    font-size: 15px;
+  }
+  
+  .approachList li {
+    font-size: 15px;
+    margin-bottom: 10px;
   }
   
   .videoPlaceholder {
-    padding: 2rem 1.5rem;
+    padding: 30px 20px;
   }
   
   .placeholderText {
-    font-size: 0.9rem;
+    font-size: 14px;
+  }
+  
+  .ctaSection {
+    margin: 60px 0 40px;
   }
 }
 
-/* Legacy styles cleanup */
+@media screen and (max-width: 480px) {
+  .siteContainer {
+    padding: 0 12px;
+  }
+  
+  .headerSection {
+    padding: 40px 0 30px;
+  }
+  
+  .mainTitle {
+    font-size: 32px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+/* Image Gallery */
+.imageGallery {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.imageItem {
+  flex: 1;
+  min-width: 180px;
+}
+
+.placeholderImage {
+  background: var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.placeholderImage:hover {
+  background: var(--ifm-color-emphasis-300);
+}
+
+.placeholderImage span {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.placeholderImage p {
+  font-size: 14px;
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 30px;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.timelineYear {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ifm-color-content);
+  width: 80px;
+  flex-shrink: 0;
+  margin-right: 30px;
+  margin-top: 2px;
+}
+
+.timelineContent {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.timelineEmoji {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.timelineContent p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ifm-color-content);
+}
+
+/* Beliefs Grid */
+.beliefsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.beliefItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.beliefEmoji {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.beliefItem p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ifm-color-content);
+}
+
+.beliefItem strong {
+  color: var(--ifm-color-content);
+  font-weight: 600;
+}
+
+/* Mobile Responsive Updates */
+@media screen and (max-width: 768px) {
+  .imageGallery {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .imageItem {
+    min-width: 100%;
+  }
+  
+  .placeholderImage {
+    padding: 25px 15px;
+  }
+  
+  .timelineItem {
+    margin-bottom: 30px;
+  }
+  
+  .timelineYear {
+    width: 60px;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  
+  .timelineContent p {
+    font-size: 15px;
+  }
+  
+  .beliefsGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .beliefItem {
+    gap: 12px;
+  }
+  
+  .beliefEmoji {
+    font-size: 20px;
+  }
+  
+  .beliefItem p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .imageGallery {
+    gap: 12px;
+  }
+  
+  .placeholderImage {
+    padding: 20px 15px;
+  }
+  
+  .placeholderImage span {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .placeholderImage p {
+    font-size: 13px;
+  }
+  
+  .timelineYear {
+    width: 50px;
+    margin-right: 15px;
+    font-size: 15px;
+  }
+  
+  .timelineEmoji {
+    font-size: 18px;
+  }
+  
+  .beliefsGrid {
+    gap: 20px;
+  }
+  
+  .beliefEmoji {
+    font-size: 18px;
+  }
+}
+
+/* Clean up legacy styles */
 .heroBanner,
 .buttons {
   display: none;
