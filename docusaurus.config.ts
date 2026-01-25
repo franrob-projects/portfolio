@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Technical Writing Portfolio',
+  title: 'Francis Roberts, tech writer',
   tagline: 'Documentation samples and writing expertise',
   favicon: 'img/favicon.ico',
 
@@ -52,24 +52,20 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Technical Writing Portfolio',
-      logo: {
-        alt: 'Portfolio Logo',
-        src: 'img/logo.svg',
-      },
+      title: 'About me',
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Writing Samples',
+          label: 'About work',
         },
         {
           href: 'https://github.com/franrob-projects',
@@ -77,43 +73,6 @@ const config: Config = {
           position: 'right',
         },
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Portfolio',
-          items: [
-            {
-              label: 'Writing Samples',
-              to: '/docs/intro',
-            },
-            {
-              label: 'About Me',
-              to: '/docs/about',
-            },
-          ],
-        },
-        {
-          title: 'Connect',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/franrob-projects',
-            },
-            {
-              label: 'LinkedIn',
-              href: 'https://linkedin.com',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Technical Writing Portfolio. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

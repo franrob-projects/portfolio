@@ -1,238 +1,198 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
 function PersonalSite() {
   return (
-    <div className={styles.siteContainer}>
-      {/* Header/Intro Section */}
-      <section className={styles.headerSection}>
-        <h1 className={styles.mainTitle}>Francis Roberts</h1>
-        <p className={styles.subtitle}>
-          Technical Writer & Developer Educator helping businesses create documentation 
-          that developers actually want to use.
-        </p>
-      </section>
-
-      {/* Who I Am Section with Images */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>Who I am</h2>
-        <div className={styles.sectionContent}>
-          <p>
-            I specialize in API documentation, docs-as-code workflows, and developer experience. 
-            My approach combines technical expertise with user-centered design to create 
-            documentation that reduces support load and accelerates product adoption.
-          </p>
-          
-          {/* Image Gallery - Personal/Professional */}
-          <div className={styles.imageGallery}>
-            <div className={styles.imageItem}>
-              <div className={styles.placeholderImage}>
-                <span>📝</span>
-                <p>Documentation Workshop</p>
-              </div>
-            </div>
-            <div className={styles.imageItem}>
-              <div className={styles.placeholderImage}>
-                <span>🚀</span>
-                <p>API Launch Event</p>
-              </div>
-            </div>
-            <div className={styles.imageItem}>
-              <div className={styles.placeholderImage}>
-                <span>👥</span>
-                <p>Dev Team Collaboration</p>
-              </div>
-            </div>
-          </div>
-          
-          <p style={{marginTop: '20px', fontSize: '16px', color: 'var(--ifm-color-content)'}}>
-            You can reach me on <a href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ifm-color-primary)'}}>GitHub</a> and <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ifm-color-primary)'}}>LinkedIn</a>, where I post frequently about technical writing and developer experience.
-          </p>
-        </div>
-      </section>
-
-      {/* What I Believe Section */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>What I believe in</h2>
-        <div className={styles.sectionContent}>
-          <p>Building documentation that developers actually use, one commit at a time.</p>
-        </div>
-      </section>
-
-      {/* GitHub Stats Section */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>GitHub stats</h2>
-        <div className={styles.sectionContent}>
-          <div className={styles.githubStats}>
-            <div className={styles.githubPlaceholder}>
-              <div className={styles.githubChart}>
-                {/* Simulated GitHub contribution chart */}
-                <div className={styles.chartGrid}>
-                  {Array.from({length: 364}, (_, i) => (
-                    <div 
-                      key={i} 
-                      className={styles.chartSquare} 
-                      style={{
-                        backgroundColor: `var(--ifm-color-primary-${['darkest', 'darker', 'dark', 'light'][Math.floor(Math.random() * 4)]})`
-                      }}
-                    />
-                  ))}
-                </div>
-                <p className={styles.chartLabel}>Contributions in the last year</p>
-              </div>
-            </div>
-            <p style={{marginTop: '20px'}}>
-              Follow my progress on <a href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ifm-color-primary)'}}>GitHub</a>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About My Work Video Section */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>About My Work</h2>
-        <div className={styles.sectionContent}>
-          <div className={styles.videoWrapper}>
-            {/* Placeholder for when video is ready */}
-            <div className={styles.videoPlaceholder}>
-              <p className={styles.placeholderText}>
-                I'll be adding a personal video here discussing my approach to technical writing, 
-                career achievements, and how I help businesses improve their documentation.
-              </p>
-            </div>
-            
-            {/* Uncomment and replace with your video URL when ready:
-            <div className={styles.videoEmbed}>
-              <iframe 
-                width="100%" 
-                height="400" 
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                title="About Francis Roberts - Technical Writing"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            */}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Writing Section */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>Latest posts.</h2>
-        <div className={styles.sectionContent}>
-          <p>I write so I can think and communicate better.</p>
-          
-          <div className={styles.writingChart}>
-            <div className={styles.chartPlaceholder}>
-              <span>📊</span>
-              <p>Writing activity visualization coming soon</p>
-            </div>
-          </div>
-
-          <div className={styles.latestPosts}>
-            <div className={styles.postItem}>
-              <h4>API Documentation Best Practices</h4>
-              <p>A comprehensive guide to creating developer-friendly API documentation</p>
-            </div>
-            <div className={styles.postItem}>
-              <h4>Implementing Docs-as-Code Workflows</h4>
-              <p>How to build scalable documentation systems using modern development practices</p>
-            </div>
-            <div className={styles.postItem}>
-              <h4>Measuring Documentation Success</h4>
-              <p>Metrics and strategies for tracking the impact of your technical writing</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Outside Work Section */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>Outside work?</h2>
-        <div className={styles.sectionContent}>
-          <p>In my spare time I enjoy reading tech books, contributing to open source projects, attending developer meetups, and exploring new documentation tools.</p>
-          <br/>
-          <p>Nowadays I put work first. But I intend to speak at conferences in over 20 different countries and help improve developer experiences worldwide.</p>
-        </div>
-      </section>
-
-      {/* My Journey - Comprehensive Timeline */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>My journey.</h2>
-        <div className={styles.sectionContent}>
-          <div className={styles.timeline}>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2024</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>🎯</span>
-                <p>Launched independent technical writing consultancy, focusing on developer experience and API documentation.</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2023</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>📚</span>
-                <p>Led docs-as-code transformation at tech startup, reducing support tickets by 40% and improving developer onboarding.</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2022</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>⚡</span>
-                <p>Specialized in API documentation and developer onboarding experiences at fast-growing SaaS company.</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2021</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>🌱</span>
-                <p>Started career in technical writing and developer education, discovering passion for clear communication.</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2020</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>💻</span>
-                <p>Began contributing to open source documentation projects and writing technical tutorials.</p>
-              </div>
-            </div>
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineYear}>2019</div>
-              <div className={styles.timelineContent}>
-                <span className={styles.timelineEmoji}>🎓</span>
-                <p>Completed degree and started exploring the intersection of technology and clear communication.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className={styles.ctaSection}>
-        <Link className={styles.primaryButton} to="/docs/intro">
-          View Writing Samples
+    <main className={styles.container}>
+      <section className={styles.hero}>
+        <h1>Francis Roberts</h1>
+        <p className={styles.subtitle}>Tech writer</p>
+        <p style={{ marginBottom: '24px' }}>I create clear, practical documentation for developer products. My focus is making complex technical concepts accessible through well-structured guides and API docs.</p>
+        <Link className={styles.button} to="/docs/intro">
+          See my work
         </Link>
       </section>
 
-      {/* Contact Section */}
-      <section className={styles.contactSection}>
-        <h2 className={styles.sectionTitle}>Let's stay in touch.</h2>
-        <div className={styles.contactLinks}>
-          <a href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="/docs/intro">Portfolio</a>
+      <section className={styles.section}>
+        <h2 style={{ marginBottom: '3rem', fontSize: '2.25rem', fontWeight: '500', textAlign: 'center', letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--ifm-color-content) 0%, var(--ifm-color-content-secondary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🏍️</span>
+          When offline
+        </h2>
+        <div style={{ 
+          display: 'flex', 
+          gap: '20px', 
+          justifyContent: 'center',
+          marginBottom: '40px',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{
+            borderRadius: '16px',
+            overflow: 'hidden',
+            width: '280px',
+            height: '350px',
+            boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
+          }}>
+            <img 
+              src="/technical-writing-portfolio/img/Ver fotos recientes.jpeg"
+              alt="Francis Roberts"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center 35%'
+              }}
+            />
+          </div>
+          <div style={{
+            borderRadius: '16px',
+            overflow: 'hidden',
+            width: '280px',
+            height: '350px',
+            boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
+          }}>
+            <img 
+              src="/technical-writing-portfolio/img/bjj.jpg"
+              alt="Francis Roberts"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
+            />
+          </div>
+        </div>
+        <p style={{ textAlign: 'center', marginTop: '20px' }}>Motorbikes in the morning, technical writing in the day, and Brazilian Jiu-Jitsu at night.</p>
+      </section>
+
+      <section className={styles.section}>
+        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>💼</span>
+          My writer journey
+        </h2>
+        
+        <div className={styles.job}>
+          <h3>Developer Educator at Ably (2023)</h3>
+          <p>Co-developing technical docs for LiveSync database sync product. Building scalable content strategies for developer adoption.</p>
+        </div>
+        
+        <div className={styles.job}>
+          <h3>Lead Technical Writer at Couchbase (2022)</h3>
+          <p>Built scalable documentation framework, authored API docs for Cloud/Mobile/Edge platforms, consolidated fragmented repos into unified GitHub monorepo.</p>
+        </div>
+        
+        <div className={styles.job}>
+          <h3>Technical Writer at CDW UK (2021)</h3>
+          <p>Authored developer-centric API docs for cloud platforms, maintained AWS/Azure documentation, created multi-language SDK documentation.</p>
+        </div>
+        
+        <div className={styles.job}>
+          <h3>Technical Writer at Atlas Copco (2018)</h3>
+          <p>Authored software/hardware manuals and API documentation, developed browser-based documentation portals.</p>
         </div>
       </section>
-    </div>
+
+      <section className={styles.section}>
+        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>📝</span>
+        Blog posts
+        </h2>
+        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', textAlign: 'center' }}>
+          I like to use LinkedIn as a blog for sharing tips and tricks I learned. Generally, the way I think tactical writing should be moving forward is on what I think is good and bad.
+        </p>
+        <p style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--ifm-color-primary)', textAlign: 'center' }}>
+          Click or scroll the widget below to read posts.
+        </p>
+        <div style={{ 
+          height: '600px', 
+          overflow: 'hidden', 
+          borderRadius: '24px',
+          position: 'relative',
+          boxShadow: '0 4px 8px rgba(64, 215, 124, 0.1), inset 0 0 16px rgba(64, 215, 124, 0.25)',
+          background: 'white',
+          border: '2px solid var(--ifm-color-primary)'
+        }}>
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: '80px',
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)',
+            zIndex: 2,
+            borderRadius: '24px 24px 0 0',
+            pointerEvents: 'none'
+          }} />
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              .linkedin-widget-container {
+                border-radius: 24px !important;
+                overflow: auto !important;
+              }
+              .linkedin-widget-container::-webkit-scrollbar {
+                width: 14px !important;
+                background: rgba(64, 215, 124, 0.1) !important;
+              }
+              .linkedin-widget-container::-webkit-scrollbar-track {
+                background: rgba(64, 215, 124, 0.1) !important;
+                border-radius: 7px !important;
+                margin: 2px !important;
+              }
+              .linkedin-widget-container::-webkit-scrollbar-thumb {
+                background: linear-gradient(180deg, #3ecf8e, #2dd77c) !important;
+                border-radius: 10px !important;
+                border: 2px solid rgba(255,255,255,0.2) !important;
+                min-height: 30px !important;
+              }
+              .linkedin-widget-container::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(180deg, #2dd77c, #27d074) !important;
+                box-shadow: 0 0 8px rgba(64, 215, 124, 0.5) !important;
+              }
+              .linkedin-widget-container::-webkit-scrollbar-thumb:active {
+                background: linear-gradient(180deg, #27d074, #1fb866) !important;
+              }
+            `
+          }} />
+          <div 
+            className="linkedin-widget-container"
+            style={{ 
+              height: '100%',
+              borderRadius: '24px',
+              scrollbarWidth: 'auto',
+              scrollbarColor: '#40d77c rgba(64, 215, 124, 0.1)'
+            }}
+          >
+            <iframe 
+              src="https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25647394" 
+              width="100%" 
+              height="600"
+              style={{ 
+                border: 'none', 
+                position: 'relative',
+                borderRadius: '24px'
+              }}
+              title="LinkedIn Posts"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🤝</span>
+          Let's work together
+        </h2>
+        <p style={{ textAlign: 'center' }}>Ready to improve your documentation? Let's discuss how I can help your team create docs that developers actually want to use.</p>
+        
+        <div className={styles.links}>
+          <Link className={styles.button} to="/docs/intro">See my work</Link>
+          <a className={styles.button} href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a className={styles.button} href="https://linkedin.com/in/francis-roberts-5850b396" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
   );
 }
 
@@ -242,7 +202,6 @@ export default function Home(): ReactNode {
       title="Francis Roberts - Technical Writing Portfolio"
       description="Developer Educator and Technical Writer specializing in API documentation, docs-as-code, and developer experience">
       <PersonalSite />
-      <HomepageFeatures />
     </Layout>
   );
 }
