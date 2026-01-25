@@ -4,11 +4,15 @@ sidebar_position: 1
 
 # Writing portfolio
 
-Hey there! I'm Francis, and I've spent the last few years working with some great companies to make their documentation actually useful for developers.
+When I started my career in technical writing, I thought documentation was just about explaining how things work. After years of working with developers at companies like Ably, Couchbase, and Atlas Copco, I've learned that great documentation is really about enabling people to succeed with complex technology.
+
+My focus has been on taking complicated systems - from real-time messaging platforms to industrial manufacturing equipment - and creating documentation that developers and engineers can actually use to solve real problems. Each project taught me something different about how people learn and implement technology.
 
 <div className="work-section">
 
 ## My work at Ably
+
+Since joining Ably in 2023, I've focused on making real-time messaging technology accessible to developers. Working with WebSockets, Server-Sent Events, and database sync requires explaining complex concepts in ways that help developers build production-ready applications.
 
 <div className="work-item">
 
@@ -76,6 +80,8 @@ Led comprehensive information architecture overhaul to improve developer experie
 
 ## My time at Couchbase
 
+As Lead Technical Writer at Couchbase from 2022 to 2023, I worked on making NoSQL databases approachable for mobile developers. The challenge was explaining distributed database concepts to developers accustomed to simpler storage solutions, while maintaining the technical depth needed for production implementations.
+
 <div className="work-item">
 
 **[Mobile platform documentation.](https://docs.couchbase.com/couchbase-lite/current/)**  
@@ -113,6 +119,8 @@ Consolidated fragmented documentation repositories into unified GitHub monorepo 
 <div className="work-section">
 
 ## My work at Atlas Copco
+
+Working as a Technical Writer at Atlas Copco from 2018 to 2021 taught me that manufacturing documentation can be life-or-death. When your documentation goes to factories worldwide, unclear instructions don't just frustrate users - they can shut down production lines or cause injuries.
 
 <div className="work-item">
 
@@ -156,6 +164,8 @@ Developed technical manuals for Henrob blow feed self-pierce riveting systems, f
 <div className="work-section">
 
 ## My work at CDW
+
+My time as a Technical Solutions Specialist at CDW UK from 2021 to 2022 showed me how technical writing works in enterprise sales. Unlike developer-focused documentation, enterprise customers needed materials that helped multiple stakeholders - from IT directors to compliance officers - understand complex technology implementations.
 
 <div className="work-item">
 

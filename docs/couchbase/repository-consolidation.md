@@ -4,16 +4,21 @@ sidebar_position: 3
 
 # Repository consolidation project
 
-The biggest technical project during my time at Couchbase was consolidating 12+ fragmented documentation repositories into a single, maintainable system. This wasn't just about moving files - it was about creating a sustainable documentation architecture.
+When I joined Couchbase as Lead Technical Writer, I inherited a documentation system that had grown organically over years of product development. What started as separate documentation efforts for different products had become a maintenance nightmare that made it nearly impossible for developers to understand how Couchbase's ecosystem worked together.
 
-## The problem
+The [repository consolidation project](https://github.com/couchbase/docs-server) became my largest undertaking - not just moving files from one place to another, but redesigning how technical content could scale with a multi-product platform. This project taught me that information architecture isn't just about organizing content - it's about enabling developers to understand complex systems.
 
-When I started, Couchbase's documentation was scattered across:
-- **Separate repositories** for each product (Lite, Sync Gateway, Server)
-- **Different documentation systems** (some Jekyll, some Gitiles, some Antora)
-- **Inconsistent URLs** that broke frequently during updates
-- **No cross-product references** making it hard to understand relationships
-- **Duplicated content** that got out of sync between repositories
+## Understanding the documentation fragmentation
+
+Couchbase's documentation had evolved into a system that reflected internal team structure rather than developer needs. Each product team had chosen their own tools and approaches, creating barriers that made it nearly impossible for developers to understand how the pieces fit together.
+
+| Problem | Impact on Developers |
+|---------|----------------------|
+| **Separate repositories for each product** | Developers couldn't find related information across Lite, Sync Gateway, and Server |
+| **Different documentation systems** | Inconsistent experience switching between Jekyll, Gitiles, and Antora sites |
+| **Inconsistent URLs** | Bookmarks broke frequently, search results led to 404 pages |
+| **No cross-product references** | Impossible to understand how products worked together |
+| **Duplicated content** | Same information in multiple places, often contradictory or outdated |
 
 ## Technical approach
 
@@ -25,27 +30,36 @@ Instead of a big-bang migration, I used a phased approach:
 4. **Gradual consolidation** - Moved repositories systematically
 5. **Legacy cleanup** - Archived old repositories after validation
 
-### Architecture design
-Built the new system using:
-- **Antora documentation site generator** for modular content architecture
-- **Git submodules** for content that needed to stay in product repositories
-- **Automated CI/CD pipelines** for content validation and deployment
-- **Redirect management** to preserve all existing URLs
+### Technical architecture design
+The new system needed to support both current needs and future scaling. I chose tools that would enable content reuse while maintaining the flexibility teams needed for product-specific documentation.
+
+| Technology | Purpose |
+|------------|----------|
+| **Antora documentation site generator** | Modular content architecture supporting multiple source repositories |
+| **Git submodules** | Content that needed to stay in product repositories for engineering workflows |
+| **Automated CI/CD pipelines** | Content validation, link checking, and deployment without manual intervention |
+| **Redirect management** | Preserving all existing URLs and search engine rankings |
 
 ## Content organization
 
-### Logical grouping
-Reorganized content by user journey rather than internal product structure:
-- **Developer onboarding** - Cross-product onboarding flows
-- **Develop** - Platform-specific development guides
-- **Deploy** - Infrastructure and production setup
-- **Operate** - Monitoring, scaling, and maintenance
+### User-centered content organization
+The existing structure reflected how Couchbase organized its engineering teams, not how developers actually approached building applications. I restructured everything around the developer journey.
 
-### Cross-reference mapping
-Created extensive linking between related concepts:
-- **Concept to implementation** - Theory pages linked to practical examples
-- **Cross-platform references** - iOS examples linked to equivalent Android code
-- **Product relationships** - Clear navigation between Lite, Sync Gateway, and Server docs
+| Content Category | Developer Need |
+|------------------|----------------|
+| **Developer onboarding** | Cross-product onboarding flows that show how pieces connect |
+| **Develop** | Platform-specific development guides for iOS, Android, .NET, and web |
+| **Deploy** | Infrastructure and production setup across cloud and on-premises |
+| **Operate** | Monitoring, scaling, and maintenance for production applications |
+
+### Intelligent content connections
+The fragmented system had broken the conceptual relationships between ideas. I created systematic linking that helped developers understand not just individual features, but how they worked together.
+
+| Connection Type | Purpose |
+|-----------------|----------|
+| **Concept to implementation** | Theory pages linked to practical code examples showing real usage |
+| **Cross-platform references** | iOS examples linked to equivalent Android, .NET, and web implementations |
+| **Product relationships** | Clear navigation paths between Lite, Sync Gateway, and Server documentation |
 
 ## Technical implementation
 
