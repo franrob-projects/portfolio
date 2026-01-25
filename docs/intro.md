@@ -25,7 +25,7 @@ Created comprehensive guides for real-time streaming using SSE, including code e
 **[Webhooks security documentation.](https://ably.com/docs/general/webhooks)**  
 Developed security-focused documentation for webhook implementation, covering HMAC authentication and security best practices. Includes practical examples for signature verification. Key areas: Webhook setup, Security configuration, Signature validation, Event filtering, Rate limiting.
 
-<img src="/portfolio/img/webhook/webhook-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/ably/ably-webhook/webhook-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -35,9 +35,7 @@ Developed security-focused documentation for webhook implementation, covering HM
 **[Troubleshooting guides & developer support.](https://ably.com/docs/platform/errors)**  
 Built structured troubleshooting workflows using HAR file analysis and developer support resources to reduce support ticket volume by 40%. Documentation areas: Error code reference, Network diagnostics, Connection troubleshooting, Performance optimization, Debug logging setup.
 
-<img src="/portfolio/img/ably/ably-troubleshooting/trouble-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
-<img src="/portfolio/img/troubleshooting/trouble-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/ably/ably-troubleshooting /trouble-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -47,7 +45,7 @@ Built structured troubleshooting workflows using HAR file analysis and developer
 **Developer journey mapping & information architecture.**  
 Redesigned documentation structure based on developer workflows and user research. Improved navigation patterns and information architecture.
 
-<img src="/portfolio/img/architecture/arch-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/ably/ably-architecture/arch-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -59,8 +57,6 @@ Authored core messaging documentation for Ably's real-time pub/sub system, inclu
 
 <img src="/portfolio/img/ably/ably-pub-sub/pub-sub-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
-<img src="/portfolio/img/ably-channels/channels-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
 
 </div>
 
@@ -69,9 +65,7 @@ Authored core messaging documentation for Ably's real-time pub/sub system, inclu
 **Content restructuring & information architecture.**  
 Led comprehensive information architecture overhaul to improve developer experience. Consolidated scattered content into logical sections and implemented docs-as-code workflows.
 
-<img src="/portfolio/img/architecture/arch-b.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
-<img src="/portfolio/img/github/github-contributions.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/ably/ably-architecture/arch-b.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -87,9 +81,7 @@ Led comprehensive information architecture overhaul to improve developer experie
 **[Mobile platform documentation.](https://docs.couchbase.com/couchbase-lite/current/)**  
 Built scalable documentation framework for Couchbase Lite and [Sync Gateway](https://docs.couchbase.com/sync-gateway/current/) platforms. Created cross-platform replication guides and conflict resolution documentation. Key sections: Installation guides, Database setup, Query APIs, Replication configuration, Conflict resolution strategies, Performance tuning.
 
-<img src="/portfolio/img/couch-light /swift-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
-<img src="/portfolio/img/couchbase/mobile-docs.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/couchbase/couch-light /swift-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -101,9 +93,7 @@ Authored API docs spanning [Couchbase Cloud](https://docs.couchbase.com/cloud/),
 
 <img src="/portfolio/img/couchbase/couch-server/server-b.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
-<img src="/portfolio/img/couch-light/swift-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
-<img src="/portfolio/img/couchbase/api-docs.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/couchbase/couch-light /swift-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -113,9 +103,7 @@ Authored API docs spanning [Couchbase Cloud](https://docs.couchbase.com/cloud/),
 **[Repository consolidation project.](https://github.com/couchbase/docs-server)**  
 Consolidated fragmented documentation repositories into unified GitHub monorepo structure. Migrated 15+ separate repos, implemented docs-as-code workflows, and established consistent contribution guidelines. Project scope: Content migration, Build system integration, Version control optimization, Workflow automation, Cross-team collaboration protocols, Documentation standards.
 
-<img src="/portfolio/img/couch-server/server-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
-<img src="/portfolio/img/couchbase/github-repo.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/couchbase/couch-server/server-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -131,9 +119,7 @@ Consolidated fragmented documentation repositories into unified GitHub monorepo 
 **[Self-pierce riveting documentation.](https://www.atlascopco.com/en-er/itba/product/self-pierce-riveting)**  
 Authored technical documentation for Henrob self-pierce riveting systems, solving lightweighting challenges with mixed materials in automotive and industrial applications.
 
-<img src="/portfolio/img/atlas-gen/atlas-gen-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
-<img src="/portfolio/img/atlas-copco/spr-docs.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/atlas-copco/atlas-gen/atlas-gen-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -146,7 +132,6 @@ Created comprehensive guides for Henrob tape feed self-pierce riveting systems, 
 <div style={{display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem'}}>
   <img src="/portfolio/img/atlas-copco/tape-feed/tape-a.png" alt="" style={{borderRadius: '8px', width: '280px', height: 'auto'}} />
   <img src="/portfolio/img/atlas-copco/tape-feed/die-a.png" alt="" style={{borderRadius: '8px', width: '280px', height: 'auto'}} />
-  <img src="/portfolio/img/atlas-copco/henrob-tape.png" alt="" style={{borderRadius: '8px', width: '280px', height: 'auto'}} />
 </div>
 
 
@@ -162,7 +147,6 @@ Developed technical manuals for Henrob blow feed self-pierce riveting systems, f
   <img src="/portfolio/img/atlas-copco/blow-feed/panel-a.png" alt="" style={{borderRadius: '8px', width: '280px', height: 'auto'}} />
 </div>
 
-<img src="/portfolio/img/atlas-copco/henrob-blow.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
@@ -180,8 +164,6 @@ Authored developer-centric API documentation for AWS and Azure cloud services, s
 
 <img src="/portfolio/img/cdw/cdw-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
-<img src="/portfolio/img/cdw/cloud-docs.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
 
 </div>
 
@@ -192,8 +174,6 @@ Created SDK documentation supporting multiple programming languages and framewor
 
 <img src="/portfolio/img/cdw/cdw-b.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
-<img src="/portfolio/img/cdw/sdk-docs.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
 
 </div>
 
@@ -203,8 +183,6 @@ Created SDK documentation supporting multiple programming languages and framewor
 Built comprehensive onboarding materials and professional services documentation to accelerate developer adoption of cloud platforms.
 
 <img src="/portfolio/img/cdw/cdw-c.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
-
-<img src="/portfolio/img/cdw/onboarding.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
