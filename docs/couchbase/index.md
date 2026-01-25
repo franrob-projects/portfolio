@@ -34,10 +34,12 @@ Creating consistent documentation across iOS, Android, .NET, and React Native pl
 
 ## Tools and process
 
-- **Antora.** For modular documentation architecture.
-- **AsciiDoc.** For technical content (Couchbase's preferred format).
-- **GitHub Actions.** For automated builds and testing.
-- **Confluence.** For internal planning and strategy docs.
+| Tool | Purpose |
+|------|---------|
+| **Antora** | For modular documentation architecture |
+| **AsciiDoc** | For technical content (Couchbase's preferred format) |
+| **GitHub Actions** | For automated builds and testing |
+| **Confluence** | For internal planning and strategy docs |
 
 ## Impact
 

@@ -27,9 +27,11 @@ You can see all my merged pull requests on [Ably's docs repository](https://gith
 
 ## Tools and approach
 
-- **MDX + Docusaurus.** For interactive documentation.
-- **GitHub Actions.** For automated testing of code samples.
-- **Linear.** For project tracking with the engineering team.
-- **Notion.** For content planning and strategy docs.
+| Tool | Purpose |
+|------|---------|
+| **MDX + Docusaurus** | For interactive documentation |
+| **GitHub Actions** | For automated testing of code samples |
+| **Linear** | For project tracking with the engineering team |
+| **Notion** | For content planning and strategy docs |
 
 The goal is always the same: can a developer copy the code, run it, and have it work? If not, the documentation isn't done.

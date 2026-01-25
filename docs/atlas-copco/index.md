@@ -61,26 +61,24 @@ Wrote guides for integrating Atlas Copco joining equipment into existing factory
 
 ## Tools and technology I used
 
-**DITA XML.** For structured authoring and single-sourcing content across multiple formats.
-
-**SDL Tridion.** Content management system that handled multilingual publishing.
-
-**SharePoint.** Collaboration platform for working with subject matter experts.
-
-**Adobe FrameMaker.** For complex technical illustrations and layout.
+| Tool | Purpose |
+|------|---------|
+| **DITA XML** | For structured authoring and single-sourcing content across multiple formats |
+| **SDL Tridion** | Content management system that handled multilingual publishing |
+| **SharePoint** | Collaboration platform for working with subject matter experts |
+| **Adobe FrameMaker** | For complex technical illustrations and layout |
 
 
 ## Real business impact
 
 The documentation I created directly affected factory operations:
 
-**Reduced setup time.** Clear installation procedures cut equipment installation time by 30%.
-
-**Improved safety records.** Better safety documentation reduced workplace incidents.
-
-**Faster troubleshooting.** Systematic diagnostic procedures reduced equipment downtime by 40%.
-
-**Global consistency.** Same procedures worked the same way regardless of factory location.
+| Impact | Result |
+|--------|--------|
+| **Reduced setup time** | Clear installation procedures cut equipment installation time by 30% |
+| **Improved safety records** | Better safety documentation reduced workplace incidents |
+| **Faster troubleshooting** | Systematic diagnostic procedures reduced equipment downtime by 40% |
+| **Global consistency** | Same procedures worked the same way regardless of factory location |
 
 
 ## Live examples

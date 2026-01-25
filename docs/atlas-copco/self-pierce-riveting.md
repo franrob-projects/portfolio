@@ -21,40 +21,55 @@ Self-pierce riveting sounds simple - you push a rivet through multiple pieces of
 
 ### Process fundamentals guide
 Developed comprehensive technical documentation explaining:
-- **Rivet formation mechanics.** How the rivet pierces the top sheet and flares in the bottom sheet.
-- **Material compatibility matrices.** Which material combinations work best with different rivet types.
-- **Joint strength characteristics.** Tensile, shear, and fatigue properties of SPR joints.
-- **Quality assessment methods.** Visual inspection, cross-sectioning, and automated monitoring.
+
+| Topic | Description |
+|-------|-------------|
+| **Rivet formation mechanics** | How the rivet pierces the top sheet and flares in the bottom sheet |
+| **Material compatibility matrices** | Which material combinations work best with different rivet types |
+| **Joint strength characteristics** | Tensile, shear, and fatigue properties of SPR joints |
+| **Quality assessment methods** | Visual inspection, cross-sectioning, and automated monitoring |
 
 ### Equipment selection and setup documentation
 Created detailed guides for:
-- **SPR system specification.** Matching equipment capabilities to production requirements.
-- **Tooling selection.** Dies and punches for different material combinations and thicknesses.
-- **Robot integration.** Programming industrial robots for consistent rivet placement.
-- **Quality monitoring setup.** Force/displacement monitoring for real-time quality control.
+
+| Topic | Description |
+|-------|-------------|
+| **SPR system specification** | Matching equipment capabilities to production requirements |
+| **Tooling selection** | Dies and punches for different material combinations and thicknesses |
+| **Robot integration** | Programming industrial robots for consistent rivet placement |
+| **Quality monitoring setup** | Force/displacement monitoring for real-time quality control |
 
 ### Production implementation guides
 Comprehensive documentation covering:
-- **Line integration procedures.** Installing SPR equipment in existing automotive production lines.
-- **Process parameter optimization.** Setting force, speed, and position parameters for different applications.
-- **Operator training materials.** Safe operation procedures and quality checkpoints.
-- **Maintenance protocols.** Preventive maintenance schedules and tooling replacement procedures.
+
+| Topic | Description |
+|-------|-------------|
+| **Line integration procedures** | Installing SPR equipment in existing automotive production lines |
+| **Process parameter optimization** | Setting force, speed, and position parameters for different applications |
+| **Operator training materials** | Safe operation procedures and quality checkpoints |
+| **Maintenance protocols** | Preventive maintenance schedules and tooling replacement procedures |
 
 ## Real-world applications
 
 ### Automotive body-in-white manufacturing
 SPR technology is particularly valuable for:
-- **Multi-material joining.** Connecting aluminum space frames to steel reinforcements.
-- **Dissimilar thickness materials.** Joining structural components of varying thickness.
-- **Access-limited areas.** Creating joints where traditional welding isn't feasible.
-- **Coated materials.** Joining pre-painted or galvanized materials without damaging coatings.
+
+| Application | Description |
+|-------------|-------------|
+| **Multi-material joining** | Connecting aluminum space frames to steel reinforcements |
+| **Dissimilar thickness materials** | Joining structural components of varying thickness |
+| **Access-limited areas** | Creating joints where traditional welding isn't feasible |
+| **Coated materials** | Joining pre-painted or galvanized materials without damaging coatings |
 
 ### Electric vehicle manufacturing
 Special considerations for EV applications:
-- **Lightweight construction.** Maximizing range through weight reduction.
-- **Battery pack integration.** Secure mounting points that maintain structural integrity.
-- **Corrosion resistance.** Preventing galvanic corrosion in dissimilar metal joints.
-- **Crash performance.** Maintaining joint integrity during impact scenarios.
+
+| Consideration | Description |
+|---------------|-------------|
+| **Lightweight construction** | Maximizing range through weight reduction |
+| **Battery pack integration** | Secure mounting points that maintain structural integrity |
+| **Corrosion resistance** | Preventing galvanic corrosion in dissimilar metal joints |
+| **Crash performance** | Maintaining joint integrity during impact scenarios |
 
 ## Technical writing approach
 
