@@ -15,7 +15,7 @@ Hey there! I'm Francis, and I've spent the last few years working with some grea
 **[Server-sent events documentation.](https://ably.com/docs/protocols/sse)**  
 Created comprehensive guides for real-time streaming using SSE, including code examples and troubleshooting sections. Built interactive demos showing connection flow and error handling. Specific sections: Protocol overview, Connection setup, Event handling, Error recovery patterns.
 
-<img src="/portfolio/img/ably-sse/sse-b.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/portfolio/img/ably/ably-sse/sse-b.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 
 </div>
