@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ably/channels-pubsub-docs" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Channels &amp; pub/sub documentation | Francis Roberts, tech writer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://franrob-projects.github.io/portfolio/docs/ably/channels-pubsub-docs/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Channels &amp; pub/sub documentation | Francis Roberts, tech writer"><meta data-rh="true" name="description" content="Real-time messaging centers around the concept of &quot;channels&quot; - but explaining this to developers coming from HTTP request/response patterns can be challenging. I rebuilt Ably&#x27;s channels documentation to bridge this conceptual gap."><meta data-rh="true" property="og:description" content="Real-time messaging centers around the concept of &quot;channels&quot; - but explaining this to developers coming from HTTP request/response patterns can be challenging. I rebuilt Ably&#x27;s channels documentation to bridge this conceptual gap."><link data-rh="true" rel="icon" href="/portfolio/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://franrob-projects.github.io/portfolio/docs/ably/channels-pubsub-docs/"><link data-rh="true" rel="alternate" href="https://franrob-projects.github.io/portfolio/docs/ably/channels-pubsub-docs/" hreflang="en"><link data-rh="true" rel="alternate" href="https://franrob-projects.github.io/portfolio/docs/ably/channels-pubsub-docs/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My work at Ably","item":"https://franrob-projects.github.io/portfolio/docs/ably/"},{"@type":"ListItem","position":2,"name":"Channels & pub/sub documentation","item":"https://franrob-projects.github.io/portfolio/docs/ably/channels-pubsub-docs"}]}</script><link rel="alternate" type="application/rss+xml" href="/portfolio/blog/rss.xml" title="Francis Roberts, tech writer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/portfolio/blog/atom.xml" title="Francis Roberts, tech writer Atom Feed"><link rel="stylesheet" href="/portfolio/assets/css/styles.3a2c0e80.css">
+<script src="/portfolio/assets/js/runtime~main.490a03f2.js" defer="defer"></script>
+<script src="/portfolio/assets/js/main.820c7ffb.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","dark"),document.documentElement.setAttribute("data-theme-choice","dark"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/portfolio/"><b class="navbar__title text--truncate">About me</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/portfolio/docs/intro/">About work</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/portfolio/docs/intro/"><span title="Writing portfolio" class="linkLabel_WmDU">Writing portfolio</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/portfolio/docs/ably/"><span title="My work at Ably" class="categoryLinkLabel_W154">My work at Ably</span></a><button aria-label="Collapse sidebar category &#x27;My work at Ably&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/portfolio/docs/ably/sse-documentation/"><span title="Server-sent events documentation" class="linkLabel_WmDU">Server-sent events documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/portfolio/docs/ably/webhooks-security/"><span title="Webhooks security documentation" class="linkLabel_WmDU">Webhooks security documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/portfolio/docs/ably/troubleshooting-guides/"><span title="Troubleshooting guides &amp; developer support" class="linkLabel_WmDU">Troubleshooting guides &amp; developer support</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/portfolio/docs/ably/developer-journey-mapping/"><span title="Developer journey mapping &amp; information architecture" class="linkLabel_WmDU">Developer journey mapping &amp; information architecture</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/portfolio/docs/ably/channels-pubsub-docs/"><span title="Channels &amp; pub/sub documentation" class="linkLabel_WmDU">Channels &amp; pub/sub documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/portfolio/docs/ably/content-restructuring/"><span title="Content restructuring &amp; information architecture" class="linkLabel_WmDU">Content restructuring &amp; information architecture</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/portfolio/docs/couchbase/"><span title="My time at Couchbase" class="categoryLinkLabel_W154">My time at Couchbase</span></a><button aria-label="Expand sidebar category &#x27;My time at Couchbase&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/portfolio/docs/atlas-copco/"><span title="My work at Atlas Copco" class="categoryLinkLabel_W154">My work at Atlas Copco</span></a><button aria-label="Expand sidebar category &#x27;My work at Atlas Copco&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/portfolio/docs/cdw/"><span title="My work at CDW" class="linkLabel_WmDU">My work at CDW</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/portfolio/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/portfolio/docs/ably/"><span>My work at Ably</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Channels &amp; pub/sub documentation</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Channels &amp; pub/sub documentation</h1></header>
+<p>Real-time messaging centers around the concept of &quot;channels&quot; - but explaining this to developers coming from HTTP request/response patterns can be challenging. I rebuilt Ably&#x27;s channels documentation to bridge this conceptual gap.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-documentation-challenge">The documentation challenge<a href="#the-documentation-challenge" class="hash-link" aria-label="Direct link to The documentation challenge" title="Direct link to The documentation challenge" translate="no">​</a></h2>
+<p>Pub/Sub (publish/subscribe) messaging is fundamentally different from traditional web APIs:</p>
+<ul>
+<li class=""><strong>Asynchronous communication.</strong> vs. synchronous request/response.</li>
+<li class=""><strong>Many-to-many relationships.</strong> vs. one-to-one API calls.</li>
+<li class=""><strong>Event-driven patterns.</strong> vs. procedural programming.</li>
+<li class=""><strong>Connection state management.</strong> vs. stateless HTTP.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-i-rebuilt">What I rebuilt<a href="#what-i-rebuilt" class="hash-link" aria-label="Direct link to What I rebuilt" title="Direct link to What I rebuilt" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-channels-documentation">Core channels documentation<a href="#core-channels-documentation" class="hash-link" aria-label="Direct link to Core channels documentation" title="Direct link to Core channels documentation" translate="no">​</a></h3>
+<p>I completely rewrote the <a href="https://ably.com/docs/products/channels" target="_blank" rel="noopener noreferrer" class="">channels overview page</a> to focus on practical understanding rather than abstract concepts.</p>
+<p><strong>Key Changes</strong>:</p>
+<ul>
+<li class=""><strong>Interactive examples.</strong> Showing messages flowing between multiple clients.</li>
+<li class=""><strong>Visual diagrams.</strong> Illustrating pub/sub patterns.</li>
+<li class=""><strong>Progressive complexity.</strong> From simple messaging to advanced features.</li>
+<li class=""><strong>Real-world use cases.</strong> Connecting business needs to technical implementation.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="channel-specific-feature-documentation">Channel-specific feature documentation<a href="#channel-specific-feature-documentation" class="hash-link" aria-label="Direct link to Channel-specific feature documentation" title="Direct link to Channel-specific feature documentation" translate="no">​</a></h3>
+<p>Created detailed guides for channel-related features:</p>
+<ul>
+<li class=""><strong>Channel naming and namespaces.</strong> How to organize channels at scale.</li>
+<li class=""><strong>Channel options and configuration.</strong> Persistence, history, push notifications.</li>
+<li class=""><strong>Channel lifecycle management.</strong> When channels are created, destroyed, and cleaned up.</li>
+<li class=""><strong>Channel occupancy and presence.</strong> Who&#x27;s connected and how to track it.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer-experience-focus">Developer experience focus<a href="#developer-experience-focus" class="hash-link" aria-label="Direct link to Developer experience focus" title="Direct link to Developer experience focus" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="multiple-entry-points">Multiple entry points<a href="#multiple-entry-points" class="hash-link" aria-label="Direct link to Multiple entry points" title="Direct link to Multiple entry points" translate="no">​</a></h3>
+<p>Developers come to channels documentation with different backgrounds:</p>
+<ul>
+<li class=""><strong>Web developers.</strong> Familiar with WebSockets but new to pub/sub patterns.</li>
+<li class=""><strong>Mobile developers.</strong> Used to push notifications but new to real-time bidirectional messaging.</li>
+<li class=""><strong>Backend developers.</strong> Familiar with message queues but new to client-side real-time.</li>
+<li class=""><strong>Game developers.</strong> Needing ultra-low latency messaging patterns.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="progressive-disclosure">Progressive disclosure<a href="#progressive-disclosure" class="hash-link" aria-label="Direct link to Progressive disclosure" title="Direct link to Progressive disclosure" translate="no">​</a></h3>
+<p>Structured the documentation to serve different depths of need:</p>
+<ol>
+<li class=""><strong>Quick start.</strong> Send your first message in under 2 minutes.</li>
+<li class=""><strong>Core concepts.</strong> Understanding channels, messages, and subscriptions.</li>
+<li class=""><strong>Advanced patterns.</strong> Scaling, optimization, and enterprise features.</li>
+<li class=""><strong>Troubleshooting.</strong> Debugging connection and delivery issues.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-implementation-details">Technical implementation details<a href="#technical-implementation-details" class="hash-link" aria-label="Direct link to Technical implementation details" title="Direct link to Technical implementation details" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="interactive-code-examples">Interactive code examples<a href="#interactive-code-examples" class="hash-link" aria-label="Direct link to Interactive code examples" title="Direct link to Interactive code examples" translate="no">​</a></h3>
+<p>Instead of static code snippets, I created interactive examples:</p>
+<ul>
+<li class=""><strong>Live messaging demos.</strong> Using real Ably channels.</li>
+<li class=""><strong>Multi-client simulations.</strong> Showing how messages flow.</li>
+<li class=""><strong>Error condition examples.</strong> Demonstrating retry logic and fallback patterns.</li>
+<li class=""><strong>Performance demonstrations.</strong> Showing message delivery speed and reliability.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="framework-integration-examples">Framework integration examples<a href="#framework-integration-examples" class="hash-link" aria-label="Direct link to Framework integration examples" title="Direct link to Framework integration examples" translate="no">​</a></h3>
+<p>Created comprehensive integration guides:</p>
+<ul>
+<li class=""><strong>React hooks.</strong> For channel subscription management.</li>
+<li class=""><strong>Vue.js reactive data.</strong> Binding to real-time messages.</li>
+<li class=""><strong>Angular services.</strong> For enterprise-scale real-time integration.</li>
+<li class=""><strong>React Native.</strong> For mobile real-time messaging.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="business-impact-through-documentation">Business impact through documentation<a href="#business-impact-through-documentation" class="hash-link" aria-label="Direct link to Business impact through documentation" title="Direct link to Business impact through documentation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="conversion-optimization">Conversion optimization<a href="#conversion-optimization" class="hash-link" aria-label="Direct link to Conversion optimization" title="Direct link to Conversion optimization" translate="no">​</a></h3>
+<p>The channels documentation serves as a critical conversion point:</p>
+<ul>
+<li class=""><strong>Value demonstration.</strong> Show immediate messaging capabilities.</li>
+<li class=""><strong>Complexity reduction.</strong> Make real-time messaging feel approachable.</li>
+<li class=""><strong>Feature discovery.</strong> Introduce advanced capabilities naturally.</li>
+<li class=""><strong>Implementation confidence.</strong> Reduce evaluation paralysis.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="feature-adoption-strategy">Feature adoption strategy<a href="#feature-adoption-strategy" class="hash-link" aria-label="Direct link to Feature adoption strategy" title="Direct link to Feature adoption strategy" translate="no">​</a></h3>
+<p>Used documentation to drive adoption of premium features:</p>
+<ul>
+<li class=""><strong>Message history.</strong> Show how to build robust offline-capable apps.</li>
+<li class=""><strong>Push integrations.</strong> Connect real-time messaging to mobile push notifications.</li>
+<li class=""><strong>Presence features.</strong> Enable &quot;who&#x27;s online&quot; functionality.</li>
+<li class=""><strong>Message persistence.</strong> Ensure reliable message delivery.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="specific-content-i-created">Specific content I created<a href="#specific-content-i-created" class="hash-link" aria-label="Direct link to Specific content I created" title="Direct link to Specific content I created" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="channel-basics-tutorial">Channel basics tutorial<a href="#channel-basics-tutorial" class="hash-link" aria-label="Direct link to Channel basics tutorial" title="Direct link to Channel basics tutorial" translate="no">​</a></h3>
+<p>Step-by-step guide covering:</p>
+<ul>
+<li class="">Creating and subscribing to channels</li>
+<li class="">Publishing messages with different data types</li>
+<li class="">Handling connection events and errors</li>
+<li class="">Basic authentication and permissions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="advanced-channel-patterns">Advanced channel patterns<a href="#advanced-channel-patterns" class="hash-link" aria-label="Direct link to Advanced channel patterns" title="Direct link to Advanced channel patterns" translate="no">​</a></h3>
+<p>Documentation for complex use cases:</p>
+<ul>
+<li class=""><strong>Private channels.</strong> With token-based authentication.</li>
+<li class=""><strong>Channel namespaces.</strong> For organizing channels at scale.</li>
+<li class=""><strong>Channel rules.</strong> For automatic message routing.</li>
+<li class=""><strong>Delta compression.</strong> For efficient message transmission.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-guides">Integration guides<a href="#integration-guides" class="hash-link" aria-label="Direct link to Integration guides" title="Direct link to Integration guides" translate="no">​</a></h3>
+<p>Platform-specific implementation guides:</p>
+<ul>
+<li class=""><strong>JavaScript SDK.</strong> Browser and Node.js implementations.</li>
+<li class=""><strong>Mobile SDKs.</strong> iOS, Android, React Native, Flutter.</li>
+<li class=""><strong>Server-side SDKs.</strong> Python, Ruby, Java, .NET, Go.</li>
+<li class=""><strong>IoT platforms.</strong> Arduino, Raspberry Pi, embedded devices.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-and-scale-documentation">Performance and scale documentation<a href="#performance-and-scale-documentation" class="hash-link" aria-label="Direct link to Performance and scale documentation" title="Direct link to Performance and scale documentation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scaling-patterns">Scaling patterns<a href="#scaling-patterns" class="hash-link" aria-label="Direct link to Scaling patterns" title="Direct link to Scaling patterns" translate="no">​</a></h3>
+<p>Documentation for high-scale implementations:</p>
+<ul>
+<li class=""><strong>Connection management.</strong> Handling thousands of concurrent connections.</li>
+<li class=""><strong>Message throttling.</strong> Rate limiting and backpressure handling.</li>
+<li class=""><strong>Channel sharding.</strong> Distributing load across multiple channels.</li>
+<li class=""><strong>Regional deployment.</strong> Optimizing latency with global infrastructure.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring-and-analytics">Monitoring and analytics<a href="#monitoring-and-analytics" class="hash-link" aria-label="Direct link to Monitoring and analytics" title="Direct link to Monitoring and analytics" translate="no">​</a></h3>
+<p>Guides for operational visibility:</p>
+<ul>
+<li class=""><strong>Metrics dashboard.</strong> Integration and interpretation.</li>
+<li class=""><strong>Connection health.</strong> Monitoring and alerting.</li>
+<li class=""><strong>Message delivery.</strong> Tracking and debugging.</li>
+<li class=""><strong>Performance optimization.</strong> Based on usage patterns.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer-feedback-integration">Developer feedback integration<a href="#developer-feedback-integration" class="hash-link" aria-label="Direct link to Developer feedback integration" title="Direct link to Developer feedback integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="community-driven-improvements">Community-driven improvements<a href="#community-driven-improvements" class="hash-link" aria-label="Direct link to Community-driven improvements" title="Direct link to Community-driven improvements" translate="no">​</a></h3>
+<p>Regular updates based on developer feedback:</p>
+<ul>
+<li class=""><strong>Common questions.</strong> From support tickets become FAQ sections.</li>
+<li class=""><strong>Integration challenges.</strong> Become detailed troubleshooting guides.</li>
+<li class=""><strong>Feature requests.</strong> Influence documentation roadmap priorities.</li>
+<li class=""><strong>Success stories.</strong> Become case studies and implementation examples.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ab-testing-results">A/B testing results<a href="#ab-testing-results" class="hash-link" aria-label="Direct link to A/B testing results" title="Direct link to A/B testing results" translate="no">​</a></h3>
+<p>Continuous optimization of documentation effectiveness:</p>
+<ul>
+<li class=""><strong>Code-first vs. concept-first.</strong> Approaches for different developer types.</li>
+<li class=""><strong>Visual vs. text-heavy.</strong> Explanations for complex concepts.</li>
+<li class=""><strong>Linear vs. branching.</strong> Tutorial structures for different learning preferences.</li>
+<li class=""><strong>Embedded vs. linked.</strong> Examples for maintaining engagement.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="current-live-documentation">Current live documentation<a href="#current-live-documentation" class="hash-link" aria-label="Direct link to Current live documentation" title="Direct link to Current live documentation" translate="no">​</a></h2>
+<p>You can see the results of this work at:</p>
+<ul>
+<li class=""><a href="https://ably.com/docs/products/channels" target="_blank" rel="noopener noreferrer" class="">Channels product overview</a></li>
+<li class=""><a href="https://ably.com/docs/channels" target="_blank" rel="noopener noreferrer" class="">Pub/Sub messaging patterns</a></li>
+<li class=""><a href="https://ably.com/docs/realtime/channels" target="_blank" rel="noopener noreferrer" class="">Channel options and configuration</a></li>
+<li class=""><a href="https://ably.com/docs/realtime/messages" target="_blank" rel="noopener noreferrer" class="">Message publishing and subscribing</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="measurable-impact">Measurable impact<a href="#measurable-impact" class="hash-link" aria-label="Direct link to Measurable impact" title="Direct link to Measurable impact" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer-success-metrics">Developer success metrics<a href="#developer-success-metrics" class="hash-link" aria-label="Direct link to Developer success metrics" title="Direct link to Developer success metrics" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Time to first message.</strong> Reduced by 45% through clearer onboarding.</li>
+<li class=""><strong>Channel feature adoption.</strong> Increased 35% through contextual feature introduction.</li>
+<li class=""><strong>Documentation engagement.</strong> Increased 60% with interactive examples.</li>
+<li class=""><strong>Support ticket reduction.</strong> Of 30% for channel-related questions.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="business-outcomes">Business outcomes<a href="#business-outcomes" class="hash-link" aria-label="Direct link to Business outcomes" title="Direct link to Business outcomes" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Trial-to-paid conversion.</strong> Improved 20% with better technical understanding.</li>
+<li class=""><strong>Feature upsell success.</strong> Increased through strategic premium feature positioning.</li>
+<li class=""><strong>Developer satisfaction.</strong> Scores improved significantly in post-integration surveys.</li>
+<li class=""><strong>Community growth.</strong> Driven by shareable, high-quality technical content.</li>
+</ul>
+<p>The key insight: Channels documentation needed to be both educational (teaching pub/sub concepts) and practical (enabling immediate implementation), while serving as a subtle sales funnel for Ably&#x27;s advanced features.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/portfolio/docs/ably/developer-journey-mapping/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Developer journey mapping &amp; information architecture</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/portfolio/docs/ably/content-restructuring/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Content restructuring &amp; information architecture</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-documentation-challenge" class="table-of-contents__link toc-highlight">The documentation challenge</a></li><li><a href="#what-i-rebuilt" class="table-of-contents__link toc-highlight">What I rebuilt</a><ul><li><a href="#core-channels-documentation" class="table-of-contents__link toc-highlight">Core channels documentation</a></li><li><a href="#channel-specific-feature-documentation" class="table-of-contents__link toc-highlight">Channel-specific feature documentation</a></li></ul></li><li><a href="#developer-experience-focus" class="table-of-contents__link toc-highlight">Developer experience focus</a><ul><li><a href="#multiple-entry-points" class="table-of-contents__link toc-highlight">Multiple entry points</a></li><li><a href="#progressive-disclosure" class="table-of-contents__link toc-highlight">Progressive disclosure</a></li></ul></li><li><a href="#technical-implementation-details" class="table-of-contents__link toc-highlight">Technical implementation details</a><ul><li><a href="#interactive-code-examples" class="table-of-contents__link toc-highlight">Interactive code examples</a></li><li><a href="#framework-integration-examples" class="table-of-contents__link toc-highlight">Framework integration examples</a></li></ul></li><li><a href="#business-impact-through-documentation" class="table-of-contents__link toc-highlight">Business impact through documentation</a><ul><li><a href="#conversion-optimization" class="table-of-contents__link toc-highlight">Conversion optimization</a></li><li><a href="#feature-adoption-strategy" class="table-of-contents__link toc-highlight">Feature adoption strategy</a></li></ul></li><li><a href="#specific-content-i-created" class="table-of-contents__link toc-highlight">Specific content I created</a><ul><li><a href="#channel-basics-tutorial" class="table-of-contents__link toc-highlight">Channel basics tutorial</a></li><li><a href="#advanced-channel-patterns" class="table-of-contents__link toc-highlight">Advanced channel patterns</a></li><li><a href="#integration-guides" class="table-of-contents__link toc-highlight">Integration guides</a></li></ul></li><li><a href="#performance-and-scale-documentation" class="table-of-contents__link toc-highlight">Performance and scale documentation</a><ul><li><a href="#scaling-patterns" class="table-of-contents__link toc-highlight">Scaling patterns</a></li><li><a href="#monitoring-and-analytics" class="table-of-contents__link toc-highlight">Monitoring and analytics</a></li></ul></li><li><a href="#developer-feedback-integration" class="table-of-contents__link toc-highlight">Developer feedback integration</a><ul><li><a href="#community-driven-improvements" class="table-of-contents__link toc-highlight">Community-driven improvements</a></li><li><a href="#ab-testing-results" class="table-of-contents__link toc-highlight">A/B testing results</a></li></ul></li><li><a href="#current-live-documentation" class="table-of-contents__link toc-highlight">Current live documentation</a></li><li><a href="#measurable-impact" class="table-of-contents__link toc-highlight">Measurable impact</a><ul><li><a href="#developer-success-metrics" class="table-of-contents__link toc-highlight">Developer success metrics</a></li><li><a href="#business-outcomes" class="table-of-contents__link toc-highlight">Business outcomes</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
