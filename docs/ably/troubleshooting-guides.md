@@ -4,17 +4,23 @@ sidebar_position: 3
 
 # Troubleshooting guides & developer support
 
-One of the most impactful things I've done at Ably is create practical troubleshooting resources. These aren't generic "check your network connection" guides - they're specific tools that help developers debug real-time messaging issues.
+Real-time messaging creates unique debugging challenges that traditional web development doesn't prepare developers for. When a WebSocket connection fails or messages don't arrive, the problem could be anywhere - network proxies, browser policies, authentication tokens, or subtle timing issues.
+
+Creating effective [troubleshooting documentation](https://ably.com/docs/platform/errors) meant understanding how developers actually diagnose real-time problems, not just documenting what could theoretically go wrong. I focused on building systematic diagnostic tools that helped developers identify the root cause quickly.
 
 ## HAR file generation guide
 
 I created a comprehensive guide for generating HAR (HTTP Archive) files to help developers troubleshoot connection issues. This was crucial because real-time connection problems are notoriously difficult to debug.
 
-### Why HAR files matter
-- **Real-time connections** fail in ways that aren't obvious in browser dev tools
-- **WebSocket handshakes** can fail silently
-- **Authentication issues** are hard to trace without detailed request logs
-- **Network proxy problems** only show up in detailed timing data
+### Understanding connection failure patterns
+Real-time connections fail differently than HTTP requests, often in ways that browser developer tools don't reveal clearly. I needed to give developers better visibility into what was actually happening.
+
+| Problem Type | Why Standard Tools Miss It |
+|--------------|-----------------------------|
+| **Real-time connections** | Fail in ways that aren't obvious in browser dev tools |
+| **WebSocket handshakes** | Can fail silently without clear error messages |
+| **Authentication issues** | Hard to trace without detailed request and response logs |
+| **Network proxy problems** | Only show up in detailed timing and header data |
 
 ### What I built
 A step-by-step guide that walks developers through:
@@ -25,19 +31,25 @@ A step-by-step guide that walks developers through:
 
 ## Connection debugging workflows
 
-### WebSocket connection issues
-Created specific troubleshooting flows for:
-- Connection timeouts and why they happen
-- Authentication token expiration handling
-- Network proxy interference
-- Browser security policy conflicts
+### WebSocket connection debugging
+WebSocket problems have specific patterns that developers can learn to recognize. I created troubleshooting workflows that helped developers identify which type of problem they were facing.
 
-### Server-sent events debugging
-Since SSE debugging is particularly tricky:
-- **Browser compatibility** issues and workarounds
-- **Connection persistence** problems
-- **Event parsing** errors and malformed data
-- **CORS configuration** for cross-origin requests
+| Problem Pattern | Diagnostic Approach |
+|-----------------|---------------------|
+| **Connection timeouts** | Timing analysis and network path testing |
+| **Authentication token expiration** | Token validation and renewal workflows |
+| **Network proxy interference** | Proxy detection and configuration guidance |
+| **Browser security policy conflicts** | CORS and content security policy debugging |
+
+### Server-sent events troubleshooting
+SSE debugging presents unique challenges because the protocol looks simple but has complex edge cases. I created specific guidance for the most common SSE problems.
+
+| SSE Challenge | Solution Approach |
+|---------------|-------------------|
+| **Browser compatibility** | Detection methods and polyfill recommendations |
+| **Connection persistence** | Reconnection strategies and state management |
+| **Event parsing errors** | Data format validation and error handling |
+| **CORS configuration** | Cross-origin setup and preflight debugging |
 
 ## Developer tools integration
 

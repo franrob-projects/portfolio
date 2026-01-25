@@ -4,26 +4,34 @@ sidebar_position: 5
 
 # Channels & pub/sub documentation
 
-Real-time messaging centers around the concept of "channels" - but explaining this to developers coming from HTTP request/response patterns can be challenging. I rebuilt Ably's channels documentation to bridge this conceptual gap.
+When developers first encounter real-time messaging, they often struggle with a fundamental shift in thinking. Moving from HTTP's familiar request/response pattern to pub/sub messaging requires understanding concepts like persistent connections, event-driven architecture, and asynchronous communication flows.
 
-## The documentation challenge
+The [channels and pub/sub documentation](https://ably.com/docs/products/channels) became my focus because this conceptual gap was where most developers got stuck. They could understand the API calls, but they couldn't visualize how messages flowed between different parts of their application. The existing documentation explained what channels were, but not how developers should think about using them.
 
-Pub/Sub (publish/subscribe) messaging is fundamentally different from traditional web APIs:
-- **Asynchronous communication.** vs. synchronous request/response.
-- **Many-to-many relationships.** vs. one-to-one API calls.
-- **Event-driven patterns.** vs. procedural programming.
-- **Connection state management.** vs. stateless HTTP.
+## Understanding the conceptual shift
+
+The challenge wasn't technical complexity - it was helping developers make a mental model shift. Pub/sub messaging operates on completely different assumptions than the web development most developers know.
+
+| Pub/Sub Concept | Traditional Web API | Why This Matters |
+|----------------|---------------------|------------------|
+| **Asynchronous communication** | Synchronous request/response | Messages can arrive at any time, not just when you ask |
+| **Many-to-many relationships** | One-to-one API calls | One message can reach multiple subscribers simultaneously |
+| **Event-driven patterns** | Procedural programming | Your application reacts to events rather than controlling flow |
+| **Connection state management** | Stateless HTTP | You need to handle connection drops, reconnections, and message queuing |
 
 ## What I rebuilt
 
 ### Core channels documentation
 I completely rewrote the [channels overview page](https://ably.com/docs/products/channels) to focus on practical understanding rather than abstract concepts.
 
-**Key Changes**:
-- **Interactive examples.** Showing messages flowing between multiple clients.
-- **Visual diagrams.** Illustrating pub/sub patterns.
-- **Progressive complexity.** From simple messaging to advanced features.
-- **Real-world use cases.** Connecting business needs to technical implementation.
+The key insight was that developers needed to see pub/sub in action, not just read about it. I restructured the documentation around dynamic examples that showed the flow of information.
+
+| Documentation Improvement | Purpose |
+|---------------------------|----------|
+| **Interactive examples** | Show messages flowing between multiple clients in real-time |
+| **Visual diagrams** | Help developers visualize pub/sub patterns and message routing |
+| **Progressive complexity** | Start with simple messaging, build to advanced features like presence |
+| **Real-world use cases** | Connect abstract messaging concepts to actual business problems |
 
 ### Channel-specific feature documentation
 Created detailed guides for channel-related features:
