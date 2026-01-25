@@ -36,7 +36,7 @@ function PersonalSite() {
             boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
           }}>
             <img 
-              src="/technical-writing-portfolio/img/Ver fotos recientes.jpeg"
+              src="/portfolio/img/Ver fotos recientes.jpeg"
               alt="Francis Roberts"
               style={{
                 width: '100%',
@@ -54,7 +54,7 @@ function PersonalSite() {
             boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
           }}>
             <img 
-              src="/technical-writing-portfolio/img/bjj.jpg"
+              src="/portfolio/img/bjj.jpg"
               alt="Francis Roberts"
               style={{
                 width: '100%',
