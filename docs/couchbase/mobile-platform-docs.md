@@ -4,15 +4,20 @@ sidebar_position: 1
 
 # Mobile platform documentation
 
-When I joined Couchbase, their mobile platform documentation was fragmented across multiple sites. Developers couldn't understand how Couchbase Lite, Sync Gateway, and cloud services worked together. I rebuilt it as a unified story.
+Mobile database development requires a fundamental shift in how developers think about data. Unlike web applications where you can assume constant connectivity, mobile apps must work offline, sync data when connections return, and handle conflicts when the same data changes in multiple places.
 
-## The challenge
+When I joined Couchbase, their [mobile platform documentation](https://docs.couchbase.com/home/mobile.html) was scattered across product-specific silos that made it nearly impossible for developers to understand how offline-first architecture actually worked. My job was to rebuild this as a coherent story that helped developers transition from traditional client-server thinking to distributed database patterns.
 
-Mobile database documentation has unique challenges:
-- **Offline-first thinking.** Is foreign to many web developers.
-- **Data synchronization.** Concepts are complex and abstract.
-- **Platform differences.** Between iOS, Android, and cross-platform tools.
-- **Enterprise deployment.** Requirements for mobile apps.
+## Understanding the mobile database learning curve
+
+Mobile database development combines several complex concepts that web developers rarely encounter. The challenge wasn't just explaining individual features, but helping developers understand how these concepts work together in real applications.
+
+| Challenge | Why It's Difficult | Solution Approach |
+|-----------|-------------------|-------------------|
+| **Offline-first thinking** | Foreign to developers used to constant connectivity | Show practical scenarios where offline capabilities matter |
+| **Data synchronization** | Abstract concepts with complex edge cases | Use visual examples and conflict resolution workflows |
+| **Platform differences** | iOS, Android, and cross-platform tools have different patterns | Create parallel examples showing same concepts across platforms |
+| **Enterprise deployment** | Mobile apps have unique security and management requirements | Connect technical implementation to business requirements |
 
 ## What I restructured
 
@@ -23,11 +28,14 @@ I created a comprehensive [mobile platform overview](https://docs.couchbase.com/
 - The relationship between local storage, sync, and cloud
 - Decision trees for different mobile architecture patterns
 
-### Component relationships
-Instead of separate product docs, I created documentation that shows:
-- **Couchbase Lite.** As the embedded database layer.
-- **Sync Gateway.** As the synchronization middleware.
-- **Couchbase Server.** As the cloud backend.
+### Architecture visualization
+The biggest breakthrough was helping developers visualize how the components worked together. Instead of separate product documentation, I created architecture-focused content that showed the data flow.
+
+| Component | Role | Developer Benefit |
+|-----------|------|-------------------|
+| **Couchbase Lite** | Embedded database layer | Local storage and queries that work offline |
+| **Sync Gateway** | Synchronization middleware | Handles conflicts and security between mobile and cloud |
+| **Couchbase Server** | Cloud backend | Centralized data storage and management at scale |
 - **Mobile applications.** As the consumer layer.
 
 ## Developer journey design

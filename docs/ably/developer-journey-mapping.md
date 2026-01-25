@@ -4,7 +4,9 @@ sidebar_position: 4
 
 # Developer journey mapping & information architecture
 
-At Ably, I don't just write documentation - I architect the entire developer experience. My role involves mapping out how developers discover, evaluate, integrate, and scale with Ably's platform, then designing content that drives business results through each stage of that journey.
+Technical writing for developer-focused companies isn't just about explaining APIs - it's about understanding how developers make technology decisions and designing content that supports those decisions at every stage. At Ably, I learned that documentation architecture directly impacts business outcomes, from initial developer interest through long-term platform adoption.
+
+The developer journey mapping project taught me that effective technical communication requires thinking like a product manager, not just a writer. Every piece of content needed to serve both developer needs and business objectives, creating a seamless path from technical curiosity to production implementation.
 
 ## The business challenge
 

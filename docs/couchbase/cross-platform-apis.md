@@ -4,23 +4,31 @@ sidebar_position: 2
 
 # Cross-platform API documentation
 
-One of the biggest challenges at Couchbase was maintaining consistent API documentation across 8+ programming languages and platforms. Mobile developers expect the same database operations to work similarly whether they're writing Swift, Java, or JavaScript.
+Cross-platform development creates a unique documentation challenge: how do you maintain consistency across different programming languages while respecting the idioms and patterns that make each platform feel native? Mobile developers often work across iOS, Android, and cross-platform frameworks, switching between Swift, Java, and JavaScript in the same project.
+
+At Couchbase, I learned that effective cross-platform API documentation isn't about creating identical interfaces - it's about creating conceptually consistent experiences that feel natural in each development environment.
 
 ## The multi-platform challenge
 
-### Different languages, same concepts
-Mobile developers often work across platforms, so API documentation needs to:
-- **Show equivalent operations.** In different languages.
-- **Highlight platform differences.** Where they matter.
-- **Maintain conceptual consistency.** Across implementations.
-- **Provide platform-specific optimizations.** Without losing the big picture.
+### Conceptual consistency across platforms
+The key insight was that mobile developers needed to understand not just how to call APIs, but how the same database concepts expressed themselves differently across platforms. This required showing both the similarities and the important differences.
 
-### Platform-specific considerations
-Each platform has unique characteristics:
-- **iOS (Swift).** Value types, optionals, protocol-oriented programming.
-- **Android (Java/Kotlin).** Null safety, coroutines, lifecycle awareness.
-- **React Native (JavaScript).** Promises, async/await, bridge communication.
-- **.NET (C#).** LINQ patterns, async/await, memory management.
+| Documentation Need | Purpose |
+|-------------------|----------|
+| **Show equivalent operations** | Help developers transfer knowledge between platforms |
+| **Highlight platform differences** | Prevent confusion when patterns diverge |
+| **Maintain conceptual consistency** | Ensure developers understand the underlying database concepts |
+| **Provide platform-specific optimizations** | Help developers write idiomatic code for each platform |
+
+### Platform-specific development patterns
+Each mobile platform has evolved its own approach to handling common problems like asynchronous operations, memory management, and error handling. The documentation needed to respect these patterns while maintaining conceptual consistency.
+
+| Platform | Key Characteristics | Documentation Approach |
+|----------|-------------------|------------------------|
+| **iOS (Swift)** | Value types, optionals, protocol-oriented programming | Emphasize type safety and functional patterns |
+| **Android (Java/Kotlin)** | Null safety, coroutines, lifecycle awareness | Focus on lifecycle integration and modern async patterns |
+| **React Native (JavaScript)** | Promises, async/await, bridge communication | Bridge-native concepts with web development patterns |
+| **.NET (C#)** | LINQ patterns, async/await, memory management | Leverage familiar .NET idioms and async patterns |
 
 ## My API documentation approach
 

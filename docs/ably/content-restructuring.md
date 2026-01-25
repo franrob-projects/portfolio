@@ -4,16 +4,21 @@ sidebar_position: 6
 
 # Content restructuring & information architecture
 
-One of my most impactful contributions at Ably has been systematically restructuring their documentation architecture. This wasn't just moving pages around - it was rebuilding how developers discover, understand, and implement Ably's platform.
+When developers can't find what they need in documentation, they don't just get frustrated - they make assumptions, implement workarounds, or abandon the platform entirely. At Ably, I discovered that the biggest barrier to developer success wasn't technical complexity, but information architecture that had grown organically without considering how developers actually approach real-time messaging.
 
-## The information architecture problem
+The [content restructuring project](https://ably.com/docs) became about more than organizing pages - it was about redesigning the entire developer journey from curiosity to production deployment. This taught me that information architecture is really experience design for technical learning.
 
-When I joined Ably, their documentation had grown organically over several years:
-- **Product-centric organization** instead of user-journey focused
-- **Fragmented onboarding experiences** across different protocols  
-- **Missing conceptual bridges** between related features
-- **Inconsistent content depth** - some areas over-documented, others under-served
-- **Navigation that reflected internal team structure** rather than developer needs
+## Understanding the navigation chaos
+
+Abled documentation had evolved the way most technical documentation does - following the internal logic of product development rather than the external logic of developer needs. Each team had built their section independently, creating a fragmented experience that made it nearly impossible for developers to understand how the pieces connected.
+
+| Architecture Problem | Impact on Developers |
+|---------------------|----------------------|
+| **Product-centric organization** | Developers couldn't find information organized around their actual tasks |
+| **Fragmented onboarding experiences** | Different entry points for WebSockets, SSE, and REST created confusion |
+| **Missing conceptual bridges** | No clear path from basic concepts to advanced implementation |
+| **Inconsistent content depth** | Some areas over-documented with theory, others missing practical examples |
+| **Internal team structure navigation** | Menu organization reflected engineering teams, not developer workflows |
 
 ## My systematic approach
 
