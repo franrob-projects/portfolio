@@ -43,6 +43,11 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
         },
+        blog: {
+          showReadingTime: true,
+          blogSidebarTitle: 'Recent posts',
+          blogSidebarCount: 10,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -66,6 +71,11 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'About work',
+        },
+        {
+          to: '/blog',
+          label: 'Crypto',
+          position: 'left',
         },
         {
           href: 'https://github.com/franrob-projects',

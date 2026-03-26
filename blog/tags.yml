@@ -1,19 +1,39 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+blockchain:
+  label: Blockchain
+  permalink: /blockchain
+  description: Blockchain technology and infrastructure
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+ethereum:
+  label: Ethereum
+  permalink: /ethereum
+  description: Ethereum development and ecosystem
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+solidity:
+  label: Solidity
+  permalink: /solidity
+  description: Solidity smart contract development
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+defi:
+  label: DeFi
+  permalink: /defi
+  description: Decentralized finance protocols and patterns
+
+security:
+  label: Security
+  permalink: /security
+  description: Smart contract and protocol security
+
+layer2:
+  label: Layer 2
+  permalink: /layer2
+  description: Layer 2 scaling solutions
+
+tooling:
+  label: Tooling
+  permalink: /tooling
+  description: Developer tools and workflows
+
+nft:
+  label: NFT
+  permalink: /nft
+  description: Non-fungible tokens and standards
