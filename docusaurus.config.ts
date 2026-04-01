@@ -73,6 +73,11 @@ const config: Config = {
           label: 'About work',
         },
         {
+          to: '/projects',
+          label: 'Projects',
+          position: 'left',
+        },
+        {
           to: '/blog',
           label: 'Crypto',
           position: 'left',
