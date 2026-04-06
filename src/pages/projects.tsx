@@ -18,6 +18,27 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    title: 'Doc Link Monitor',
+    icon: '🔗',
+    description:
+      'Documentation goes stale. External links break, pages move, APIs get deprecated. Doc Link Monitor is a fully serverless AWS application that checks every registered URL on an hourly schedule and fires an SNS alert the moment something breaks — built with AWS CDK so the entire infrastructure deploys with a single command.',
+    details: [
+      'CDK stack defines Lambda, DynamoDB, API Gateway, EventBridge, and SNS as code',
+      'Checker Lambda scans DynamoDB, fires HEAD requests concurrently, and writes results back',
+      'GSI on DynamoDB enables instant broken-link queries without a full table scan',
+      'REST API to register URLs, list status, and trigger on-demand checks',
+      'Pay-per-use — runs for cents per month at documentation team scale',
+    ],
+    tags: [
+      { label: 'AWS CDK',    colour: '#FF9900' },
+      { label: 'Lambda',     colour: '#FF9900' },
+      { label: 'DynamoDB',   colour: '#4053D6' },
+      { label: 'EventBridge',colour: '#FF4F8B' },
+      { label: 'TypeScript', colour: '#3178C6' },
+    ],
+    github: 'https://github.com/franrob-projects/doc-link-monitor',
+  },
+  {
     title: 'SecureTrain Gamification',
     icon: '🛡️',
     description:
