@@ -10,7 +10,7 @@ function PersonalSite() {
       <section className={styles.hero}>
         <h1>Francis Roberts</h1>
         <p className={styles.subtitle}>All things docs</p>
-        <p style={{ marginBottom: '24px' }}>I build documentation sites and write the content that lives on them. That means engineering the underlying infrastructure — migrating legacy platforms like Textile onto modern React, TypeScript, and MDX stacks — alongside authoring the API references, guides, and troubleshooting content developers actually use.</p>
+        <p style={{ marginBottom: '24px' }}>I build documentation sites and write the content that lives on them. That means engineering the underlying infrastructure (migrating legacy platforms like Textile onto modern React, TypeScript, and MDX stacks) alongside authoring the API references, guides, and troubleshooting content developers actually use.</p>
         <Link className={styles.button} to="/docs/intro">
           See my work
         </Link>
@@ -75,13 +75,7 @@ function PersonalSite() {
         
         <div className={styles.job}>
           <h3>Developer Educator at Ably (2023)</h3>
-          <p>Co-developing technical docs for the LiveSync database sync product, and contributing to the re-engineering of the <a href="https://ably.com/docs" target="_blank" rel="noopener noreferrer">ably.com/docs</a> codebase — migrating pages from the legacy Textile content system onto the new Next.js + TypeScript + React stack. Building scalable content strategies for developer adoption.</p>
-          <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', color: 'var(--ifm-color-content-secondary)' }}>
-            Merged conversion PRs:{' '}
-            <a href="https://github.com/ably/docs/pull/2911" target="_blank" rel="noopener noreferrer">REST API → MDX (#2911)</a>
-            {' · '}
-            <a href="https://github.com/ably/docs/pull/2913" target="_blank" rel="noopener noreferrer">SSE → MDX (#2913)</a>
-          </p>
+          <p>Co-developing technical docs for the LiveSync database sync product, and contributing to the re-engineering of the ably.com/docs codebase by migrating pages from the legacy Textile content system onto the new Next.js + TypeScript + React stack. Building scalable content strategies for developer adoption.</p>
         </div>
         
         <div className={styles.job}>
@@ -206,7 +200,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Francis Roberts - Technical Writing Portfolio"
-      description="Documentation engineer and technical writer building and authoring developer docs — doc-site infrastructure, API references, and migrations from legacy platforms to modern React/MDX stacks.">
+      description="Documentation engineer and technical writer building and authoring developer docs: doc-site infrastructure, API references, and migrations from legacy platforms to modern React/MDX stacks.">
       <PersonalSite />
     </Layout>
   );

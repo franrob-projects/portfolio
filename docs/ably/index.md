@@ -22,8 +22,8 @@ Ably's docs site was migrated off a legacy Textile-based content system onto a m
 
 Two of the larger conversions are merged upstream:
 
-- [**ably/docs#2911**](https://github.com/ably/docs/pull/2911) — Converts the REST API reference page to MDX. 2,027 lines added, 1,512 deleted (the old `content/api/rest-api.textile` removed, the new `src/pages/docs/api/rest-api.mdx` added).
-- [**ably/docs#2913**](https://github.com/ably/docs/pull/2913) — Converts the SSE reference page to MDX. Moved `content/api/sse.textile` into `src/pages/docs/api/sse.mdx` so the page lives alongside the rest of the React app.
+- [**ably/docs#2911**](https://github.com/ably/docs/pull/2911): Converts the REST API reference page to MDX. 2,027 lines added, 1,512 deleted (the old `content/api/rest-api.textile` removed, the new `src/pages/docs/api/rest-api.mdx` added).
+- [**ably/docs#2913**](https://github.com/ably/docs/pull/2913): Converts the SSE reference page to MDX. Moved `content/api/sse.textile` into `src/pages/docs/api/sse.mdx` so the page lives alongside the rest of the React app.
 
 The conversions aren't just copy-paste. Textile callouts, inline language tabs, and variable interpolations had to be rewritten as MDX components so the rendered output stayed consistent with the new design system. After conversion the pages can import React components directly, which is how the interactive code samples and language switchers now work.
 
