@@ -9,7 +9,7 @@ function PersonalSite() {
     <main className={styles.container}>
       <section className={styles.hero}>
         <h1>Francis Roberts</h1>
-        <p className={styles.subtitle}>Tech writer</p>
+        <p className={styles.subtitle}>All things docs</p>
         <p style={{ marginBottom: '24px' }}>I create clear, practical documentation for developer products. My focus is making complex technical concepts accessible through well-structured guides and API docs.</p>
         <Link className={styles.button} to="/docs/intro">
           See my work
@@ -70,12 +70,18 @@ function PersonalSite() {
       <section className={styles.section}>
         <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
           <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>💼</span>
-          My writer journey
+          My journey
         </h2>
         
         <div className={styles.job}>
           <h3>Developer Educator at Ably (2023)</h3>
-          <p>Co-developing technical docs for LiveSync database sync product. Building scalable content strategies for developer adoption.</p>
+          <p>Co-developing technical docs for the LiveSync database sync product, and contributing to the re-engineering of the <a href="https://ably.com/docs" target="_blank" rel="noopener noreferrer">ably.com/docs</a> codebase — migrating pages from the legacy Textile content system onto the new Next.js + TypeScript + React stack. Building scalable content strategies for developer adoption.</p>
+          <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', color: 'var(--ifm-color-content-secondary)' }}>
+            Merged conversion PRs:{' '}
+            <a href="https://github.com/ably/docs/pull/2911" target="_blank" rel="noopener noreferrer">REST API → MDX (#2911)</a>
+            {' · '}
+            <a href="https://github.com/ably/docs/pull/2913" target="_blank" rel="noopener noreferrer">SSE → MDX (#2913)</a>
+          </p>
         </div>
         
         <div className={styles.job}>

@@ -11,7 +11,7 @@ The scaling debate in Ethereum has been going on for years. In 2024 the picture 
 
 <!-- truncate -->
 
-[![L2Beat — Layer 2 scaling tracker](https://l2beat.com/meta-images/publications/interoperability-page.png)](https://l2beat.com/scaling/summary)
+[![L2Beat: Layer 2 scaling tracker](https://l2beat.com/meta-images/publications/interoperability-page.png)](https://l2beat.com/scaling/summary)
 
 ## The core problem
 

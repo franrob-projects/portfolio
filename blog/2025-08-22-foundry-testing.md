@@ -11,7 +11,7 @@ Foundry has become a serious alternative to Hardhat for smart contract developme
 
 <!-- truncate -->
 
-[![Foundry — fast Ethereum development toolkit](https://ethereum.org/images/ef-logo.png)](https://getfoundry.sh/)
+[![Foundry: fast Ethereum development toolkit](https://ethereum.org/images/ef-logo.png)](https://getfoundry.sh/)
 
 ## Why Foundry for DeFi testing
 
