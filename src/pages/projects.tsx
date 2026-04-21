@@ -177,6 +177,42 @@ const CONTRIBUTIONS: Contribution[] = [
     blurb:
       'Expands the REST assessment guidance to cover modern API attack surface: OpenAPI-driven testing, OAuth2/JWT flows, BOLA, mass assignment, and rate-limit evasion.',
   },
+  {
+    repo: 'ably/docs',
+    number: 2911,
+    title: 'Converts REST API reference to MDX',
+    url: 'https://github.com/ably/docs/pull/2911',
+    state: 'merged',
+    blurb:
+      'Part of the Ably docs platform migration from Textile to Next.js + TypeScript + React. Moved content/api/rest-api.textile (1,512 lines) into src/pages/docs/api/rest-api.mdx (2,027 lines), rewriting callouts, language tabs, and variable interpolations as MDX components.',
+  },
+  {
+    repo: 'ably/docs',
+    number: 2913,
+    title: 'Converts SSE reference to MDX',
+    url: 'https://github.com/ably/docs/pull/2913',
+    state: 'merged',
+    blurb:
+      'Companion to #2911 in the Textile-to-MDX migration. Moved the Server-Sent Events reference page onto the new React-based routing, then rewrote the page content to cover the full lifecycle with interactive examples.',
+  },
+  {
+    repo: 'ably/docs',
+    number: 2984,
+    title: 'Generating a HAR file for troubleshooting',
+    url: 'https://github.com/ably/docs/pull/2984',
+    state: 'merged',
+    blurb:
+      'Adds a self-service troubleshooting guide for producing HAR files when reporting connection issues, reducing back-and-forth between developers and Ably support on the first message.',
+  },
+  {
+    repo: 'ably/docs',
+    number: 2818,
+    title: 'Add service disruptions documentation',
+    url: 'https://github.com/ably/docs/pull/2818',
+    state: 'merged',
+    blurb:
+      'Documents Ably\'s behaviour during service disruptions and the guarantees developers can expect, so teams designing around realtime availability have authoritative answers without going through support.',
+  },
 ]
 
 function TagBadge({ tag }: { tag: Tag }) {
