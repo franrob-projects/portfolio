@@ -49,9 +49,18 @@ Produced troubleshooting guides and diagnostic content covering common developer
 
 <img src="/portfolio/img/ably/ably-troubleshooting/trouble-a.png" alt="Ably troubleshooting documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
-## GitHub activity
+## Merged pull requests
 
-You can see all my merged pull requests on [Ably's docs repository](https://github.com/ably/docs/pulls?q=is%3Apr+author%3Afranrob-projects+is%3Amerged).
+Selected PRs that landed in `ably/docs`:
+
+| PR | Summary | Merged |
+|---|---|---|
+| [#2911](https://github.com/ably/docs/pull/2911) | Converts REST API reference to MDX (part of the Textile → Next.js/TypeScript/React migration) | 2025-11-07 |
+| [#2913](https://github.com/ably/docs/pull/2913) | Converts SSE reference to MDX | 2025-11-07 |
+| [#2984](https://github.com/ably/docs/pull/2984) | Self-service HAR file guide for connection troubleshooting | 2025-12-01 |
+| [#2818](https://github.com/ably/docs/pull/2818) | Service disruptions documentation and developer guarantees | 2025-09-18 |
+
+Full history: [all merged PRs by me on ably/docs](https://github.com/ably/docs/pulls?q=is%3Apr+author%3Afranrob-projects+is%3Amerged).
 
 ## Tools and approach
 
