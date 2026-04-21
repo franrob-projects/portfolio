@@ -10,7 +10,7 @@ function PersonalSite() {
       <section className={styles.hero}>
         <h1>Francis Roberts</h1>
         <p className={styles.subtitle}>All things docs</p>
-        <p style={{ marginBottom: '24px' }}>I create clear, practical documentation for developer products. My focus is making complex technical concepts accessible through well-structured guides and API docs.</p>
+        <p style={{ marginBottom: '24px' }}>I build documentation sites and write the content that lives on them. That means engineering the underlying infrastructure — migrating legacy platforms like Textile onto modern React, TypeScript, and MDX stacks — alongside authoring the API references, guides, and troubleshooting content developers actually use.</p>
         <Link className={styles.button} to="/docs/intro">
           See my work
         </Link>
@@ -206,7 +206,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Francis Roberts - Technical Writing Portfolio"
-      description="Developer Educator and Technical Writer specializing in API documentation, docs-as-code, and developer experience">
+      description="Documentation engineer and technical writer building and authoring developer docs — doc-site infrastructure, API references, and migrations from legacy platforms to modern React/MDX stacks.">
       <PersonalSite />
     </Layout>
   );
