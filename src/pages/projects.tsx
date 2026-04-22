@@ -332,6 +332,33 @@ export default function Projects(): ReactNode {
 
         <section className={styles.section}>
           <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🎙️</span>
+            Docs Engineering podcast series
+          </h2>
+          <div className={styles.job} style={{ marginBottom: '2rem' }}>
+            <img
+              src="/portfolio/img/podcast/docs-engineering-podcast.jpg"
+              alt="Docs Engineering podcast episode"
+              style={{ width: '100%', borderRadius: '8px', marginBottom: '1rem', display: 'block' }}
+              loading="lazy"
+            />
+            <p style={{ marginBottom: '1rem', color: 'var(--ifm-color-content-secondary)', lineHeight: '1.65' }}>
+              A conversation series on what "docs engineering" actually looks like day to day: migrating legacy platforms onto React and MDX, building the pipelines that test code samples, and the judgment calls behind what to document and what to cut. Recorded with fellow practitioners working on developer docs in the wild.
+            </p>
+            <a
+              href="https://www.linkedin.com/feed/update/urn:li:activity:7404514545265852416/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+              style={{ marginLeft: 0 }}
+            >
+              Watch on LinkedIn ↗
+            </a>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
             <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🛠️</span>
             Open source
           </h2>
