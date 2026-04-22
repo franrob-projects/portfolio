@@ -352,3 +352,16 @@ main {
     padding: 40px 12px;
   }
 }
+
+/* Blog list: cover images are mostly small logos, don't upscale them */
+.theme-blog-list-page article img,
+[class*='blogListPage'] article img {
+  max-width: 120px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0.75rem 0;
+  border-radius: 6px;
+}
