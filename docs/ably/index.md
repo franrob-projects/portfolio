@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # My work at Ably
 
-I joined Ably in August 2023 as a Developer Educator, working on their realtime messaging platform. My focus is making complex WebSocket and database sync concepts accessible to developers.
+I joined Ably in August 2023 as a Developer Educator and Docs Engineer, working on their realtime messaging platform. My focus is making complex WebSocket and database sync concepts accessible to developers.
 
 ## What I do at Ably
 

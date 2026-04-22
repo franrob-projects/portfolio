@@ -77,7 +77,7 @@ function PersonalSite() {
         </h2>
         
         <div className={styles.job}>
-          <h3>Developer Educator at Ably (2023)</h3>
+          <h3>Developer Educator and Docs Engineer at Ably (2023)</h3>
           <p>Co-developing technical docs for the LiveSync database sync product, and contributing to the re-engineering of the ably.com/docs codebase by migrating pages from the legacy Textile content system onto the new Next.js + TypeScript + React stack. Building scalable content strategies for developer adoption.</p>
         </div>
         
