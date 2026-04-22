@@ -354,14 +354,15 @@ main {
 }
 
 /* Blog list: cover images are mostly small logos, don't upscale them */
-.theme-blog-list-page article img,
-[class*='blogListPage'] article img {
-  max-width: 120px;
-  max-height: 80px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0.75rem 0;
-  border-radius: 6px;
+.blog-list-page article img:not(.avatar__photo),
+.blog-wrapper.blog-list-page article img:not(.avatar__photo) {
+  max-width: 100px !important;
+  max-height: 64px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+  margin: 0.5rem 0 !important;
+  border-radius: 4px;
+  opacity: 0.9;
 }

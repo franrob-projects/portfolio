@@ -191,8 +191,15 @@ function PersonalSite() {
         
         <div className={styles.links}>
           <Link className={styles.button} to="/docs/intro">See my work</Link>
-          <a className={styles.button} href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a className={styles.button} href="https://linkedin.com/in/francis-roberts-5850b396" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a className={styles.button} href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" style={{ padding: '0.6rem 0.8rem' }}>
+            <img src="/portfolio/img/icons/github.svg" alt="" style={{ width: '22px', height: '22px', display: 'block', filter: 'brightness(0) invert(1)' }} />
+          </a>
+          <a className={styles.button} href="https://linkedin.com/in/francis-roberts-5850b396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" style={{ padding: '0.6rem 0.8rem' }}>
+            <img src="/portfolio/img/icons/linkedin.svg" alt="" style={{ width: '22px', height: '22px', display: 'block' }} />
+          </a>
+          <a className={styles.button} href="mailto:francis@fantasyfruitsatlife.com" aria-label="Email" title="Email" style={{ padding: '0.6rem 0.8rem', color: 'var(--ifm-color-primary)' }}>
+            <img src="/portfolio/img/icons/email.svg" alt="" style={{ width: '22px', height: '22px', display: 'block', filter: 'brightness(0) invert(1)' }} />
+          </a>
         </div>
       </section>
     </main>
