@@ -73,7 +73,7 @@ function PersonalSite() {
       <section className={styles.section}>
         <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
           <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>💼</span>
-          My journey
+          My docs journey
         </h2>
         
         <div className={styles.job}>
