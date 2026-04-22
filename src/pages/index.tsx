@@ -100,7 +100,7 @@ function PersonalSite() {
       <section className={styles.section}>
         <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
           <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>📝</span>
-        Doc's Tips
+        Docs Tips
         </h2>
         <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', textAlign: 'center' }}>
           I share the docs tips and tricks I pick up on LinkedIn. I'm also a <Link to="/blog">crypto</Link> geek writing about blockchain, smart contracts, and developer tooling over on the blog.
