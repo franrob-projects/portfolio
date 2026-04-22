@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import styles from './index.module.css';
+import TechCarousel from '../components/TechCarousel';
 
 function PersonalSite() {
   return (
@@ -15,6 +16,8 @@ function PersonalSite() {
           See my work
         </Link>
       </section>
+
+      <TechCarousel />
 
       <section className={styles.section}>
         <h2 style={{ marginBottom: '3rem', fontSize: '2.25rem', fontWeight: '500', textAlign: 'center', letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--ifm-color-content) 0%, var(--ifm-color-content-secondary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
