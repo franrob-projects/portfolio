@@ -100,10 +100,10 @@ function PersonalSite() {
       <section className={styles.section}>
         <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
           <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>📝</span>
-        Blog posts
+        Doc's Tips
         </h2>
         <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', textAlign: 'center' }}>
-          I like to use LinkedIn as a blog for sharing tips and tricks I learned. Generally, the way I think tactical writing should be moving forward is on what I think is good and bad.
+          I share the docs tips and tricks I pick up on LinkedIn. I'm also a <Link to="/blog">crypto</Link> geek writing about blockchain, smart contracts, and developer tooling over on the blog.
         </p>
         <p style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--ifm-color-primary)', textAlign: 'center' }}>
           Click or scroll the widget below to read posts.
