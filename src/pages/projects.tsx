@@ -343,7 +343,7 @@ export default function Projects(): ReactNode {
               loading="lazy"
             />
             <p style={{ marginBottom: '1rem', color: 'var(--ifm-color-content-secondary)', lineHeight: '1.65' }}>
-              A conversation series on what "docs engineering" actually looks like day to day: migrating legacy platforms onto React and MDX, building the pipelines that test code samples, and the judgment calls behind what to document and what to cut. Recorded with fellow practitioners working on developer docs in the wild.
+              A conversation series on what "docs engineering" actually looks like day to day: migrating legacy platforms onto React and MDX, building the pipelines that test code samples, and the judgment calls behind what to document and what to cut. Recorded with fellow practitioners working on developer docs in the wild, including the team at <a href="https://koinju.io/" target="_blank" rel="noopener noreferrer">Koinju</a>, an institutional crypto data platform.
             </p>
             <a
               href="https://www.linkedin.com/feed/update/urn:li:activity:7404514545265852416/"
