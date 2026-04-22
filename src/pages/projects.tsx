@@ -323,22 +323,29 @@ export default function Projects(): ReactNode {
     >
       <main className={styles.container}>
         <section className={styles.hero}>
-          <h1>Projects</h1>
-          <p style={{ maxWidth: '560px', margin: '0 auto', color: 'var(--ifm-color-content-secondary)' }}>
-            Side projects I've built to explore tools outside of technical writing, mostly where the fastest way to understand something was to build it.
+          <h1 style={{ fontSize: '3rem' }}>Projects</h1>
+          <p>
+            Side projects I've built to explore tools outside of technical writing, mostly
+            things where the best way to understand something was to build it.
           </p>
         </section>
 
         <section className={styles.section}>
-          <h2>Open source</h2>
+          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🛠️</span>
+            Open source
+          </h2>
           {PROJECTS.map(project => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </section>
 
         <section className={styles.section}>
-          <h2>Open-source contributions</h2>
-          <p style={{ color: 'var(--ifm-color-content-secondary)', marginBottom: '1.5rem' }}>
+          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🌱</span>
+            Open-source contributions
+          </h2>
+          <p style={{ textAlign: 'center', color: 'var(--ifm-color-content-secondary)', marginBottom: '2rem' }}>
             Docs PRs I've opened against products I use or want to make easier to use.
           </p>
           {CONTRIBUTIONS.map(c => (

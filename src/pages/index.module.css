@@ -6,68 +6,110 @@
 
 .hero {
   text-align: center;
-  padding: 4rem 0 3rem;
-  margin: 0;
+  padding: 3rem 2.5rem;
+  margin: 2rem 0;
+  border-radius: 16px;
+  background: rgba(64, 215, 124, 0.03);
+  border: 1px solid rgba(64, 215, 124, 0.1);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.hero:hover {
+  background: rgba(64, 215, 124, 0.05);
+  border-color: rgba(64, 215, 124, 0.15);
+  box-shadow: 0 4px 16px rgba(64, 215, 124, 0.1);
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin-bottom: 1rem;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
   color: var(--ifm-color-content);
 }
 
 .subtitle {
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--ifm-color-primary);
-  margin-bottom: 1.5rem;
-  letter-spacing: 0;
+  margin-bottom: 2rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
   display: inline-block;
 }
 
 .section {
-  padding: 2.5rem 0;
-  margin: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2.5rem;
+  margin: 2rem 0;
+  border-radius: 16px;
+  background: rgba(64, 215, 124, 0.03);
+  border: 1px solid rgba(64, 215, 124, 0.1);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.section:hover {
+  background: rgba(64, 215, 124, 0.05);
+  border-color: rgba(64, 215, 124, 0.15);
+  box-shadow: 0 4px 16px rgba(64, 215, 124, 0.1);
 }
 
 .section h2 {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  font-size: 2.25rem;
   font-weight: 500;
-  text-align: left;
-  letter-spacing: -0.015em;
-  color: var(--ifm-color-content);
+  text-align: center;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--ifm-color-content) 0%, var(--ifm-color-content-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .job {
-  margin-bottom: 1.25rem;
-  padding: 1rem 1.25rem;
-  border-left: 2px solid rgba(64, 215, 124, 0.4);
-  background: transparent;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: rgba(64, 215, 124, 0.02);
+  border: 1px solid rgba(64, 215, 124, 0.1);
+  position: relative;
+  transition: all 0.2s ease;
 }
 
+
 .job:hover {
-  background: rgba(64, 215, 124, 0.04);
-  border-left-color: var(--ifm-color-primary);
+  background: rgba(64, 215, 124, 0.05);
+  border-color: rgba(64, 215, 124, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(64, 215, 124, 0.1);
 }
 
 .job h3 {
-  margin-bottom: 0.4rem;
-  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: var(--ifm-color-content);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.job h3::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .job p {
   margin-bottom: 0;
   color: var(--ifm-color-content-secondary);
-  line-height: 1.55;
-  font-size: 0.9rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .button {
@@ -119,10 +161,8 @@
 }
 
 .links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 
@@ -173,22 +213,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .hero {
-    padding: 2.5rem 0 2rem;
-  }
-
   .hero h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
-
+  
   .subtitle {
     font-size: 1rem;
   }
-
-  .section {
-    padding: 2rem 0;
-  }
-
+  
   .container {
     padding: 0 16px;
   }
