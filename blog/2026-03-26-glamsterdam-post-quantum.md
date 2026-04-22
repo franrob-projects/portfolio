@@ -9,9 +9,9 @@ image: https://ethereum.org/images/ef-logo.png
 
 Two things are dominating Ethereum developer conversations right now. The Glamsterdam upgrade is taking shape as the most significant protocol change since the Merge, and the Ethereum Foundation just launched a dedicated post-quantum security hub with more than ten client teams already running interoperability devnets. Neither is finished, but both are far enough along that developers should be paying attention.
 
-<!-- truncate -->
-
 [![Ethereum developer roadmap](https://ethereum.org/images/ef-logo.png)](https://ethereum.org/en/roadmap/)
+
+<!-- truncate -->
 
 ## Glamsterdam: what's actually in it
 

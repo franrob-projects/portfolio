@@ -9,9 +9,9 @@ image: https://docs.erc4337.io/assets/images/ERC-4337-team-logo-white.png
 
 Account abstraction has been discussed in Ethereum for years. EIP-4337 implemented it without requiring a protocol change, which is why it shipped when others didn't. If you're building wallet infrastructure or any user-facing application that involves transactions, understanding AA is becoming essential.
 
-<!-- truncate -->
-
 [![ERC-4337 account abstraction standard](https://docs.erc4337.io/assets/images/ERC-4337-team-logo-white.png)](https://docs.erc4337.io/)
+
+<!-- truncate -->
 
 ## The problem with EOAs
 

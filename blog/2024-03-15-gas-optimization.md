@@ -9,9 +9,9 @@ image: https://ethereum.org/images/ef-logo.png
 
 Gas fees have been a recurring headache for Ethereum developers since the network's early days. When you're shipping a production contract, every opcode matters. I've spent a fair bit of time profiling contracts and this post covers the patterns that actually move the needle.
 
-<!-- truncate -->
-
 [![evm.codes opcode reference](https://ethereum.org/images/ef-logo.png)](https://www.evm.codes/)
+
+<!-- truncate -->
 
 ## Why gas optimization is worth your time
 

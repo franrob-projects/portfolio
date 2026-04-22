@@ -9,9 +9,9 @@ image: https://docs.chain.link/images/logo.png
 
 Oracles are one of the more misunderstood pieces of blockchain infrastructure. The blockchain itself has no access to off-chain data. It can't fetch an API, check a stock price, or know what the weather is. Oracles bridge that gap. Chainlink is the dominant oracle network, and understanding how it works matters if you're building anything that relies on external data.
 
-<!-- truncate -->
-
 [![Chainlink decentralized oracle network](https://docs.chain.link/images/logo.png)](https://docs.chain.link/data-feeds/price-feeds/addresses)
+
+<!-- truncate -->
 
 ## The oracle problem
 

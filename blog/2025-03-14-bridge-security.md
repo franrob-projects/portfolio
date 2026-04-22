@@ -9,9 +9,9 @@ image: https://l2beat.com/meta-images/publications/interoperability-page.png
 
 Cross-chain bridges have been the single biggest source of losses in DeFi. The Ronin bridge lost $625 million. Wormhole lost $320 million. Nomad lost $190 million. These aren't edge cases. Bridges are genuinely hard to secure, and understanding why is useful if you're building anything that crosses chains.
 
-<!-- truncate -->
-
 [![L2Beat bridge risk assessment](https://l2beat.com/meta-images/publications/interoperability-page.png)](https://l2beat.com/bridges/summary)
+
+<!-- truncate -->
 
 ## Why bridges exist
 

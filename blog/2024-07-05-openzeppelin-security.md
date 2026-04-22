@@ -9,9 +9,9 @@ image: https://openzeppelin-docs-v2.netlify.app/social.png
 
 Smart contract security is one of those topics that's easy to read about and surprisingly hard to internalize until something breaks. OpenZeppelin's contracts library is widely used precisely because it encodes a lot of hard-won security lessons. Here's what you should actually understand about it rather than just copy-pasting imports.
 
-<!-- truncate -->
-
 [![OpenZeppelin Contracts](https://openzeppelin-docs-v2.netlify.app/social.png)](https://docs.openzeppelin.com/contracts/5.x/)
+
+<!-- truncate -->
 
 ## What OpenZeppelin is and isn't
 

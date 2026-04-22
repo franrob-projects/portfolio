@@ -9,9 +9,9 @@ image: https://l2beat.com/meta-images/publications/interoperability-page.png
 
 The scaling debate in Ethereum has been going on for years. In 2024 the picture is clearer than it was in 2021 because we can look at what's actually running in production. This is a breakdown of the main approaches and where they stand.
 
-<!-- truncate -->
-
 [![L2Beat: Layer 2 scaling tracker](https://l2beat.com/meta-images/publications/interoperability-page.png)](https://l2beat.com/scaling/summary)
+
+<!-- truncate -->
 
 ## The core problem
 

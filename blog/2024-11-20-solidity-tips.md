@@ -9,9 +9,9 @@ image: https://ethereum.org/images/ef-logo.png
 
 Some things in Solidity are counterintuitive, and you tend to learn them the hard way. This is a collection of things that would have saved me time earlier. Not foundational concepts, just practical gotchas and shortcuts.
 
-<!-- truncate -->
-
 [![Solidity language documentation](https://ethereum.org/images/ef-logo.png)](https://docs.soliditylang.org/en/latest/)
+
+<!-- truncate -->
 
 ## Division truncates, always
 

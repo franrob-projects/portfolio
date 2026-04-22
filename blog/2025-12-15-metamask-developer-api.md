@@ -9,9 +9,9 @@ image: https://docs.metamask.io/img/metamask-logo.svg
 
 MetaMask has around 30 million monthly active users. For most Ethereum applications, it's the primary wallet. Understanding what the MetaMask API can actually do helps you build a better user experience, and knowing its limitations helps you avoid building around them.
 
-<!-- truncate -->
-
 [![MetaMask developer documentation](https://docs.metamask.io/img/metamask-logo.svg)](https://docs.metamask.io/wallet/)
+
+<!-- truncate -->
 
 ## The provider object
 

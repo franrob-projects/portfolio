@@ -9,9 +9,9 @@ image: https://ethereum.org/content/developers/docs/nodes-and-clients/eth1eth2cl
 
 Running your own Ethereum node is worth doing at least once even if you end up using a hosted RPC service in production. The visibility you get into how the network actually works is useful, and in some contexts having your own node is important for reliability or privacy.
 
-<!-- truncate -->
-
 [![Ethereum execution and consensus client architecture](https://ethereum.org/content/developers/docs/nodes-and-clients/eth1eth2client.png)](https://ethereum.org/en/developers/docs/nodes-and-clients/)
+
+<!-- truncate -->
 
 ## What kind of node?
 

@@ -9,9 +9,9 @@ image: https://ethereum.org/images/ef-logo.png
 
 Foundry has become a serious alternative to Hardhat for smart contract development, and for testing DeFi protocols specifically, it has some compelling advantages. Tests are written in Solidity, the fork feature is fast, and fuzzing is built in without additional setup. Here's a practical overview of how to use it effectively.
 
-<!-- truncate -->
-
 [![Foundry: fast Ethereum development toolkit](https://ethereum.org/images/ef-logo.png)](https://getfoundry.sh/)
+
+<!-- truncate -->
 
 ## Why Foundry for DeFi testing
 

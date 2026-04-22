@@ -9,9 +9,9 @@ image: https://ethereum.org/images/ef-logo.png
 
 Blockchain documentation is uniquely difficult to write well. The audience spans protocol researchers who think in cryptographic primitives and developers who just want to make a transaction. The technology changes faster than most documentation teams can keep up with. And incorrect documentation can have direct financial consequences in a way that most software docs don't. Here's what I've learned writing in this space.
 
-<!-- truncate -->
-
 [![Ethereum developer documentation](https://ethereum.org/images/ef-logo.png)](https://ethereum.org/en/developers/docs/)
+
+<!-- truncate -->
 
 ## Know which layer you're documenting
 

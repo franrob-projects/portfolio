@@ -9,9 +9,9 @@ image: https://openzeppelin-docs-v2.netlify.app/social.png
 
 ERC-721 gets most of the attention in NFT discussions because it's where the standard started. But the ecosystem has moved considerably since 2018. If you're building an NFT project now, you have better options depending on what you're actually trying to do.
 
-<!-- truncate -->
-
 [![OpenZeppelin ERC-721 documentation](https://openzeppelin-docs-v2.netlify.app/social.png)](https://docs.openzeppelin.com/contracts/5.x/erc721)
+
+<!-- truncate -->
 
 ## ERC-721 basics
 

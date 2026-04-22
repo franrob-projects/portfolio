@@ -9,9 +9,9 @@ image: https://docs.polygon.technology/img/zkEVM/zkevm.svg
 
 Polygon zkEVM has been in production on mainnet since March 2023. It's a ZK rollup that aims for full EVM equivalence, meaning existing Solidity contracts and Ethereum tooling should work without modification. Here's a practical assessment of where it stands and what you actually need to know before deploying.
 
-<!-- truncate -->
-
 [![Polygon zkEVM architecture diagram](https://docs.polygon.technology/img/zkEVM/zkevm.svg)](https://docs.polygon.technology/zkEVM/)
+
+<!-- truncate -->
 
 ## What "EVM equivalence" means in practice
 

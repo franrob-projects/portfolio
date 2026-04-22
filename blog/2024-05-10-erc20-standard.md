@@ -9,9 +9,9 @@ image: https://openzeppelin-docs-v2.netlify.app/social.png
 
 Before ERC-20, every token on Ethereum was its own island. Wallets had to write custom integration code for each one. Exchanges couldn't list a token without manual effort to support its specific interface. The ERC-20 proposal changed that, and it's worth understanding why it worked when so many standards don't.
 
-<!-- truncate -->
-
 [![OpenZeppelin Contracts documentation](https://openzeppelin-docs-v2.netlify.app/social.png)](https://docs.openzeppelin.com/contracts/5.x/erc20)
+
+<!-- truncate -->
 
 ## What a standard actually does
 

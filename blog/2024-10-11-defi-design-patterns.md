@@ -9,9 +9,9 @@ image: https://docs.chain.link/images/logo.png
 
 DeFi protocols deal with a specific combination of constraints that you don't encounter in most software: code that's public and immutable, assets that move automatically based on logic, and adversaries who will find and exploit any mistake. Patterns that work well in these conditions have emerged from a few years of production experience and some expensive failures.
 
-<!-- truncate -->
-
 [![Chainlink Data Feeds](https://docs.chain.link/images/logo.png)](https://docs.chain.link/data-feeds)
+
+<!-- truncate -->
 
 ## Checks-effects-interactions
 

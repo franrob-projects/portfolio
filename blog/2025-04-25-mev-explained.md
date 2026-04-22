@@ -9,9 +9,9 @@ image: https://www.flashbots.net/badge.svg
 
 MEV (maximal extractable value, formerly "miner extractable value") is one of those topics that seems like an obscure research area until you realize it affects almost every transaction on Ethereum. If you're building DeFi protocols or have wondered why your transactions sometimes get sandwiched, this is worth understanding.
 
-<!-- truncate -->
-
 [![Flashbots MEV transparency dashboard](https://www.flashbots.net/badge.svg)](https://transparency.flashbots.net)
+
+<!-- truncate -->
 
 ## What MEV is
 

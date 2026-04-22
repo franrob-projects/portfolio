@@ -9,9 +9,9 @@ image: https://ethereum.org/content/roadmap/verkle-trees/verkle.png
 
 Merkle trees come up constantly in blockchain contexts. They're the reason you can verify a transaction was included in a block without downloading the entire chain, and they show up in smart contracts more often than people expect. Here's a practical look at how they work and where you'll actually encounter them.
 
-<!-- truncate -->
-
 [![Ethereum verkle tree diagram](https://ethereum.org/content/roadmap/verkle-trees/verkle.png)](https://ethereum.org/en/roadmap/verkle-trees/)
+
+<!-- truncate -->
 
 ## The structure
 

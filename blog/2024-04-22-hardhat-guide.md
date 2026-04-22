@@ -9,9 +9,9 @@ image: https://v2.hardhat.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhardha
 
 If you've tried to set up a Solidity development environment from scratch in the last few years, you've probably landed on either Hardhat or Foundry. I use both depending on the project, but Hardhat is where most teams start, and for good reason. This is a practical walkthrough of the pieces that matter.
 
-<!-- truncate -->
-
 [![Hardhat](https://v2.hardhat.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhardhat-logo.5c5f687b.svg&w=384&q=75)](https://hardhat.org)
+
+<!-- truncate -->
 
 ## Project setup
 
