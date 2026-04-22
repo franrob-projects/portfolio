@@ -9,18 +9,17 @@ function PersonalSite() {
     <main className={styles.container}>
       <section className={styles.hero}>
         <h1>Francis Roberts</h1>
-        <p className={styles.subtitle}>All things docs</p>
-        <p style={{ marginBottom: '24px' }}>I build documentation sites and write the content that lives on them. That means engineering the underlying infrastructure (migrating legacy platforms like Textile onto modern React, TypeScript, and MDX stacks) alongside authoring the API references, guides, and troubleshooting content developers actually use.</p>
+        <p className={styles.subtitle}>Documentation engineer</p>
+        <p style={{ marginBottom: '24px', maxWidth: '560px', margin: '0 auto 24px', color: 'var(--ifm-color-content-secondary)' }}>
+          I build docs sites and write the content on them: infrastructure, API references, and migrations from legacy CMSes onto React and MDX.
+        </p>
         <Link className={styles.button} to="/docs/intro">
           See my work
         </Link>
       </section>
 
       <section className={styles.section}>
-        <h2 style={{ marginBottom: '3rem', fontSize: '2.25rem', fontWeight: '500', textAlign: 'center', letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--ifm-color-content) 0%, var(--ifm-color-content-secondary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🏍️</span>
-          When offline
-        </h2>
+        <h2>When offline</h2>
         <div style={{ 
           display: 'flex', 
           gap: '20px', 
@@ -68,10 +67,7 @@ function PersonalSite() {
       </section>
 
       <section className={styles.section}>
-        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>💼</span>
-          My journey
-        </h2>
+        <h2>My journey</h2>
         
         <div className={styles.job}>
           <h3>Developer Educator at Ably (2023)</h3>
@@ -95,96 +91,20 @@ function PersonalSite() {
       </section>
 
       <section className={styles.section}>
-        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>📝</span>
-        Blog posts
-        </h2>
-        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', textAlign: 'center' }}>
-          I like to use LinkedIn as a blog for sharing tips and tricks I learned. Generally, the way I think tactical writing should be moving forward is on what I think is good and bad.
+        <h2>Writing</h2>
+        <p style={{ color: 'var(--ifm-color-content-secondary)', marginBottom: '1.25rem' }}>
+          I post tips, patterns, and opinions from the craft of technical writing on LinkedIn.
         </p>
-        <p style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--ifm-color-primary)', textAlign: 'center' }}>
-          Click or scroll the widget below to read posts.
-        </p>
-        <div style={{ 
-          height: '600px', 
-          overflow: 'hidden', 
-          borderRadius: '24px',
-          position: 'relative',
-          boxShadow: '0 4px 8px rgba(64, 215, 124, 0.1), inset 0 0 16px rgba(64, 215, 124, 0.25)',
-          background: 'white',
-          border: '2px solid var(--ifm-color-primary)'
-        }}>
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            height: '80px',
-            background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)',
-            zIndex: 2,
-            borderRadius: '24px 24px 0 0',
-            pointerEvents: 'none'
-          }} />
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              .linkedin-widget-container {
-                border-radius: 24px !important;
-                overflow: auto !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar {
-                width: 14px !important;
-                background: rgba(64, 215, 124, 0.1) !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-track {
-                background: rgba(64, 215, 124, 0.1) !important;
-                border-radius: 7px !important;
-                margin: 2px !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-thumb {
-                background: linear-gradient(180deg, #3ecf8e, #2dd77c) !important;
-                border-radius: 10px !important;
-                border: 2px solid rgba(255,255,255,0.2) !important;
-                min-height: 30px !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-thumb:hover {
-                background: linear-gradient(180deg, #2dd77c, #27d074) !important;
-                box-shadow: 0 0 8px rgba(64, 215, 124, 0.5) !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-thumb:active {
-                background: linear-gradient(180deg, #27d074, #1fb866) !important;
-              }
-            `
-          }} />
-          <div 
-            className="linkedin-widget-container"
-            style={{ 
-              height: '100%',
-              borderRadius: '24px',
-              scrollbarWidth: 'auto',
-              scrollbarColor: '#40d77c rgba(64, 215, 124, 0.1)'
-            }}
-          >
-            <iframe 
-              src="https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25647394" 
-              width="100%" 
-              height="600"
-              style={{ 
-                border: 'none', 
-                position: 'relative',
-                borderRadius: '24px'
-              }}
-              title="LinkedIn Posts"
-            />
-          </div>
-        </div>
+        <a className={styles.button} href="https://linkedin.com/in/francis-roberts-5850b396" target="_blank" rel="noopener noreferrer" style={{ marginLeft: 0 }}>
+          Read on LinkedIn
+        </a>
       </section>
 
       <section className={styles.section}>
-        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🤝</span>
-          Let's work together
-        </h2>
-        <p style={{ textAlign: 'center' }}>Ready to improve your documentation? Let's discuss how I can help your team create docs that developers actually want to use.</p>
+        <h2>Let's work together</h2>
+        <p style={{ color: 'var(--ifm-color-content-secondary)', marginBottom: '1.25rem' }}>
+          Ready to improve your documentation? Let's talk about what your team needs.
+        </p>
         
         <div className={styles.links}>
           <Link className={styles.button} to="/docs/intro">See my work</Link>
