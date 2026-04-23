@@ -353,6 +353,21 @@ main {
   }
 }
 
+/* Mobile: LinkedIn widget hardcodes height=600 and white bg, make it shorter and fit the dark theme better */
+@media (max-width: 768px) {
+  .linkedin-widget-container {
+    height: 420px !important;
+  }
+  .linkedin-widget-container iframe {
+    height: 420px !important;
+  }
+  /* Parent div uses inline style height:600px; override via attribute selector */
+  div[style*="height: 600px"],
+  div[style*="height:600px"] {
+    height: 420px !important;
+  }
+}
+
 /* Blog list: cover images are mostly small logos, don't upscale them */
 .blog-list-page article img:not(.avatar__photo),
 .blog-wrapper.blog-list-page article img:not(.avatar__photo) {
