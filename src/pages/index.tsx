@@ -67,7 +67,7 @@ function PersonalSite() {
             />
           </div>
         </div>
-        <p style={{ textAlign: 'center', marginTop: '20px' }}>Motorbikes in the morning, technical writing in the day, and Brazilian Jiu-Jitsu at night.</p>
+        <p style={{ textAlign: 'center', marginTop: '20px' }}>Motorbikes in the morning, docs engineering in the day, and Brazilian Jiu-Jitsu at night.</p>
       </section>
 
       <section className={styles.section}>
@@ -82,17 +82,17 @@ function PersonalSite() {
         </div>
         
         <div className={styles.job}>
-          <h3>Lead Technical Writer at Couchbase (2022)</h3>
+          <h3>Lead Docs Engineer at Couchbase (2022)</h3>
           <p>Built scalable documentation framework, authored API docs for Cloud/Mobile/Edge platforms, consolidated fragmented repos into unified GitHub monorepo.</p>
         </div>
         
         <div className={styles.job}>
-          <h3>Technical Writer at CDW UK (2021)</h3>
+          <h3>Docs Engineer at CDW UK (2021)</h3>
           <p>Authored developer-centric API docs for cloud platforms, maintained AWS/Azure documentation, created multi-language SDK documentation.</p>
         </div>
         
         <div className={styles.job}>
-          <h3>Technical Writer at Atlas Copco (2018)</h3>
+          <h3>Docs Engineer at Atlas Copco (2018)</h3>
           <p>Authored software/hardware manuals and API documentation, developed browser-based documentation portals.</p>
         </div>
       </section>
@@ -210,7 +210,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Francis Roberts - Technical Writing Portfolio"
-      description="Documentation engineer and technical writer building and authoring developer docs: doc-site infrastructure, API references, and migrations from legacy platforms to modern React/MDX stacks.">
+      description="Documentation engineer and docs engineer building and authoring developer docs: doc-site infrastructure, API references, and migrations from legacy platforms to modern React/MDX stacks.">
       <PersonalSite />
     </Layout>
   );

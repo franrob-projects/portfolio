@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Writing portfolio
+# Docs Engineering Portfolio
 
-When I started my career in technical writing, I thought documentation was just about explaining how things work. After years of working with developers at companies like Ably, Couchbase, and Atlas Copco, I've learned that great documentation is really about enabling people to succeed with complex technology.
+When I started my career in docs engineering, I thought documentation was just about explaining how things work. After years of working with developers at companies like Ably, Couchbase, and Atlas Copco, I've learned that great documentation is really about enabling people to succeed with complex technology.
 
 My focus has been on taking complicated systems - from real-time messaging platforms to industrial manufacturing equipment - and creating documentation that developers and engineers can actually use to solve real problems. Each project taught me something different about how people learn and implement technology.
 
@@ -80,7 +80,7 @@ Led comprehensive information architecture overhaul to improve developer experie
 
 ## My time at Couchbase
 
-As Lead Technical Writer at Couchbase from 2022 to 2023, I worked on making NoSQL databases approachable for mobile developers. The challenge was explaining distributed database concepts to developers accustomed to simpler storage solutions, while maintaining the technical depth needed for production implementations.
+As Lead Docs Engineer at Couchbase from 2022 to 2023, I worked on making NoSQL databases approachable for mobile developers. The challenge was explaining distributed database concepts to developers accustomed to simpler storage solutions, while maintaining the technical depth needed for production implementations.
 
 <div className="work-item">
 
@@ -120,7 +120,7 @@ Consolidated fragmented documentation repositories into unified GitHub monorepo 
 
 ## My work at Atlas Copco
 
-Working as a Technical Writer at Atlas Copco from 2018 to 2021 taught me that manufacturing documentation can be life-or-death. When your documentation goes to factories worldwide, unclear instructions don't just frustrate users - they can shut down production lines or cause injuries.
+Working as a Docs Engineer at Atlas Copco from 2018 to 2021 taught me that manufacturing documentation can be life-or-death. When your documentation goes to factories worldwide, unclear instructions don't just frustrate users - they can shut down production lines or cause injuries.
 
 <div className="work-item">
 
@@ -165,7 +165,7 @@ Developed technical manuals for Henrob blow feed self-pierce riveting systems, f
 
 ## My work at CDW
 
-My time as a Technical Solutions Specialist at CDW UK from 2021 to 2022 showed me how technical writing works in enterprise sales. Unlike developer-focused documentation, enterprise customers needed materials that helped multiple stakeholders - from IT directors to compliance officers - understand complex technology implementations.
+My time as a Technical Solutions Specialist at CDW UK from 2021 to 2022 showed me how docs engineering works in enterprise sales. Unlike developer-focused documentation, enterprise customers needed materials that helped multiple stakeholders - from IT directors to compliance officers - understand complex technology implementations.
 
 <div className="work-item">
 
@@ -215,6 +215,6 @@ Good documentation enhances learning through low effort and helps people problem
 | **Tested** | If the code doesn't work, the documentation is useless |
 | **Visual when needed** | Strategic use of images and diagrams to clarify complex concepts |
 | **Workflow-oriented** | Create maintainable documentation workflows that scale with teams |
-| **AI-assisted** | Implement AI systems for grunt work, freeing technical writers and UX teams to focus on user experience optimization |
+| **AI-assisted** | Implement AI systems for grunt work, freeing docs engineers and UX teams to focus on user experience optimization |
 
 </div>

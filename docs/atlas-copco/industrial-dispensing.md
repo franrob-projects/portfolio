@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Henrob blow feed riveting documentation
 
-The Henrob blow feed riveting system presented a unique technical writing challenge at Atlas Copco. This was energy-efficient technology - achieving just 7Wh per rivet while delivering setting forces up to 85,000 N. The engineering was impressive, but making it accessible to production teams required a completely different approach.
+The Henrob blow feed riveting system presented a unique docs engineering challenge at Atlas Copco. This was energy-efficient technology - achieving just 7Wh per rivet while delivering setting forces up to 85,000 N. The engineering was impressive, but making it accessible to production teams required a completely different approach.
 
 ## Understanding the technology first
 
@@ -52,7 +52,7 @@ I created modular documentation that could be adapted for different markets whil
 
 Blow feed riveting didn't exist in isolation - it was part of Atlas Copco's complete joining portfolio. I made sure the documentation clearly explained when blow feed was the right choice versus tape feed or other methods.
 
-This systems thinking became central to how I approached technical writing throughout my career. Individual technologies are just components in larger solutions, and documentation needs to help users understand those connections.
+This systems thinking became central to how I approached docs engineering throughout my career. Individual technologies are just components in larger solutions, and documentation needs to help users understand those connections.
 
 ## Results and continuous improvement
 

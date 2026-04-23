@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # My work at Atlas Copco
 
-I worked as a Technical Writer at Atlas Copco from 2018 to 2021, writing documentation for industrial manufacturing equipment. My job was translating complex joining and fastening technologies into guides that engineers and factory workers could actually use.
+I worked as a Docs Engineer at Atlas Copco from 2018 to 2021, writing documentation for industrial manufacturing equipment. My job was translating complex joining and fastening technologies into guides that engineers and factory workers could actually use.
 
 
 ## About Atlas Copco
@@ -90,6 +90,6 @@ You can see the results of this work in Atlas Copco's current resources:
 
 ## What I learned
 
-Working at Atlas Copco taught me that technical writing isn't just about explaining how things work - it's about enabling people to do their jobs safely and efficiently. When your documentation goes to factories around the world, you realize how important clear, practical writing really is.
+Working at Atlas Copco taught me that docs engineering isn't just about explaining how things work - it's about enabling people to do their jobs safely and efficiently. When your documentation goes to factories around the world, you realize how important clear, practical writing really is.
 
-The manufacturing industry showed me documentation at its most critical - where unclear instructions don't just frustrate users, they can shut down production lines or hurt people. That experience shaped how I approach all technical writing now.
+The manufacturing industry showed me documentation at its most critical - where unclear instructions don't just frustrate users, they can shut down production lines or hurt people. That experience shaped how I approach all docs engineering now.

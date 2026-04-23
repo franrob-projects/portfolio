@@ -142,4 +142,4 @@ The comprehensive documentation served critical business functions:
 - **Consistent training.** Standardized learning materials for global training programs.
 - **Continuous improvement.** Documentation framework supporting ongoing process optimization.
 
-This SPR documentation project demonstrated how technical writing can directly impact manufacturing quality, efficiency, and global standardization in advanced automotive joining technologies.
+This SPR documentation project demonstrated how docs engineering can directly impact manufacturing quality, efficiency, and global standardization in advanced automotive joining technologies.

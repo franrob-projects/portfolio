@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # My time at Couchbase
 
-I was Lead Technical Writer at Couchbase from 2022 to 2023, focused on their mobile database platform. The main challenge was making NoSQL databases approachable for mobile developers who were used to simpler storage solutions.
+I was Lead Docs Engineer at Couchbase from 2022 to 2023, focused on their mobile database platform. The main challenge was making NoSQL databases approachable for mobile developers who were used to simpler storage solutions.
 
 ## The problem I inherited
 

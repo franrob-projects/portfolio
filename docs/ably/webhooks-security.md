@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Webhooks security documentation
 
-When I took on rewriting Ably's [webhook security documentation](https://ably.com/docs/general/webhooks), I faced a classic technical writing challenge: how do you make security concepts practical without compromising safety? Security documentation typically falls into two traps - either it's too simplistic to be useful, or so complex that developers skip the security altogether.
+When I took on rewriting Ably's [webhook security documentation](https://ably.com/docs/general/webhooks), I faced a classic docs engineering challenge: how do you make security concepts practical without compromising safety? Security documentation typically falls into two traps - either it's too simplistic to be useful, or so complex that developers skip the security altogether.
 
 The existing documentation had become a collection of theoretical concepts with few practical examples. Developers were implementing webhooks without proper security, not because they didn't care about security, but because they couldn't figure out how to implement it correctly from the documentation.
 

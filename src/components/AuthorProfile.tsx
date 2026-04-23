@@ -31,7 +31,7 @@ export default function AuthorProfile() {
           />
           <div className="avatar__intro">
             <div className="avatar__name">Francis Roberts</div>
-            <small className="avatar__subtitle">Technical Writer & Developer Educator</small>
+            <small className="avatar__subtitle">Docs Engineer & Developer Educator</small>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function AuthorProfile() {
           </Link>
         </div>
         <div style={{textAlign: 'center', marginTop: '10px', fontSize: '0.8rem', opacity: 0.8}}>
-          Posting frequently about technical writing and developer experience
+          Posting frequently about docs engineering and developer experience
         </div>
       </div>
     </div>

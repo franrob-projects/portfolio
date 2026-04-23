@@ -334,7 +334,7 @@ export default function Projects(): ReactNode {
         <section className={styles.hero}>
           <h1 style={{ fontSize: '3rem' }}>Projects</h1>
           <p>
-            Side projects I've built to explore tools outside of technical writing, mostly
+            Side projects I've built to explore tools outside of docs engineering, mostly
             things where the best way to understand something was to build it.
           </p>
         </section>

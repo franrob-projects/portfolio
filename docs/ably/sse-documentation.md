@@ -42,4 +42,4 @@ This connected directly to the developer journey mapping work I was doing simult
 
 The revised SSE documentation became one of the most-referenced pages in Ably's developer resources. More importantly, it reduced support ticket volume for SSE-related issues and improved successful implementation rates for developers choosing this protocol.
 
-The systematic approach to troubleshooting and the focus on production-ready code examples influenced how I approached other protocol documentation at Ably. The principles I developed here - layered complexity, practical examples, and systematic troubleshooting - became central to all my subsequent technical writing projects.
+The systematic approach to troubleshooting and the focus on production-ready code examples influenced how I approached other protocol documentation at Ably. The principles I developed here - layered complexity, practical examples, and systematic troubleshooting - became central to all my subsequent docs engineering projects.

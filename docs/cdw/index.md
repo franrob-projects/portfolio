@@ -14,7 +14,7 @@ The documentation challenge was helping customers understand not just what techn
 
 ## Writing for multiple decision makers
 
-Unlike the technical writing I had done at Atlas Copco or would later do at Ably, CDW documentation needed to serve multiple audiences simultaneously. A single cloud migration project might involve IT directors, compliance officers, finance teams, and technical implementers - each with different concerns and information needs.
+Unlike the docs engineering I had done at Atlas Copco or would later do at Ably, CDW documentation needed to serve multiple audiences simultaneously. A single cloud migration project might involve IT directors, compliance officers, finance teams, and technical implementers - each with different concerns and information needs.
 
 I developed a modular documentation approach that provided different levels of detail for different roles while maintaining consistency across the overall solution architecture. This experience later influenced how I approached developer journey mapping at Ably.
 
@@ -40,7 +40,7 @@ I developed templates for solution architecture documentation that showed custom
 
 ## Supporting the sales process
 
-Unlike pure technical writing, my CDW work required understanding how documentation fits into the sales process. Technical materials needed to support proposal development, customer education, and post-sale implementation planning.
+Unlike pure docs engineering, my CDW work required understanding how documentation fits into the sales process. Technical materials needed to support proposal development, customer education, and post-sale implementation planning.
 
 I created reusable content libraries that sales teams could adapt for different customer situations without starting from scratch each time. This improved proposal quality and consistency while reducing preparation time for complex technical sales.
 
@@ -60,10 +60,10 @@ This specialization taught me the importance of understanding vendor ecosystems 
 
 The documentation frameworks I developed had measurable impact on CDW's sales process. Standardized technical materials improved proposal quality, reduced preparation time, and increased win rates by helping customers understand complex solutions more clearly.
 
-More importantly, the documentation improved implementation success rates by setting clear expectations and providing practical guidance that customers could follow during project execution. This showed me how good technical writing directly impacts business outcomes in enterprise environments.
+More importantly, the documentation improved implementation success rates by setting clear expectations and providing practical guidance that customers could follow during project execution. This showed me how good docs engineering directly impacts business outcomes in enterprise environments.
 
 ## Enterprise writing lessons
 
-Working at CDW taught me that technical writing in enterprise sales is fundamentally about building confidence. When customers are investing millions in technology implementations, they need to believe that the vendor truly understands their operational realities and can deliver successful outcomes.
+Working at CDW taught me that docs engineering in enterprise sales is fundamentally about building confidence. When customers are investing millions in technology implementations, they need to believe that the vendor truly understands their operational realities and can deliver successful outcomes.
 
-The documentation skills I developed at CDW - modular content architecture, audience-specific information design, and business outcome orientation - became central to how I approached all subsequent technical writing projects. These principles proved essential when I later worked on developer experience optimization at Ably.
+The documentation skills I developed at CDW - modular content architecture, audience-specific information design, and business outcome orientation - became central to how I approached all subsequent docs engineering projects. These principles proved essential when I later worked on developer experience optimization at Ably.

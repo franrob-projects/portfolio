@@ -40,4 +40,4 @@ Similar to how I restructured information architecture at Ably, I organized this
 
 The tape feed documentation became a model for other Atlas Copco product lines. The modular structure made it easy to adapt for different markets and applications. More importantly, it reduced the learning curve for new installations and improved troubleshooting efficiency when production issues arose.
 
-This project taught me that industrial documentation requires the same user-centered thinking as software documentation, but with much higher stakes. The principles I learned here - clarity, safety-first thinking, and global accessibility - influenced how I approached every subsequent technical writing project.
+This project taught me that industrial documentation requires the same user-centered thinking as software documentation, but with much higher stakes. The principles I learned here - clarity, safety-first thinking, and global accessibility - influenced how I approached every subsequent docs engineering project.

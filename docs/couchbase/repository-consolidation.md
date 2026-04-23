@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Repository consolidation project
 
-When I joined Couchbase as Lead Technical Writer, I inherited a documentation system that had grown organically over years of product development. What started as separate documentation efforts for different products had become a maintenance nightmare that made it nearly impossible for developers to understand how Couchbase's ecosystem worked together.
+When I joined Couchbase as Lead Docs Engineer, I inherited a documentation system that had grown organically over years of product development. What started as separate documentation efforts for different products had become a maintenance nightmare that made it nearly impossible for developers to understand how Couchbase's ecosystem worked together.
 
 The [repository consolidation project](https://github.com/couchbase/docs-server) became my largest undertaking - not just moving files from one place to another, but redesigning how technical content could scale with a multi-product platform. This project taught me that information architecture isn't just about organizing content - it's about enabling developers to understand complex systems.
 
