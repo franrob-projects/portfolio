@@ -133,6 +133,15 @@ interface Contribution {
 
 const CONTRIBUTIONS: Contribution[] = [
   {
+    repo: 'ethereum/ethereum-org-website',
+    number: 18016,
+    title: 'Developer docs: add goal-based wayfinding on the hub and intro pages',
+    url: 'https://github.com/ethereum/ethereum-org-website/pull/18016',
+    state: 'open',
+    blurb:
+      'Adds a "Pick a starting point" block above the developer docs hub and a mirrored "Where to go next" block at the end of the technical intro, so readers self-route by goal (dapp, smart contract, node/staking) instead of reading the modules top-to-bottom.',
+  },
+  {
     repo: 'graphprotocol/docs',
     number: 1096,
     title: 'Quick Start: add Start Block guidance and Troubleshooting section',
