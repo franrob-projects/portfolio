@@ -173,9 +173,6 @@ const DOCS_ENGINEERING_PROJECTS: Project[] = [
       { label: 'Prettier', colour: '#F7B93E' },
     ],
     github: 'https://github.com/franrob-projects/portfolio/tree/main/.github/workflows',
-    image: '/portfolio/img/projects/ci-pipeline.png',
-    imageAlt: 'GitHub Actions run for the portfolio CI pipeline: typecheck, build, spellcheck, linkcheck, format',
-    imageHref: 'https://github.com/franrob-projects/portfolio/tree/main/.github/workflows',
   },
 ]
 
