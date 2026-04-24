@@ -41,6 +41,8 @@ const PROJECTS: Project[] = [
       { label: 'TypeScript', colour: '#3178C6' },
     ],
     github: 'https://github.com/franrob-projects/doc-link-monitor',
+    image: '/portfolio/img/projects/doc-link-monitor.svg',
+    imageAlt: 'Doc Link Monitor promotional graphic: serverless AWS link checker built with CDK, Lambda, DynamoDB, and SNS alerts',
   },
   {
     title: 'Crypto compliance',
