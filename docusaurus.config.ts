@@ -81,12 +81,12 @@ mixpanel.init('f668a74691e1d95e8f4e2665a0486185', {
     },
     navbar: {
       title: 'About me',
+      hideOnScroll: false,
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
+          to: '/docs/intro',
           label: 'About work',
+          position: 'left',
         },
         {
           to: '/projects',
@@ -101,6 +101,16 @@ mixpanel.init('f668a74691e1d95e8f4e2665a0486185', {
         {
           href: 'https://github.com/franrob-projects',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://linkedin.com/in/francis-roberts-5850b396',
+          label: 'LinkedIn',
+          position: 'right',
+        },
+        {
+          href: 'mailto:francis@fantasyfruitsatlife.com',
+          label: 'Email',
           position: 'right',
         },
       ],

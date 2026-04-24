@@ -15,6 +15,9 @@ interface Project {
   github: string;
   live?: string;
   icon: string;
+  image?: string;
+  imageAlt?: string;
+  imageHref?: string;
 }
 
 const PROJECTS: Project[] = [
@@ -40,28 +43,7 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/franrob-projects/doc-link-monitor',
   },
   {
-    title: 'Portfolio Analytics with Mixpanel',
-    icon: '📊',
-    description:
-      'Wired Mixpanel into this Docusaurus portfolio so I can see which projects people actually read, which outbound links (GitHub, LinkedIn, live demos) get clicked, and where visitors drop off. The point was less "do analytics" and more "design a small, answer-oriented tracking plan": pick the questions first, then pick the smallest event schema that answers them.',
-    details: [
-      'Injected via Docusaurus headTags, gated on NODE_ENV==="production" so dev traffic does not pollute the project',
-      'Autocapture + session replay handle pageviews and generic clicks; the tracking plan adds named events for project_card_click, contribution_click, and nav_outbound',
-      'Routed to the EU Mixpanel cluster (api-eu.mixpanel.com) to keep traffic in-region',
-      'Site map documented per page: entry points, CTAs, and the three flows worth measuring (home → project → GitHub, About → Projects, blog retention)',
-      'One-hunk change to docusaurus.config.ts so it is trivial to revert or swap for another analytics provider',
-    ],
-    tags: [
-      { label: 'Mixpanel',    colour: '#7856FF' },
-      { label: 'Docusaurus',  colour: '#3ECC5F' },
-      { label: 'TypeScript',  colour: '#3178C6' },
-      { label: 'GitHub Pages', colour: '#ffffff' },
-    ],
-    github: 'https://github.com/franrob-projects/portfolio',
-    live: 'https://franrob-projects.github.io/portfolio/',
-  },
-  {
-    title: 'SecureTrain Gamification',
+    title: 'Crypto compliance',
     icon: '🛡️',
     description:
       'A gamification layer built on top of a Next.js security training platform aimed at crypto and iGaming companies operating under Gibraltar\'s DLT regulatory framework. The platform turns compliance training into something people actually want to do: tracking streaks, unlocking badges, and ranking teams on a live leaderboard.',
@@ -79,6 +61,8 @@ const PROJECTS: Project[] = [
       { label: 'Tailwind',   colour: '#38BDF8' },
     ],
     github: 'https://github.com/franrob-projects/securetrain-gamification',
+    image: '/portfolio/img/projects/crypto-compliance.png',
+    imageAlt: 'Crypto compliance training platform with gamified badges and leaderboard',
   },
   {
     title: 'BJJ Move Graph',
@@ -100,6 +84,8 @@ const PROJECTS: Project[] = [
       { label: 'Docker',     colour: '#2496ED' },
     ],
     github: 'https://github.com/franrob-projects/bjj-move-graph',
+    image: '/portfolio/img/projects/bjj-move-graph.png',
+    imageAlt: 'BJJ Move Graph showing closed guard position with weighted transitions to techniques like armbar, triangle choke, kimura, scissor sweep, and knee slice pass',
   },
   {
     title: 'GibTrain: Gibraltar Compliance',
@@ -140,6 +126,56 @@ const PROJECTS: Project[] = [
       { label: 'Supabase',   colour: '#3ECF8E' },
     ],
     github: 'https://github.com/franrob-projects/teachyar',
+  },
+]
+
+const DOCS_ENGINEERING_PROJECTS: Project[] = [
+  {
+    title: 'Portfolio Analytics with Mixpanel',
+    icon: '📊',
+    description:
+      'Wired Mixpanel into this Docusaurus portfolio so I can see which projects people actually read, which outbound links (GitHub, LinkedIn, live demos) get clicked, and where visitors drop off. The point was less "do analytics" and more "design a small, answer-oriented tracking plan": pick the questions first, then pick the smallest event schema that answers them.',
+    details: [
+      'Injected via Docusaurus headTags, gated on NODE_ENV==="production" so dev traffic does not pollute the project',
+      'Autocapture + session replay handle pageviews and generic clicks; the tracking plan adds named events for project_card_click, contribution_click, and nav_outbound',
+      'Routed to the EU Mixpanel cluster (api-eu.mixpanel.com) to keep traffic in-region',
+      'Site map documented per page: entry points, CTAs, and the three flows worth measuring (home → project → GitHub, About → Projects, blog retention)',
+      'One-hunk change to docusaurus.config.ts so it is trivial to revert or swap for another analytics provider',
+    ],
+    tags: [
+      { label: 'Mixpanel',    colour: '#7856FF' },
+      { label: 'Docusaurus',  colour: '#3ECC5F' },
+      { label: 'TypeScript',  colour: '#3178C6' },
+      { label: 'GitHub Pages', colour: '#ffffff' },
+    ],
+    github: 'https://github.com/franrob-projects/portfolio',
+    live: 'https://franrob-projects.github.io/portfolio/',
+  },
+  {
+    title: 'CI/CD Pipelines for TypeScript, React, Docusaurus, static generators',
+    icon: '🚦',
+    description:
+      'A GitHub Actions pipeline that runs on every push and pull request before anything reaches main. The build job is the single source of truth for "does this site still compile", and four smaller jobs enforce the boring-but-important stuff: typos, broken outbound links, style drift, and type safety. The deploy workflow stays untouched and only fires once main is green.',
+    details: [
+      'Typecheck job runs tsc against the Docusaurus config and React pages',
+      'Build job runs the full Docusaurus build, which throws on any internal broken link (onBrokenLinks: throw)',
+      'Spellcheck via cspell over every .md, .mdx, .ts, .tsx file, with a project dictionary for names and jargon',
+      'External link check via lychee against the built HTML plus all markdown, tuned to skip hosts that block headless checkers (LinkedIn, X)',
+      'Prettier --check over src, docs, and blog so style drift shows up in CI instead of review',
+      'Concurrency group cancels superseded runs on the same branch so only the latest commit is checked',
+    ],
+    tags: [
+      { label: 'GitHub Actions', colour: '#2088FF' },
+      { label: 'TypeScript', colour: '#3178C6' },
+      { label: 'Docusaurus', colour: '#3ECC5F' },
+      { label: 'cspell', colour: '#4B32C3' },
+      { label: 'lychee', colour: '#E0A000' },
+      { label: 'Prettier', colour: '#F7B93E' },
+    ],
+    github: 'https://github.com/franrob-projects/portfolio/tree/main/.github/workflows',
+    image: '/portfolio/img/projects/ci-pipeline.png',
+    imageAlt: 'GitHub Actions run for the portfolio CI pipeline: typecheck, build, spellcheck, linkcheck, format',
+    imageHref: 'https://github.com/franrob-projects/portfolio/tree/main/.github/workflows',
   },
 ]
 
@@ -229,8 +265,28 @@ function TagBadge({ tag }: { tag: Tag }) {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const imageEl = project.image ? (
+    <img
+      src={project.image}
+      alt={project.imageAlt ?? project.title}
+      style={{
+        width: '100%',
+        borderRadius: '8px',
+        marginBottom: '1rem',
+        display: 'block',
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+      }}
+      loading="lazy"
+    />
+  ) : null;
+
   return (
     <div className={styles.job} style={{ marginBottom: '2rem' }}>
+      {imageEl && (project.imageHref ? (
+        <a href={project.imageHref} target="_blank" rel="noopener noreferrer">
+          {imageEl}
+        </a>
+      ) : imageEl)}
       <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>
         <span style={{ marginRight: '10px' }}>{project.icon}</span>
         {project.title}
@@ -390,9 +446,19 @@ export default function Projects(): ReactNode {
         <section className={styles.section}>
           <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
             <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🛠️</span>
-            Open source
+            Open source projects I founded
           </h2>
           {PROJECTS.map(project => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </section>
+
+        <section className={styles.section}>
+          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🏗️</span>
+            Docs engineering projects
+          </h2>
+          {DOCS_ENGINEERING_PROJECTS.map(project => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </section>

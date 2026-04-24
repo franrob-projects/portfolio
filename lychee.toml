@@ -1,0 +1,25 @@
+max_redirects = 5
+max_retries = 2
+retry_wait_time = 2
+timeout = 20
+
+accept = ["200", "206", "429"]
+
+exclude = [
+  "^https?://localhost",
+  "^https?://127\\.0\\.0\\.1",
+  "^https?://(www\\.)?linkedin\\.com",
+  "^https?://(www\\.)?x\\.com",
+  "^https?://(www\\.)?twitter\\.com",
+  "^mailto:",
+]
+
+exclude_path = [
+  "node_modules",
+  ".docusaurus",
+  "CheatSheetSeries",
+  "scraped_css",
+]
+
+cache = true
+max_cache_age = "1d"

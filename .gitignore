@@ -1,6 +1,9 @@
 # Dependencies
 /node_modules
 
+# Nested clones (OWASP CheatSheetSeries etc.)
+/CheatSheetSeries
+
 # Production
 /build
 
