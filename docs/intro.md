@@ -6,7 +6,7 @@ sidebar_position: 1
 
 When I started my career in docs engineering, I thought documentation was just about explaining how things work. After years of working with developers at companies like Ably, Couchbase, and Atlas Copco, I've learned that great documentation is really about enabling people to succeed with complex technology.
 
-My focus has been on taking complicated systems - from real-time messaging platforms to industrial manufacturing equipment - and creating documentation that developers and engineers can actually use to solve real problems. Each project taught me something different about how people learn and implement technology.
+My focus has been on taking complicated systems - from real-time messaging platforms to industrial manufacturing equipment - and creating documentation that developers and engineers can actually use to solve real problems. Each project taught me something different about how people learn and implement technology. The framework I keep returning to is [Diátaxis](https://diataxis.fr/), which splits docs into tutorials, how-tos, reference, and explanation so readers can find what they need in the mode they are actually in.
 
 <div className="work-section">
 
