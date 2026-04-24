@@ -20,22 +20,50 @@ function PersonalSite() {
       <TechCarousel />
 
       <section className={styles.section}>
-        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+        <h2 style={{ marginBottom: '3rem', fontSize: '2.25rem', fontWeight: '500', textAlign: 'center', letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--ifm-color-content) 0%, var(--ifm-color-content-secondary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
           <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🏍️</span>
           When offline
         </h2>
-        <div className={styles.imageGrid}>
-          <div className={styles.imageCard}>
-            <img
+        <div style={{ 
+          display: 'flex', 
+          gap: '20px', 
+          justifyContent: 'center',
+          marginBottom: '40px',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{
+            borderRadius: '16px',
+            overflow: 'hidden',
+            width: '280px',
+            height: '350px',
+            boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
+          }}>
+            <img 
               src="/portfolio/img/Ver fotos recientes.jpeg"
               alt="Francis Roberts"
-              style={{ objectPosition: 'center 35%' }}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center 35%'
+              }}
             />
           </div>
-          <div className={styles.imageCard}>
-            <img
+          <div style={{
+            borderRadius: '16px',
+            overflow: 'hidden',
+            width: '280px',
+            height: '350px',
+            boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
+          }}>
+            <img 
               src="/portfolio/img/bjj.jpg"
               alt="Francis Roberts"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
             />
           </div>
         </div>

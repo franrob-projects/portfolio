@@ -115,14 +115,14 @@ const GitHubStats = () => {
           margin: '0 auto'
         }}>
           {contributions.slice(-365).map((day, i) => (
-            <div
-              key={i}
-              title={`${day.count} contributions on ${day.date}`}
+            <div 
+              key={i} 
               style={{
                 backgroundColor: getContributionColor(day.count),
                 width: '10px',
                 height: '10px',
                 borderRadius: '2px',
+                title: `${day.count} contributions on ${day.date}`
               }}
             />
           ))}

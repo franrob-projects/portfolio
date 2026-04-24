@@ -98,12 +98,6 @@ body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  max-width: 100%;
-}
-
-img {
-  max-width: 100%;
 }
 
 /* Typography - Supabase style headings */
@@ -371,102 +365,6 @@ main {
   div[style*="height: 600px"],
   div[style*="height:600px"] {
     height: 420px !important;
-  }
-}
-
-/* Mobile: ensure the navbar hamburger + menu work and tighten spacing */
-@media (max-width: 996px) {
-  .navbar {
-    padding: 0 4px;
-  }
-
-  .navbar__inner {
-    padding: 0 12px;
-  }
-
-  .navbar__brand {
-    margin-right: 0;
-  }
-
-  main {
-    padding: 0;
-  }
-
-  /* Expansive mobile drawer */
-  .navbar-sidebar {
-    width: 100vw;
-    max-width: 100vw;
-    background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
-    border-right: 1px solid rgba(64, 215, 124, 0.15);
-  }
-
-  .navbar-sidebar__brand {
-    background: rgba(64, 215, 124, 0.05);
-    border-bottom: 1px solid rgba(64, 215, 124, 0.15);
-    padding: 1.25rem 1.5rem;
-    min-height: 64px;
-  }
-
-  .navbar-sidebar__brand .navbar__title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--ifm-color-content);
-    letter-spacing: -0.01em;
-  }
-
-  .navbar-sidebar__close {
-    color: var(--ifm-color-primary);
-  }
-
-  .navbar-sidebar__items {
-    padding: 0.5rem 0;
-  }
-
-  .navbar-sidebar__item {
-    padding: 0.5rem 0.75rem;
-  }
-
-  .navbar-sidebar .menu__list {
-    padding: 0;
-  }
-
-  .navbar-sidebar .menu__list-item {
-    margin: 0.25rem 0;
-  }
-
-  .navbar-sidebar .menu__link {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 1rem 1.25rem;
-    border-radius: 12px;
-    color: var(--ifm-color-content);
-    background: rgba(64, 215, 124, 0.04);
-    border: 1px solid rgba(64, 215, 124, 0.08);
-    transition: all 0.15s ease;
-  }
-
-  .navbar-sidebar .menu__link:hover,
-  .navbar-sidebar .menu__link--active {
-    background: rgba(64, 215, 124, 0.1);
-    border-color: rgba(64, 215, 124, 0.25);
-    color: var(--ifm-color-primary);
-  }
-
-  .navbar-sidebar .menu__link--sublist::after {
-    background-color: var(--ifm-color-primary);
-  }
-
-  /* Back button on secondary views */
-  .navbar-sidebar__back {
-    margin: 0.75rem 1rem;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    background: rgba(64, 215, 124, 0.06);
-    border: 1px solid rgba(64, 215, 124, 0.15);
-    font-weight: 500;
-    color: var(--ifm-color-primary);
   }
 }
 
