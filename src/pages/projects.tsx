@@ -40,6 +40,27 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/franrob-projects/doc-link-monitor',
   },
   {
+    title: 'Portfolio Analytics with Mixpanel',
+    icon: '📊',
+    description:
+      'Wired Mixpanel into this Docusaurus portfolio so I can see which projects people actually read, which outbound links (GitHub, LinkedIn, live demos) get clicked, and where visitors drop off. The point was less "do analytics" and more "design a small, answer-oriented tracking plan": pick the questions first, then pick the smallest event schema that answers them.',
+    details: [
+      'Injected via Docusaurus headTags, gated on NODE_ENV==="production" so dev traffic does not pollute the project',
+      'Autocapture + session replay handle pageviews and generic clicks; the tracking plan adds named events for project_card_click, contribution_click, and nav_outbound',
+      'Routed to the EU Mixpanel cluster (api-eu.mixpanel.com) to keep traffic in-region',
+      'Site map documented per page: entry points, CTAs, and the three flows worth measuring (home → project → GitHub, About → Projects, blog retention)',
+      'One-hunk change to docusaurus.config.ts so it is trivial to revert or swap for another analytics provider',
+    ],
+    tags: [
+      { label: 'Mixpanel',    colour: '#7856FF' },
+      { label: 'Docusaurus',  colour: '#3ECC5F' },
+      { label: 'TypeScript',  colour: '#3178C6' },
+      { label: 'GitHub Pages', colour: '#ffffff' },
+    ],
+    github: 'https://github.com/franrob-projects/portfolio',
+    live: 'https://franrob-projects.github.io/portfolio/',
+  },
+  {
     title: 'SecureTrain Gamification',
     icon: '🛡️',
     description:
