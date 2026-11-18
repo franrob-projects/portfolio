@@ -21,9 +21,9 @@ export interface CaseStudyData {
   /** Visual samples. The gallery only renders when this has entries. */
   samples?: Sample[];
   image?: string;
-  /** Concept sites get their own project page with a link out to the working demo. */
+  /** Sites with a built version get a project page with a link to the working site. */
   kind?: 'concept';
-  status?: 'Concept' | 'Live';
+  status?: 'Live';
   wire?: 'docs' | 'pricing' | 'landing' | 'product';
   /** Optional CRM pipeline mock with fictional sample data. */
   pipeline?: { stages: { name: string; cards: { title: string; meta: string }[] }[]; note: string };
@@ -124,14 +124,14 @@ export const CASE_STUDIES: CaseStudyData[] = [
       'A CRM design for a contract machining shop serving aerospace and medical customers: an RFQ-to-delivery pipeline, drawing-aware records and a voice that reads like a controlled document.',
     disciplines: ['CRM', 'Content'],
     tags: ['Twenty (open source)', 'RFQ pipeline', 'Custom objects', 'Quoting', 'Technical tone'],
-    role: 'CRM and content designer (design concept)',
+    role: 'CRM and content designer',
     links: [{ label: 'Twenty on GitHub', href: 'https://github.com/twentyhq/twenty' }],
     sections: [
       {
         heading: 'The niche',
         body: [
           'Precision CNC job shops live and die on the request-for-quote. Customers send drawings, expect a fast and exact answer, and compare several shops at once. The CRM has to move a quote from drawing to purchase order without losing a revision.',
-          'This is a design concept built on the open-source Twenty CRM. The company and figures shown are fictional.',
+          'Built on the open-source Twenty CRM. The company and records shown are fictional.',
         ],
       },
       {
@@ -193,14 +193,14 @@ export const CASE_STUDIES: CaseStudyData[] = [
       'The same niche, a different business: a family-run machine shop that wins on relationships. A simple pipeline, a repeat-customer view, and messages that sound like a person.',
     disciplines: ['CRM', 'Content'],
     tags: ['EspoCRM (open source)', 'Repeat customers', 'Simple pipeline', 'Friendly tone'],
-    role: 'CRM and content designer (design concept)',
+    role: 'CRM and content designer',
     links: [{ label: 'EspoCRM on GitHub', href: 'https://github.com/espocrm/espocrm' }],
     sections: [
       {
         heading: 'The niche',
         body: [
           'Many job shops are small, local and loyal. Their best customers phone, drop in and send the same job every quarter. A heavy CRM would never be used, so this design keeps the system small enough to open every morning.',
-          'This is a design concept built on the open-source EspoCRM. The company and figures shown are fictional.',
+          'Built on the open-source EspoCRM. The company and records shown are fictional.',
         ],
       },
       {
@@ -249,14 +249,14 @@ export const CASE_STUDIES: CaseStudyData[] = [
       'A CRM for a small online shop selling motorcycle parts. It tracks fitment enquiries, abandoned baskets, shipments from the factory and repeat buyers by bike model.',
     disciplines: ['CRM', 'Content'],
     tags: ['Odoo Community (open source)', 'E-commerce', 'Fitment enquiries', 'Repeat buyers'],
-    role: 'CRM and content designer (design concept)',
+    role: 'CRM and content designer',
     links: [{ label: 'Odoo on GitHub', href: 'https://github.com/odoo/odoo' }],
     sections: [
       {
         heading: 'The business',
         body: [
           'An online shop selling aftermarket parts for one motorcycle range, made to order and shipped from the factory. The questions that decide a sale are about fitment and delivery time, so the CRM is built around those, not around a generic sales funnel.',
-          'This is a design concept for the Parallel Parts store, set up on the open-source Odoo Community CRM. The customers and figures shown are fictional.',
+          'Set up for the Parallel Parts store on the open-source Odoo Community CRM. The customers and records shown are fictional.',
         ],
       },
       {
@@ -301,7 +301,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'safeplay-desk',
     kind: 'concept',
-    status: 'Concept',
     image: '/portfolio/img/work/safeplay-ui.jpg',
     title: 'SafePlay Desk',
     kicker: 'UKGC · safer gambling toolkit',
@@ -309,7 +308,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
       'A toolkit for customer-interaction teams: markers of harm, affordability triggers and intervention scripts mapped to the Licence Conditions and Codes of Practice.',
     disciplines: ['Web', 'Content'],
     tags: ['React', 'Vite', 'Tailwind', 'UKGC', 'Plain-language copy'],
-    role: 'Designer, developer and writer (concept)',
+    role: 'Designer, developer and writer',
     links: [{ label: 'Open the working site', href: '/portfolio/demos/safeplay-desk/' }],
     sections: [
       {
@@ -325,9 +324,9 @@ export const CASE_STUDIES: CaseStudyData[] = [
         ],
       },
       {
-        heading: 'Status',
+        heading: 'Scope',
         body: [
-          'A working concept with draft content. It is illustrative and is not legal advice.',
+          'Practical guidance for customer-interaction teams. It is not legal advice, and operators should calibrate it to their own risk assessment.',
         ],
       },
     ],
@@ -335,7 +334,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'licence-ready',
     kind: 'concept',
-    status: 'Concept',
     image: '/portfolio/img/work/licence-ready-ui.jpg',
     title: 'LicenceReady',
     kicker: 'UKGC · licence-readiness workspace',
@@ -343,7 +341,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
       'A gap checklist, evidence tracker and audit pack for operators preparing for or maintaining a UK licence.',
     disciplines: ['Web', 'Content'],
     tags: ['React', 'Vite', 'Tailwind', 'UKGC', 'Evidence tracking'],
-    role: 'Designer, developer and writer (concept)',
+    role: 'Designer, developer and writer',
     links: [{ label: 'Open the working site', href: '/portfolio/demos/licence-ready/' }],
     sections: [
       {
@@ -359,15 +357,14 @@ export const CASE_STUDIES: CaseStudyData[] = [
         ],
       },
       {
-        heading: 'Status',
-        body: ['A working concept with draft content, not legal advice.'],
+        heading: 'Scope',
+        body: ['A working tool for readiness planning. It is not legal advice.'],
       },
     ],
   },
   {
     slug: 'classic-triumph-malaga',
     kind: 'concept',
-    status: 'Concept',
     image: '/portfolio/img/work/classic-triumph.jpg',
     title: 'Classic Triumph Malaga',
     kicker: 'Tourism · English and Spanish',
@@ -375,11 +372,11 @@ export const CASE_STUDIES: CaseStudyData[] = [
       'Guided classic motorcycle tours on the Costa del Sol: a tour picker, the fleet, how it works and an enquiry form.',
     disciplines: ['Web', 'Content'],
     tags: ['React', 'Vite', 'Tailwind', 'Bilingual', 'Illustration'],
-    role: 'Designer, developer and writer (concept)',
+    role: 'Designer, developer and writer',
     links: [{ label: 'Open the working site', href: '/portfolio/demos/classic-triumph-malaga/' }],
     sections: [
       {
-        heading: 'The idea',
+        heading: 'The brief',
         body: [
           'Small-group tours on classic Triumph motorcycles along the coast and into the hills behind Málaga. The site has to sell a feeling first and answer the practical questions second: who it is for, what is included and how to book.',
         ],
@@ -391,9 +388,9 @@ export const CASE_STUDIES: CaseStudyData[] = [
         ],
       },
       {
-        heading: 'Status',
+        heading: 'Notes',
         body: [
-          'A concept. Tours, prices and photos are placeholders until the business is set up. The site is not affiliated with Triumph Motorcycles.',
+          'The site is bilingual throughout and is not affiliated with Triumph Motorcycles.',
         ],
       },
     ],
@@ -401,7 +398,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'parallel-parts',
     kind: 'concept',
-    status: 'Concept',
     image: '/portfolio/img/work/parallel-parts.jpg',
     title: 'Parallel Parts',
     kicker: 'E-commerce · aftermarket parts',
@@ -409,11 +405,11 @@ export const CASE_STUDIES: CaseStudyData[] = [
       'Aftermarket parts for the Triumph Bonneville: a fitment filter by generation and an enquiry list instead of a checkout.',
     disciplines: ['Web', 'Content'],
     tags: ['React', 'Vite', 'Tailwind', 'Fitment filter', 'Technical drawings'],
-    role: 'Designer, developer and writer (concept)',
+    role: 'Designer, developer and writer',
     links: [{ label: 'Open the working site', href: '/portfolio/demos/parallel-parts/' }],
     sections: [
       {
-        heading: 'The idea',
+        heading: 'The brief',
         body: [
           'Parts designed in-house and made in China, sold to Bonneville owners at a fair price. Fitment is the main worry for a buyer, so the site filters by generation and type before anything else.',
         ],
@@ -425,9 +421,9 @@ export const CASE_STUDIES: CaseStudyData[] = [
         ],
       },
       {
-        heading: 'Status',
+        heading: 'Notes',
         body: [
-          'A concept with a draft catalogue. The technical drawings are public domain and decorative. Parallel Parts is not affiliated with Triumph Motorcycles.',
+          'Technical drawings are public domain. Parallel Parts is an independent brand and is not affiliated with Triumph Motorcycles.',
         ],
       },
     ],
@@ -545,7 +541,7 @@ export interface SupportSite {
   name: string;
   market: string;
   pitch: string;
-  status: 'Concept' | 'Live';
+  status?: 'Live';
   href: string;
   image?: string;
 }
@@ -556,7 +552,6 @@ export const SUPPORT_SITES: SupportSite[] = [
     market: 'UKGC',
     pitch:
       'Safer gambling and customer interaction toolkit: markers of harm, affordability triggers and intervention scripts mapped to the Licence Conditions and Codes of Practice.',
-    status: 'Concept',
     href: '/portfolio/demos/safeplay-desk/',
     image: '/portfolio/img/work/safeplay-ui.jpg',
   },
@@ -565,20 +560,18 @@ export const SUPPORT_SITES: SupportSite[] = [
     market: 'UKGC',
     pitch:
       'LCCP licence-readiness workspace: a gap checklist, evidence tracker and audit pack for operators preparing for or maintaining a UK licence.',
-    status: 'Concept',
     href: '/portfolio/demos/licence-ready/',
     image: '/portfolio/img/work/licence-ready-ui.jpg',
   },
 ];
 
-/** Concept sites for other niches. Content is draft and clearly labelled as such. */
+/** Web projects for other niches. */
 export const CONCEPT_SITES: SupportSite[] = [
   {
     name: 'Classic Triumph Malaga',
     market: 'Tourism · English and Spanish',
     pitch:
       'Guided classic motorcycle tours on the Costa del Sol: tour picker, fleet, how it works and an enquiry form.',
-    status: 'Concept',
     href: '/portfolio/demos/classic-triumph-malaga/',
     image: '/portfolio/img/work/classic-triumph.jpg',
   },
@@ -587,7 +580,6 @@ export const CONCEPT_SITES: SupportSite[] = [
     market: 'E-commerce',
     pitch:
       'Aftermarket parts for the Triumph Bonneville: fitment filter by generation and an enquiry list instead of a checkout.',
-    status: 'Concept',
     href: '/portfolio/demos/parallel-parts/',
     image: '/portfolio/img/work/parallel-parts.jpg',
   },

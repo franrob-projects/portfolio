@@ -20,7 +20,7 @@ export default function Work(): ReactNode {
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Selected work</div>
           <h1>Web, CRM and content, designed together.</h1>
-          <p>Case studies, live pages and working concept sites.</p>
+          <p>Case studies, live pages and working sites.</p>
         </header>
 
         <LiveWork />
@@ -36,7 +36,7 @@ export default function Work(): ReactNode {
 
         <div className={styles.sectionHead}>
           <div>
-            <h2>CRM design examples</h2>
+            <h2>CRM design</h2>
             <p className={styles.sectionLead}>Precision CNC job shops in two tones, plus an online parts store, all on open-source CRMs.</p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Work(): ReactNode {
           ))}
         </div>
 
-        <div className={styles.sectionHead}><h2>Web design concepts</h2></div>
+        <div className={styles.sectionHead}><h2>Web projects</h2></div>
         <div className={styles.grid2}>
           {WEB.map((s, i) => (
             <Reveal key={s.slug} delay={(i % 2) * 70}>

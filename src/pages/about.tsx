@@ -21,7 +21,7 @@ export default function About(): ReactNode {
 
         <div style={{maxWidth: 720}}>
           <p>I spent more than eight years as a technical writer and documentation engineer at developer-facing companies, including Ably and Couchbase. That taught me to make complicated things easy to follow, and to check that they actually work.</p>
-          <p>Now I use that on the whole product surface: the site people land on, the CRM behind it, and the content that ties them together. I also run Conply, a compliance training product, and I build concept sites to show what I would make for a client before any contract is signed.</p>
+          <p>Now I use that on the whole product surface: the site people land on, the CRM behind it, and the content that ties them together. I also run Conply, a compliance training product, and I build and publish my own sites, including regulation support for iGaming, tourism and parts retail.</p>
         </div>
 
         <div className={styles.sectionHead}><h2>What I do</h2></div>

@@ -74,8 +74,8 @@ export default function Home(): ReactNode {
 
         <div className={styles.sectionHead}>
           <div>
-            <h2>Web design concepts</h2>
-            <p className={styles.sectionLead}>Working sites you can click through. Content is draft.</p>
+            <h2>Web projects</h2>
+            <p className={styles.sectionLead}>Sites designed, written and built end to end.</p>
           </div>
           <Link to="/work" className={styles.textLink}>All work →</Link>
         </div>

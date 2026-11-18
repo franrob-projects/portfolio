@@ -35,7 +35,7 @@ export default function ContactPage(): ReactNode {
           <a className={styles.card} style={{padding: '1.5rem'}} href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub, opens in a new tab">
             <div className={styles.eyebrow}>GitHub</div>
             <h3 style={{margin: '0 0 .4rem'}}>franrob-projects</h3>
-            <p style={{margin: 0}}>Code behind the concept sites.</p>
+            <p style={{margin: 0}}>Code behind the sites.</p>
           </a>
         </div>
 
