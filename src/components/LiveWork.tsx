@@ -4,7 +4,6 @@ import styles from '../css/work.module.css';
 import {ABLY_LIVE_PAGES} from '../data/work';
 import Frame from './Frame';
 import Reveal from './Reveal';
-import {ExternalIcon} from './ProjectCard';
 
 export default function LiveWork(): ReactNode {
   return (
@@ -19,13 +18,13 @@ export default function LiveWork(): ReactNode {
       <div className={styles.grid2}>
         {ABLY_LIVE_PAGES.map((p, i) => (
           <Reveal key={p.href} delay={i * 70}>
-            <a className={styles.card} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={`${p.name}: ${p.what}. Opens ably.com in a new tab.`}>
+            <Link className={styles.card} to="/work/ably" aria-label={`${p.name}: ${p.what}. Read the Ably case study.`}>
               <Frame src={p.image} alt={`${p.name} page on ably.com`} wire={p.wire} />
               <div className={styles.cardBody}>
-                <h3>{p.name}<ExternalIcon /></h3>
+                <h3>{p.name}</h3>
                 <p>{p.what}</p>
               </div>
-            </a>
+            </Link>
           </Reveal>
         ))}
       </div>

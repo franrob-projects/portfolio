@@ -21,6 +21,9 @@ export interface CaseStudyData {
   /** Visual samples. The gallery only renders when this has entries. */
   samples?: Sample[];
   image?: string;
+  /** Concept sites get their own project page with a link out to the working demo. */
+  kind?: 'concept';
+  status?: 'Concept' | 'Live';
   wire?: 'docs' | 'pricing' | 'landing' | 'product';
   /** Optional CRM pipeline mock with fictional sample data. */
   pipeline?: { stages: { name: string; cards: { title: string; meta: string }[] }[]; note: string };
@@ -89,27 +92,31 @@ export const CASE_STUDIES: CaseStudyData[] = [
         title: 'Docs home',
         caption: 'Six products, tooling, examples and changelog.',
         href: 'https://ably.com/docs',
+        image: '/portfolio/img/work/ably-docs.jpg',
       },
       {
         title: 'Pricing',
         caption: 'MAU slider, plan cards and comparison table.',
         href: 'https://ably.com/pricing',
+        image: '/portfolio/img/work/ably-pricing.jpg',
       },
       {
         title: 'LiveSync',
         caption: 'Database-to-device product page.',
         href: 'https://ably.com/livesync',
+        image: '/portfolio/img/work/ably-livesync.jpg',
       },
       {
         title: 'LiveObjects',
         caption: 'Shared application state product page.',
         href: 'https://ably.com/liveobjects',
+        image: '/portfolio/img/work/ably-liveobjects.jpg',
       },
     ],
   },
   {
     slug: 'crm-precision',
-    wire: 'product',
+    image: '/portfolio/img/work/crm-precision.jpg',
     title: 'CRM example: precision CNC job shop',
     kicker: 'Open-source CRM (Twenty) · engineered, exact tone',
     summary:
@@ -178,7 +185,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'crm-shopfloor',
-    wire: 'product',
+    image: '/portfolio/img/work/crm-shopfloor.jpg',
     title: 'CRM example: family machine shop',
     kicker: 'Open-source CRM (EspoCRM) · warm, plain-spoken tone',
     summary:
@@ -234,7 +241,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'crm-ecommerce',
-    wire: 'product',
+    image: '/portfolio/img/work/crm-ecommerce.jpg',
     title: 'CRM example: online parts store',
     kicker: 'Open-source CRM (Odoo Community) · e-commerce, clear and practical tone',
     summary:
@@ -287,6 +294,140 @@ export const CASE_STUDIES: CaseStudyData[] = [
       {
         label: 'Shipping update',
         text: 'Hi Marcus, your brushed steel exhaust for the 2018 Bonneville T100 left the factory today. Tracking is below. Expect it in Málaga by 24 November. If it is not with you by the 27th, reply to this email and I will chase it.',
+      },
+    ],
+  },
+  {
+    slug: 'safeplay-desk',
+    kind: 'concept',
+    status: 'Concept',
+    image: '/portfolio/img/work/safeplay-ui.jpg',
+    title: 'SafePlay Desk',
+    kicker: 'UKGC · safer gambling toolkit',
+    summary:
+      'A toolkit for customer-interaction teams: markers of harm, affordability triggers and intervention scripts mapped to the Licence Conditions and Codes of Practice.',
+    disciplines: ['Web', 'Content'],
+    tags: ['React', 'Vite', 'Tailwind', 'UKGC', 'Plain-language copy'],
+    role: 'Designer, developer and writer (concept)',
+    links: [{ label: 'Open the working site', href: '/portfolio/demos/safeplay-desk/' }],
+    sections: [
+      {
+        heading: 'The problem',
+        body: [
+          'Customer-interaction staff at UK operators have to spot harm and respond within a short conversation. The rules are long and the wording of a good intervention is hard to remember under pressure.',
+        ],
+      },
+      {
+        heading: 'What the site does',
+        body: [
+          'It lists markers of harm and affordability triggers, and gives suggested wording for each interaction, mapped back to the relevant licence condition. Staff find the situation, read the wording and see why it applies.',
+        ],
+      },
+      {
+        heading: 'Status',
+        body: [
+          'A working concept with draft content. It is illustrative and is not legal advice.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'licence-ready',
+    kind: 'concept',
+    status: 'Concept',
+    image: '/portfolio/img/work/licence-ready-ui.jpg',
+    title: 'LicenceReady',
+    kicker: 'UKGC · licence-readiness workspace',
+    summary:
+      'A gap checklist, evidence tracker and audit pack for operators preparing for or maintaining a UK licence.',
+    disciplines: ['Web', 'Content'],
+    tags: ['React', 'Vite', 'Tailwind', 'UKGC', 'Evidence tracking'],
+    role: 'Designer, developer and writer (concept)',
+    links: [{ label: 'Open the working site', href: '/portfolio/demos/licence-ready/' }],
+    sections: [
+      {
+        heading: 'The problem',
+        body: [
+          'Applying for or keeping an LCCP licence means showing evidence against many requirements. Teams usually track that in spreadsheets and email, and lose track of what is missing.',
+        ],
+      },
+      {
+        heading: 'What the site does',
+        body: [
+          'A checklist shows the gaps, an evidence tracker links documents to each requirement, and an audit pack collects what a reviewer will ask for.',
+        ],
+      },
+      {
+        heading: 'Status',
+        body: ['A working concept with draft content, not legal advice.'],
+      },
+    ],
+  },
+  {
+    slug: 'classic-triumph-malaga',
+    kind: 'concept',
+    status: 'Concept',
+    image: '/portfolio/img/work/classic-triumph.jpg',
+    title: 'Classic Triumph Malaga',
+    kicker: 'Tourism · English and Spanish',
+    summary:
+      'Guided classic motorcycle tours on the Costa del Sol: a tour picker, the fleet, how it works and an enquiry form.',
+    disciplines: ['Web', 'Content'],
+    tags: ['React', 'Vite', 'Tailwind', 'Bilingual', 'Illustration'],
+    role: 'Designer, developer and writer (concept)',
+    links: [{ label: 'Open the working site', href: '/portfolio/demos/classic-triumph-malaga/' }],
+    sections: [
+      {
+        heading: 'The idea',
+        body: [
+          'Small-group tours on classic Triumph motorcycles along the coast and into the hills behind Málaga. The site has to sell a feeling first and answer the practical questions second: who it is for, what is included and how to book.',
+        ],
+      },
+      {
+        heading: 'What the site does',
+        body: [
+          'A tour picker, a fleet section, a step-by-step of how a day works, and an enquiry form. Everything is available in English and Spanish.',
+        ],
+      },
+      {
+        heading: 'Status',
+        body: [
+          'A concept. Tours, prices and photos are placeholders until the business is set up. The site is not affiliated with Triumph Motorcycles.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'parallel-parts',
+    kind: 'concept',
+    status: 'Concept',
+    image: '/portfolio/img/work/parallel-parts.jpg',
+    title: 'Parallel Parts',
+    kicker: 'E-commerce · aftermarket parts',
+    summary:
+      'Aftermarket parts for the Triumph Bonneville: a fitment filter by generation and an enquiry list instead of a checkout.',
+    disciplines: ['Web', 'Content'],
+    tags: ['React', 'Vite', 'Tailwind', 'Fitment filter', 'Technical drawings'],
+    role: 'Designer, developer and writer (concept)',
+    links: [{ label: 'Open the working site', href: '/portfolio/demos/parallel-parts/' }],
+    sections: [
+      {
+        heading: 'The idea',
+        body: [
+          'Parts designed in-house and made in China, sold to Bonneville owners at a fair price. Fitment is the main worry for a buyer, so the site filters by generation and type before anything else.',
+        ],
+      },
+      {
+        heading: 'What the site does',
+        body: [
+          'Visitors pick their bike, filter the catalogue and build an enquiry list with a finish for each part. They copy the list into an email, and the shop replies with a price and a delivery time.',
+        ],
+      },
+      {
+        heading: 'Status',
+        body: [
+          'A concept with a draft catalogue. The technical drawings are public domain and decorative. Parallel Parts is not affiliated with Triumph Motorcycles.',
+        ],
       },
     ],
   },

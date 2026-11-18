@@ -5,9 +5,10 @@ import Contact from '../../components/Contact';
 import LiveWork from '../../components/LiveWork';
 import ProjectCard from '../../components/ProjectCard';
 import Reveal from '../../components/Reveal';
-import {CASE_STUDIES, CONCEPT_SITES, SUPPORT_SITES} from '../../data/work';
+import {CASE_STUDIES} from '../../data/work';
 
-const STUDIES = CASE_STUDIES.filter(c => !c.slug.startsWith('crm-'));
+const STUDIES = CASE_STUDIES.filter(c => !c.slug.startsWith('crm-') && c.kind !== 'concept');
+const WEB = CASE_STUDIES.filter(c => c.kind === 'concept');
 const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
 
 const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
@@ -49,9 +50,9 @@ export default function Work(): ReactNode {
 
         <div className={styles.sectionHead}><h2>Web design concepts</h2></div>
         <div className={styles.grid2}>
-          {[...SUPPORT_SITES, ...CONCEPT_SITES].map((s, i) => (
-            <Reveal key={s.name} delay={(i % 2) * 70}>
-              <ProjectCard href={s.href} title={s.name} kicker={s.market} summary={s.pitch} image={s.image} status={s.status} />
+          {WEB.map((s, i) => (
+            <Reveal key={s.slug} delay={(i % 2) * 70}>
+              <ProjectCard to={`/work/${s.slug}`} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
             </Reveal>
           ))}
         </div>

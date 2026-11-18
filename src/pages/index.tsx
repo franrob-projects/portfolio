@@ -7,11 +7,11 @@ import Frame from '../components/Frame';
 import LiveWork from '../components/LiveWork';
 import ProjectCard from '../components/ProjectCard';
 import Reveal from '../components/Reveal';
-import {CASE_STUDIES, CONCEPT_SITES, SUPPORT_SITES} from '../data/work';
+import {CASE_STUDIES} from '../data/work';
 
 const PRODUCTS = CASE_STUDIES.filter(c => c.slug === 'conply' || c.slug === 'viki');
 const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
-const WEB = [...SUPPORT_SITES, ...CONCEPT_SITES];
+const WEB = CASE_STUDIES.filter(c => c.kind === 'concept');
 
 const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 
@@ -81,8 +81,8 @@ export default function Home(): ReactNode {
         </div>
         <div className={styles.grid2}>
           {WEB.map((s, i) => (
-            <Reveal key={s.name} delay={(i % 2) * 70}>
-              <ProjectCard href={s.href} title={s.name} kicker={s.market} summary={s.pitch} image={s.image} status={s.status} />
+            <Reveal key={s.slug} delay={(i % 2) * 70}>
+              <ProjectCard to={`/work/${s.slug}`} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
             </Reveal>
           ))}
         </div>

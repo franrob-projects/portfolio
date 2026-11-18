@@ -1,12 +1,15 @@
 import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from '../css/work.module.css';
-import type { CaseStudyData } from '../data/work';
+import { CASE_STUDIES, type CaseStudyData } from '../data/work';
+import Frame from './Frame';
+import ProjectCard, { ExternalIcon } from './ProjectCard';
 
 export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode {
-  const imgBase = useBaseUrl('/');
+  const group = (c: CaseStudyData) => (c.kind === 'concept' ? 'concept' : c.slug.startsWith('crm-') ? 'crm' : 'study');
+  const others = CASE_STUDIES.filter(c => c.slug !== data.slug);
+  const related = [...others.filter(c => group(c) === group(data)), ...others.filter(c => group(c) !== group(data))].slice(0, 3);
   return (
     <Layout title={`${data.title} | FranRob Project`} description={data.summary}>
       <main className={styles.wrap}>
@@ -21,6 +24,10 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
               {data.kicker}. {data.summary}
             </p>
           </header>
+
+          <div style={{ marginBottom: '1.5rem' }}>
+            <Frame src={data.image} alt={`${data.title} screenshot`} wire={data.wire ?? 'product'} />
+          </div>
 
           <dl className={styles.facts}>
             <div>
@@ -87,11 +94,13 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
                 {data.samples.map(s => (
                   <figure key={s.title}>
                     {s.image && (
-                      <img
-                        src={`${imgBase}${s.image.replace(/^\//, '')}`}
-                        alt={s.title}
-                        loading="lazy"
-                      />
+                      s.href ? (
+                        <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={`${s.title}, opens in a new tab`}>
+                          <img src={s.image} alt={`${s.title} page`} loading="lazy" />
+                        </a>
+                      ) : (
+                        <img src={s.image} alt={s.title} loading="lazy" />
+                      )
                     )}
                     <figcaption>
                       {s.href ? (
@@ -110,19 +119,31 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
           )}
 
           <div className={styles.actions}>
-            {data.links.map(l => (
+            {data.links.map((l, i) => (
               <a
                 key={l.href}
-                className={styles.btn}
+                className={`${styles.btn} ${i === 0 && data.kind === 'concept' ? styles.btnSolid : ''}`}
                 href={l.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {l.label} ↗
+                {l.label} <ExternalIcon />
               </a>
             ))}
           </div>
         </article>
+
+        <section aria-labelledby="more-work" style={{ marginTop: '4rem' }}>
+          <div className={styles.sectionHead} style={{ marginTop: 0 }}>
+            <h2 id="more-work">More work</h2>
+            <Link to="/work" className={styles.textLink}>All work →</Link>
+          </div>
+          <div className={styles.grid3}>
+            {related.map(c => (
+              <ProjectCard key={c.slug} to={`/work/${c.slug}`} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} status={c.status} />
+            ))}
+          </div>
+        </section>
       </main>
     </Layout>
   );
