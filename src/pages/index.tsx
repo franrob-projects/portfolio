@@ -60,10 +60,10 @@ export default function Home(): ReactNode {
         <div className={styles.sectionHead}>
           <div>
             <h2>CRM design</h2>
-            <p className={styles.sectionLead}>One niche, precision CNC job shops, designed twice on open-source CRMs.</p>
+            <p className={styles.sectionLead}>Precision CNC job shops in two tones, plus an online parts store, all on open-source CRMs.</p>
           </div>
         </div>
-        <div className={styles.grid2}>
+        <div className={styles.grid3}>
           {CRM.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>
               <ProjectCard to={`/work/${c.slug}`} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />

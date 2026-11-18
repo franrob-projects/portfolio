@@ -233,6 +233,64 @@ export const CASE_STUDIES: CaseStudyData[] = [
     ],
   },
   {
+    slug: 'crm-ecommerce',
+    wire: 'product',
+    title: 'CRM example: online parts store',
+    kicker: 'Open-source CRM (Odoo Community) · e-commerce, clear and practical tone',
+    summary:
+      'A CRM for a small online shop selling motorcycle parts. It tracks fitment enquiries, abandoned baskets, shipments from the factory and repeat buyers by bike model.',
+    disciplines: ['CRM', 'Content'],
+    tags: ['Odoo Community (open source)', 'E-commerce', 'Fitment enquiries', 'Repeat buyers'],
+    role: 'CRM and content designer (design concept)',
+    links: [{ label: 'Odoo on GitHub', href: 'https://github.com/odoo/odoo' }],
+    sections: [
+      {
+        heading: 'The business',
+        body: [
+          'An online shop selling aftermarket parts for one motorcycle range, made to order and shipped from the factory. The questions that decide a sale are about fitment and delivery time, so the CRM is built around those, not around a generic sales funnel.',
+          'This is a design concept for the Parallel Parts store, set up on the open-source Odoo Community CRM. The customers and figures shown are fictional.',
+        ],
+      },
+      {
+        heading: 'Data model',
+        body: [
+          'A contact carries the bike they ride: model, year and any earlier parts bought. Each order links to its fitment check and its shipment, so anyone replying to a customer sees the whole history in one place.',
+        ],
+      },
+      {
+        heading: 'Pipeline',
+        body: [
+          'Seven stages from first question to repeat purchase: Fitment enquiry, Quoted, Paid, In production, Shipped, Delivered, Review requested.',
+          'Two side lists sit next to the board: abandoned baskets older than a day, and buyers whose bike has a new part released since their last order.',
+        ],
+      },
+      {
+        heading: 'Voice',
+        body: [
+          'Clear, practical and honest about timing. Every message names the part, the bike it fits and the date to expect it, and says plainly when something is late.',
+        ],
+      },
+    ],
+    pipeline: {
+      note: 'Fictional sample data.',
+      stages: [
+        { name: 'Fitment enquiry', cards: [{ title: 'Rear shocks, 2016 T120', meta: 'Asked this morning' }] },
+        { name: 'Quoted', cards: [{ title: 'Bar-end mirrors', meta: 'Sent Tuesday' }] },
+        { name: 'Paid', cards: [{ title: 'Pannier racks', meta: 'Ordered today' }] },
+        { name: 'In production', cards: [{ title: 'Seat, tan leather', meta: 'Due in 3 weeks' }] },
+        { name: 'Shipped', cards: [{ title: 'Exhaust, brushed steel', meta: 'Tracking sent' }] },
+        { name: 'Delivered', cards: [] },
+        { name: 'Review requested', cards: [] },
+      ],
+    },
+    templates: [
+      {
+        label: 'Shipping update',
+        text: 'Hi Marcus, your brushed steel exhaust for the 2018 Bonneville T100 left the factory today. Tracking is below. Expect it in Málaga by 24 November. If it is not with you by the 27th, reply to this email and I will chase it.',
+      },
+    ],
+  },
+  {
     slug: 'conply',
     image: '/portfolio/img/work/conply.jpg',
     wire: 'product',
