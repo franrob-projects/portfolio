@@ -428,3 +428,47 @@ article img[class*='avatar'], article .avatar__photo { width: 40px; height: 40px
 .menu__link--active { background: rgba(64, 215, 124, 0.1); color: #40d77c; }
 .theme-doc-sidebar-container { border-right: 1px solid rgba(255, 255, 255, 0.12) !important; }
 @media (max-width: 900px) { article.margin-bottom--xl { padding: 1.25rem; } article header h1, article header h2 { font-size: 1.6rem; } }
+
+/* ---- Blog post pages ---- */
+.blog-wrapper .markdown { max-width: none; margin: 0; padding: 0; font-size: 1.0625rem; line-height: 1.7; color: #b4beb8; overflow-wrap: anywhere; }
+.blog-wrapper .markdown h2, .blog-wrapper .markdown h3 { color: #eef2ef; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; margin: 2.75rem 0 1rem; }
+.blog-wrapper .markdown h2 { font-size: 1.75rem; padding-top: 1.75rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.blog-wrapper .markdown > h2:first-child, .blog-wrapper .markdown > p:first-child + h2 { border-top: 0; }
+.blog-wrapper .markdown h3 { font-size: 1.3rem; }
+.blog-wrapper .markdown a { color: #40d77c; text-decoration: none; border-bottom: 1px solid rgba(64, 215, 124, 0.35); }
+.blog-wrapper .markdown a:hover { border-bottom-color: #40d77c; }
+.blog-wrapper .markdown ul, .blog-wrapper .markdown ol { padding-left: 1.25rem; }
+.blog-wrapper .markdown li { margin-bottom: 0.65rem; }
+.blog-wrapper .markdown li::marker { color: #40d77c; }
+.blog-wrapper .markdown strong { color: #eef2ef; font-weight: 600; }
+.blog-wrapper .markdown code { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 6px; padding: 0.1em 0.4em; font-size: 0.88em; color: #eef2ef; }
+.blog-wrapper .markdown pre, .blog-wrapper .markdown pre code { border: 0; padding: 0; background: transparent; }
+.blog-wrapper .markdown pre { max-width: 100%; overflow-x: auto; }
+.blog-wrapper .markdown blockquote { border-left: 3px solid #40d77c; background: #141a16; border-radius: 0 12px 12px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; color: #b4beb8; }
+.blog-wrapper .markdown table { display: block; max-width: 100%; overflow-x: auto; }
+.blog-wrapper .markdown img { border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.12); }
+.blog-wrapper article > header { margin-bottom: 1.5rem; }
+.blog-wrapper main article:not(.margin-bottom--xl) header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.blog-wrapper .table-of-contents { border-left: 1px solid rgba(255, 255, 255, 0.12); }
+.blog-wrapper .table-of-contents__link { color: #a3aea8; font-size: 0.85rem; }
+.blog-wrapper .table-of-contents__link:hover, .blog-wrapper .table-of-contents__link--active { color: #40d77c; }
+.blog-wrapper .pagination-nav__link { background: #141a16; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; }
+.blog-wrapper .pagination-nav__link:hover { border-color: #40d77c; }
+.blog-wrapper .pagination-nav__sublabel { color: #a3aea8; }
+.blog-wrapper .pagination-nav__label { color: #eef2ef; }
+.blog-wrapper footer.docusaurus-mt-lg { margin-top: 2.5rem; }
+.blog-wrapper .theme-tags a, .blog-wrapper footer a.tag, .blog-wrapper a[class*='tag_'] { border-radius: 999px; background: transparent; border: 1px solid rgba(255, 255, 255, 0.24); padding: 0.2rem 0.8rem; font-size: 0.8rem; color: #b4beb8; }
+
+/* ---- Footer: left-aligned, brand column, divider ---- */
+.footer.footer--dark { padding: 3.5rem 0 2rem; }
+.footer .footer__links { margin-bottom: 2rem; }
+.footer .footer__col { margin-bottom: 0.5rem; }
+.footer__item { margin: 0; }
+.footer__link-item { display: inline-flex; padding: 0.3rem 0; font-size: 0.95rem; }
+.footer__bottom { border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 1.5rem; text-align: left; }
+.footer__copyright { text-align: left; }
+@media (max-width: 900px) { .blog-wrapper .markdown { font-size: 1rem; } .blog-wrapper main article:not(.margin-bottom--xl) header h1 { font-size: 1.8rem; } .footer .footer__col { margin-bottom: 1.25rem; } }
+.blog-wrapper article header .row { margin-left: 0; margin-right: 0; }
+.blog-wrapper article header .row > .col { padding-left: 0; padding-right: 0; max-width: 100%; }
+.footer__link-item { align-items: center; gap: 0.35rem; }
+.footer__link-item svg { margin: 0 !important; width: 0.8em; height: 0.8em; opacity: 0.7; }
