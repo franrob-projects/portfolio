@@ -6,7 +6,8 @@ import ProjectCard from '../../components/ProjectCard';
 import Reveal from '../../components/Reveal';
 import {CASE_STUDIES, openFor } from '../../data/work';
 
-const STUDIES = CASE_STUDIES.filter(c => !c.slug.startsWith('crm-') && c.kind !== 'concept');
+const STUDIES = CASE_STUDIES.filter(c => !c.slug.startsWith('crm-') && c.kind !== 'concept' && c.kind !== 'product');
+const PRODUCT = CASE_STUDIES.filter(c => c.kind === 'product');
 const WEB = CASE_STUDIES.filter(c => c.kind === 'concept');
 const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
 
@@ -26,6 +27,15 @@ export default function Work(): ReactNode {
           {STUDIES.map((c, i) => (
             <Reveal key={c.slug} delay={(i % 3) * 70}>
               <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} tags={c.disciplines} />
+            </Reveal>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead}><h2>Product design</h2></div>
+        <div className={styles.grid3}>
+          {PRODUCT.map((c, i) => (
+            <Reveal key={c.slug} delay={i * 70}>
+              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} tags={c.disciplines} />
             </Reveal>
           ))}
         </div>

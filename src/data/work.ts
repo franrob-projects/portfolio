@@ -1,4 +1,4 @@
-export type Discipline = 'Web' | 'CRM' | 'Content';
+export type Discipline = 'Web' | 'CRM' | 'Content' | 'Product' | 'Packaging';
 
 export interface Sample {
   title: string;
@@ -22,7 +22,7 @@ export interface CaseStudyData {
   samples?: Sample[];
   image?: string;
   /** Sites with a built version get a project page with a link to the working site. */
-  kind?: 'concept';
+  kind?: 'concept' | 'product';
   status?: 'Live';
   wire?: 'docs' | 'pricing' | 'landing' | 'product';
   /** Optional CRM pipeline mock with fictional sample data. */
@@ -32,6 +32,153 @@ export interface CaseStudyData {
 }
 
 export const CASE_STUDIES: CaseStudyData[] = [
+  {
+    slug: 'viki-dashboard',
+    kind: 'product',
+    image: '/portfolio/img/work/viki-dash.jpg',
+    title: 'VIKI Dashboard',
+    kicker: 'Product design · web app',
+    summary:
+      'The working dashboard for VIKI, an AI business operating system: a daily Command Center, a CRM pipeline and finance, designed in Figma and built as a working app.',
+    disciplines: ['Product', 'Web'],
+    tags: ['Figma', 'React', 'TypeScript', 'Vite', 'Manrope'],
+    role: 'Product designer and front-end developer',
+    period: '2026',
+    links: [{ label: 'Open the app', href: '/portfolio/demos/viki-dashboard/' }],
+    sections: [
+      {
+        heading: 'The brief',
+        body: [
+          'A small business runs on a handful of separate tools: email, WhatsApp, a calendar, a bank, a spreadsheet. VIKI pulls them into one place. The dashboard has to answer one question quickly: what needs my attention today.',
+        ],
+      },
+      {
+        heading: 'Command Center',
+        body: [
+          'The overview opens with what VIKI recommends, such as an overdue invoice or unassigned tasks, then the month’s numbers, a quick-capture box for tasks and notes, an AI day plan with time slots, and a chat with the assistant. Each recommendation links to the screen where it is fixed.',
+        ],
+      },
+      {
+        heading: 'CRM and finances',
+        body: [
+          'The CRM screen is a sales pipeline from new lead to negotiation. Cards drag between stages, with follow-ups and lead sources beside it. The finance screen shows invoiced, collected, expenses and margin, with a recent invoices table that filters by status.',
+        ],
+      },
+      {
+        heading: 'Design system',
+        body: [
+          'One orange accent on a quiet light interface, Manrope throughout, monospaced labels for section names, and a two-level navigation: platform modules on the left and the pages inside each module beside them.',
+        ],
+      },
+      {
+        heading: 'Scope',
+        body: [
+          'The overview, CRM and finance screens are built and interactive. The data is sample data. The other modules are not in this build.',
+        ],
+      },
+    ],
+    samples: [
+      { title: 'Overview in Figma', caption: 'Command Center design.', image: '/portfolio/img/work/dash-figma-overview.jpg' },
+      { title: 'CRM in Figma', caption: 'Pipeline and follow-ups.', image: '/portfolio/img/work/dash-figma-crm.jpg' },
+      { title: 'Finances in Figma', caption: 'Dashboard and invoices.', image: '/portfolio/img/work/dash-figma-finance.jpg' },
+      { title: 'CRM, built', caption: 'The same screen as a working app.', image: '/portfolio/img/work/viki-crm.jpg' },
+    ],
+  },
+  {
+    slug: 'viki-auth',
+    kind: 'product',
+    image: '/portfolio/img/work/viki-auth.jpg',
+    title: 'VIKI Auth & Onboarding',
+    kicker: 'Product design · web app',
+    summary:
+      'Log in, sign up, email verification and a six-step onboarding that sets up a VIKI workspace, designed in Figma and built as a working app.',
+    disciplines: ['Product', 'Web'],
+    tags: ['Figma', 'React', 'TypeScript', 'Vite', 'Manrope'],
+    role: 'Product designer and front-end developer',
+    period: '2026',
+    links: [{ label: 'Open the app', href: '/portfolio/demos/viki-auth/' }],
+    sections: [
+      {
+        heading: 'The brief',
+        body: [
+          'Getting into a new product should take minutes. The first screens have to build trust, ask only for what is needed, and leave the person with a workspace that already reflects their business.',
+        ],
+      },
+      {
+        heading: 'Authentication',
+        body: [
+          'Log in, create an account, enter a six-digit code sent by email, and reset a password. Fields validate as you go, passwords can be shown or hidden, a pasted code fills all six boxes, and the resend timer counts down.',
+        ],
+      },
+      {
+        heading: 'Onboarding',
+        body: [
+          'Six short steps: business details, industry, team size and structure, tools to connect, first goals and team invites. Choices are tiles and chips rather than long forms, and the progress bar shows where you are. Skipping optional steps is always possible.',
+        ],
+      },
+      {
+        heading: 'Workspace ready',
+        body: [
+          'The last screen lists what has been set up from the answers: CRM pipeline, connected tools, invites and the AI day plan. One button opens the dashboard.',
+        ],
+      },
+      {
+        heading: 'Scope',
+        body: [
+          'The flow is front-end only. No accounts or emails are created, and any six digits are accepted for the code.',
+        ],
+      },
+    ],
+    samples: [
+      { title: 'Choose an industry', caption: 'Step 2 of 6.', image: '/portfolio/img/work/viki-auth-onboarding.jpg' },
+      { title: 'Workspace ready', caption: 'What was set up from your answers.', image: '/portfolio/img/work/viki-auth-ready.jpg' },
+    ],
+  },
+  {
+    slug: 'earth-and-hound',
+    kind: 'product',
+    image: '/portfolio/img/work/earth-hound-print.jpg',
+    title: 'Earth & Hound',
+    kicker: 'Packaging design · brand',
+    summary:
+      'Brand, logo and retail box for dog waste bags made from recycled plastic, with print-ready artwork and dielines for two box sizes.',
+    disciplines: ['Packaging', 'Content'],
+    tags: ['Figma', 'Packaging', 'Dielines', 'Branding', 'Copywriting'],
+    role: 'Packaging and brand designer, and copywriter',
+    period: '2026',
+    links: [],
+    sections: [
+      {
+        heading: 'The brief',
+        body: [
+          'A product nobody wants to talk about, made from recycled plastic and sold in a box. The packaging had to look like a brand worth picking up, say what is inside in a second, and explain how to dispose of it.',
+        ],
+      },
+      {
+        heading: 'The brand',
+        body: [
+          'A hound in profile with a leaf for an ear, in a double ring. Deep green, cream, gold and a band of lavender for the scent. A spaced serif wordmark with the ampersand set in gold, and a line that does the talking: the bit of the walk nobody talks about.',
+        ],
+      },
+      {
+        heading: 'The box',
+        body: [
+          'The front carries the name, the claim and two badges: tie handles and 80% post-consumer recycled. The sides repeat the mark and the count. The back tells the story, lists six product facts as icons and gives disposal instructions, material codes and a lot number space. A repeat pattern of the logo covers the lid and base.',
+        ],
+      },
+      {
+        heading: 'Print files',
+        body: [
+          'Artwork sits on its own layer, separate from cut, crease, glue, perforation and seal lines, with centre lines and a 10 mm keep-clear zone around the handle cut-out. The same artwork is set up for a 600-bag, 40-roll box and a 300-bag, 20-roll box on the supplier’s template. The logo also has a one-colour master for single-colour print.',
+        ],
+      },
+    ],
+    samples: [
+      { title: 'Flat artwork', caption: '600 bags, 40 rolls.', image: '/portfolio/img/work/earth-hound-print.jpg' },
+      { title: 'Box with dielines', caption: '300 bags, 20 rolls, on the supplier template.', image: '/portfolio/img/work/earth-hound-box.jpg' },
+      { title: 'The mark', caption: 'Hound and leaf.', image: '/portfolio/img/work/earth-hound-logo.jpg' },
+    ],
+  },
   {
     slug: 'ably',
     image: '/portfolio/img/work/ably-docs.jpg',
@@ -599,7 +746,7 @@ export const ABLY_LIVE_PAGES: LivePage[] = [
 
 
 // The built or live site behind a case study, if there is one. CRM examples have none.
-const LIVE = ['ably', 'conply', 'viki', 'safeplay-desk', 'licence-ready', 'classic-triumph-malaga', 'parallel-parts'];
+const LIVE = ['ably', 'conply', 'viki', 'viki-dashboard', 'viki-auth', 'safeplay-desk', 'licence-ready', 'classic-triumph-malaga', 'parallel-parts'];
 export function openFor(slug: string): { label: string; href: string } | undefined {
   if (!LIVE.includes(slug)) return undefined;
   const c = CASE_STUDIES.find(x => x.slug === slug);
