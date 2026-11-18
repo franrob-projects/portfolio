@@ -7,14 +7,42 @@ const FAN = ['classic-triumph-malaga', 'parallel-parts', 'licence-ready', 'conpl
 const bySlug = (s: string) => CASE_STUDIES.find(c => c.slug === s)!;
 const label = (d: string[]) => d.join(' · ');
 
+// x / y in rem (y negative = raised), r in degrees: a loose, hand-tossed scatter
+const SCATTER = [
+  {x: -10.5, y: -2.5, r: -12},
+  {x: -5, y: -7.5, r: -5},
+  {x: 0.5, y: -3.5, r: 3},
+  {x: 5.5, y: -8.5, r: 8},
+  {x: 10.5, y: -4, r: 14},
+];
+const COLORS = ['#40d77c', '#ffd24a', '#ff7a59', '#6cc7ff', '#c084fc', '#ff8ad8'];
+const STARS = [
+  {x: 6, y: 18, s: 1.3, d: 7, l: 0.3}, {x: 20, y: 52, s: 0.8, d: 6, l: 1.1}, {x: 33, y: 8, s: 1.1, d: 8, l: 0.7},
+  {x: 47, y: 44, s: 1.6, d: 9, l: 0.2}, {x: 60, y: 14, s: 0.9, d: 6.5, l: 1.4}, {x: 72, y: 56, s: 1.2, d: 7.5, l: 0.9},
+  {x: 84, y: 22, s: 1.5, d: 8.5, l: 0.5}, {x: 93, y: 60, s: 0.8, d: 6, l: 1.7},
+];
+const DOTS = [
+  {x: 13, y: 34, s: 5, d: 5, l: 0.4}, {x: 27, y: 66, s: 4, d: 6, l: 1.2}, {x: 40, y: 28, s: 6, d: 5.5, l: 0.8},
+  {x: 54, y: 70, s: 4, d: 6.5, l: 0.1}, {x: 66, y: 36, s: 5, d: 5, l: 1.5}, {x: 79, y: 8, s: 4, d: 6, l: 0.6}, {x: 90, y: 40, s: 6, d: 5.5, l: 1},
+];
+
 export function Fan(): ReactNode {
   return (
     <div className={styles.fan}>
+      <div className={styles.stars} aria-hidden="true">
+        {STARS.map((s, k) => (
+          <span key={'s' + k} className={styles.star} style={{['--sx' as string]: s.x + '%', ['--sy' as string]: s.y + '%', ['--ss' as string]: s.s + 'rem', ['--sc' as string]: COLORS[k % COLORS.length], ['--sd' as string]: s.d + 's', ['--sl' as string]: s.l + 's'}}>
+            <svg viewBox="0 0 24 24"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z" /></svg>
+          </span>
+        ))}
+        {DOTS.map((s, k) => (
+          <span key={'d' + k} className={styles.dot} style={{['--sx' as string]: s.x + '%', ['--sy' as string]: s.y + '%', ['--ss' as string]: s.s + 'px', ['--sc' as string]: COLORS[(k + 2) % COLORS.length], ['--sd' as string]: s.d + 's', ['--sl' as string]: s.l + 's'}} />
+        ))}
+      </div>
       {FAN.map((slug, n) => {
         const c = bySlug(slug);
-        const i = n - 2;
         return (
-          <Link key={slug} to={`/work/${slug}`} className={styles.fanCard} style={{['--i' as string]: i, ['--z' as string]: n + 1}}>
+          <Link key={slug} to={`/work/${slug}`} className={styles.fanCard} style={{['--x' as string]: SCATTER[n].x, ['--y' as string]: SCATTER[n].y, ['--r' as string]: SCATTER[n].r + 'deg', ['--z' as string]: n + 1}}>
             <span className={styles.fanBar}><i /><i /><i /></span>
             <img className={styles.fanImg} src={c.image} alt="" />
             <span className={styles.fanLabel}><b>{c.title}</b><span>{label(c.disciplines)}</span></span>
