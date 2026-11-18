@@ -2,19 +2,16 @@ import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import styles from '../css/work.module.css';
-import Contact, {WHATSAPP, WaIcon} from '../components/Contact';
-import Frame from '../components/Frame';
+import {WHATSAPP, WaIcon} from '../components/Contact';
+import ContactCta from '../components/ContactCta';
 import LiveWork from '../components/LiveWork';
-import ProjectCard from '../components/ProjectCard';
-import Reveal from '../components/Reveal';
-import {CASE_STUDIES, openFor } from '../data/work';
-import {EPISODES, SERIES, thumb} from '../data/podcast';
 
-const PRODUCTS = CASE_STUDIES.filter(c => c.slug === 'conply' || c.slug === 'viki');
-const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
-const WEB = CASE_STUDIES.filter(c => c.kind === 'concept');
+const EXPLORE: [string, string, string][] = [
+  ['/work', 'Work', 'Ably, Conply and VIKI, CRM design, and the web projects I have built.'],
+  ['/projects', 'Projects', 'Open-source builds, docs tooling and contributions.'],
+  ['/podcast', 'Podcast', 'EAR: In Conversation and the Docs Engineering series.'],
+];
 
-const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 
 export default function Home(): ReactNode {
   return (
@@ -22,7 +19,7 @@ export default function Home(): ReactNode {
       title="FranRob Project | Web, CRM and content designer"
       description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
       <main className={styles.wrap}>
-        <header className={styles.heroSplit}>
+        <header className={styles.hero}>
           <div>
             <div className={styles.eyebrow}>Web, CRM and content design · Málaga</div>
             <h1>I design the site, the pipeline and the words.</h1>
@@ -32,83 +29,25 @@ export default function Home(): ReactNode {
             </p>
             <div className={styles.actions}>
               <Link className={`${styles.btn} ${styles.btnSolid}`} to="/work">See the work</Link>
-              <a className={styles.btn} href="#contact">Start a project</a>
+              <Link className={styles.btn} to="/contact">Start a project</Link>
               <a className={styles.btn} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Francis on WhatsApp, opens in a new tab"><WaIcon /> WhatsApp</a>
             </div>
-          </div>
-          <div className={styles.stack} aria-hidden>
-            <Frame src="/portfolio/img/work/ably-livesync.jpg" alt="" wire="landing" />
-            <Frame src="/portfolio/img/work/viki.jpg" alt="" wire="landing" />
-            <Frame src="/portfolio/img/work/conply.jpg" alt="" wire="product" />
           </div>
         </header>
 
         <LiveWork />
 
-        <div className={styles.sectionHead}>
-          <div>
-            <h2>Products</h2>
-            <p className={styles.sectionLead}>Product sites and content systems I run or build with others.</p>
-          </div>
-        </div>
-        <div className={styles.grid2}>
-          {PRODUCTS.map((c, i) => (
-            <Reveal key={c.slug} delay={i * 70}>
-              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />
-            </Reveal>
-          ))}
-        </div>
-
-        <div className={styles.sectionHead}>
-          <div>
-            <h2>Podcast</h2>
-            <p className={styles.sectionLead}>{SERIES.title}: {SERIES.tagline}</p>
-          </div>
-          <Link to="/podcast" className={styles.textLink}>All episodes →</Link>
-        </div>
-        <div className={styles.grid2}>
-          {EPISODES.slice(0, 2).map((e, i) => (
-            <Reveal key={e.number} delay={i * 70}>
-              <ProjectCard to="/podcast" title={`Ep. ${e.number}: ${e.title}`} kicker={`${e.guest}, ${e.role}`} summary={e.summary} image={thumb(e.videoId)} wire="landing" />
-            </Reveal>
-          ))}
-        </div>
-
-        <div className={styles.sectionHead}>
-          <div>
-            <h2>CRM design</h2>
-            <p className={styles.sectionLead}>Precision CNC job shops in two tones, plus an online parts store, all on open-source CRMs.</p>
-          </div>
-        </div>
+        <div className={styles.sectionHead}><h2>Explore</h2></div>
         <div className={styles.grid3}>
-          {CRM.map((c, i) => (
-            <Reveal key={c.slug} delay={i * 70}>
-              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />
-            </Reveal>
+          {EXPLORE.map(([to, title, text]) => (
+            <Link key={to} to={to} className={styles.card} style={{padding: '1.5rem', height: 'auto'}}>
+              <h3 style={{margin: '0 0 .5rem'}}>{title} →</h3>
+              <p style={{margin: 0}}>{text}</p>
+            </Link>
           ))}
         </div>
 
-        <div className={styles.sectionHead}>
-          <div>
-            <h2>Web projects</h2>
-            <p className={styles.sectionLead}>Sites designed, written and built end to end.</p>
-          </div>
-          <Link to="/work" className={styles.textLink}>All work →</Link>
-        </div>
-        <div className={styles.grid2}>
-          {WEB.map((s, i) => (
-            <Reveal key={s.slug} delay={(i % 2) * 70}>
-              <ProjectCard to={`/work/${s.slug}`} open={openFor(s.slug)} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
-            </Reveal>
-          ))}
-        </div>
-
-        <p style={{marginTop: '3rem', color: 'var(--meta)'}}>
-          Also: <Link to="/docs/intro" className={styles.textLink}>docs engineering work</Link> and the{' '}
-          <Link to="/blog" className={styles.textLink}>crypto blog</Link>.
-        </p>
-
-        <Contact />
+        <ContactCta />
       </main>
     </Layout>
   );

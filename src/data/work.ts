@@ -506,35 +506,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
       },
     ],
   },
-  {
-    slug: 'web-design',
-    image: '/portfolio/img/work/parallel-parts.jpg',
-    title: 'Web design',
-    kicker: 'Marketing sites and landing pages',
-    summary:
-      'Sites built to make one point clearly and convert: a regulatory training site, a programme landing page, and a growing set of regulation-support sites for the iGaming sector.',
-    disciplines: ['Web'],
-    tags: ['React', 'Next.js', 'Tailwind', 'Vite', 'Accessibility'],
-    role: 'Designer and developer',
-    links: [
-      { label: 'GibTrain', href: 'https://franrob-projects.github.io/gibraltar-compliance/' },
-      { label: 'TeachYAR', href: 'https://github.com/franrob-projects/teachyar' },
-    ],
-    sections: [
-      {
-        heading: 'Approach',
-        body: [
-          'Each site starts with the single decision the visitor has to make, then removes everything that does not help them make it. Copy, layout and component design are done together so the page reads as one argument.',
-        ],
-      },
-      {
-        heading: 'Selected sites',
-        body: [
-          'GibTrain: a Gibraltar compliance training site that argues local statute matters. TeachYAR: a Next.js landing page for a pre-service education programme for 16 to 19 year olds. Plus the UKGC support sites on the Work page.',
-        ],
-      },
-    ],
-  },
 ];
 
 export interface SupportSite {

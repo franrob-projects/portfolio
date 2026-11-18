@@ -2,12 +2,13 @@ import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import styles from '../css/work.module.css';
-import Contact, {WHATSAPP, WaIcon} from '../components/Contact';
+import Contact from '../components/Contact';
 
 const FACTS: [string, string][] = [
   ['Based in', 'Málaga, Spain (Europe/Madrid time)'],
   ['Replies', 'Within two working days'],
   ['Languages', 'English, and Spanish in progress'],
+  ['GitHub', 'github.com/franrob-projects'],
   ['Works on', 'Websites, CRM set-up and redesign, product and marketing copy'],
 ];
 
@@ -20,24 +21,6 @@ export default function ContactPage(): ReactNode {
           <h1>Let’s talk about your project.</h1>
           <p className="lead">Send a short brief, or message me directly. I’ll tell you what I’d do, how long it takes and roughly what it costs.</p>
         </header>
-
-        <div className={styles.grid3} style={{marginBottom: '1rem'}}>
-          <a className={styles.card} style={{padding: '1.5rem'}} href="mailto:francisroberts@live.com">
-            <div className={styles.eyebrow}>Email</div>
-            <h3 style={{margin: '0 0 .4rem'}}>francisroberts@live.com</h3>
-            <p style={{margin: 0}}>Best for briefs and attachments.</p>
-          </a>
-          <a className={styles.card} style={{padding: '1.5rem'}} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp, opens in a new tab">
-            <div className={styles.eyebrow}>WhatsApp</div>
-            <h3 style={{margin: '0 0 .4rem', display: 'flex', gap: '.5rem', alignItems: 'center'}}><WaIcon /> +34 678 34 80 65</h3>
-            <p style={{margin: 0}}>Best for a quick question.</p>
-          </a>
-          <a className={styles.card} style={{padding: '1.5rem'}} href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub, opens in a new tab">
-            <div className={styles.eyebrow}>GitHub</div>
-            <h3 style={{margin: '0 0 .4rem'}}>franrob-projects</h3>
-            <p style={{margin: 0}}>Code behind the sites.</p>
-          </a>
-        </div>
 
         <Contact />
 

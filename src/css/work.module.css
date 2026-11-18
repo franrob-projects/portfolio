@@ -143,3 +143,7 @@ a.card:hover .ext { color: var(--accent); transform: translate(1px, -1px); }
 .epGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: start; }
 .topics { margin: 1rem 0 0; padding-left: 1.2rem; color: var(--text-2); line-height: 1.7; }
 @media (max-width: 900px) { .epGrid { grid-template-columns: 1fr; } }
+
+.cta { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin: 4.5rem 0 1rem; padding: 2rem 2.25rem; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.cta h2 { margin: 0 0 .35rem; font-size: var(--fs-h3); color: var(--text); }
+.cta p { margin: 0; }

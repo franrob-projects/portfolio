@@ -1,8 +1,7 @@
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import styles from '../../css/work.module.css';
-import Contact from '../../components/Contact';
-import LiveWork from '../../components/LiveWork';
+import ContactCta from '../../components/ContactCta';
 import ProjectCard from '../../components/ProjectCard';
 import Reveal from '../../components/Reveal';
 import {CASE_STUDIES, openFor } from '../../data/work';
@@ -20,15 +19,13 @@ export default function Work(): ReactNode {
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Selected work</div>
           <h1>Web, CRM and content, designed together.</h1>
-          <p>Case studies, live pages and working sites.</p>
+          <p>Case studies and working sites.</p>
         </header>
 
-        <LiveWork />
-
         <div className={styles.sectionHead}><h2>Case studies</h2></div>
-        <div className={styles.grid2}>
+        <div className={styles.grid3}>
           {STUDIES.map((c, i) => (
-            <Reveal key={c.slug} delay={(i % 2) * 70}>
+            <Reveal key={c.slug} delay={(i % 3) * 70}>
               <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} tags={c.disciplines} />
             </Reveal>
           ))}
@@ -57,7 +54,7 @@ export default function Work(): ReactNode {
           ))}
         </div>
 
-        <Contact />
+        <ContactCta />
       </main>
     </Layout>
   );

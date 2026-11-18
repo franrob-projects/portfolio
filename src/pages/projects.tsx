@@ -1,8 +1,6 @@
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
-import LiveWork from '../components/LiveWork';
-import workStyles from '../css/work.module.css';
 
 interface Tag {
   label: string;
@@ -412,43 +410,12 @@ export default function Projects(): ReactNode {
         <section className={styles.hero}>
           <h1 style={{ fontSize: '3rem' }}>Projects</h1>
           <p>
-            Builds and experiments behind the design work. For case studies on Ably, Conply,
-            VIKI and web design, see <a href="/portfolio/work/">Work</a>.
+            Open-source builds, docs tooling and contributions. Client and product work is on the <a href="/portfolio/work/">Work</a> page.
           </p>
         </section>
 
-        <div className={workStyles.wrap} style={{padding: 0}}><LiveWork /></div>
-
         <section className={styles.section}>
           <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🎙️</span>
-            Docs Engineering podcast series
-          </h2>
-          <div className={styles.job} style={{ marginBottom: '2rem' }}>
-            <img
-              src="/portfolio/img/podcast/docs-engineering-podcast.jpg"
-              alt="Docs Engineering podcast episode"
-              style={{ width: '100%', borderRadius: '8px', marginBottom: '1rem', display: 'block' }}
-              loading="lazy"
-            />
-            <p style={{ marginBottom: '1rem', color: 'var(--ifm-color-content-secondary)', lineHeight: '1.65' }}>
-              A conversation series on what "docs engineering" actually looks like day to day: migrating legacy platforms onto React and MDX, building the pipelines that test code samples, and the judgment calls behind what to document and what to cut. Recorded with fellow practitioners working on developer docs in the wild, including the team at <a href="https://koinju.io/" target="_blank" rel="noopener noreferrer">Koinju</a>, an institutional crypto data platform.
-            </p>
-            <a
-              href="https://www.linkedin.com/feed/update/urn:li:activity:7404514545265852416/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.button}
-              style={{ marginLeft: 0 }}
-            >
-              Watch on LinkedIn ↗
-            </a>
-          </div>
-        </section>
-
-        <section className={styles.section}>
-          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🛠️</span>
             Open source projects I founded
           </h2>
           {PROJECTS.map(project => (
@@ -458,7 +425,6 @@ export default function Projects(): ReactNode {
 
         <section className={styles.section}>
           <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🏗️</span>
             Docs engineering and tooling
           </h2>
           {DOCS_ENGINEERING_PROJECTS.map(project => (
@@ -468,7 +434,6 @@ export default function Projects(): ReactNode {
 
         <section className={styles.section}>
           <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🌱</span>
             Open-source contributions
           </h2>
           <p style={{ textAlign: 'center', color: 'var(--ifm-color-content-secondary)', marginBottom: '2rem' }}>
