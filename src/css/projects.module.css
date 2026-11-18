@@ -1,0 +1,41 @@
+.jump { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.75rem; }
+.jump a { display: inline-flex; gap: .5rem; align-items: center; padding: .45rem .95rem; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text-2) !important; text-decoration: none !important; font-size: .875rem; transition: border-color .2s, color .2s; }
+.jump a:hover { border-color: var(--accent); color: var(--text) !important; }
+.jump b { font-weight: 600; color: var(--accent); }
+.sub { color: var(--meta); font-size: .95rem; max-width: 42ch; }
+
+.grid { columns: 2; column-gap: 1.25rem; }
+.grid > * { break-inside: avoid; margin-bottom: 1.25rem; }
+.card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: border-color .25s, transform .25s, box-shadow .25s; }
+.card:hover { border-color: var(--line-strong); transform: translateY(-3px); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.shot { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); background: var(--surface-2); }
+.body { display: flex; flex-direction: column; gap: .8rem; padding: 1.25rem 1.35rem 1.35rem; flex: 1; }
+.title { margin: 0; font-size: 1.25rem; line-height: 1.25; letter-spacing: -.01em; color: var(--text); display: flex; gap: .6rem; align-items: baseline; }
+.icon { font-size: 1.15rem; }
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tag { padding: .15rem .6rem; border-radius: 999px; font-size: .72rem; font-weight: 500; color: var(--c); background: color-mix(in srgb, var(--c) 11%, transparent); border: 1px solid color-mix(in srgb, var(--c) 30%, transparent); }
+.desc { margin: 0; font-size: .95rem; line-height: 1.6; color: var(--text-2); display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.more { border-top: 1px solid var(--line); padding-top: .7rem; }
+.more summary { cursor: pointer; font-size: .85rem; font-weight: 600; color: var(--accent); list-style: none; display: flex; align-items: center; gap: .4rem; }
+.more summary::-webkit-details-marker { display: none; }
+.more summary::after { content: '+'; font-size: 1.1rem; line-height: 1; transition: transform .2s; }
+.more[open] summary::after { transform: rotate(45deg); }
+.more ul { margin: .7rem 0 0; padding-left: 1.1rem; font-size: .875rem; line-height: 1.65; color: var(--text-2); }
+.more li + li { margin-top: .3rem; }
+.links { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: auto; padding-top: .4rem; }
+.sm { padding: .5rem 1rem; font-size: .875rem; }
+
+.prs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.pr { display: flex; flex-direction: column; gap: .5rem; padding: 1.1rem 1.25rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; color: inherit !important; text-decoration: none !important; transition: border-color .25s, transform .25s; }
+.pr:hover { border-color: var(--accent); transform: translateY(-2px); }
+.prTop { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.prTop code { font-size: .78rem; padding: .1rem .5rem; background: rgba(255,255,255,.06); border-radius: 5px; color: var(--text-2); }
+.state { font-size: .65rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: .1rem .5rem; border-radius: 999px; color: #3fb950; background: rgba(63,185,80,.13); border: 1px solid rgba(63,185,80,.35); }
+.state[data-state='merged'] { color: #a371f7; background: rgba(163,113,247,.13); border-color: rgba(163,113,247,.35); }
+.state[data-state='closed'] { color: #f85149; background: rgba(248,81,73,.13); border-color: rgba(248,81,73,.35); }
+.num { font-size: .8rem; color: var(--meta); }
+.prTitle { font-weight: 600; font-size: 1rem; line-height: 1.35; color: var(--text); }
+.prBlurb { font-size: .85rem; line-height: 1.55; color: var(--text-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.prGo { margin-top: auto; padding-top: .3rem; font-size: .85rem; font-weight: 600; color: var(--accent); }
+
+@media (max-width: 900px) { .grid { columns: 1; } .prs { grid-template-columns: 1fr; } }

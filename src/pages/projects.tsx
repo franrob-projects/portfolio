@@ -1,6 +1,8 @@
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
-import styles from './index.module.css';
+import Link from '@docusaurus/Link';
+import styles from '../css/work.module.css';
+import p from '../css/projects.module.css';
 
 interface Tag {
   label: string;
@@ -242,159 +244,43 @@ const CONTRIBUTIONS: Contribution[] = [
   },
 ]
 
-function TagBadge({ tag }: { tag: Tag }) {
-  return (
-    <span style={{
-      display: 'inline-block',
-      padding: '3px 10px',
-      borderRadius: '999px',
-      fontSize: '0.75rem',
-      fontWeight: 500,
-      background: `${tag.colour}18`,
-      color: tag.colour,
-      border: `1px solid ${tag.colour}40`,
-      marginRight: '6px',
-      marginBottom: '6px',
-    }}>
-      {tag.label}
-    </span>
-  );
-}
-
 function ProjectCard({ project }: { project: Project }) {
-  const imageEl = project.image ? (
-    <img
-      src={project.image}
-      alt={project.imageAlt ?? project.title}
-      style={{
-        width: '100%',
-        borderRadius: '8px',
-        marginBottom: '1rem',
-        display: 'block',
-        border: '1px solid rgba(255, 255, 255, 0.08)',
-      }}
-      loading="lazy"
-    />
-  ) : null;
-
   return (
-    <div className={styles.job} style={{ marginBottom: '2rem' }}>
-      {imageEl && (project.imageHref ? (
-        <a href={project.imageHref} target="_blank" rel="noopener noreferrer">
-          {imageEl}
-        </a>
-      ) : imageEl)}
-      <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>
-        <span style={{ marginRight: '10px' }}>{project.icon}</span>
-        {project.title}
-      </h3>
-
-      <div style={{ marginBottom: '12px' }}>
-        {project.tags.map(tag => (
-          <TagBadge key={tag.label} tag={tag} />
-        ))}
+    <article className={p.card}>
+      {project.image && <img className={p.shot} src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" />}
+      <div className={p.body}>
+        <h3 className={p.title}><span className={p.icon} aria-hidden="true">{project.icon}</span>{project.title}</h3>
+        <div className={p.tags}>
+          {project.tags.map(t => (
+            <span key={t.label} className={p.tag} style={{ ['--c' as string]: t.colour }}>{t.label}</span>
+          ))}
+        </div>
+        <p className={p.desc}>{project.description}</p>
+        <details className={p.more}>
+          <summary>What it does</summary>
+          <ul>{project.details.map((d, i) => <li key={i}>{d}</li>)}</ul>
+        </details>
+        <div className={p.links}>
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${p.sm}`}>GitHub →</a>
+          {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnSolid} ${p.sm}`}>Live site ↗</a>}
+        </div>
       </div>
-
-      <p style={{ marginBottom: '1rem', color: 'var(--ifm-color-content-secondary)', lineHeight: '1.65' }}>
-        {project.description}
-      </p>
-
-      <ul style={{
-        paddingLeft: '1.25rem',
-        marginBottom: '1.25rem',
-        color: 'var(--ifm-color-content-secondary)',
-        fontSize: '0.9rem',
-        lineHeight: '1.7',
-      }}>
-        {project.details.map((d, i) => (
-          <li key={i}>{d}</li>
-        ))}
-      </ul>
-
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.button}
-        style={{ marginLeft: 0 }}
-      >
-        View on GitHub →
-      </a>
-      {project.live && (
-        <a
-          href={project.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.button}
-          style={{ marginLeft: '10px' }}
-        >
-          Live site ↗
-        </a>
-      )}
-    </div>
+    </article>
   );
 }
 
-const STATE_COLOURS: Record<Contribution['state'], string> = {
-  open:   '#3FB950',
-  merged: '#A371F7',
-  closed: '#F85149',
-};
-
-function ContributionRow({ contribution }: { contribution: Contribution }) {
-  const colour = STATE_COLOURS[contribution.state];
+function ContributionRow({ c }: { c: Contribution }) {
   return (
-    <div className={styles.job} style={{ marginBottom: '1.25rem' }}>
-      <div style={{ display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: '10px', marginBottom: '6px' }}>
-        <code style={{
-          fontSize: '0.85rem',
-          padding: '2px 8px',
-          background: 'rgba(255, 255, 255, 0.06)',
-          borderRadius: '4px',
-        }}>
-          {contribution.repo}
-        </code>
-        <span style={{
-          fontSize: '0.7rem',
-          fontWeight: 600,
-          letterSpacing: '0.05em',
-          textTransform: 'uppercase',
-          padding: '2px 8px',
-          borderRadius: '999px',
-          background: `${colour}22`,
-          color: colour,
-          border: `1px solid ${colour}55`,
-        }}>
-          {contribution.state}
-        </span>
-        <span style={{ fontSize: '0.85rem', color: 'var(--ifm-color-content-secondary)' }}>
-          #{contribution.number}
-        </span>
-      </div>
-
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.5rem' }}>
-        {contribution.title}
-      </h3>
-
-      <p style={{
-        marginBottom: '0.75rem',
-        color: 'var(--ifm-color-content-secondary)',
-        fontSize: '0.9rem',
-        lineHeight: '1.65',
-      }}>
-        {contribution.blurb}
-      </p>
-
-      <a
-        href={contribution.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.button}
-        style={{ marginLeft: 0 }}
-      >
-        View PR →
-      </a>
-    </div>
+    <a className={p.pr} href={c.url} target="_blank" rel="noopener noreferrer">
+      <span className={p.prTop}>
+        <code>{c.repo}</code>
+        <span className={p.state} data-state={c.state}>{c.state}</span>
+        <span className={p.num}>#{c.number}</span>
+      </span>
+      <span className={p.prTitle}>{c.title}</span>
+      <span className={p.prBlurb}>{c.blurb}</span>
+      <span className={p.prGo}>View PR →</span>
+    </a>
   );
 }
 
@@ -402,45 +288,37 @@ export default function Projects(): ReactNode {
   return (
     <Layout
       title="Projects | Fran Roberts"
-      description="Side projects and open-source work by Francis Roberts"
+      description="Open-source builds, docs tooling and documentation contributions by Fran Roberts"
     >
-      <main className={styles.container}>
-        <section className={styles.hero}>
-          <h1 style={{ fontSize: '3rem' }}>Projects</h1>
-          <p>
-            Open-source builds, docs tooling and contributions. Client and product work is on the <a href="/portfolio/work/">Work</a> page.
-          </p>
-        </section>
+      <main className={styles.wrap}>
+        <header className={styles.hero}>
+          <div className={styles.eyebrow}>Projects</div>
+          <h1>Things I build in the open.</h1>
+          <p>Open-source builds, docs tooling and contributions. Client and product work is on the <Link to="/work/">Work</Link> page.</p>
+          <nav className={p.jump} aria-label="On this page">
+            <a href="#built">Open-source builds <b>{PROJECTS.length}</b></a>
+            <a href="#tooling">Docs tooling <b>{DOCS_ENGINEERING_PROJECTS.length}</b></a>
+            <a href="#prs">Contributions <b>{CONTRIBUTIONS.length}</b></a>
+          </nav>
+        </header>
 
-        <section className={styles.section}>
-          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            Open source projects I founded
-          </h2>
-          {PROJECTS.map(project => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </section>
+        <div className={styles.sectionHead} id="built"><h2>Open-source builds</h2></div>
+        <div className={p.grid}>
+          {PROJECTS.map(x => <ProjectCard key={x.title} project={x} />)}
+        </div>
 
-        <section className={styles.section}>
-          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            Docs engineering and tooling
-          </h2>
-          {DOCS_ENGINEERING_PROJECTS.map(project => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </section>
+        <div className={styles.sectionHead} id="tooling"><h2>Docs engineering and tooling</h2></div>
+        <div className={p.grid}>
+          {DOCS_ENGINEERING_PROJECTS.map(x => <ProjectCard key={x.title} project={x} />)}
+        </div>
 
-        <section className={styles.section}>
-          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            Open-source contributions
-          </h2>
-          <p style={{ textAlign: 'center', color: 'var(--ifm-color-content-secondary)', marginBottom: '2rem' }}>
-            Docs PRs I've opened against products I use or want to make easier to use.
-          </p>
-          {CONTRIBUTIONS.map(c => (
-            <ContributionRow key={c.url} contribution={c} />
-          ))}
-        </section>
+        <div className={styles.sectionHead} id="prs">
+          <h2>Open-source contributions</h2>
+          <span className={p.sub}>Docs PRs against products I use or want to make easier to use.</span>
+        </div>
+        <div className={p.prs}>
+          {CONTRIBUTIONS.map(c => <ContributionRow key={c.url} c={c} />)}
+        </div>
       </main>
     </Layout>
   );

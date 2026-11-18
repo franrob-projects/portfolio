@@ -2,5 +2,5 @@ francis:
   name: Francis Roberts
   title: Technical Writer
   url: https://github.com/franrob-projects
-  image_url: https://github.com/franrob-projects.png
+  image_url: /img/monogram.svg
   page: true
