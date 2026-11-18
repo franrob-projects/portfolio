@@ -35,9 +35,9 @@ export default function Home(): ReactNode {
             </div>
           </div>
           <div className={styles.stack} aria-hidden>
-            <Frame src="/portfolio/img/work/safeplay-desk.jpg" alt="" wire="landing" />
-            <Frame src="/portfolio/img/work/parallel-parts.jpg" alt="" wire="landing" />
-            <Frame src="/portfolio/img/work/licence-ready.jpg" alt="" wire="product" />
+            <Frame src="/portfolio/img/work/ably-livesync.jpg" alt="" wire="landing" />
+            <Frame src="/portfolio/img/work/viki.jpg" alt="" wire="landing" />
+            <Frame src="/portfolio/img/work/conply.jpg" alt="" wire="product" />
           </div>
         </header>
 

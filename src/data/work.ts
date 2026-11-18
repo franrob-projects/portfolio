@@ -234,6 +234,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'conply',
+    image: '/portfolio/img/work/conply.jpg',
     wire: 'product',
     title: 'Conply',
     kicker: 'Compliance training SaaS for regulated firms',
@@ -278,6 +279,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'viki',
+    image: '/portfolio/img/work/viki.jpg',
     wire: 'product',
     title: 'VIKI',
     kicker: 'An AI-powered business operating system',
@@ -406,24 +408,28 @@ export const ABLY_LIVE_PAGES: LivePage[] = [
     name: 'Docs',
     what: 'Redesigned docs home and navigation',
     href: 'https://ably.com/docs',
+    image: '/portfolio/img/work/ably-docs.jpg',
     wire: 'docs',
   },
   {
     name: 'Pricing',
     what: 'MAU slider, plan cards, comparison table',
     href: 'https://ably.com/pricing',
+    image: '/portfolio/img/work/ably-pricing.jpg',
     wire: 'pricing',
   },
   {
     name: 'LiveSync',
     what: 'Product marketing page',
     href: 'https://ably.com/livesync',
+    image: '/portfolio/img/work/ably-livesync.jpg',
     wire: 'landing',
   },
   {
     name: 'LiveObjects',
     what: 'Product marketing page',
     href: 'https://ably.com/liveobjects',
+    image: '/portfolio/img/work/ably-liveobjects.jpg',
     wire: 'landing',
   },
 ];
