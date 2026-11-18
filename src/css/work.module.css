@@ -125,3 +125,9 @@ a.card:hover .ext { color: var(--accent); transform: translate(1px, -1px); }
   .grid2, .grid3, .grid4, .formRow { grid-template-columns: 1fr; }
   .contact { padding: 1.5rem; }
 }
+
+/* Card shell: the whole card opens the project page, the pill opens the built site */
+.shell { position: relative; height: 100%; }
+.openPill { position: absolute; z-index: 3; top: 0.75rem; right: 0.75rem; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 999px; background: rgba(11, 13, 12, 0.88); backdrop-filter: blur(6px); border: 1px solid rgba(64, 215, 124, 0.55); color: #8ff0b4 !important; font-size: 0.8125rem; font-weight: 600; text-decoration: none !important; transition: background 0.2s, color 0.2s; }
+.openPill:hover { background: var(--accent); color: #06130b !important; }
+.heroActions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }

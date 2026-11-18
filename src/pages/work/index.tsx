@@ -5,7 +5,7 @@ import Contact from '../../components/Contact';
 import LiveWork from '../../components/LiveWork';
 import ProjectCard from '../../components/ProjectCard';
 import Reveal from '../../components/Reveal';
-import {CASE_STUDIES} from '../../data/work';
+import {CASE_STUDIES, openFor } from '../../data/work';
 
 const STUDIES = CASE_STUDIES.filter(c => !c.slug.startsWith('crm-') && c.kind !== 'concept');
 const WEB = CASE_STUDIES.filter(c => c.kind === 'concept');
@@ -29,7 +29,7 @@ export default function Work(): ReactNode {
         <div className={styles.grid2}>
           {STUDIES.map((c, i) => (
             <Reveal key={c.slug} delay={(i % 2) * 70}>
-              <ProjectCard to={`/work/${c.slug}`} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} tags={c.disciplines} />
+              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} tags={c.disciplines} />
             </Reveal>
           ))}
         </div>
@@ -43,7 +43,7 @@ export default function Work(): ReactNode {
         <div className={styles.grid3}>
           {CRM.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>
-              <ProjectCard to={`/work/${c.slug}`} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} />
+              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} />
             </Reveal>
           ))}
         </div>
@@ -52,7 +52,7 @@ export default function Work(): ReactNode {
         <div className={styles.grid2}>
           {WEB.map((s, i) => (
             <Reveal key={s.slug} delay={(i % 2) * 70}>
-              <ProjectCard to={`/work/${s.slug}`} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
+              <ProjectCard to={`/work/${s.slug}`} open={openFor(s.slug)} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
             </Reveal>
           ))}
         </div>

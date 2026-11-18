@@ -632,3 +632,15 @@ export const ABLY_LIVE_PAGES: LivePage[] = [
     wire: 'landing',
   },
 ];
+
+
+// The built or live site behind a case study, if there is one. CRM examples have none.
+const LIVE = ['ably', 'conply', 'viki', 'safeplay-desk', 'licence-ready', 'classic-triumph-malaga', 'parallel-parts'];
+export function openFor(slug: string): { label: string; href: string } | undefined {
+  if (!LIVE.includes(slug)) return undefined;
+  const c = CASE_STUDIES.find(x => x.slug === slug);
+  const l = c?.links[0];
+  if (!l) return undefined;
+  const internal = l.href.startsWith('/portfolio/demos/');
+  return { label: internal ? 'Open site' : `Visit ${l.label}`.replace('Visit Docs', 'Visit Ably docs'), href: l.href };
+}

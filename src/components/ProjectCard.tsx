@@ -13,6 +13,7 @@ interface Props {
   href?: string;
   tags?: string[];
   status?: string;
+  open?: { label: string; href: string };
 }
 
 export function ExternalIcon() {
@@ -23,7 +24,7 @@ export function ExternalIcon() {
   );
 }
 
-export default function ProjectCard({title, kicker, summary, image, wire = 'product', to, href, tags, status}: Props): ReactNode {
+export default function ProjectCard({title, kicker, summary, image, wire = 'product', to, href, tags, status, open}: Props): ReactNode {
   const body = (
     <>
       <Frame src={image} alt={`${title} screenshot`} wire={wire} />
@@ -39,7 +40,14 @@ export default function ProjectCard({title, kicker, summary, image, wire = 'prod
     </>
   );
   return to ? (
-    <Link to={to} className={styles.card}>{body}</Link>
+    <div className={styles.shell}>
+      <Link to={to} className={styles.card}>{body}</Link>
+      {open && (
+        <a className={styles.openPill} href={open.href} target="_blank" rel="noopener noreferrer" aria-label={`${open.label}: ${title}, opens in a new tab`}>
+          {open.label} <ExternalIcon />
+        </a>
+      )}
+    </div>
   ) : (
     <a href={href} className={styles.card} aria-label={`${title}, ${kicker}`}>{body}</a>
   );

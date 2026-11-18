@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import styles from '../css/work.module.css';
-import { CASE_STUDIES, type CaseStudyData } from '../data/work';
+import { CASE_STUDIES, type CaseStudyData, openFor } from '../data/work';
 import Frame from './Frame';
 import ProjectCard, { ExternalIcon } from './ProjectCard';
 
@@ -23,6 +23,14 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
             <p>
               {data.kicker}. {data.summary}
             </p>
+            {openFor(data.slug) && (
+              <div className={styles.heroActions}>
+                <a className={`${styles.btn} ${styles.btnSolid}`} href={openFor(data.slug)!.href} target="_blank" rel="noopener noreferrer">
+                  {openFor(data.slug)!.label} <ExternalIcon />
+                </a>
+                <Link className={styles.btn} to="/contact">Start a project</Link>
+              </div>
+            )}
           </header>
 
           <div style={{ marginBottom: '1.5rem' }}>
@@ -140,7 +148,7 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
           </div>
           <div className={styles.grid3}>
             {related.map(c => (
-              <ProjectCard key={c.slug} to={`/work/${c.slug}`} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} status={c.status} />
+              <ProjectCard key={c.slug} to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} status={c.status} />
             ))}
           </div>
         </section>

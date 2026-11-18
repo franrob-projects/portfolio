@@ -7,7 +7,7 @@ import Frame from '../components/Frame';
 import LiveWork from '../components/LiveWork';
 import ProjectCard from '../components/ProjectCard';
 import Reveal from '../components/Reveal';
-import {CASE_STUDIES} from '../data/work';
+import {CASE_STUDIES, openFor } from '../data/work';
 
 const PRODUCTS = CASE_STUDIES.filter(c => c.slug === 'conply' || c.slug === 'viki');
 const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
@@ -53,7 +53,7 @@ export default function Home(): ReactNode {
         <div className={styles.grid2}>
           {PRODUCTS.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>
-              <ProjectCard to={`/work/${c.slug}`} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />
+              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />
             </Reveal>
           ))}
         </div>
@@ -67,7 +67,7 @@ export default function Home(): ReactNode {
         <div className={styles.grid3}>
           {CRM.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>
-              <ProjectCard to={`/work/${c.slug}`} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />
+              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />
             </Reveal>
           ))}
         </div>
@@ -82,7 +82,7 @@ export default function Home(): ReactNode {
         <div className={styles.grid2}>
           {WEB.map((s, i) => (
             <Reveal key={s.slug} delay={(i % 2) * 70}>
-              <ProjectCard to={`/work/${s.slug}`} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
+              <ProjectCard to={`/work/${s.slug}`} open={openFor(s.slug)} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
             </Reveal>
           ))}
         </div>
