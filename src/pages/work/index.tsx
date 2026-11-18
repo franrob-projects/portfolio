@@ -14,7 +14,7 @@ const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 
 export default function Work(): ReactNode {
   return (
-    <Layout title="Work | Francis Roberts" description="Web, CRM and content design work: Ably, Conply, VIKI and regulation-support sites for iGaming.">
+    <Layout title="Work | FranRob Project" description="Web, CRM and content design work: Ably, Conply, VIKI and regulation-support sites for iGaming.">
       <main className={styles.wrap}>
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Selected work</div>

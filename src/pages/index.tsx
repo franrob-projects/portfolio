@@ -18,7 +18,7 @@ const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Francis Roberts | Web, CRM and content designer"
+      title="FranRob Project | Web, CRM and content designer"
       description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
       <main className={styles.wrap}>
         <header className={styles.heroSplit}>

@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Francis Roberts, web, CRM and content designer',
+  title: 'FranRob Project',
   tagline: 'Web, CRM and content design',
   favicon: 'img/favicon.ico',
 
@@ -63,8 +63,8 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Francis Roberts',
-      logo: {alt: 'Francis Roberts monogram', src: 'img/monogram.svg'},
+      title: 'FranRob Project',
+      logo: {alt: 'FranRob Project monogram', src: 'img/monogram.svg'},
       items: [
         {to: '/work', label: 'Work', position: 'left'},
         {to: '/projects', label: 'Projects', position: 'left'},

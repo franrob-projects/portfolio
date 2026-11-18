@@ -8,7 +8,7 @@ import type { CaseStudyData } from '../data/work';
 export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode {
   const imgBase = useBaseUrl('/');
   return (
-    <Layout title={`${data.title} | Francis Roberts`} description={data.summary}>
+    <Layout title={`${data.title} | FranRob Project`} description={data.summary}>
       <main className={styles.wrap}>
         <article className={styles.article}>
           <Link to="/work" className={styles.back}>
