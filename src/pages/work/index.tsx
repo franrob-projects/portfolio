@@ -24,7 +24,7 @@ export default function Work(): ReactNode {
           <h2>Case studies</h2>
         </div>
         <div className={styles.grid2}>
-          {CASE_STUDIES.map(c => (
+          {CASE_STUDIES.filter(c => !c.slug.startsWith('crm-')).map(c => (
             <Link key={c.slug} to={`/work/${c.slug}`} className={styles.card}>
               <h3>{c.title}</h3>
               <div className={styles.kicker}>{c.kicker}</div>
@@ -36,6 +36,22 @@ export default function Work(): ReactNode {
                   </span>
                 ))}
               </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead}>
+          <h2>CRM design examples</h2>
+        </div>
+        <p style={{color: 'var(--ifm-color-content-secondary)', marginTop: '-.5rem', marginBottom: '1.25rem'}}>
+          One niche, precision CNC job shops, designed twice on open-source CRMs in two different tones.
+        </p>
+        <div className={styles.grid2}>
+          {CASE_STUDIES.filter(c => c.slug.startsWith('crm-')).map(c => (
+            <Link key={c.slug} to={`/work/${c.slug}`} className={styles.card}>
+              <h3>{c.title}</h3>
+              <div className={styles.kicker}>{c.kicker}</div>
+              <p>{c.summary}</p>
             </Link>
           ))}
         </div>

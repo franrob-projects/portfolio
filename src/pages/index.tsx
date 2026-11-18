@@ -67,7 +67,7 @@ export default function Home(): ReactNode {
           <Link to="/work">All work →</Link>
         </div>
         <div className={styles.grid2}>
-          {CASE_STUDIES.map(c => (
+          {CASE_STUDIES.filter(c => !c.slug.startsWith('crm-')).map(c => (
             <Link key={c.slug} to={`/work/${c.slug}`} className={styles.card}>
               <h3>{c.title}</h3>
               <div className={styles.kicker}>{c.kicker}</div>
@@ -79,6 +79,20 @@ export default function Home(): ReactNode {
                   </span>
                 ))}
               </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead}>
+          <h2>CRM design examples</h2>
+          <Link to="/work">See both →</Link>
+        </div>
+        <div className={styles.grid2}>
+          {CASE_STUDIES.filter(c => c.slug.startsWith('crm-')).map(c => (
+            <Link key={c.slug} to={`/work/${c.slug}`} className={styles.card}>
+              <h3>{c.title}</h3>
+              <div className={styles.kicker}>{c.kicker}</div>
+              <p>{c.summary}</p>
             </Link>
           ))}
         </div>

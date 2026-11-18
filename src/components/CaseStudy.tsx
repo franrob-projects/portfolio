@@ -48,6 +48,38 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
             </section>
           ))}
 
+          {data.pipeline && (
+            <section className={styles.block}>
+              <h2>Pipeline</h2>
+              <div className={styles.board} role="list">
+                {data.pipeline.stages.map(st => (
+                  <div key={st.name} className={styles.col} role="listitem">
+                    <h3>{st.name}</h3>
+                    {st.cards.map(c => (
+                      <div key={c.title} className={styles.dealCard}>
+                        <strong>{c.title}</strong>
+                        <span>{c.meta}</span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p style={{ fontSize: '.85rem' }}>{data.pipeline.note}</p>
+            </section>
+          )}
+
+          {data.templates && data.templates.length > 0 && (
+            <section className={styles.block}>
+              <h2>In this voice</h2>
+              {data.templates.map(t => (
+                <figure key={t.label} className={styles.quote}>
+                  <figcaption>{t.label}</figcaption>
+                  <blockquote>{t.text}</blockquote>
+                </figure>
+              ))}
+            </section>
+          )}
+
           {data.samples && data.samples.length > 0 && (
             <section className={styles.block}>
               <h2>Selected work</h2>
