@@ -335,8 +335,8 @@ export interface SupportSite {
   name: string;
   market: string;
   pitch: string;
-  status: 'In build' | 'Live';
-  href?: string;
+  status: 'Concept' | 'Live';
+  href: string;
 }
 
 export const SUPPORT_SITES: SupportSite[] = [
@@ -345,14 +345,36 @@ export const SUPPORT_SITES: SupportSite[] = [
     market: 'UKGC',
     pitch:
       'Safer gambling and customer interaction toolkit: markers of harm, affordability triggers and intervention scripts mapped to the Licence Conditions and Codes of Practice.',
-    status: 'In build',
+    status: 'Concept',
+    href: '/portfolio/demos/safeplay-desk/',
   },
   {
     name: 'LicenceReady',
     market: 'UKGC',
     pitch:
       'LCCP licence-readiness workspace: a gap checklist, evidence tracker and audit pack for operators preparing for or maintaining a UK licence.',
-    status: 'In build',
+    status: 'Concept',
+    href: '/portfolio/demos/licence-ready/',
+  },
+];
+
+/** Concept sites for other niches. Content is draft and clearly labelled as such. */
+export const CONCEPT_SITES: SupportSite[] = [
+  {
+    name: 'Classic Triumph Malaga',
+    market: 'Tourism · English and Spanish',
+    pitch:
+      'Guided classic motorcycle tours on the Costa del Sol: tour picker, fleet, how it works and an enquiry form.',
+    status: 'Concept',
+    href: '/portfolio/demos/classic-triumph-malaga/',
+  },
+  {
+    name: 'Parallel Parts',
+    market: 'E-commerce',
+    pitch:
+      'Aftermarket parts for the Triumph Bonneville: fitment filter by generation and an enquiry list instead of a checkout.',
+    status: 'Concept',
+    href: '/portfolio/demos/parallel-parts/',
   },
 ];
 

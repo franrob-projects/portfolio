@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import LiveWork from '../../components/LiveWork';
 import styles from '../../css/work.module.css';
-import { CASE_STUDIES, SUPPORT_SITES } from '../../data/work';
+import { CASE_STUDIES, CONCEPT_SITES, SUPPORT_SITES } from '../../data/work';
 
 export default function Work(): ReactNode {
   return (
@@ -61,14 +61,30 @@ export default function Work(): ReactNode {
         </div>
         <div className={styles.grid2}>
           {SUPPORT_SITES.map(s => (
-            <div key={s.name} className={styles.card}>
+            <a key={s.name} href={s.href} className={styles.card}>
               <h3>{s.name}</h3>
               <div className={styles.kicker}>{s.market} · React</div>
               <p>{s.pitch}</p>
               <div className={styles.cardFoot}>
-                <span className={styles.status}>{s.status}</span>
+                <span className={styles.status}>{s.status} ↗</span>
               </div>
-            </div>
+            </a>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead}>
+          <h2>More web design concepts</h2>
+        </div>
+        <div className={styles.grid2}>
+          {CONCEPT_SITES.map(s => (
+            <a key={s.name} href={s.href} className={styles.card}>
+              <h3>{s.name}</h3>
+              <div className={styles.kicker}>{s.market}</div>
+              <p>{s.pitch}</p>
+              <div className={styles.cardFoot}>
+                <span className={styles.status}>{s.status} ↗</span>
+              </div>
+            </a>
           ))}
         </div>
       </main>
