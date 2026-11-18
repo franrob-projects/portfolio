@@ -81,7 +81,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'mailto:francis@fantasyfruitsatlife.com',
+          href: 'mailto:francisroberts@live.com',
           label: "Let's talk",
           position: 'right',
           className: 'navbar-cta',

@@ -1,7 +1,7 @@
 import type {FormEvent, ReactNode} from 'react';
 import styles from '../css/work.module.css';
 
-const EMAIL = 'francis@fantasyfruitsatlife.com';
+const EMAIL = 'francisroberts@live.com';
 
 export default function Contact(): ReactNode {
   const submit = (e: FormEvent<HTMLFormElement>) => {
