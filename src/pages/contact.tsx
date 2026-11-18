@@ -28,7 +28,7 @@ export default function ContactPage(): ReactNode {
         <dl style={{display: 'grid', gridTemplateColumns: 'minmax(120px,200px) 1fr', gap: '.75rem 1.5rem', maxWidth: 760, margin: 0}}>
           {FACTS.map(([k, v]) => (<><dt key={k} style={{color: 'var(--meta)'}}>{k}</dt><dd key={k + v} style={{margin: 0}}>{v}</dd></>))}
         </dl>
-        <p style={{marginTop: '2rem'}}>See <Link to="/work">the work</Link>, read <Link to="/about">about me</Link>, or check the <Link to="/privacy">privacy note</Link>.</p>
+        <p style={{marginTop: '2rem'}}>See <Link to="/work">the work</Link>, or check the <Link to="/privacy">privacy note</Link>.</p>
       </main>
     </Layout>
   );
