@@ -20,6 +20,8 @@ export interface CaseStudyData {
   sections: { heading: string; body: string[] }[];
   /** Visual samples. The gallery only renders when this has entries. */
   samples?: Sample[];
+  image?: string;
+  wire?: 'docs' | 'pricing' | 'landing' | 'product';
   /** Optional CRM pipeline mock with fictional sample data. */
   pipeline?: { stages: { name: string; cards: { title: string; meta: string }[] }[]; note: string };
   /** Optional tone examples: message templates written in this case study's voice. */
@@ -29,6 +31,7 @@ export interface CaseStudyData {
 export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'ably',
+    wire: 'docs',
     title: 'Ably',
     kicker: 'Docs, navigation and product marketing pages for a realtime platform',
     summary:
@@ -106,6 +109,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'crm-precision',
+    wire: 'product',
     title: 'CRM example: precision CNC job shop',
     kicker: 'Open-source CRM (Twenty) · engineered, exact tone',
     summary:
@@ -174,6 +178,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'crm-shopfloor',
+    wire: 'product',
     title: 'CRM example: family machine shop',
     kicker: 'Open-source CRM (EspoCRM) · warm, plain-spoken tone',
     summary:
@@ -229,6 +234,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'conply',
+    wire: 'product',
     title: 'Conply',
     kicker: 'Compliance training SaaS for regulated firms',
     summary:
@@ -272,6 +278,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'viki',
+    wire: 'product',
     title: 'VIKI',
     kicker: 'An AI-powered business operating system',
     summary:
@@ -303,6 +310,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'web-design',
+    image: '/portfolio/img/work/parallel-parts.jpg',
     title: 'Web design',
     kicker: 'Marketing sites and landing pages',
     summary:
@@ -337,6 +345,7 @@ export interface SupportSite {
   pitch: string;
   status: 'Concept' | 'Live';
   href: string;
+  image?: string;
 }
 
 export const SUPPORT_SITES: SupportSite[] = [
@@ -347,6 +356,7 @@ export const SUPPORT_SITES: SupportSite[] = [
       'Safer gambling and customer interaction toolkit: markers of harm, affordability triggers and intervention scripts mapped to the Licence Conditions and Codes of Practice.',
     status: 'Concept',
     href: '/portfolio/demos/safeplay-desk/',
+    image: '/portfolio/img/work/safeplay-ui.jpg',
   },
   {
     name: 'LicenceReady',
@@ -355,6 +365,7 @@ export const SUPPORT_SITES: SupportSite[] = [
       'LCCP licence-readiness workspace: a gap checklist, evidence tracker and audit pack for operators preparing for or maintaining a UK licence.',
     status: 'Concept',
     href: '/portfolio/demos/licence-ready/',
+    image: '/portfolio/img/work/licence-ready-ui.jpg',
   },
 ];
 
@@ -367,6 +378,7 @@ export const CONCEPT_SITES: SupportSite[] = [
       'Guided classic motorcycle tours on the Costa del Sol: tour picker, fleet, how it works and an enquiry form.',
     status: 'Concept',
     href: '/portfolio/demos/classic-triumph-malaga/',
+    image: '/portfolio/img/work/classic-triumph.jpg',
   },
   {
     name: 'Parallel Parts',
@@ -375,6 +387,7 @@ export const CONCEPT_SITES: SupportSite[] = [
       'Aftermarket parts for the Triumph Bonneville: fitment filter by generation and an enquiry list instead of a checkout.',
     status: 'Concept',
     href: '/portfolio/demos/parallel-parts/',
+    image: '/portfolio/img/work/parallel-parts.jpg',
   },
 ];
 
@@ -382,16 +395,35 @@ export interface LivePage {
   name: string;
   what: string;
   href: string;
+  /** Drop a screenshot at this path and it replaces the wireframe automatically. */
+  image?: string;
+  wire: 'docs' | 'pricing' | 'landing' | 'product';
 }
 
 /** Pages I redesigned and built at Ably, live on ably.com. */
 export const ABLY_LIVE_PAGES: LivePage[] = [
-  { name: 'Docs', what: 'Redesigned docs home and navigation', href: 'https://ably.com/docs' },
+  {
+    name: 'Docs',
+    what: 'Redesigned docs home and navigation',
+    href: 'https://ably.com/docs',
+    wire: 'docs',
+  },
   {
     name: 'Pricing',
     what: 'MAU slider, plan cards, comparison table',
     href: 'https://ably.com/pricing',
+    wire: 'pricing',
   },
-  { name: 'LiveSync', what: 'Product marketing page', href: 'https://ably.com/livesync' },
-  { name: 'LiveObjects', what: 'Product marketing page', href: 'https://ably.com/liveobjects' },
+  {
+    name: 'LiveSync',
+    what: 'Product marketing page',
+    href: 'https://ably.com/livesync',
+    wire: 'landing',
+  },
+  {
+    name: 'LiveObjects',
+    what: 'Product marketing page',
+    href: 'https://ably.com/liveobjects',
+    wire: 'landing',
+  },
 ];

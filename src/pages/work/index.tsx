@@ -1,92 +1,62 @@
-import type { ReactNode } from 'react';
+import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import LiveWork from '../../components/LiveWork';
 import styles from '../../css/work.module.css';
-import { CASE_STUDIES, CONCEPT_SITES, SUPPORT_SITES } from '../../data/work';
+import Contact from '../../components/Contact';
+import LiveWork from '../../components/LiveWork';
+import ProjectCard from '../../components/ProjectCard';
+import Reveal from '../../components/Reveal';
+import {CASE_STUDIES, CONCEPT_SITES, SUPPORT_SITES} from '../../data/work';
+
+const STUDIES = CASE_STUDIES.filter(c => !c.slug.startsWith('crm-'));
+const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
+
+const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 
 export default function Work(): ReactNode {
   return (
-    <Layout
-      title="Work | Francis Roberts"
-      description="Web, CRM and content design work: Ably, Conply, VIKI and regulation-support sites for iGaming."
-    >
+    <Layout title="Work | Francis Roberts" description="Web, CRM and content design work: Ably, Conply, VIKI and regulation-support sites for iGaming.">
       <main className={styles.wrap}>
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Selected work</div>
-          <h1>Web, CRM and content, designed as one system.</h1>
-          <p>Four case studies, and two regulation-support sites for the UK gambling sector.</p>
+          <h1>Web, CRM and content, designed together.</h1>
+          <p>Case studies, live pages and working concept sites.</p>
         </header>
 
         <LiveWork />
 
-        <div className={styles.sectionHead}>
-          <h2>Case studies</h2>
-        </div>
+        <div className={styles.sectionHead}><h2>Case studies</h2></div>
         <div className={styles.grid2}>
-          {CASE_STUDIES.filter(c => !c.slug.startsWith('crm-')).map(c => (
-            <Link key={c.slug} to={`/work/${c.slug}`} className={styles.card}>
-              <h3>{c.title}</h3>
-              <div className={styles.kicker}>{c.kicker}</div>
-              <p>{c.summary}</p>
-              <div className={styles.cardFoot}>
-                {c.disciplines.map(d => (
-                  <span key={d} className={`${styles.chip} ${styles.chipAccent}`}>
-                    {d}
-                  </span>
-                ))}
-              </div>
-            </Link>
+          {STUDIES.map((c, i) => (
+            <Reveal key={c.slug} delay={(i % 2) * 70}>
+              <ProjectCard to={`/work/${c.slug}`} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} tags={c.disciplines} />
+            </Reveal>
           ))}
         </div>
 
         <div className={styles.sectionHead}>
-          <h2>CRM design examples</h2>
+          <div>
+            <h2>CRM design examples</h2>
+            <p className={styles.sectionLead}>One niche, precision CNC job shops, designed twice on open-source CRMs in two tones.</p>
+          </div>
         </div>
-        <p style={{color: 'var(--ifm-color-content-secondary)', marginTop: '-.5rem', marginBottom: '1.25rem'}}>
-          One niche, precision CNC job shops, designed twice on open-source CRMs in two different tones.
-        </p>
         <div className={styles.grid2}>
-          {CASE_STUDIES.filter(c => c.slug.startsWith('crm-')).map(c => (
-            <Link key={c.slug} to={`/work/${c.slug}`} className={styles.card}>
-              <h3>{c.title}</h3>
-              <div className={styles.kicker}>{c.kicker}</div>
-              <p>{c.summary}</p>
-            </Link>
+          {CRM.map((c, i) => (
+            <Reveal key={c.slug} delay={i * 70}>
+              <ProjectCard to={`/work/${c.slug}`} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} />
+            </Reveal>
           ))}
         </div>
 
-        <div className={styles.sectionHead}>
-          <h2>iGaming regulation support</h2>
-        </div>
+        <div className={styles.sectionHead}><h2>Web design concepts</h2></div>
         <div className={styles.grid2}>
-          {SUPPORT_SITES.map(s => (
-            <a key={s.name} href={s.href} className={styles.card}>
-              <h3>{s.name}</h3>
-              <div className={styles.kicker}>{s.market} · React</div>
-              <p>{s.pitch}</p>
-              <div className={styles.cardFoot}>
-                <span className={styles.status}>{s.status} ↗</span>
-              </div>
-            </a>
+          {[...SUPPORT_SITES, ...CONCEPT_SITES].map((s, i) => (
+            <Reveal key={s.name} delay={(i % 2) * 70}>
+              <ProjectCard href={s.href} title={s.name} kicker={s.market} summary={s.pitch} image={s.image} status={s.status} />
+            </Reveal>
           ))}
         </div>
 
-        <div className={styles.sectionHead}>
-          <h2>More web design concepts</h2>
-        </div>
-        <div className={styles.grid2}>
-          {CONCEPT_SITES.map(s => (
-            <a key={s.name} href={s.href} className={styles.card}>
-              <h3>{s.name}</h3>
-              <div className={styles.kicker}>{s.market}</div>
-              <p>{s.pitch}</p>
-              <div className={styles.cardFoot}>
-                <span className={styles.status}>{s.status} ↗</span>
-              </div>
-            </a>
-          ))}
-        </div>
+        <Contact />
       </main>
     </Layout>
   );

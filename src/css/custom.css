@@ -52,7 +52,7 @@
   --ifm-color-primary-lightest: #6feb94;
   
   /* Clean dark theme matching Supabase style */
-  --ifm-background-color: #0f0f0f;
+  --ifm-background-color: #0b0d0c;
   --ifm-background-surface-color: #1a1a1a;
   --ifm-color-content: rgba(255, 255, 255, 0.8);
   --ifm-color-content-secondary: rgba(255, 255, 255, 0.7);
@@ -381,3 +381,21 @@ main {
   border-radius: 4px;
   opacity: 0.9;
 }
+
+/* Navbar: brand mark and primary call to action */
+.navbar__brand { gap: 0.6rem; }
+.navbar__logo img { border-radius: 8px; }
+.navbar__title { font-weight: 600; letter-spacing: -0.01em; }
+.navbar__item.navbar-cta {
+  background: #40d77c;
+  color: #06130b !important;
+  border-radius: 10px;
+  padding: 0.45rem 1rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+.navbar__item.navbar-cta:hover { background: #5ae38f; }
+
+.navbar__inner { max-width: 1120px; padding: 0 24px; }
+.navbar__item { white-space: nowrap; }
+.navbar__title { color: var(--ifm-color-content); font-weight: 600; }

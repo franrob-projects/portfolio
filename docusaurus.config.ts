@@ -64,6 +64,7 @@ const config: Config = {
     },
     navbar: {
       title: 'Francis Roberts',
+      logo: {alt: 'Francis Roberts monogram', src: 'img/monogram.svg'},
       items: [
         {to: '/work', label: 'Work', position: 'left'},
         {to: '/projects', label: 'Projects', position: 'left'},
@@ -78,6 +79,12 @@ const config: Config = {
           href: 'https://github.com/franrob-projects',
           label: 'GitHub',
           position: 'right',
+        },
+        {
+          href: 'mailto:francis@fantasyfruitsatlife.com',
+          label: "Let's talk",
+          position: 'right',
+          className: 'navbar-cta',
         },
       ],
     },
