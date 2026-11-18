@@ -12,6 +12,8 @@ My focus has been on taking complicated systems - from real-time messaging platf
 
 ## My work at Ably
 
+Live in production: [docs](https://ably.com/docs), [pricing](https://ably.com/pricing), [LiveSync](https://ably.com/livesync) and [LiveObjects](https://ably.com/liveobjects), all redesigned and built by me.
+
 Since joining Ably in 2023, I've focused on making real-time messaging technology accessible to developers. Working with WebSockets, Server-Sent Events, and database sync requires explaining complex concepts in ways that help developers build production-ready applications.
 
 <div className="work-item">

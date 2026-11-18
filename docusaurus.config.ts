@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Francis Roberts, docs engineer',
-  tagline: 'Documentation samples and writing expertise',
+  title: 'Francis Roberts, web, CRM and content designer',
+  tagline: 'Web, CRM and content design',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -63,24 +63,17 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'About me',
+      title: 'Francis Roberts',
       items: [
+        {to: '/work', label: 'Work', position: 'left'},
+        {to: '/projects', label: 'Projects', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'About work',
+          label: 'Docs & writing',
         },
-        {
-          to: '/projects',
-          label: 'Projects',
-          position: 'left',
-        },
-        {
-          to: '/blog',
-          label: 'Crypto',
-          position: 'left',
-        },
+        {to: '/blog', label: 'Crypto', position: 'left'},
         {
           href: 'https://github.com/franrob-projects',
           label: 'GitHub',

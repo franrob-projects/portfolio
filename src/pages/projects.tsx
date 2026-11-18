@@ -1,6 +1,8 @@
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
+import LiveWork from '../components/LiveWork';
+import workStyles from '../css/work.module.css';
 
 interface Tag {
   label: string;
@@ -410,10 +412,12 @@ export default function Projects(): ReactNode {
         <section className={styles.hero}>
           <h1 style={{ fontSize: '3rem' }}>Projects</h1>
           <p>
-            Side projects I've built to explore tools outside of docs engineering, mostly
-            things where the best way to understand something was to build it.
+            Builds and experiments behind the design work. For case studies on Ably, Conply,
+            VIKI and web design, see <a href="/portfolio/work/">Work</a>.
           </p>
         </section>
+
+        <div className={workStyles.wrap} style={{padding: 0}}><LiveWork /></div>
 
         <section className={styles.section}>
           <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
@@ -455,7 +459,7 @@ export default function Projects(): ReactNode {
         <section className={styles.section}>
           <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
             <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🏗️</span>
-            Docs engineering projects
+            Docs engineering and tooling
           </h2>
           {DOCS_ENGINEERING_PROJECTS.map(project => (
             <ProjectCard key={project.title} project={project} />

@@ -1,217 +1,149 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
-
-import styles from './index.module.css';
+import styles from '../css/work.module.css';
+import legacy from './index.module.css';
+import LiveWork from '../components/LiveWork';
 import TechCarousel from '../components/TechCarousel';
+import { CASE_STUDIES, SUPPORT_SITES } from '../data/work';
 
-function PersonalSite() {
-  return (
-    <main className={styles.container}>
-      <section className={styles.hero}>
-        <h1>Francis Roberts</h1>
-        <p className={styles.subtitle}>All things docs</p>
-        <p style={{ marginBottom: '24px' }}>I build documentation sites and write the content that lives on them. That means engineering the underlying infrastructure (migrating legacy platforms like Textile onto modern React, TypeScript, and MDX stacks) alongside authoring the API references, guides, and troubleshooting content developers actually use.</p>
-        <Link className={styles.button} to="/docs/intro">
-          See my work
-        </Link>
-      </section>
-
-      <TechCarousel />
-
-      <section className={styles.section}>
-        <h2 style={{ marginBottom: '3rem', fontSize: '2.25rem', fontWeight: '500', textAlign: 'center', letterSpacing: '-0.02em', background: 'linear-gradient(135deg, var(--ifm-color-content) 0%, var(--ifm-color-content-secondary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🏍️</span>
-          When offline
-        </h2>
-        <div style={{ 
-          display: 'flex', 
-          gap: '20px', 
-          justifyContent: 'center',
-          marginBottom: '40px',
-          flexWrap: 'wrap'
-        }}>
-          <div style={{
-            borderRadius: '16px',
-            overflow: 'hidden',
-            width: '280px',
-            height: '350px',
-            boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
-          }}>
-            <img 
-              src="/portfolio/img/Ver fotos recientes.jpeg"
-              alt="Francis Roberts"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: 'center 35%'
-              }}
-            />
-          </div>
-          <div style={{
-            borderRadius: '16px',
-            overflow: 'hidden',
-            width: '280px',
-            height: '350px',
-            boxShadow: '0 4px 12px rgba(64, 215, 124, 0.2)'
-          }}>
-            <img 
-              src="/portfolio/img/bjj.jpg"
-              alt="Francis Roberts"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover'
-              }}
-            />
-          </div>
-        </div>
-        <p style={{ textAlign: 'center', marginTop: '20px' }}>Motorbikes in the morning, docs engineering in the day, and Brazilian Jiu-Jitsu at night.</p>
-      </section>
-
-      <section className={styles.section}>
-        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>💼</span>
-          My docs journey
-        </h2>
-        
-        <div className={styles.job}>
-          <h3>Developer Educator and Docs Engineer at Ably (2023)</h3>
-          <p>Co-developing technical docs for the LiveSync database sync product, and contributing to the re-engineering of the ably.com/docs codebase by migrating pages from the legacy Textile content system onto the new Next.js + TypeScript + React stack. Building scalable content strategies for developer adoption.</p>
-        </div>
-        
-        <div className={styles.job}>
-          <h3>Lead Docs Engineer at Couchbase (2022)</h3>
-          <p>Built scalable documentation framework, authored API docs for Cloud/Mobile/Edge platforms, consolidated fragmented repos into unified GitHub monorepo.</p>
-        </div>
-        
-        <div className={styles.job}>
-          <h3>Docs Engineer at CDW UK (2021)</h3>
-          <p>Authored developer-centric API docs for cloud platforms, maintained AWS/Azure documentation, created multi-language SDK documentation.</p>
-        </div>
-        
-        <div className={styles.job}>
-          <h3>Docs Engineer at Atlas Copco (2018)</h3>
-          <p>Authored software/hardware manuals and API documentation, developed browser-based documentation portals.</p>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>📝</span>
-        Docs tips
-        </h2>
-        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', textAlign: 'center' }}>
-          I share the docs tips and tricks I pick up on LinkedIn. I'm also a <Link to="/blog">crypto</Link> geek writing about blockchain, smart contracts, and developer tooling over on the blog.
-        </p>
-        <p style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--ifm-color-primary)', textAlign: 'center' }}>
-          Click or scroll the widget below to read posts.
-        </p>
-        <div style={{ 
-          height: '600px', 
-          overflow: 'hidden', 
-          borderRadius: '24px',
-          position: 'relative',
-          boxShadow: '0 4px 8px rgba(64, 215, 124, 0.1), inset 0 0 16px rgba(64, 215, 124, 0.25)',
-          background: 'white',
-          border: '2px solid var(--ifm-color-primary)'
-        }}>
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            height: '80px',
-            background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)',
-            zIndex: 2,
-            borderRadius: '24px 24px 0 0',
-            pointerEvents: 'none'
-          }} />
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              .linkedin-widget-container {
-                border-radius: 24px !important;
-                overflow: auto !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar {
-                width: 14px !important;
-                background: rgba(64, 215, 124, 0.1) !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-track {
-                background: rgba(64, 215, 124, 0.1) !important;
-                border-radius: 7px !important;
-                margin: 2px !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-thumb {
-                background: linear-gradient(180deg, #3ecf8e, #2dd77c) !important;
-                border-radius: 10px !important;
-                border: 2px solid rgba(255,255,255,0.2) !important;
-                min-height: 30px !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-thumb:hover {
-                background: linear-gradient(180deg, #2dd77c, #27d074) !important;
-                box-shadow: 0 0 8px rgba(64, 215, 124, 0.5) !important;
-              }
-              .linkedin-widget-container::-webkit-scrollbar-thumb:active {
-                background: linear-gradient(180deg, #27d074, #1fb866) !important;
-              }
-            `
-          }} />
-          <div 
-            className="linkedin-widget-container"
-            style={{ 
-              height: '100%',
-              borderRadius: '24px',
-              scrollbarWidth: 'auto',
-              scrollbarColor: '#40d77c rgba(64, 215, 124, 0.1)'
-            }}
-          >
-            <iframe 
-              src="https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25647394" 
-              width="100%" 
-              height="600"
-              style={{ 
-                border: 'none', 
-                position: 'relative',
-                borderRadius: '24px'
-              }}
-              title="LinkedIn Posts"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 4px rgba(64, 215, 124, 0.3))' }}>🤝</span>
-          Let's work together
-        </h2>
-        <p style={{ textAlign: 'center' }}>Ready to improve your documentation? Let's discuss how I can help your team create docs that developers actually want to use.</p>
-        
-        <div className={styles.links}>
-          <Link className={styles.button} to="/docs/intro">See my work</Link>
-          <a className={styles.button} href="https://github.com/franrob-projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" style={{ padding: '0.6rem 0.8rem' }}>
-            <img src="/portfolio/img/icons/github.svg" alt="" style={{ width: '22px', height: '22px', display: 'block', filter: 'brightness(0) invert(1)' }} />
-          </a>
-          <a className={styles.button} href="https://linkedin.com/in/francis-roberts-5850b396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" style={{ padding: '0.6rem 0.8rem' }}>
-            <img src="/portfolio/img/icons/linkedin.svg" alt="" style={{ width: '22px', height: '22px', display: 'block' }} />
-          </a>
-          <a className={styles.button} href="mailto:francis@fantasyfruitsatlife.com" aria-label="Email" title="Email" style={{ padding: '0.6rem 0.8rem', color: 'var(--ifm-color-primary)' }}>
-            <img src="/portfolio/img/icons/email.svg" alt="" style={{ width: '22px', height: '22px', display: 'block', filter: 'brightness(0) invert(1)' }} />
-          </a>
-        </div>
-      </section>
-    </main>
-  );
-}
+const DISCIPLINES = [
+  {
+    n: '01',
+    t: 'Web design',
+    d: 'Marketing sites, landing pages and product UI in React and Next.js. Fast, accessible, and built to make one point clearly.',
+  },
+  {
+    n: '02',
+    t: 'CRM design',
+    d: 'Pipelines, lifecycle messaging and outreach systems that turn a visitor into a conversation and a conversation into a customer.',
+  },
+  {
+    n: '03',
+    t: 'Content design',
+    d: 'Positioning, product copy and information architecture, so the words and the layout argue the same case.',
+  },
+];
 
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Francis Roberts - Technical Writing Portfolio"
-      description="Documentation engineer and docs engineer building and authoring developer docs: doc-site infrastructure, API references, and migrations from legacy platforms to modern React/MDX stacks.">
-      <PersonalSite />
+      title="Francis Roberts | Web, CRM and content designer"
+      description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector."
+    >
+      <main className={styles.wrap}>
+        <header className={styles.hero}>
+          <div className={styles.eyebrow}>Francis Roberts · Málaga, Spain</div>
+          <h1>Web, CRM and content designer.</h1>
+          <p>
+            I design the site, the pipeline behind it and the words on it, as one system. Eight
+            years of writing for developer-facing companies, now applied to products and marketing
+            for regulated and technical audiences.
+          </p>
+          <div className={styles.actions}>
+            <Link className={`${styles.btn} ${styles.btnSolid}`} to="/work">
+              See the work
+            </Link>
+            <a className={styles.btn} href="mailto:francis@fantasyfruitsatlife.com">
+              Get in touch
+            </a>
+          </div>
+        </header>
+
+        <div className={styles.grid3}>
+          {DISCIPLINES.map(d => (
+            <div key={d.n} className={`${styles.card} ${styles.disc}`}>
+              <div className={styles.discNum}>{d.n}</div>
+              <h3>{d.t}</h3>
+              <p>{d.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <LiveWork />
+
+        <div className={styles.sectionHead}>
+          <h2>Featured work</h2>
+          <Link to="/work">All work →</Link>
+        </div>
+        <div className={styles.grid2}>
+          {CASE_STUDIES.map(c => (
+            <Link key={c.slug} to={`/work/${c.slug}`} className={styles.card}>
+              <h3>{c.title}</h3>
+              <div className={styles.kicker}>{c.kicker}</div>
+              <p>{c.summary}</p>
+              <div className={styles.cardFoot}>
+                {c.disciplines.map(d => (
+                  <span key={d} className={`${styles.chip} ${styles.chipAccent}`}>
+                    {d}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead}>
+          <h2>iGaming regulation support</h2>
+        </div>
+        <div className={styles.grid2}>
+          {SUPPORT_SITES.map(s => (
+            <div key={s.name} className={styles.card}>
+              <h3>{s.name}</h3>
+              <div className={styles.kicker}>{s.market} · React</div>
+              <p>{s.pitch}</p>
+              <div className={styles.cardFoot}>
+                <span className={styles.status}>{s.status}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead}>
+          <h2>Tools</h2>
+        </div>
+        <TechCarousel />
+
+        <div className={styles.sectionHead}>
+          <h2>Writing and docs</h2>
+        </div>
+        <div className={styles.grid2}>
+          <Link to="/docs/intro" className={styles.card}>
+            <h3>Docs engineering</h3>
+            <p>Where the content work started: Ably, Couchbase, CDW and Atlas Copco.</p>
+          </Link>
+          <Link to="/blog" className={styles.card}>
+            <h3>Crypto blog</h3>
+            <p>Writing on smart contracts, Ethereum and developer tooling.</p>
+          </Link>
+        </div>
+
+        <section className={legacy.section} style={{ marginTop: '3.5rem', textAlign: 'center' }}>
+          <h2 style={{ marginBottom: '1rem' }}>Let's work together</h2>
+          <p>Have a site, a pipeline or a product story that needs designing? Send me a line.</p>
+          <div className={legacy.links}>
+            <a className={legacy.button} href="mailto:francis@fantasyfruitsatlife.com">
+              Email
+            </a>
+            <a
+              className={legacy.button}
+              href="https://linkedin.com/in/francis-roberts-5850b396"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              className={legacy.button}
+              href="https://github.com/franrob-projects"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </section>
+      </main>
     </Layout>
   );
 }
