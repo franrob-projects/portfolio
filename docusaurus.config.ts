@@ -56,7 +56,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/og-card.png',
+    image: 'img/og-card-2026.png',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
