@@ -19,10 +19,10 @@ export default function Home(): ReactNode {
       title="Fran Roberts | Web, CRM and content designer"
       description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
       <main className={styles.wrap}>
-        <header className={styles.hero}>
+        <header className={styles.heroSplit}>
           <div>
             <div className={styles.eyebrow}>Web, CRM and content design · Málaga</div>
-            <h1>I design the site, the pipeline and the words.</h1>
+            <h1>I design the site: graphics, words and infrastructure.</h1>
             <p className="lead">
               Sites and landing pages, CRM pipelines, and the copy that goes in both. Built for
               technical and regulated products.
@@ -33,9 +33,8 @@ export default function Home(): ReactNode {
               <a className={styles.btn} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Fran on WhatsApp, opens in a new tab"><WaIcon /> WhatsApp</a>
             </div>
           </div>
+          <Fan />
         </header>
-
-        <Fan />
 
         <Trio />
 
