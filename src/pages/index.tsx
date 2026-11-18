@@ -4,7 +4,7 @@ import Layout from '@theme/Layout';
 import styles from '../css/work.module.css';
 import {WHATSAPP, WaIcon} from '../components/Contact';
 import ContactCta from '../components/ContactCta';
-import {Fan, Belt} from '../components/Showcase';
+import {Fan, Belt, Trio} from '../components/Showcase';
 
 const EXPLORE: [string, string, string][] = [
   ['/work', 'Work', 'Case studies, working sites, CRM and product design.'],
@@ -19,7 +19,7 @@ export default function Home(): ReactNode {
       title="Fran Roberts | Web, CRM and content designer"
       description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
       <main className={styles.wrap}>
-        <header className={styles.heroSplit}>
+        <header className={styles.hero}>
           <div>
             <div className={styles.eyebrow}>Web, CRM and content design · Málaga</div>
             <h1>I design the site, the pipeline and the words.</h1>
@@ -33,8 +33,11 @@ export default function Home(): ReactNode {
               <a className={styles.btn} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Fran on WhatsApp, opens in a new tab"><WaIcon /> WhatsApp</a>
             </div>
           </div>
-          <Fan />
         </header>
+
+        <Fan />
+
+        <Trio />
 
         <div className={styles.sectionHead}>
           <div>

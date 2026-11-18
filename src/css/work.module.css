@@ -22,7 +22,7 @@
 .wrap p { color: var(--text-2); }
 
 /* Hero */
-.hero { padding: 4.5rem 0 3rem; }
+.hero { padding: 4.5rem 0 2.5rem; }
 .heroSplit { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: center; padding: 4rem 0 3rem; }
 .hero h1, .heroSplit h1 { font-size: var(--fs-display); line-height: 1.05; letter-spacing: -0.035em; font-weight: 600; margin: 0 0 1.25rem; color: var(--text); max-width: 14ch; }
 .hero p, .heroSplit p.lead { font-size: 1.1875rem; line-height: 1.6; max-width: 46ch; }
