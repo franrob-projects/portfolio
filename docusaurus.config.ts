@@ -68,6 +68,7 @@ const config: Config = {
       items: [
         {to: '/work', label: 'Work', position: 'left'},
         {to: '/projects', label: 'Projects', position: 'left'},
+        {to: '/podcast', label: 'Podcast', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
         {
           type: 'docSidebar',
@@ -92,7 +93,7 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {title: 'Work', items: [{label: 'Selected work', to: '/work'}, {label: 'Projects', to: '/projects'}, {label: 'Docs & writing', to: '/docs/intro'}]},
+        {title: 'Work', items: [{label: 'Selected work', to: '/work'}, {label: 'Projects', to: '/projects'}, {label: 'Podcast', to: '/podcast'}, {label: 'Docs & writing', to: '/docs/intro'}]},
         {title: 'Contact', items: [{label: 'Contact page', to: '/contact'}, {label: 'francisroberts@live.com', href: 'mailto:francisroberts@live.com'}, {label: 'WhatsApp', href: 'https://wa.me/34678348065'}]},
         {title: 'More', items: [{label: 'About', to: '/about'}, {label: 'Privacy', to: '/privacy'}, {label: 'GitHub', href: 'https://github.com/franrob-projects'}]},
       ],

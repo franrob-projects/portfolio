@@ -18,6 +18,8 @@ export default function Privacy(): ReactNode {
           <p>The form does not send data to a server. When you press “Send brief”, it opens your own email app with the details filled in. Nothing is sent until you send that email yourself.</p>
           <h2>If you write to me</h2>
           <p>If you email or message me on WhatsApp, I use what you send only to reply and to work on your project. I don’t pass it to anyone else. Ask me and I’ll delete it.</p>
+          <h2>Podcast page</h2>
+          <p>The podcast page shows the video thumbnail, which loads from YouTube. The video player itself only loads when you press play, and then it comes from YouTube’s privacy-enhanced domain.</p>
           <h2>Other sites</h2>
           <p>Some pages link to other sites, such as GitHub and WhatsApp. They have their own privacy policies.</p>
           <h2>Contact</h2>

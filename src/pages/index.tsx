@@ -8,6 +8,7 @@ import LiveWork from '../components/LiveWork';
 import ProjectCard from '../components/ProjectCard';
 import Reveal from '../components/Reveal';
 import {CASE_STUDIES, openFor } from '../data/work';
+import {EPISODES, SERIES, thumb} from '../data/podcast';
 
 const PRODUCTS = CASE_STUDIES.filter(c => c.slug === 'conply' || c.slug === 'viki');
 const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
@@ -54,6 +55,21 @@ export default function Home(): ReactNode {
           {PRODUCTS.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>
               <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={c.title} kicker={c.kicker} summary={c.summary} image={c.image} wire={c.wire} />
+            </Reveal>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead}>
+          <div>
+            <h2>Podcast</h2>
+            <p className={styles.sectionLead}>{SERIES.title}: {SERIES.tagline}</p>
+          </div>
+          <Link to="/podcast" className={styles.textLink}>All episodes →</Link>
+        </div>
+        <div className={styles.grid2}>
+          {EPISODES.slice(0, 2).map((e, i) => (
+            <Reveal key={e.number} delay={i * 70}>
+              <ProjectCard to="/podcast" title={`Ep. ${e.number}: ${e.title}`} kicker={`${e.guest}, ${e.role}`} summary={e.summary} image={thumb(e.videoId)} wire="landing" />
             </Reveal>
           ))}
         </div>
