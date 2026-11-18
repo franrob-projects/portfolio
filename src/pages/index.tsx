@@ -4,10 +4,10 @@ import Layout from '@theme/Layout';
 import styles from '../css/work.module.css';
 import {WHATSAPP, WaIcon} from '../components/Contact';
 import ContactCta from '../components/ContactCta';
-import LiveWork from '../components/LiveWork';
+import {Fan, Belt} from '../components/Showcase';
 
 const EXPLORE: [string, string, string][] = [
-  ['/work', 'Work', 'Ably, Conply and VIKI, CRM design, and the web projects I have built.'],
+  ['/work', 'Work', 'Case studies, working sites, CRM and product design.'],
   ['/projects', 'Projects', 'Open-source builds, docs tooling and contributions.'],
   ['/podcast', 'Podcast', 'EAR: In Conversation and the Docs Engineering series.'],
 ];
@@ -19,7 +19,7 @@ export default function Home(): ReactNode {
       title="FranRob Project | Web, CRM and content designer"
       description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
       <main className={styles.wrap}>
-        <header className={styles.hero}>
+        <header className={styles.heroSplit}>
           <div>
             <div className={styles.eyebrow}>Web, CRM and content design · Málaga</div>
             <h1>I design the site, the pipeline and the words.</h1>
@@ -33,9 +33,17 @@ export default function Home(): ReactNode {
               <a className={styles.btn} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Francis on WhatsApp, opens in a new tab"><WaIcon /> WhatsApp</a>
             </div>
           </div>
+          <Fan />
         </header>
 
-        <LiveWork />
+        <div className={styles.sectionHead}>
+          <div>
+            <h2>What I make</h2>
+            <p className={styles.sectionLead}>Websites, CRM design, product design, packaging and content. Open any screen to read the case study.</p>
+          </div>
+          <Link to="/work" className={styles.textLink}>All work →</Link>
+        </div>
+        <Belt />
 
         <div className={styles.sectionHead}><h2>Explore</h2></div>
         <div className={styles.grid3}>
