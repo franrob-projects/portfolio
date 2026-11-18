@@ -22,7 +22,6 @@ export default function Work(): ReactNode {
           <p>Case studies and working sites.</p>
         </header>
 
-        <div className={styles.sectionHead}><h2>Case studies</h2></div>
         <div className={styles.grid3}>
           {STUDIES.map((c, i) => (
             <Reveal key={c.slug} delay={(i % 3) * 70}>
@@ -34,7 +33,6 @@ export default function Work(): ReactNode {
         <div className={styles.sectionHead}>
           <div>
             <h2>CRM design</h2>
-            <p className={styles.sectionLead}>Precision CNC job shops in two tones, plus an online parts store, all on open-source CRMs.</p>
           </div>
         </div>
         <div className={styles.grid3}>
