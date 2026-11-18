@@ -2,7 +2,7 @@ import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import styles from '../css/work.module.css';
-import Contact from '../components/Contact';
+import Contact, {WHATSAPP, WaIcon} from '../components/Contact';
 import Frame from '../components/Frame';
 import LiveWork from '../components/LiveWork';
 import ProjectCard from '../components/ProjectCard';
@@ -32,6 +32,7 @@ export default function Home(): ReactNode {
             <div className={styles.actions}>
               <Link className={`${styles.btn} ${styles.btnSolid}`} to="/work">See the work</Link>
               <a className={styles.btn} href="#contact">Start a project</a>
+              <a className={styles.btn} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Francis on WhatsApp, opens in a new tab"><WaIcon /> WhatsApp</a>
             </div>
           </div>
           <div className={styles.stack} aria-hidden>
