@@ -11,7 +11,7 @@ const fmt = (d: string) => new Date(d).toLocaleDateString('en-GB', {day: 'numeri
 export default function Podcast(): ReactNode {
   const [latest, ...rest] = EPISODES;
   return (
-    <Layout title="Podcast | FranRob Project" description={`${SERIES.title}: ${SERIES.tagline} Hosted and produced by Francis Roberts.`}>
+    <Layout title="Podcast | Fran Roberts" description={`${SERIES.title}: ${SERIES.tagline} Hosted and produced by Francis Roberts.`}>
       <main className={styles.wrap}>
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Podcast</div>

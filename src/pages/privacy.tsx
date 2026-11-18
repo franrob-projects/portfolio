@@ -4,7 +4,7 @@ import styles from '../css/work.module.css';
 
 export default function Privacy(): ReactNode {
   return (
-    <Layout title="Privacy | FranRob Project" description="How this site handles your data.">
+    <Layout title="Privacy | Fran Roberts" description="How this site handles your data.">
       <main className={styles.wrap}>
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Privacy</div>

@@ -11,7 +11,7 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
   const others = CASE_STUDIES.filter(c => c.slug !== data.slug);
   const related = [...others.filter(c => group(c) === group(data)), ...others.filter(c => group(c) !== group(data))].slice(0, 3);
   return (
-    <Layout title={`${data.title} | FranRob Project`} description={data.summary}>
+    <Layout title={`${data.title} | Fran Roberts`} description={data.summary}>
       <main className={styles.wrap}>
         <article className={styles.article}>
           <Link to="/work" className={styles.back}>

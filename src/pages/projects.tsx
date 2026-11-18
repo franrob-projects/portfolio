@@ -401,7 +401,7 @@ function ContributionRow({ contribution }: { contribution: Contribution }) {
 export default function Projects(): ReactNode {
   return (
     <Layout
-      title="Projects | FranRob Project"
+      title="Projects | Fran Roberts"
       description="Side projects and open-source work by Francis Roberts"
     >
       <main className={styles.container}>

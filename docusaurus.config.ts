@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'FranRob Project',
+  title: 'Fran Roberts',
   tagline: 'Web, CRM and content design',
   favicon: 'img/favicon.ico',
 
@@ -63,8 +63,8 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'FranRob Project',
-      logo: {alt: 'FranRob Project monogram', src: 'img/monogram.svg'},
+      title: 'Fran Roberts',
+      logo: {alt: 'Fran Roberts monogram', src: 'img/monogram.svg'},
       items: [
         {to: '/work', label: 'Work', position: 'left'},
         {to: '/projects', label: 'Projects', position: 'left'},
@@ -96,7 +96,7 @@ const config: Config = {
         {title: 'Contact', items: [{label: 'Contact page', to: '/contact'}, {label: 'francisroberts@live.com', href: 'mailto:francisroberts@live.com'}, {label: 'WhatsApp', href: 'https://wa.me/34678348065'}]},
         {title: 'More', items: [{label: 'Privacy', to: '/privacy'}, {label: 'GitHub', href: 'https://github.com/franrob-projects'}]},
       ],
-      copyright: `© ${new Date().getFullYear()} FranRob Project. Málaga, Spain.`,
+      copyright: `© ${new Date().getFullYear()} Fran Roberts. Málaga, Spain.`,
     },
     prism: {
       theme: prismThemes.github,

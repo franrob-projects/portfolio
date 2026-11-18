@@ -16,7 +16,7 @@ const EXPLORE: [string, string, string][] = [
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="FranRob Project | Web, CRM and content designer"
+      title="Fran Roberts | Web, CRM and content designer"
       description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
       <main className={styles.wrap}>
         <header className={styles.heroSplit}>
@@ -30,7 +30,7 @@ export default function Home(): ReactNode {
             <div className={styles.actions}>
               <Link className={`${styles.btn} ${styles.btnSolid}`} to="/work">See the work</Link>
               <Link className={styles.btn} to="/contact">Start a project</Link>
-              <a className={styles.btn} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Francis on WhatsApp, opens in a new tab"><WaIcon /> WhatsApp</a>
+              <a className={styles.btn} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Fran on WhatsApp, opens in a new tab"><WaIcon /> WhatsApp</a>
             </div>
           </div>
           <Fan />
