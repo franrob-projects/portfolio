@@ -34,6 +34,7 @@ export interface CaseStudyData {
 export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'ably',
+    image: '/portfolio/img/work/ably-docs.jpg',
     wire: 'docs',
     title: 'Ably',
     kicker: 'Docs, navigation and product marketing pages for a realtime platform',

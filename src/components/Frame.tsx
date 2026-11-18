@@ -69,7 +69,7 @@ export default function Frame({src, alt, wire, children}: {src?: string; alt: st
         <i /><i /><i />
       </div>
       <div className={styles.frameBody}>
-        {!failed && src ? <img ref={img} src={src} alt={alt} loading="lazy" onError={() => setFailed(true)} /> : <Wire kind={wire} />}
+        {!failed && src ? <img ref={img} src={src} alt={alt} onError={() => setFailed(true)} /> : <Wire kind={wire} />}
         {children}
       </div>
     </div>

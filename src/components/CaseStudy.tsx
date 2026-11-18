@@ -104,10 +104,10 @@ export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode 
                     {s.image && (
                       s.href ? (
                         <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={`${s.title}, opens in a new tab`}>
-                          <img src={s.image} alt={`${s.title} page`} loading="lazy" />
+                          <img src={s.image} alt={`${s.title} page`} />
                         </a>
                       ) : (
-                        <img src={s.image} alt={s.title} loading="lazy" />
+                        <img src={s.image} alt={s.title} />
                       )
                     )}
                     <figcaption>
