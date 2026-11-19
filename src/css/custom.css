@@ -147,6 +147,16 @@ h3 {
   transition: all 0.2s ease;
 }
 
+/* backdrop-filter makes the navbar the containing block for the fixed mobile
+   drawer, squashing it to the bar's height. Drop it while the drawer is open. */
+.navbar.navbar-sidebar--show,
+.navbar.navbar-sidebar--show .navbar__inner {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.navbar-sidebar { background-color: #0b0d0c; }
+.navbar-sidebar .menu__link { font-size: 17px; }
+
 .navbar__inner {
   max-width: 680px;
   margin: 0 auto;
