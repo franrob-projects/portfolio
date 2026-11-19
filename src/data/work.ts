@@ -208,7 +208,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'classic-triumph-malaga',
     kind: 'concept',
-    image: '/portfolio/img/work/classic-triumph.jpg',
+    image: '/portfolio/img/work/classic-triumph-figma.jpg',
     title: 'Classic Triumph Malaga',
     kicker: 'Tourism · English and Spanish',
     summary:
@@ -562,7 +562,7 @@ export const CONCEPT_SITES: SupportSite[] = [
     pitch:
       'Guided classic motorcycle tours on the Costa del Sol: tour picker, fleet, how it works and an enquiry form.',
     href: '/portfolio/demos/classic-triumph-malaga/',
-    image: '/portfolio/img/work/classic-triumph.jpg',
+    image: '/portfolio/img/work/classic-triumph-figma.jpg',
   },
   {
     name: 'Parallel Parts',
