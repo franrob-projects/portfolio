@@ -35,7 +35,7 @@ export default function TechCarousel(): ReactNode {
         {loop.map((tech, i) => (
           <div key={i} className={styles.item} title={tech.name}>
             <img
-              src={`/portfolio/img/icons/${tech.slug}.svg`}
+              src={`/img/icons/${tech.slug}.svg`}
               alt={tech.name}
               className={styles.icon}
               loading="lazy"

@@ -55,7 +55,7 @@ export default function Podcast(): ReactNode {
 
         <div className={styles.sectionHead}><h2>Docs Engineering series</h2></div>
         <div className={styles.epGrid}>
-          <img src="/portfolio/img/podcast/docs-engineering-podcast.jpg" alt="Docs Engineering podcast episode" style={{width: '100%', borderRadius: 16, border: '1px solid var(--line)', display: 'block'}} />
+          <img src="/img/podcast/docs-engineering-podcast.jpg" alt="Docs Engineering podcast episode" style={{width: '100%', borderRadius: 16, border: '1px solid var(--line)', display: 'block'}} />
           <div>
             <p style={{marginTop: 0}}>A conversation series on what docs engineering looks like day to day: migrating legacy platforms onto React and MDX, building the pipelines that test code samples, and the judgment calls behind what to document and what to cut. Recorded with practitioners working on developer docs, including the team at <a href="https://koinju.io/" target="_blank" rel="noopener noreferrer">Koinju</a>, an institutional crypto data platform.</p>
             <p><a className={styles.btn} href="https://www.linkedin.com/feed/update/urn:li:activity:7404514545265852416/" target="_blank" rel="noopener noreferrer">Watch on LinkedIn <ExternalIcon /></a></p>

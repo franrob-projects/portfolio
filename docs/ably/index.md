@@ -16,9 +16,9 @@ Most of my work centers around [Ably's realtime platform](https://ably.com/docs)
 
 Ably's docs site was migrated off a legacy Textile-based content system onto a modern Next.js application (TypeScript + React, with MDX for content). I contributed directly to that migration by converting high-traffic reference pages from Textile into MDX and wiring them into the new page-based routing.
 
-<img src="/portfolio/img/ably/ably-architecture/arch-a.png" alt="Ably docs architecture" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-architecture/arch-a.png" alt="Ably docs architecture" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
-<img src="/portfolio/img/ably/ably-architecture/arch-b.png" alt="Ably docs component structure" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-architecture/arch-b.png" alt="Ably docs component structure" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 Two of the larger conversions are merged upstream:
 
@@ -30,24 +30,24 @@ The conversions aren't just copy-paste. Textile callouts, inline language tabs, 
 ### Server-sent events documentation
 I completely rewrote Ably's [SSE documentation](https://ably.com/docs/protocols/sse), converting it from basic markdown to an interactive guide with working examples and troubleshooting steps. The MDX conversion ([#2913](https://github.com/ably/docs/pull/2913)) landed as part of this work.
 
-<img src="/portfolio/img/ably/ably-sse/sse-a.png" alt="Ably SSE documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-sse/sse-a.png" alt="Ably SSE documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
-<img src="/portfolio/img/ably/ably-sse/sse-b.png" alt="Ably SSE documentation - troubleshooting" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-sse/sse-b.png" alt="Ably SSE documentation - troubleshooting" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 ### Webhooks and security
 Rewrote the [webhook security documentation](https://ably.com/docs/general/webhooks) to be more practical, with step-by-step validation examples and common security mistakes.
 
-<img src="/portfolio/img/ably/ably-webhook/webhook-a.png" alt="Ably webhook security documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-webhook/webhook-a.png" alt="Ably webhook security documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 ### Pub/Sub and Developer onboarding
 Rebuilt the developer onboarding documentation to be more accessible while maintaining technical depth. Recent work includes intro copy and USP sections across Pub/Sub, Spaces, Chat, LiveSync, and LiveObjects docs.
 
-<img src="/portfolio/img/ably/ably-pub-sub/pub-sub-a.png" alt="Ably Pub/Sub documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-pub-sub/pub-sub-a.png" alt="Ably Pub/Sub documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 ### Troubleshooting and support content
 Produced troubleshooting guides and diagnostic content covering common developer issues, including generating HAR files ([#2984](https://github.com/ably/docs/pull/2984)) and documenting service disruption behaviour ([#2818](https://github.com/ably/docs/pull/2818)).
 
-<img src="/portfolio/img/ably/ably-troubleshooting/trouble-a.png" alt="Ably troubleshooting documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-troubleshooting/trouble-a.png" alt="Ably troubleshooting documentation" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 ## Merged pull requests
 

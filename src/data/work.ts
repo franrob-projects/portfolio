@@ -34,7 +34,7 @@ export interface CaseStudyData {
 export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'ably',
-    image: '/portfolio/img/work/ably-docs.jpg',
+    image: '/img/work/ably-docs.jpg',
     wire: 'docs',
     title: 'Ably',
     kicker: 'Docs, navigation and product marketing pages for a realtime platform',
@@ -93,32 +93,32 @@ export const CASE_STUDIES: CaseStudyData[] = [
         title: 'Docs home',
         caption: 'Six products, tooling, examples and changelog.',
         href: 'https://ably.com/docs',
-        image: '/portfolio/img/work/ably-docs.jpg',
+        image: '/img/work/ably-docs.jpg',
       },
       {
         title: 'Pricing',
         caption: 'MAU slider, plan cards and comparison table.',
         href: 'https://ably.com/pricing',
-        image: '/portfolio/img/work/ably-pricing.jpg',
+        image: '/img/work/ably-pricing.jpg',
       },
       {
         title: 'LiveSync',
         caption: 'Database-to-device product page.',
         href: 'https://ably.com/livesync',
-        image: '/portfolio/img/work/ably-livesync.jpg',
+        image: '/img/work/ably-livesync.jpg',
       },
       {
         title: 'LiveObjects',
         caption: 'Shared application state product page.',
         href: 'https://ably.com/liveobjects',
-        image: '/portfolio/img/work/ably-liveobjects.jpg',
+        image: '/img/work/ably-liveobjects.jpg',
       },
     ],
   },
   {
     slug: 'safeplay-desk',
     kind: 'concept',
-    image: '/portfolio/img/work/safeplay-ui.jpg',
+    image: '/img/work/safeplay-ui.jpg',
     title: 'SafePlay Desk',
     kicker: 'UKGC · safer gambling toolkit',
     summary:
@@ -126,7 +126,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     disciplines: ['Web', 'CRM', 'Content'],
     tags: ['React', 'TypeScript', 'Rules table', 'Case queue', 'UKGC'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: '/portfolio/demos/safeplay-desk/' }, { label: 'Open the case desk', href: '/portfolio/demos/safeplay-desk/#/crm' }],
+    links: [{ label: 'Open the working site', href: 'https://safeplaydesk.online/' }, { label: 'Open the case desk', href: '/demos/safeplay-desk/#/crm' }],
     sections: [
       {
         heading: 'The problem',
@@ -165,7 +165,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'licence-ready',
     kind: 'concept',
-    image: '/portfolio/img/work/licence-ready-ui.jpg',
+    image: '/img/work/licence-ready-ui.jpg',
     title: 'LicenceReady',
     kicker: 'UKGC · licence-readiness workspace',
     summary:
@@ -173,7 +173,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     disciplines: ['Web', 'Content'],
     tags: ['React', 'TypeScript', 'CSS effects', 'Evidence tracking', 'UKGC'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: '/portfolio/demos/licence-ready/' }],
+    links: [{ label: 'Open the working site', href: 'https://licenseready.space/' }],
     sections: [
       {
         heading: 'The problem',
@@ -208,7 +208,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'classic-triumph-malaga',
     kind: 'concept',
-    image: '/portfolio/img/work/classic-triumph-figma.jpg',
+    image: '/img/work/classic-triumph-figma.jpg',
     title: 'Classic Triumph Malaga',
     kicker: 'Tourism · English and Spanish',
     summary:
@@ -216,7 +216,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     disciplines: ['Web', 'CRM', 'Content'],
     tags: ['React', 'TypeScript', 'Bilingual content table', 'Photo credits', 'Fleet scheduling'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: '/portfolio/demos/classic-triumph-malaga/' }, { label: 'Open the ops console', href: '/portfolio/demos/classic-triumph-malaga/#/crm' }],
+    links: [{ label: 'Open the working site', href: 'https://classictriumphmalaga.site/' }, { label: 'Open the ops console', href: '/demos/classic-triumph-malaga/#/crm' }],
     sections: [
       {
         heading: 'The brief',
@@ -254,7 +254,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'parallel-parts',
     kind: 'concept',
-    image: '/portfolio/img/work/parallel-parts.jpg',
+    image: '/img/work/parallel-parts.jpg',
     title: 'Parallel Parts',
     kicker: 'E-commerce · aftermarket parts',
     summary:
@@ -262,7 +262,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     disciplines: ['Web', 'CRM', 'Content'],
     tags: ['React', 'TypeScript', 'Fitment data model', 'SVG drawings', 'Order and QC tracking'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: '/portfolio/demos/parallel-parts/' }, { label: 'Open the CRM', href: '/portfolio/demos/parallel-parts/#/crm' }],
+    links: [{ label: 'Open the working site', href: 'https://parallelparts.space/' }, { label: 'Open the CRM', href: '/demos/parallel-parts/#/crm' }],
     sections: [
       {
         heading: 'The brief',
@@ -300,7 +300,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'conply',
-    image: '/portfolio/img/work/conply.jpg',
+    image: '/img/work/conply.jpg',
     wire: 'product',
     title: 'Conply',
     kicker: 'Compliance training SaaS for regulated firms',
@@ -346,7 +346,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'earth-and-hound',
     kind: 'product',
-    image: '/portfolio/img/work/earth-hound-print.jpg',
+    image: '/img/work/earth-hound-print.jpg',
     title: 'Earth & Hound',
     kicker: 'Packaging design · brand',
     summary:
@@ -383,15 +383,15 @@ export const CASE_STUDIES: CaseStudyData[] = [
       },
     ],
     samples: [
-      { title: 'Flat artwork', caption: '600 bags, 40 rolls.', image: '/portfolio/img/work/earth-hound-print.jpg' },
-      { title: 'Box with dielines', caption: '300 bags, 20 rolls, on the supplier template.', image: '/portfolio/img/work/earth-hound-box.jpg' },
-      { title: 'The mark', caption: 'Hound and leaf.', image: '/portfolio/img/work/earth-hound-logo.jpg' },
+      { title: 'Flat artwork', caption: '600 bags, 40 rolls.', image: '/img/work/earth-hound-print.jpg' },
+      { title: 'Box with dielines', caption: '300 bags, 20 rolls, on the supplier template.', image: '/img/work/earth-hound-box.jpg' },
+      { title: 'The mark', caption: 'Hound and leaf.', image: '/img/work/earth-hound-logo.jpg' },
     ],
   },
   {
     slug: 'viki-dashboard',
     kind: 'product',
-    image: '/portfolio/img/work/viki-dash.jpg',
+    image: '/img/work/viki-dash.jpg',
     title: 'VIKI Dashboard',
     kicker: 'Product design · web app',
     summary:
@@ -400,7 +400,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     tags: ['Figma', 'React', 'TypeScript', 'Vite', 'Manrope'],
     role: 'Product designer and front-end developer',
     period: '2026',
-    links: [{ label: 'Open the app', href: '/portfolio/demos/viki-dashboard/' }],
+    links: [{ label: 'Open the app', href: '/demos/viki-dashboard/' }],
     sections: [
       {
         heading: 'The brief',
@@ -434,16 +434,16 @@ export const CASE_STUDIES: CaseStudyData[] = [
       },
     ],
     samples: [
-      { title: 'Overview in Figma', caption: 'Command Center design.', image: '/portfolio/img/work/dash-figma-overview.jpg' },
-      { title: 'CRM in Figma', caption: 'Pipeline and follow-ups.', image: '/portfolio/img/work/dash-figma-crm.jpg' },
-      { title: 'Finances in Figma', caption: 'Dashboard and invoices.', image: '/portfolio/img/work/dash-figma-finance.jpg' },
-      { title: 'CRM, built', caption: 'The same screen as a working app.', image: '/portfolio/img/work/viki-crm.jpg' },
+      { title: 'Overview in Figma', caption: 'Command Center design.', image: '/img/work/dash-figma-overview.jpg' },
+      { title: 'CRM in Figma', caption: 'Pipeline and follow-ups.', image: '/img/work/dash-figma-crm.jpg' },
+      { title: 'Finances in Figma', caption: 'Dashboard and invoices.', image: '/img/work/dash-figma-finance.jpg' },
+      { title: 'CRM, built', caption: 'The same screen as a working app.', image: '/img/work/viki-crm.jpg' },
     ],
   },
   {
     slug: 'viki-auth',
     kind: 'product',
-    image: '/portfolio/img/work/viki-auth.jpg',
+    image: '/img/work/viki-auth.jpg',
     title: 'VIKI Auth & Onboarding',
     kicker: 'Product design · web app',
     summary:
@@ -452,7 +452,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     tags: ['Figma', 'React', 'TypeScript', 'Vite', 'Manrope'],
     role: 'Product designer and front-end developer',
     period: '2026',
-    links: [{ label: 'Open the app', href: '/portfolio/demos/viki-auth/' }],
+    links: [{ label: 'Open the app', href: '/demos/viki-auth/' }],
     sections: [
       {
         heading: 'The brief',
@@ -486,14 +486,14 @@ export const CASE_STUDIES: CaseStudyData[] = [
       },
     ],
     samples: [
-      { title: 'Choose an industry', caption: 'Step 2 of 6.', image: '/portfolio/img/work/viki-auth-onboarding.jpg' },
-      { title: 'Workspace ready', caption: 'What was set up from your answers.', image: '/portfolio/img/work/viki-auth-ready.jpg' },
+      { title: 'Choose an industry', caption: 'Step 2 of 6.', image: '/img/work/viki-auth-onboarding.jpg' },
+      { title: 'Workspace ready', caption: 'What was set up from your answers.', image: '/img/work/viki-auth-ready.jpg' },
     ],
   },
   {
     slug: 'viki',
     kind: 'product',
-    image: '/portfolio/img/work/viki.jpg',
+    image: '/img/work/viki.jpg',
     wire: 'product',
     title: 'VIKI',
     kicker: 'An AI-powered business operating system',
@@ -541,16 +541,16 @@ export const SUPPORT_SITES: SupportSite[] = [
     market: 'UKGC',
     pitch:
       'Safer gambling and customer interaction toolkit: markers of harm, affordability triggers and intervention scripts mapped to the Licence Conditions and Codes of Practice.',
-    href: '/portfolio/demos/safeplay-desk/',
-    image: '/portfolio/img/work/safeplay-ui.jpg',
+    href: 'https://safeplaydesk.online/',
+    image: '/img/work/safeplay-ui.jpg',
   },
   {
     name: 'LicenceReady',
     market: 'UKGC',
     pitch:
       'LCCP licence-readiness workspace: a gap checklist, evidence tracker and audit pack for operators preparing for or maintaining a UK licence.',
-    href: '/portfolio/demos/licence-ready/',
-    image: '/portfolio/img/work/licence-ready-ui.jpg',
+    href: 'https://licenseready.space/',
+    image: '/img/work/licence-ready-ui.jpg',
   },
 ];
 
@@ -561,16 +561,16 @@ export const CONCEPT_SITES: SupportSite[] = [
     market: 'Tourism · English and Spanish',
     pitch:
       'Guided classic motorcycle tours on the Costa del Sol: tour picker, fleet, how it works and an enquiry form.',
-    href: '/portfolio/demos/classic-triumph-malaga/',
-    image: '/portfolio/img/work/classic-triumph-figma.jpg',
+    href: 'https://classictriumphmalaga.site/',
+    image: '/img/work/classic-triumph-figma.jpg',
   },
   {
     name: 'Parallel Parts',
     market: 'E-commerce',
     pitch:
       'Aftermarket parts for the Triumph Bonneville: fitment filter by generation and an enquiry list instead of a checkout.',
-    href: '/portfolio/demos/parallel-parts/',
-    image: '/portfolio/img/work/parallel-parts.jpg',
+    href: 'https://parallelparts.space/',
+    image: '/img/work/parallel-parts.jpg',
   },
 ];
 
@@ -589,28 +589,28 @@ export const ABLY_LIVE_PAGES: LivePage[] = [
     name: 'Docs',
     what: 'Redesigned docs home and navigation',
     href: 'https://ably.com/docs',
-    image: '/portfolio/img/work/ably-docs.jpg',
+    image: '/img/work/ably-docs.jpg',
     wire: 'docs',
   },
   {
     name: 'Pricing',
     what: 'MAU slider, plan cards, comparison table',
     href: 'https://ably.com/pricing',
-    image: '/portfolio/img/work/ably-pricing.jpg',
+    image: '/img/work/ably-pricing.jpg',
     wire: 'pricing',
   },
   {
     name: 'LiveSync',
     what: 'Product marketing page',
     href: 'https://ably.com/livesync',
-    image: '/portfolio/img/work/ably-livesync.jpg',
+    image: '/img/work/ably-livesync.jpg',
     wire: 'landing',
   },
   {
     name: 'LiveObjects',
     what: 'Product marketing page',
     href: 'https://ably.com/liveobjects',
-    image: '/portfolio/img/work/ably-liveobjects.jpg',
+    image: '/img/work/ably-liveobjects.jpg',
     wire: 'landing',
   },
 ];
@@ -623,7 +623,7 @@ export function openFor(slug: string): { label: string; href: string } | undefin
   const c = CASE_STUDIES.find(x => x.slug === slug);
   const l = c?.links[0];
   if (!l) return undefined;
-  const internal = l.href.startsWith('/portfolio/demos/');
+  const internal = l.href.startsWith('/demos/') || /^https:\/\/(parallelparts|classictriumphmalaga|safeplaydesk|licenseready)\./.test(l.href);
   return { label: internal ? 'Open site' : `Visit ${l.label}`.replace('Visit Docs', 'Visit Ably docs'), href: l.href };
 }
 
@@ -644,8 +644,8 @@ export const CRMS: CrmDemo[] = [
     slug: 'parallel-parts',
     title: 'Orders, requests and batches',
     site: 'Parallel Parts',
-    image: '/portfolio/img/work/crm-parallel-parts.png',
-    href: '/portfolio/demos/parallel-parts/#/crm',
+    image: '/img/work/crm-parallel-parts.png',
+    href: '/demos/parallel-parts/#/crm',
     summary: 'Five linked screens that follow a part from enquiry to factory batch and quality control, with a slide-in order panel and a part-request board.',
     stack: ['React', 'TypeScript', 'SVG charts', 'Batch tracking'],
   },
@@ -653,8 +653,8 @@ export const CRMS: CrmDemo[] = [
     slug: 'classic-triumph-malaga',
     title: 'Ops console',
     site: 'Classic Triumph Malaga',
-    image: '/portfolio/img/work/crm-classic-triumph.png',
-    href: '/portfolio/demos/classic-triumph-malaga/#/crm',
+    image: '/img/work/crm-classic-triumph.png',
+    href: '/demos/classic-triumph-malaga/#/crm',
     summary: 'Enquiry pipeline from first message to confirmed ride, today\'s rides with tasks, and a fleet panel that tracks distance to the next service.',
     stack: ['React', 'TypeScript', 'Pipeline board', 'Fleet scheduling'],
   },
@@ -662,8 +662,8 @@ export const CRMS: CrmDemo[] = [
     slug: 'safeplay-desk',
     title: 'Case queue',
     site: 'SafePlay Desk',
-    image: '/portfolio/img/work/crm-safeplay.png',
-    href: '/portfolio/demos/safeplay-desk/#/crm',
+    image: '/img/work/crm-safeplay.png',
+    href: '/demos/safeplay-desk/#/crm',
     summary: 'A tiered queue for safer-gambling teams: markers, an eight-week deposit trend, interaction history and escalation actions, with a Tier 3 override rule.',
     stack: ['React', 'TypeScript', 'Rules table', 'Audit trail'],
   },
@@ -671,8 +671,8 @@ export const CRMS: CrmDemo[] = [
     slug: 'viki-dashboard',
     title: 'Sales pipeline',
     site: 'VIKI Dashboard',
-    image: '/portfolio/img/work/viki-crm.jpg',
-    href: '/portfolio/work/viki-dashboard/',
+    image: '/img/work/viki-crm.jpg',
+    href: '/work/viki-dashboard/',
     summary: 'A drag-between-stages pipeline with follow-ups and lead sources, designed in Figma and built as a working app.',
     stack: ['Figma', 'React', 'Drag and drop'],
   },

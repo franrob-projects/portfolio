@@ -8,7 +8,7 @@ When I took on rewriting Ably's [webhook security documentation](https://ably.co
 
 The existing documentation had become a collection of theoretical concepts with few practical examples. Developers were implementing webhooks without proper security, not because they didn't care about security, but because they couldn't figure out how to implement it correctly from the documentation.
 
-<img src="/portfolio/img/ably/ably-webhook/webhook-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
+<img src="/img/ably/ably-webhook/webhook-a.png" alt="" style={{borderRadius: '8px', marginTop: '1rem'}} />
 
 ## Understanding the documentation challenge
 

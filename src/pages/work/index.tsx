@@ -45,7 +45,7 @@ export default function Work(): ReactNode {
         <div className={styles.grid3}>
           {CRMS.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>
-              <ProjectCard to={c.href.startsWith('/portfolio/demos/') ? `/work/${c.slug}` : c.href.replace('/portfolio','')} open={c.href.startsWith('/portfolio/demos/') ? {label: 'Open CRM', href: c.href} : undefined} title={c.site} kicker={c.title} summary={c.summary} image={c.image} />
+              <ProjectCard to={c.href.startsWith('/demos/') ? `/work/${c.slug}` : c.href} open={c.href.startsWith('/demos/') ? {label: 'Open CRM', href: c.href} : undefined} title={c.site} kicker={c.title} summary={c.summary} image={c.image} />
             </Reveal>
           ))}
         </div>

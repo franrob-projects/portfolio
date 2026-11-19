@@ -63,7 +63,7 @@ const PROJECTS: Project[] = [
       { label: 'Tailwind',   colour: '#38BDF8' },
     ],
     github: 'https://github.com/franrob-projects/securetrain-gamification',
-    image: '/portfolio/img/projects/crypto-compliance.png',
+    image: '/img/projects/crypto-compliance.png',
     imageAlt: 'Crypto compliance training platform with gamified badges and leaderboard',
   },
   {
@@ -86,7 +86,7 @@ const PROJECTS: Project[] = [
       { label: 'Docker',     colour: '#2496ED' },
     ],
     github: 'https://github.com/franrob-projects/bjj-move-graph',
-    image: '/portfolio/img/projects/bjj-move-graph.png',
+    image: '/img/projects/bjj-move-graph.png',
     imageAlt: 'BJJ Move Graph showing closed guard position with weighted transitions to techniques like armbar, triangle choke, kimura, scissor sweep, and knee slice pass',
   },
   {
@@ -151,7 +151,7 @@ const DOCS_ENGINEERING_PROJECTS: Project[] = [
       { label: 'GitHub Pages', colour: '#ffffff' },
     ],
     github: 'https://github.com/franrob-projects/portfolio',
-    live: 'https://franrob-projects.github.io/portfolio/',
+    live: 'https://franroberts.site/',
   },
   {
     title: 'CI/CD Pipelines for TypeScript, React, Docusaurus, static generators',
