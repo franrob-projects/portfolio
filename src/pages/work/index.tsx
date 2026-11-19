@@ -4,14 +4,11 @@ import styles from '../../css/work.module.css';
 import ContactCta from '../../components/ContactCta';
 import ProjectCard from '../../components/ProjectCard';
 import Reveal from '../../components/Reveal';
-import {CASE_STUDIES, openFor } from '../../data/work';
+import {CASE_STUDIES, CRMS, openFor } from '../../data/work';
 
-const STUDIES = CASE_STUDIES.filter(c => !c.slug.startsWith('crm-') && c.kind !== 'concept' && c.kind !== 'product');
+const STUDIES = CASE_STUDIES.filter(c => c.kind !== 'concept' && c.kind !== 'product');
 const PRODUCT = CASE_STUDIES.filter(c => c.kind === 'product');
 const WEB = CASE_STUDIES.filter(c => c.kind === 'concept');
-const CRM = CASE_STUDIES.filter(c => c.slug.startsWith('crm-'));
-
-const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 
 export default function Work(): ReactNode {
   return (
@@ -46,9 +43,9 @@ export default function Work(): ReactNode {
           </div>
         </div>
         <div className={styles.grid3}>
-          {CRM.map((c, i) => (
+          {CRMS.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>
-              <ProjectCard to={`/work/${c.slug}`} open={openFor(c.slug)} title={cap(c.title.replace('CRM example: ', ''))} kicker={c.kicker} summary={c.summary} image={c.image} />
+              <ProjectCard to={c.href.startsWith('/portfolio/demos/') ? `/work/${c.slug}` : c.href.replace('/portfolio','')} open={c.href.startsWith('/portfolio/demos/') ? {label: 'Open CRM', href: c.href} : undefined} title={c.site} kicker={c.title} summary={c.summary} image={c.image} />
             </Reveal>
           ))}
         </div>

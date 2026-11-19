@@ -7,7 +7,7 @@ import Frame from './Frame';
 import ProjectCard, { ExternalIcon } from './ProjectCard';
 
 export default function CaseStudy({ data }: { data: CaseStudyData }): ReactNode {
-  const group = (c: CaseStudyData) => (c.kind === 'concept' ? 'concept' : c.slug.startsWith('crm-') ? 'crm' : 'study');
+  const group = (c: CaseStudyData) => (c.kind === 'concept' ? 'concept' : c.disciplines.includes('CRM') ? 'crm' : 'study');
   const others = CASE_STUDIES.filter(c => c.slug !== data.slug);
   const related = [...others.filter(c => group(c) === group(data)), ...others.filter(c => group(c) !== group(data))].slice(0, 3);
   return (

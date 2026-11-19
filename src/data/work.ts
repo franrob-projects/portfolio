@@ -123,10 +123,10 @@ export const CASE_STUDIES: CaseStudyData[] = [
     kicker: 'UKGC · safer gambling toolkit',
     summary:
       'A toolkit for customer-interaction teams: markers of harm, affordability triggers and intervention scripts mapped to the Licence Conditions and Codes of Practice.',
-    disciplines: ['Web', 'Content'],
-    tags: ['React', 'Vite', 'Tailwind', 'UKGC', 'Plain-language copy'],
+    disciplines: ['Web', 'CRM', 'Content'],
+    tags: ['React', 'TypeScript', 'Rules table', 'Case queue', 'UKGC'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: '/portfolio/demos/safeplay-desk/' }],
+    links: [{ label: 'Open the working site', href: '/portfolio/demos/safeplay-desk/' }, { label: 'Open the case desk', href: '/portfolio/demos/safeplay-desk/#/crm' }],
     sections: [
       {
         heading: 'The problem',
@@ -146,6 +146,20 @@ export const CASE_STUDIES: CaseStudyData[] = [
           'Practical guidance for customer-interaction teams. It is not legal advice, and operators should calibrate it to their own risk assessment.',
         ],
       },
+      {
+        heading: 'How the checker decides',
+        body: [
+          'Markers are typed data, grouped under spend, time, behaviour and contact. One pure function turns the ticked markers into a tier, so the same inputs always give the same answer and the rule can be read in one place and tested.',
+        ],
+      },
+      {
+        heading: 'The case desk',
+        body: [
+          'A second screen turns the tiers into a working queue: every flagged customer ranked by tier, with owner, next step and review date. Selecting a row shows the deposit trend for eight weeks, the markers observed and the interaction history.',
+          'Two rules are built in. A customer saying they feel out of control, or that they are in financial difficulty, is Tier 3 whatever the score. A weekly deposit total that has more than doubled is drawn in the warning colour.',
+          'It runs on sample data in the same bundle as the site, behind a hash route, so there is no server to host.',
+        ],
+      },
     ],
   },
   {
@@ -157,7 +171,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     summary:
       'A gap checklist, evidence tracker and audit pack for operators preparing for or maintaining a UK licence.',
     disciplines: ['Web', 'Content'],
-    tags: ['React', 'Vite', 'Tailwind', 'UKGC', 'Evidence tracking'],
+    tags: ['React', 'TypeScript', 'CSS effects', 'Evidence tracking', 'UKGC'],
     role: 'Designer, developer and writer',
     links: [{ label: 'Open the working site', href: '/portfolio/demos/licence-ready/' }],
     sections: [
@@ -177,6 +191,18 @@ export const CASE_STUDIES: CaseStudyData[] = [
         heading: 'Scope',
         body: ['A working tool for readiness planning. It is not legal advice.'],
       },
+      {
+        heading: 'Checklist state and the audit pack',
+        body: [
+          'The workspace keeps one record per control: status, the evidence attached and a date. The audit pack is generated from those records, so the summary can only say what the tracker says.',
+        ],
+      },
+      {
+        heading: 'A restyle without a rewrite',
+        body: [
+          'The visual refresh, with a nebula backdrop, starfield, orbiting hero and glowing cards, is a few CSS classes and one hero component. It respects reduced-motion settings, and the functionality and copy are untouched.',
+        ],
+      },
     ],
   },
   {
@@ -187,10 +213,10 @@ export const CASE_STUDIES: CaseStudyData[] = [
     kicker: 'Tourism · English and Spanish',
     summary:
       'Guided classic motorcycle tours on the Costa del Sol: a tour picker, the fleet, how it works and an enquiry form.',
-    disciplines: ['Web', 'Content'],
-    tags: ['React', 'Vite', 'Tailwind', 'Bilingual', 'Illustration'],
+    disciplines: ['Web', 'CRM', 'Content'],
+    tags: ['React', 'TypeScript', 'Bilingual content table', 'Photo credits', 'Fleet scheduling'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: '/portfolio/demos/classic-triumph-malaga/' }],
+    links: [{ label: 'Open the working site', href: '/portfolio/demos/classic-triumph-malaga/' }, { label: 'Open the ops console', href: '/portfolio/demos/classic-triumph-malaga/#/crm' }],
     sections: [
       {
         heading: 'The brief',
@@ -210,6 +236,19 @@ export const CASE_STUDIES: CaseStudyData[] = [
           'The site is bilingual throughout and is not affiliated with Triumph Motorcycles.',
         ],
       },
+      {
+        heading: 'One content table, two languages',
+        body: [
+          'All copy lives in a single table keyed by language, and every Wikimedia photo carries its credit in a second table, so the language switch and the attributions cannot drift from the page.',
+        ],
+      },
+      {
+        heading: 'The ops console',
+        body: [
+          'A booking pipeline for a business with four bikes. Enquiries move from new to quoted, deposit paid and confirmed, today\'s rides show briefing times, and the fleet panel tracks each Bonneville\'s distance to its next service.',
+          'The point of putting bikes in the CRM is that a ride is never promised on a machine that is due in the workshop.',
+        ],
+      },
     ],
   },
   {
@@ -220,10 +259,10 @@ export const CASE_STUDIES: CaseStudyData[] = [
     kicker: 'E-commerce · aftermarket parts',
     summary:
       'Aftermarket parts for the Triumph Bonneville: a fitment filter by generation and an enquiry list instead of a checkout.',
-    disciplines: ['Web', 'Content'],
-    tags: ['React', 'Vite', 'Tailwind', 'Fitment filter', 'Technical drawings'],
+    disciplines: ['Web', 'CRM', 'Content'],
+    tags: ['React', 'TypeScript', 'Fitment data model', 'SVG drawings', 'Order and QC tracking'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: '/portfolio/demos/parallel-parts/' }],
+    links: [{ label: 'Open the working site', href: '/portfolio/demos/parallel-parts/' }, { label: 'Open the CRM', href: '/portfolio/demos/parallel-parts/#/crm' }],
     sections: [
       {
         heading: 'The brief',
@@ -241,6 +280,20 @@ export const CASE_STUDIES: CaseStudyData[] = [
         heading: 'Notes',
         body: [
           'Technical drawings are public domain. Parallel Parts is an independent brand and is not affiliated with Triumph Motorcycles.',
+        ],
+      },
+      {
+        heading: 'Fitment as data',
+        body: [
+          'Every part carries the years and generations it fits. The filter is a plain query over that table, so adding a part means adding one record, and a wrong fit is a data fix rather than a layout change.',
+        ],
+      },
+      {
+        heading: 'Orders, requests and batches',
+        body: [
+          'The CRM follows a part from the enquiry to the factory. Orders open in a slide-in panel, customers show their activity and messages, part requests move across a board, and batches track each production run through quality control.',
+          'Because parts are made to order in China, the batch view is the one that matters: it ties customer orders to a production run, so a delay in one batch is visible against every order waiting on it.',
+          'The drawings in the order lists are the same SVG components the catalogue uses, not screenshots.',
         ],
       },
     ],
@@ -471,189 +524,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
       },
     ],
   },
-  {
-    slug: 'crm-precision',
-    image: '/portfolio/img/work/crm-precision.jpg',
-    title: 'CRM example: precision CNC job shop',
-    kicker: 'Open-source CRM (Twenty) · engineered, exact tone',
-    summary:
-      'A CRM design for a contract machining shop serving aerospace and medical customers: an RFQ-to-delivery pipeline, drawing-aware records and a voice that reads like a controlled document.',
-    disciplines: ['CRM', 'Content'],
-    tags: ['Twenty (open source)', 'RFQ pipeline', 'Custom objects', 'Quoting', 'Technical tone'],
-    role: 'CRM and content designer',
-    links: [{ label: 'Twenty on GitHub', href: 'https://github.com/twentyhq/twenty' }],
-    sections: [
-      {
-        heading: 'The niche',
-        body: [
-          'Precision CNC job shops live and die on the request-for-quote. Customers send drawings, expect a fast and exact answer, and compare several shops at once. The CRM has to move a quote from drawing to purchase order without losing a revision.',
-          'Built on the open-source Twenty CRM. The company and records shown are fictional.',
-        ],
-      },
-      {
-        heading: 'Data model',
-        body: [
-          'Companies and contacts, plus custom objects for RFQs and Parts. Each RFQ records drawing revision, material, quantity breaks, tolerance class, certification needs and the quote deadline. Parts link to the customer so repeat orders start from history instead of a blank form.',
-        ],
-      },
-      {
-        heading: 'Pipeline and automation',
-        body: [
-          'Seven stages from New RFQ to Delivered. Where the CRM supports automation, rules flag RFQs near their quote deadline and prompt a follow-up when a quote has gone quiet.',
-        ],
-      },
-      {
-        heading: 'Voice',
-        body: [
-          'Short, exact and specific. Every message states the part, the revision and the next action with a date. Nothing is promised that is not on the quote.',
-        ],
-      },
-    ],
-    pipeline: {
-      note: 'Fictional sample data.',
-      stages: [
-        {
-          name: 'New RFQ',
-          cards: [{ title: 'Bracket, 7075-T6', meta: 'Rev C · qty 250 · due Fri' }],
-        },
-        {
-          name: 'Drawing review',
-          cards: [{ title: 'Manifold block', meta: 'Tolerance query open' }],
-        },
-        {
-          name: 'Quoted',
-          cards: [
-            { title: 'Housing, Ti-6Al-4V', meta: 'Sent Tue · valid 30 days' },
-            { title: 'Spindle sleeve', meta: 'Sent Mon' },
-          ],
-        },
-        { name: 'First article', cards: [{ title: 'Valve body', meta: 'FAI report due' }] },
-        { name: 'PO received', cards: [{ title: 'Flange set', meta: 'PO confirmed' }] },
-        { name: 'In production', cards: [] },
-        { name: 'Delivered', cards: [] },
-      ],
-    },
-    templates: [
-      {
-        label: 'Quote follow-up',
-        text: 'Re: RFQ for Bracket P/N 4471, Rev C, qty 250. Our quote was issued on Tuesday and is valid until 18 December. Please confirm whether the revision is current or send the updated drawing so we can hold the lead time of 15 working days.',
-      },
-    ],
-  },
-  {
-    slug: 'crm-shopfloor',
-    image: '/portfolio/img/work/crm-shopfloor.jpg',
-    title: 'CRM example: family machine shop',
-    kicker: 'Open-source CRM (EspoCRM) · warm, plain-spoken tone',
-    summary:
-      'The same niche, a different business: a family-run machine shop that wins on relationships. A simple pipeline, a repeat-customer view, and messages that sound like a person.',
-    disciplines: ['CRM', 'Content'],
-    tags: ['EspoCRM (open source)', 'Repeat customers', 'Simple pipeline', 'Friendly tone'],
-    role: 'CRM and content designer',
-    links: [{ label: 'EspoCRM on GitHub', href: 'https://github.com/espocrm/espocrm' }],
-    sections: [
-      {
-        heading: 'The niche',
-        body: [
-          'Many job shops are small, local and loyal. Their best customers phone, drop in and send the same job every quarter. A heavy CRM would never be used, so this design keeps the system small enough to open every morning.',
-          'Built on the open-source EspoCRM. The company and records shown are fictional.',
-        ],
-      },
-      {
-        heading: 'Data model',
-        body: [
-          'Accounts, contacts and a short opportunity record: what they need, when they need it and who spoke to them last. A repeat-customer list answers "who have we not heard from in three months?" in one view.',
-        ],
-      },
-      {
-        heading: 'Pipeline',
-        body: [
-          'Six stages that match how the shop talks: Enquiry, Quote sent, Chased, Won, On the shop floor, Invoiced.',
-        ],
-      },
-      {
-        heading: 'Voice',
-        body: [
-          'Friendly, direct and human. First names, plain words, one clear next step, and an honest date.',
-        ],
-      },
-    ],
-    pipeline: {
-      note: 'Fictional sample data.',
-      stages: [
-        { name: 'Enquiry', cards: [{ title: 'Gate hinges, 40 off', meta: 'Phoned this morning' }] },
-        { name: 'Quote sent', cards: [{ title: 'Tractor bushes', meta: 'Sent Monday' }] },
-        { name: 'Chased', cards: [{ title: 'Press tool repair', meta: 'Called Thursday' }] },
-        { name: 'Won', cards: [{ title: 'Pump shafts', meta: 'Start next week' }] },
-        { name: 'On the shop floor', cards: [{ title: 'Brackets, batch 3', meta: 'Due Friday' }] },
-        { name: 'Invoiced', cards: [] },
-      ],
-    },
-    templates: [
-      {
-        label: 'Quote follow-up',
-        text: 'Hi Sam, just checking you got the quote for the tractor bushes on Monday. No rush, but if you can let me know by Friday I can fit them in next week. Give me a ring if anything needs changing.',
-      },
-    ],
-  },
-  {
-    slug: 'crm-ecommerce',
-    image: '/portfolio/img/work/crm-ecommerce.jpg',
-    title: 'CRM example: online parts store',
-    kicker: 'Open-source CRM (Odoo Community) · e-commerce, clear and practical tone',
-    summary:
-      'A CRM for a small online shop selling motorcycle parts. It tracks fitment enquiries, abandoned baskets, shipments from the factory and repeat buyers by bike model.',
-    disciplines: ['CRM', 'Content'],
-    tags: ['Odoo Community (open source)', 'E-commerce', 'Fitment enquiries', 'Repeat buyers'],
-    role: 'CRM and content designer',
-    links: [{ label: 'Odoo on GitHub', href: 'https://github.com/odoo/odoo' }],
-    sections: [
-      {
-        heading: 'The business',
-        body: [
-          'An online shop selling aftermarket parts for one motorcycle range, made to order and shipped from the factory. The questions that decide a sale are about fitment and delivery time, so the CRM is built around those, not around a generic sales funnel.',
-          'Set up for the Parallel Parts store on the open-source Odoo Community CRM. The customers and records shown are fictional.',
-        ],
-      },
-      {
-        heading: 'Data model',
-        body: [
-          'A contact carries the bike they ride: model, year and any earlier parts bought. Each order links to its fitment check and its shipment, so anyone replying to a customer sees the whole history in one place.',
-        ],
-      },
-      {
-        heading: 'Pipeline',
-        body: [
-          'Seven stages from first question to repeat purchase: Fitment enquiry, Quoted, Paid, In production, Shipped, Delivered, Review requested.',
-          'Two side lists sit next to the board: abandoned baskets older than a day, and buyers whose bike has a new part released since their last order.',
-        ],
-      },
-      {
-        heading: 'Voice',
-        body: [
-          'Clear, practical and honest about timing. Every message names the part, the bike it fits and the date to expect it, and says plainly when something is late.',
-        ],
-      },
-    ],
-    pipeline: {
-      note: 'Fictional sample data.',
-      stages: [
-        { name: 'Fitment enquiry', cards: [{ title: 'Rear shocks, 2016 T120', meta: 'Asked this morning' }] },
-        { name: 'Quoted', cards: [{ title: 'Bar-end mirrors', meta: 'Sent Tuesday' }] },
-        { name: 'Paid', cards: [{ title: 'Pannier racks', meta: 'Ordered today' }] },
-        { name: 'In production', cards: [{ title: 'Seat, tan leather', meta: 'Due in 3 weeks' }] },
-        { name: 'Shipped', cards: [{ title: 'Exhaust, brushed steel', meta: 'Tracking sent' }] },
-        { name: 'Delivered', cards: [] },
-        { name: 'Review requested', cards: [] },
-      ],
-    },
-    templates: [
-      {
-        label: 'Shipping update',
-        text: 'Hi Marcus, your brushed steel exhaust for the 2018 Bonneville T100 left the factory today. Tracking is below. Expect it in Málaga by 24 November. If it is not with you by the 27th, reply to this email and I will chase it.',
-      },
-    ],
-  },
 ];
 
 export interface SupportSite {
@@ -746,7 +616,7 @@ export const ABLY_LIVE_PAGES: LivePage[] = [
 ];
 
 
-// The built or live site behind a case study, if there is one. CRM examples have none.
+// The built or live site behind a case study, if there is one.
 const LIVE = ['ably', 'conply', 'viki', 'viki-dashboard', 'viki-auth', 'safeplay-desk', 'licence-ready', 'classic-triumph-malaga', 'parallel-parts'];
 export function openFor(slug: string): { label: string; href: string } | undefined {
   if (!LIVE.includes(slug)) return undefined;
@@ -756,3 +626,54 @@ export function openFor(slug: string): { label: string; href: string } | undefin
   const internal = l.href.startsWith('/portfolio/demos/');
   return { label: internal ? 'Open site' : `Visit ${l.label}`.replace('Visit Docs', 'Visit Ably docs'), href: l.href };
 }
+
+
+export interface CrmDemo {
+  slug: string;
+  title: string;
+  site: string;
+  image: string;
+  href: string;
+  summary: string;
+  stack: string[];
+}
+
+/** Working CRM screens built for the demo sites. Each opens in the demo's own hash route. */
+export const CRMS: CrmDemo[] = [
+  {
+    slug: 'parallel-parts',
+    title: 'Orders, requests and batches',
+    site: 'Parallel Parts',
+    image: '/portfolio/img/work/crm-parallel-parts.png',
+    href: '/portfolio/demos/parallel-parts/#/crm',
+    summary: 'Five linked screens that follow a part from enquiry to factory batch and quality control, with a slide-in order panel and a part-request board.',
+    stack: ['React', 'TypeScript', 'SVG charts', 'Batch tracking'],
+  },
+  {
+    slug: 'classic-triumph-malaga',
+    title: 'Ops console',
+    site: 'Classic Triumph Malaga',
+    image: '/portfolio/img/work/crm-classic-triumph.png',
+    href: '/portfolio/demos/classic-triumph-malaga/#/crm',
+    summary: 'Enquiry pipeline from first message to confirmed ride, today\'s rides with tasks, and a fleet panel that tracks distance to the next service.',
+    stack: ['React', 'TypeScript', 'Pipeline board', 'Fleet scheduling'],
+  },
+  {
+    slug: 'safeplay-desk',
+    title: 'Case queue',
+    site: 'SafePlay Desk',
+    image: '/portfolio/img/work/crm-safeplay.png',
+    href: '/portfolio/demos/safeplay-desk/#/crm',
+    summary: 'A tiered queue for safer-gambling teams: markers, an eight-week deposit trend, interaction history and escalation actions, with a Tier 3 override rule.',
+    stack: ['React', 'TypeScript', 'Rules table', 'Audit trail'],
+  },
+  {
+    slug: 'viki-dashboard',
+    title: 'Sales pipeline',
+    site: 'VIKI Dashboard',
+    image: '/portfolio/img/work/viki-crm.jpg',
+    href: '/portfolio/work/viki-dashboard/',
+    summary: 'A drag-between-stages pipeline with follow-ups and lead sources, designed in Figma and built as a working app.',
+    stack: ['Figma', 'React', 'Drag and drop'],
+  },
+];

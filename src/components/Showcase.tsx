@@ -1,6 +1,6 @@
 import {useState, type ReactNode} from 'react';
 import Link from '@docusaurus/Link';
-import {CASE_STUDIES} from '../data/work';
+import {CASE_STUDIES, CRMS} from '../data/work';
 import styles from '../css/showcase.module.css';
 
 const FAN = ['classic-triumph-malaga', 'parallel-parts', 'licence-ready', 'conply', 'viki-dashboard'];
@@ -64,6 +64,20 @@ export function Belt(): ReactNode {
       <div className={styles.chips} role="group" aria-label="Filter work">
         {FILTERS.map(k => <button key={k} className={styles.chipBtn} aria-pressed={f === k} onClick={() => setF(k)}>{k}</button>)}
       </div>
+      {f === 'CRM' ? (
+        <>
+          <p className={styles.sectionLead} style={{margin: '0 0 1rem'}}>Working CRMs built for the demo sites. Each opens a clickable screen with sample data.</p>
+          <div className={styles.screens}>
+            {CRMS.map((c, i) => (
+              <a key={c.slug} href={c.href} target={c.href.includes('/demos/') ? '_blank' : undefined} rel="noopener noreferrer" className={styles.screen} style={{animationDelay: `${i * 45}ms`}}>
+                <span className={styles.screenBar}><i /><i /><i /><em>{c.site} · {c.title}</em></span>
+                <span className={styles.view}><img src={c.image} alt={`${c.site} CRM: ${c.title}`} loading="lazy" /></span>
+                <span className={styles.screenInfo}><b>{c.site}: {c.title}</b><span>{c.summary}</span><span>{c.stack.join(' · ')}</span></span>
+              </a>
+            ))}
+          </div>
+        </>
+      ) : (
       <div className={styles.screens}>
         {list.map((c, i) => (
           <Link key={f + c.slug} to={`/work/${c.slug}`} className={styles.screen} style={{animationDelay: `${i * 45}ms`}}>
@@ -73,6 +87,7 @@ export function Belt(): ReactNode {
           </Link>
         ))}
       </div>
+      )}
     </>
   );
 }
@@ -94,8 +109,8 @@ export function Trio(): ReactNode {
           <rect className={`${styles.c2} ${styles.floaty}`} x="24" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.c1} ${styles.floaty} ${styles.f2}`} x="132" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.ln} ${styles.floaty} ${styles.f3}`} x="240" y="160" width="100" height="24" rx="6" />
           <path className={styles.cursor} d="M300 170l0 20 5-5 4 9 4-2-4-9 7 0z" fill="#fff" />
         </svg>
-        <h3>The site: <em>graphics, words and infrastructure</em></h3>
-        <p>Pages built to be read quickly, with the design, the copy and the build behind them.</p>
+        <h3>Sites that <em>ship</em></h3>
+        <p>React and TypeScript builds on static hosting, with typed content, a bilingual switch and checkout flows wired to payment links.</p>
       </div>
       <div className={`${styles.tcard} ${styles.t2}`}>
         <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="CRM pipeline stages">
@@ -111,8 +126,8 @@ export function Trio(): ReactNode {
           <g className={styles.hop}><rect className={styles.c1} x="28" y="86" width="56" height="30" rx="6" /><rect fill="#0b0d0c" opacity=".55" x="34" y="94" width="34" height="5" rx="2.5" /><rect fill="#0b0d0c" opacity=".35" x="34" y="104" width="22" height="5" rx="2.5" /></g>
           <circle className={`${styles.c2} ${styles.pulse}`} cx="338" cy="30" r="6" />
         </svg>
-        <h3>The pipeline: <em>leads to customers</em></h3>
-        <p>CRM stages, follow-ups and reporting laid out so nothing sits unanswered.</p>
+        <h3>CRMs <em>with logic</em></h3>
+        <p>Pipelines, queues and batch tracking where the rules are real: tier overrides, service-due flags, order-to-batch links.</p>
       </div>
       <div className={`${styles.tcard} ${styles.t3}`}>
         <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="Lines of copy being written">
@@ -125,8 +140,8 @@ export function Trio(): ReactNode {
           <rect className={styles.caret} x="222" y="120" width="3" height="16" fill="#fff" />
           <rect className={`${styles.c1} ${styles.floaty}`} x="24" y="154" width="70" height="22" rx="11" /><rect className={`${styles.c2} ${styles.floaty} ${styles.f2}`} x="102" y="154" width="54" height="22" rx="11" /><rect className={`${styles.ln} ${styles.floaty} ${styles.f3}`} x="164" y="154" width="40" height="22" rx="11" />
         </svg>
-        <h3>The words: <em>copy and content</em></h3>
-        <p>Product copy, docs and case studies that explain things plainly, in English and Spanish.</p>
+        <h3>Docs <em>as code</em></h3>
+        <p>Docusaurus and Markdown pipelines, diagrams and AI-tagged content, written in English and Spanish.</p>
       </div>
     </div>
   );
