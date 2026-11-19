@@ -55,10 +55,23 @@ export function Fan(): ReactNode {
 
 const FILTERS = ['All', 'Web', 'CRM', 'Product', 'Packaging', 'Content'] as const;
 
+/** Each filter leads with the work that best shows that discipline, then the rest in default order. */
+const LEAD: Record<string, string[]> = {
+  All: ['classic-triumph-malaga', 'conply', 'viki-dashboard', 'ably'],
+  Web: ['parallel-parts', 'classic-triumph-malaga', 'licence-ready', 'safeplay-desk', 'conply'],
+  Content: ['ably', 'conply', 'earth-and-hound', 'licence-ready', 'safeplay-desk'],
+  Product: ['viki-dashboard', 'viki-auth'],
+  Packaging: ['earth-and-hound'],
+};
+const CRM_LEAD = ['safeplay-desk', 'parallel-parts', 'classic-triumph-malaga', 'viki-dashboard'];
+const rank = (order: string[], slug: string) => { const i = order.indexOf(slug); return i === -1 ? order.length : i; };
+
 export function Belt(): ReactNode {
   const [f, setF] = useState<(typeof FILTERS)[number]>('All');
   const all = CASE_STUDIES.filter(c => c.image && c.slug !== 'viki');
-  const list = all.filter(c => f === 'All' || (c.disciplines as string[]).includes(f));
+  const lead = LEAD[f] ?? [];
+  const list = all.filter(c => f === 'All' || (c.disciplines as string[]).includes(f)).sort((a, b) => rank(lead, a.slug) - rank(lead, b.slug));
+  const crms = [...CRMS].sort((a, b) => rank(CRM_LEAD, a.slug) - rank(CRM_LEAD, b.slug));
   return (
     <>
       <div className={styles.chips} role="group" aria-label="Filter work">
@@ -68,7 +81,7 @@ export function Belt(): ReactNode {
         <>
           <p className={styles.sectionLead} style={{margin: '0 0 1rem'}}>Working CRMs built for the demo sites. Each opens a clickable screen with sample data.</p>
           <div className={styles.screens}>
-            {CRMS.map((c, i) => (
+            {crms.map((c, i) => (
               <a key={c.slug} href={c.href} target={c.href.includes('/demos/') ? '_blank' : undefined} rel="noopener noreferrer" className={styles.screen} style={{animationDelay: `${i * 45}ms`}}>
                 <span className={styles.screenBar}><i /><i /><i /><em>{c.site} · {c.title}</em></span>
                 <span className={styles.view}><img src={c.image} alt={`${c.site} CRM: ${c.title}`} loading="lazy" /></span>

@@ -118,6 +118,8 @@ a.card:hover .ext { color: var(--accent); transform: translate(1px, -1px); }
 @media (max-width: 960px) {
   .heroSplit, .contact { grid-template-columns: 1fr; }
   .heroSplit { gap: 1rem; padding-top: 2.5rem; }
+  .actions .btn { flex: 1 1 calc(50% - .4rem); justify-content: center; padding-left: 1rem; padding-right: 1rem; white-space: nowrap; }
+  .actions .btn:nth-child(3) { flex-basis: 100%; }
   .stack { max-width: 520px; }
   .grid4 { grid-template-columns: repeat(2, 1fr); }
   .wrap { --fs-display: 2.5rem; --fs-h2: 2rem; }

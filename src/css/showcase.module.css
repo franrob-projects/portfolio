@@ -13,7 +13,7 @@
 .fanLabel { display: block; padding: .6rem .8rem .7rem; }
 .fanLabel b { display: block; font-size: .9rem; font-weight: 600; color: var(--text, #eef2ef); line-height: 1.25; }
 .fanLabel span { font-size: .72rem; color: var(--meta, #a3aea8); letter-spacing: .02em; }
-@media (max-width: 900px) { .fan { --u: .54rem; height: 15rem; margin: 0; overflow-x: clip; } .fan::before { inset: -8% 0 0; } .fanCard { width: 10rem; margin-left: -5rem; } .fanCard:hover, .fanCard:focus-visible { transform: translate(calc(var(--x) * var(--u) * 1.15), calc(var(--y) * var(--u) * 1.08 - .8rem)) rotate(calc(var(--r) * .4)) !important; } .fanLabel { padding: .4rem .6rem .5rem; } .fanLabel b { font-size: .8rem; } }
+@media (max-width: 900px) { .fan { --u: .4rem; height: 14rem; margin: 1.75rem 0 0; overflow-x: clip; } .fan::before { inset: -8% 0 0; } .fanCard { width: 9rem; margin-left: -4.5rem; } .fanCard:hover, .fanCard:focus-visible { transform: translate(calc(var(--x) * var(--u) * 1.15), calc(var(--y) * var(--u) * 1.08 - .8rem)) rotate(calc(var(--r) * .4)) !important; } .fanLabel { padding: .4rem .6rem .5rem; } .fanLabel b { font-size: .8rem; } }
 @media (prefers-reduced-motion: reduce) { .fanCard, .fan::before { animation: none !important; } }
 
 /* Conveyor */
