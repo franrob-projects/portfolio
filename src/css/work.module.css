@@ -150,3 +150,14 @@ a.card:hover .ext { color: var(--accent); transform: translate(1px, -1px); }
 .cta { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin: 4.5rem 0 1rem; padding: 2rem 2.25rem; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
 .cta h2 { margin: 0 0 .35rem; font-size: var(--fs-h3); color: var(--text); }
 .cta p { margin: 0; }
+
+/* Work page: section jump bar and tighter first section */
+.jump { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2.5rem; position: sticky; top: calc(var(--ifm-navbar-height, 60px) + .5rem); z-index: 5; }
+.jump a { padding: .45rem .95rem; border-radius: 999px; border: 1px solid var(--line-strong); background: rgba(10, 13, 11, .85); backdrop-filter: blur(8px); color: var(--text-2) !important; font-size: .875rem; font-weight: 500; text-decoration: none !important; transition: all .2s; }
+.jump a:hover { color: var(--text) !important; border-color: var(--accent, #40d77c); }
+.firstHead { margin-top: 0; }
+.sectionHead { scroll-margin-top: 7rem; }
+@media (max-width: 720px) { .jump { position: static; margin-bottom: 1.5rem; } .jump a { padding: .4rem .8rem; font-size: .8125rem; } }
+.workHero { padding: 2.5rem 0 1.25rem; }
+.workHero h1 { font-size: clamp(2rem, 4vw, 3rem); max-width: 22ch; margin-bottom: .75rem; }
+.jump { margin-bottom: 1.75rem; }

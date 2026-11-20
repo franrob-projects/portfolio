@@ -3,7 +3,8 @@ import Link from '@docusaurus/Link';
 import {CASE_STUDIES, CRMS} from '../data/work';
 import styles from '../css/showcase.module.css';
 
-const FAN = ['classic-triumph-malaga', 'parallel-parts', 'licence-ready', 'conply', 'viki-dashboard'];
+// Later = on top. The three flagship pieces sit on top and in the middle.
+const FAN = ['viki-dashboard', 'classic-triumph-malaga', 'conply', 'parallel-parts', 'ably'];
 const bySlug = (s: string) => CASE_STUDIES.find(c => c.slug === s)!;
 const label = (d: string[]) => d.join(' · ');
 
@@ -57,8 +58,8 @@ const FILTERS = ['All', 'Web', 'CRM', 'Product', 'Packaging', 'Content'] as cons
 
 /** Each filter leads with the work that best shows that discipline, then the rest in default order. */
 const LEAD: Record<string, string[]> = {
-  All: ['classic-triumph-malaga', 'conply', 'viki-dashboard', 'ably'],
-  Web: ['parallel-parts', 'classic-triumph-malaga', 'licence-ready', 'safeplay-desk', 'conply'],
+  All: ['ably', 'conply', 'parallel-parts', 'classic-triumph-malaga', 'viki-dashboard'],
+  Web: ['parallel-parts', 'ably', 'classic-triumph-malaga', 'licence-ready', 'safeplay-desk', 'conply'],
   Content: ['ably', 'conply', 'earth-and-hound', 'licence-ready', 'safeplay-desk'],
   Product: ['viki-dashboard', 'viki-auth'],
   Packaging: ['earth-and-hound'],
