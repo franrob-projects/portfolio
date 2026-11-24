@@ -2,9 +2,12 @@ import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import styles from '../css/work.module.css';
+import home from '../css/home.module.css';
 import {WHATSAPP, WaIcon} from '../components/Contact';
 import ContactCta from '../components/ContactCta';
 import {Fan, Belt, Trio} from '../components/Showcase';
+
+const SECTORS = ['Manufacturers', 'Engineering firms', 'Industrial suppliers', 'Regulated products'];
 
 const EXPLORE: [string, string, string][] = [
   ['/work', 'Work', 'Case studies, working sites, CRM and product design.'],
@@ -18,10 +21,10 @@ export default function Home(): ReactNode {
     <Layout
       title="Web, CRM and content design"
       description="Franrob Design: web, CRM and content design by Fran Roberts in Málaga. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
-      <main className={styles.wrap}>
-        <header className={styles.heroSplit}>
+      <main className={`${styles.wrap} ${home.ind}`}>
+        <header className={`${styles.heroSplit} ${home.hero}`}>
           <div>
-            <div className={styles.eyebrow}>Franrob Design · Web, CRM and content design · Málaga</div>
+            <div className={styles.eyebrow}><span className={home.tag}>Franrob Design</span>Web, CRM and content design · Málaga</div>
             <h1>I design the site: graphics, words and infrastructure.</h1>
             <p className="lead">
               Franrob Design is the web, CRM and content design studio of Fran Roberts. Sites and
@@ -36,6 +39,13 @@ export default function Home(): ReactNode {
           </div>
           <Fan />
         </header>
+
+        <div className={home.strip}>
+          <span>Built for</span>
+          <ul>
+            {SECTORS.map((s) => <li key={s}>{s}</li>)}
+          </ul>
+        </div>
 
         <Trio />
 
