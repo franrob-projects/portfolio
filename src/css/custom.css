@@ -493,3 +493,47 @@ article img[class*='avatar'], article .avatar__photo { width: 40px; height: 40px
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
+/* ===== Franrob Design industrial style, site-wide ===== */
+.navbar .navbar__item.navbar__link,
+.navbar .navbar__items--right .navbar__link {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.navbar__link--active { box-shadow: inset 0 -2px 0 var(--ifm-color-primary); color: #fff; }
+.navbar { border-bottom: 1px solid rgba(64, 215, 124, 0.14); }
+
+/* Graph paper behind every page, fading out above the footer */
+.main-wrapper { position: relative; overflow-x: clip; }
+.main-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(64, 215, 124, 0.11) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(64, 215, 124, 0.11) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 220px), transparent);
+  mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 220px), transparent);
+}
+.main-wrapper > * { position: relative; z-index: 1; }
+
+/* Heavy uppercase headings on the page templates (not inside docs or blog prose) */
+main h1, main h2, .hero__title {
+  font-family: 'Archivo', var(--ifm-heading-font-family);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.markdown h1, .markdown h2, article h1, article h2 { text-transform: none; font-family: var(--ifm-heading-font-family); font-weight: 700; }
+
+/* Square, machined corners */
+main [class*='card_'], main [class*='btn_'], main [class*='cta_'], main [class*='chip'] { border-radius: 3px !important; }
+main [class*='btn_'] { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8125rem; }
+main [class*='eyebrow'] { font-family: var(--ifm-font-family-monospace); }

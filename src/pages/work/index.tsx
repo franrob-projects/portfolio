@@ -11,6 +11,7 @@ const FEATURED = FEATURED_SLUGS.map(slug => CASE_STUDIES.find(c => c.slug === sl
 const rest = (list: typeof CASE_STUDIES) => list.filter(c => !FEATURED_SLUGS.includes(c.slug));
 const WEB = rest(CASE_STUDIES.filter(c => c.kind === 'concept'));
 const PRODUCT = CASE_STUDIES.filter(c => c.kind === 'product');
+const PRINT = CASE_STUDIES.filter(c => (c.disciplines as string[]).includes('Packaging'));
 const MORE = rest(CASE_STUDIES.filter(c => c.kind !== 'concept' && c.kind !== 'product'));
 
 export default function Work(): ReactNode {
@@ -27,6 +28,7 @@ export default function Work(): ReactNode {
           <a href="#featured">Featured</a>
           <a href="#crm">CRM design</a>
           <a href="#web">Web projects</a>
+          <a href="#print">Print &amp; packaging</a>
           <a href="#product">Product</a>
           <a href="#more">More</a>
         </nav>
@@ -54,6 +56,15 @@ export default function Work(): ReactNode {
           {WEB.map((s, i) => (
             <Reveal key={s.slug} delay={(i % 2) * 70}>
               <ProjectCard to={`/work/${s.slug}`} open={openFor(s.slug)} title={s.title} kicker={s.kicker} summary={s.summary} image={s.image} status={s.status} />
+            </Reveal>
+          ))}
+        </div>
+
+        <div className={styles.sectionHead} id="print"><h2>Print &amp; packaging</h2></div>
+        <div className={styles.grid3}>
+          {PRINT.map((c, i) => (
+            <Reveal key={c.slug} delay={i * 70}>
+              <ProjectCard to={`/work/${c.slug}`} title={c.title} kicker={c.kicker} summary={c.summary} image={c.slug === 'solaz' ? '/img/work/solaz-brochure.jpg' : c.image} tags={c.disciplines} />
             </Reveal>
           ))}
         </div>

@@ -23,6 +23,8 @@ const SCATTER = [
   {x: 10.5, y: -4, r: 14},
   {x: 0, y: 1.5, r: -2},
 ];
+// Welding sparks: angle (deg), length (px), duration and delay (s)
+const SPARKS = Array.from({length: 22}, (_, n) => ({a: -150 + ((n * 47) % 120), l: 26 + ((n * 37) % 54), d: 0.9 + ((n * 13) % 9) / 10, w: ((n * 29) % 17) / 10}));
 const COLORS = ['#40d77c', '#ffd24a', '#ff7a59', '#6cc7ff', '#c084fc', '#ff8ad8'];
 const STARS = [
   {x: 6, y: 18, s: 1.3, d: 7, l: 0.3}, {x: 20, y: 52, s: 0.8, d: 6, l: 1.1}, {x: 33, y: 8, s: 1.1, d: 8, l: 0.7},
@@ -37,15 +39,11 @@ const DOTS = [
 export function Fan(): ReactNode {
   return (
     <div className={styles.fan}>
-      <div className={styles.stars} aria-hidden="true">
-        {STARS.map((s, k) => (
-          <span key={'s' + k} className={styles.star} style={{['--sx' as string]: s.x + '%', ['--sy' as string]: s.y + '%', ['--ss' as string]: s.s + 'rem', ['--sc' as string]: COLORS[k % COLORS.length], ['--sd' as string]: s.d + 's', ['--sl' as string]: s.l + 's'}}>
-            <svg viewBox="0 0 24 24"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z" /></svg>
-          </span>
+      <div className={styles.sparks} aria-hidden="true">
+        {SPARKS.map((k, n) => (
+          <i key={n} style={{['--a' as string]: k.a + 'deg', ['--l' as string]: k.l + 'px', ['--d' as string]: k.d + 's', ['--w' as string]: k.w + 's'}} />
         ))}
-        {DOTS.map((s, k) => (
-          <span key={'d' + k} className={styles.dot} style={{['--sx' as string]: s.x + '%', ['--sy' as string]: s.y + '%', ['--ss' as string]: s.s + 'px', ['--sc' as string]: COLORS[(k + 2) % COLORS.length], ['--sd' as string]: s.d + 's', ['--sl' as string]: s.l + 's'}} />
-        ))}
+        <b />
       </div>
       {FAN.map((slug, n) => {
         const c = bySlug(slug);
@@ -117,48 +115,64 @@ export function Trio(): ReactNode {
   return (
     <div className={styles.trio}>
       <div className={styles.tcard}>
-        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="Website layout wireframe">
-          <rect className={styles.pan} x="6" y="6" width="348" height="188" rx="12" />
-          <circle cx="22" cy="20" r="3.5" className={styles.c1} /><circle cx="34" cy="20" r="3.5" className={styles.c2} /><circle cx="46" cy="20" r="3.5" className={styles.ln} />
-          <rect className={styles.ln} x="250" y="16" width="26" height="8" rx="4" /><rect className={styles.ln} x="282" y="16" width="26" height="8" rx="4" /><rect className={styles.c1} x="314" y="14" width="30" height="12" rx="6" />
-          <rect className={styles.c1} x="24" y="48" width="170" height="14" rx="4" /><rect className={styles.ln} x="24" y="70" width="120" height="14" rx="4" />
-          <rect className={styles.ln} x="24" y="96" width="150" height="7" rx="3" /><rect className={styles.ln} x="24" y="109" width="110" height="7" rx="3" />
-          <rect className={`${styles.c1} ${styles.pulse}`} x="24" y="128" width="62" height="18" rx="9" /><rect className={styles.c2s} x="94" y="128" width="62" height="18" rx="9" strokeWidth="2" />
-          <rect className={`${styles.pan} ${styles.floaty}`} x="216" y="46" width="124" height="100" rx="10" />
-          <path className={`${styles.c1s} ${styles.draw}`} d="M228 128l22-26 18 14 24-34 32 46" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-          <circle className={`${styles.c2} ${styles.pulse}`} cx="292" cy="94" r="5" />
-          <rect className={`${styles.c2} ${styles.floaty}`} x="24" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.c1} ${styles.floaty} ${styles.f2}`} x="132" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.ln} ${styles.floaty} ${styles.f3}`} x="240" y="160" width="100" height="24" rx="6" />
+        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="Website connected to hosting, database and deploy">
+          <rect className={styles.pan} x="6" y="6" width="348" height="188" rx="4" />
+          <rect className={styles.pan} x="18" y="18" width="176" height="164" rx="6" />
+          <circle cx="30" cy="30" r="3" className={styles.c1} /><circle cx="40" cy="30" r="3" className={styles.ln} /><circle cx="50" cy="30" r="3" className={styles.ln} />
+          <rect className={styles.ln} x="62" y="26" width="80" height="8" rx="4" /><rect className={styles.c1s} x="150" y="25" width="34" height="10" rx="5" strokeWidth="1.2" />
+          <rect fill="#eef2ef" x="30" y="52" width="104" height="8" rx="2" /><rect fill="#eef2ef" x="30" y="66" width="74" height="8" rx="2" />
+          <rect className={styles.ln} x="30" y="84" width="120" height="4" rx="2" /><rect className={styles.ln} x="30" y="93" width="90" height="4" rx="2" />
+          <rect className={`${styles.c1} ${styles.pulse}`} x="30" y="108" width="40" height="12" rx="2" /><rect className={styles.c2s} x="76" y="108" width="40" height="12" rx="2" strokeWidth="1.2" />
+          <rect className={styles.pan} x="30" y="132" width="40" height="38" rx="3" /><rect className={styles.pan} x="78" y="132" width="40" height="38" rx="3" /><rect className={styles.pan} x="126" y="132" width="40" height="38" rx="3" />
+          <g className={styles.c1s} strokeWidth="1.2" fill="none"><path d="M194 70h20M194 110h20M194 150h20" /></g>
+          <circle className={styles.c1} cx="214" cy="70" r="3" /><circle className={styles.c1} cx="214" cy="110" r="3" /><circle className={styles.c1} cx="214" cy="150" r="3" />
+          <text x="222" y="32" className={styles.mono}>HOSTING</text>
+          {[38, 50, 62].map((y, n) => <g key={y}><rect className={styles.pan} x="222" y={y} width="122" height="9" rx="2" /><circle className={`${styles.c1} ${styles.pulse}`} cx="229" cy={y + 4.5} r="2" style={{animationDelay: n * 0.3 + 's'}} /><rect className={styles.ln} x="236" y={y + 3.5} width="50" height="2" /></g>)}
+          <text x="222" y="86" className={styles.mono}>DATABASE</text>
+          <ellipse className={styles.pan} cx="244" cy="96" rx="20" ry="5" /><path className={styles.pan} d="M224 96v26a20 5 0 0 0 40 0V96" /><path d="M224 104a20 5 0 0 0 40 0M224 112a20 5 0 0 0 40 0" stroke="rgba(255,255,255,.2)" fill="none" />
+          {[['CMS', 272, 92], ['API', 306, 92], ['PAY', 272, 110], ['i18n', 306, 110]].map(([t, x, y]) => <g key={t as string}><rect className={styles.c1s} x={x as number} y={y as number} width="30" height="12" rx="2" strokeWidth="1" /><text x={(x as number) + 15} y={(y as number) + 8.5} textAnchor="middle" className={styles.monoC}>{t}</text></g>)}
+          <rect className={styles.pan} x="222" y="136" width="122" height="40" rx="3" /><text x="230" y="148" className={styles.mono}>DEPLOY</text><circle className={`${styles.c1} ${styles.pulse}`} cx="336" cy="145" r="3" />
+          <rect className={styles.ln} x="230" y="155" width="104" height="5" rx="2.5" /><rect className={`${styles.c1} ${styles.grow}`} x="230" y="155" width="86" height="5" rx="2.5" />
+          <text x="230" y="171" className={styles.monoC}>200 OK · 0.4s</text>
         </svg>
         <h3>Websites <em>front to back</em></h3>
         <p>Fast sites with the backend done properly: hosting, databases, CMS, payments and integrations, in English and Spanish.</p>
       </div>
       <div className={`${styles.tcard} ${styles.t2}`}>
-        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="CRM pipeline stages">
-          <rect className={styles.pan} x="6" y="6" width="348" height="188" rx="12" />
-          {[0, 1, 2, 3].map(c => (
-            <g key={c}>
-              <rect className={c % 2 ? styles.c2 : styles.c1} x={20 + c * 88} y="22" width="72" height="8" rx="4" />
-              <rect className={styles.pan} x={20 + c * 88} y="40" width="72" height="146" rx="8" />
-              {c !== 0 && <rect className={styles.ln} x={28 + c * 88} y="52" width="56" height="26" rx="5" />}
-              {c % 2 === 0 && <rect className={styles.ln} x={28 + c * 88} y="136" width="56" height="26" rx="5" />}
+        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="CRM pipeline and order tracking">
+          <rect className={styles.pan} x="6" y="6" width="348" height="188" rx="4" />
+          {['LEAD', 'QUOTE', 'BUILD', 'SHIP'].map((t, c) => (
+            <g key={t}>
+              <text x={20 + c * 82} y="24" className={c === 1 ? styles.monoC : styles.mono}>{t}</text><text x={84 + c * 82} y="24" textAnchor="end" className={styles.mono}>{[4, 3, 3, 5][c]}</text>
+              {c === 1 && <rect className={styles.c1} x="20" y="27" width="0" height="0" />}
+              {[0, 1, 2].filter(r => !(c === 1 && r === 2)).map(r => (
+                <g key={r}><rect className={styles.pan} x={20 + c * 82} y={34 + r * 22} width="72" height="17" rx="2" /><rect className={styles.ln} x={26 + c * 82} y={40 + r * 22} width="34" height="2" /><rect className={styles.ln} x={26 + c * 82} y={45 + r * 22} width="22" height="2" /><circle cx={84 + c * 82} cy={42.5 + r * 22} r="2.5" className={c === 3 ? styles.c1g : styles.ln} /></g>
+              ))}
             </g>
           ))}
-          <g className={styles.hop}><rect className={styles.c1} x="28" y="86" width="56" height="30" rx="6" /><rect fill="#0b0d0c" opacity=".55" x="34" y="94" width="34" height="5" rx="2.5" /><rect fill="#0b0d0c" opacity=".35" x="34" y="104" width="22" height="5" rx="2.5" /></g>
-          <circle className={`${styles.c2} ${styles.pulse}`} cx="338" cy="30" r="6" />
+          <g className={styles.hopQ}><rect className={styles.c1s} x="102" y="80" width="72" height="17" rx="2" strokeWidth="1.4" fill="rgba(255,180,84,.08)" /><rect className={styles.c1} x="108" y="86" width="34" height="2" /><rect className={styles.c1} x="108" y="91" width="22" height="2" /></g>
+          <path d="M184 76l6 6-6 6-6-6z" className={`${styles.c1} ${styles.pulse}`} /><text x="196" y="74" className={styles.monoC}>IF PAID</text><text x="196" y="96" className={styles.mono}>ELSE</text>
+          <rect className={styles.pan} x="20" y="116" width="318" height="64" rx="3" />
+          <text x="30" y="132" className={styles.mono}>ORDER #2848</text><text x="328" y="132" textAnchor="end" className={styles.monoC}>IN QUEUE · 3</text>
+          <rect className={styles.ln} x="40" y="152" width="280" height="2" /><rect className={`${styles.c1} ${styles.grow}`} x="40" y="152" width="164" height="2" />
+          {[['RECEIVED', 40], ['PICKED', 130], ['PACKED', 224], ['SHIPPED', 318]].map(([t, x], n) => <g key={t as string}><circle cx={x as number} cy="153" r="5" className={n < 2 ? styles.c1 : n === 2 ? styles.c1s : styles.ln} strokeWidth="1.5" /><text x={x as number} y="172" textAnchor="middle" className={n < 2 ? styles.monoC : styles.mono}>{t}</text></g>)}
         </svg>
         <h3>CRMs <em>with logic</em></h3>
         <p>Pipelines, queues and order tracking built around how your business actually runs.</p>
       </div>
       <div className={`${styles.tcard} ${styles.t3}`}>
-        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="Brand and copy being laid out">
-          <rect className={styles.pan} x="6" y="6" width="348" height="188" rx="12" />
-          <text x="22" y="64" fontSize="56" fontWeight="700" className={styles.c2} opacity=".95">“</text>
-          <rect className={`${styles.c1} ${styles.grow}`} x="62" y="44" width="250" height="12" rx="5" />
-          <rect className={`${styles.c2} ${styles.grow} ${styles.g2}`} x="24" y="84" width="300" height="8" rx="4" opacity=".7" />
-          <rect className={`${styles.ln} ${styles.grow} ${styles.g3}`} x="24" y="104" width="260" height="8" rx="4" />
-          <rect className={`${styles.ln} ${styles.grow} ${styles.g4}`} x="24" y="124" width="190" height="8" rx="4" />
-          <rect className={styles.caret} x="222" y="120" width="3" height="16" fill="#fff" />
-          <rect className={`${styles.c1} ${styles.floaty}`} x="24" y="154" width="70" height="22" rx="11" /><rect className={`${styles.c2} ${styles.floaty} ${styles.f2}`} x="102" y="154" width="54" height="22" rx="11" /><rect className={`${styles.ln} ${styles.floaty} ${styles.f3}`} x="164" y="154" width="40" height="22" rx="11" />
+        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="Brand mark, palette, print sheet and business card">
+          <rect className={styles.pan} x="6" y="6" width="348" height="188" rx="4" />
+          <rect className={styles.c1} x="22" y="22" width="40" height="40" rx="8" /><path d="M48 32v22M36 43a8 8 0 1 0 16 0a8 8 0 1 0 -16 0" stroke="#0e1310" strokeWidth="4" fill="none" />
+          <text x="72" y="54" fontSize="26" fontWeight="800" fill="#eef2ef">Aa</text>
+          {['#b794ff', '#ff7ac6', '#40d77c', '#d8dcd9'].map((c, n) => <circle key={c} cx={28 + n * 15} cy="80" r="5" fill={c} />)}
+          <text x="22" y="104" className={styles.mono}>CLEAR · TECHNICAL</text>
+          <rect fill="#eef2ef" className={styles.grow} x="22" y="112" width="120" height="4" rx="2" /><rect className={`${styles.ln} ${styles.grow} ${styles.g2}`} x="22" y="122" width="92" height="4" rx="2" /><rect className={`${styles.ln} ${styles.grow} ${styles.g3}`} x="22" y="132" width="64" height="4" rx="2" /><rect className={`${styles.c2} ${styles.caret}`} x="90" y="129" width="2" height="9" />
+          <path d="M192 24v4M188 28h4M300 24v4M300 28h4M192 140v-4M188 136h4" stroke="rgba(255,255,255,.35)" fill="none" />
+          <g className={styles.floaty}><rect fill="#f2efe8" x="196" y="30" width="100" height="104" rx="2" /><rect className={styles.c1} x="206" y="40" width="80" height="28" rx="1" /><rect fill="#9aa39d" x="206" y="76" width="66" height="4" /><rect fill="#c8ccc9" x="206" y="84" width="54" height="3" /><rect fill="#c8ccc9" x="206" y="90" width="60" height="3" /></g>
+          <g className={`${styles.floaty} ${styles.f2}`}><rect className={styles.pan} x="306" y="28" width="36" height="110" rx="2" /><rect className={styles.c2} x="311" y="34" width="26" height="22" rx="1" /><rect fill="#eef2ef" x="311" y="62" width="20" height="3" /><rect className={styles.ln} x="311" y="68" width="16" height="2" /><rect fill="#40d77c" x="311" y="118" width="20" height="8" rx="1" /></g>
+          <g className={`${styles.floaty} ${styles.f3}`} transform="rotate(-8 270 130)"><rect fill="#1d1f2b" stroke="#ff7ac6" strokeWidth="1.4" x="232" y="108" width="92" height="52" rx="5" /><rect className={styles.c1} x="242" y="118" width="12" height="12" rx="2" /><rect fill="#eef2ef" x="242" y="138" width="40" height="3" /><rect className={styles.ln} x="242" y="145" width="28" height="2" /></g>
+          <path d="M236 172h80M300 168v8" stroke="rgba(255,255,255,.3)" />
         </svg>
         <h3>Brand, print <em>&amp; wording</em></h3>
         <p>Rebrands, graphic design, print and display boards, with copy that is clear, technical and accurate.</p>

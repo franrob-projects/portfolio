@@ -67,6 +67,8 @@ const config: Config = {
       logo: {alt: 'Franrob Design logo', src: 'img/monogram.svg'},
       items: [
         {to: '/work', label: 'Work', position: 'left'},
+        {to: '/work#web', label: 'Infra', position: 'left', activeBaseRegex: '^$'},
+        {to: '/work#print', label: 'Print', position: 'left', activeBaseRegex: '^$'},
         {to: '/projects', label: 'Projects', position: 'left'},
         {to: '/podcast', label: 'Podcast', position: 'left'},
         {

@@ -671,13 +671,13 @@ export const ABLY_LIVE_PAGES: LivePage[] = [
 
 
 // The built or live site behind a case study, if there is one.
-const LIVE = ['ably', 'conply', 'viki', 'viki-dashboard', 'viki-auth', 'safeplay-desk', 'licence-ready', 'classic-triumph-malaga', 'parallel-parts'];
+const LIVE = ['solaz', 'ably', 'conply', 'viki', 'viki-dashboard', 'viki-auth', 'safeplay-desk', 'licence-ready', 'classic-triumph-malaga', 'parallel-parts'];
 export function openFor(slug: string): { label: string; href: string } | undefined {
   if (!LIVE.includes(slug)) return undefined;
   const c = CASE_STUDIES.find(x => x.slug === slug);
   const l = c?.links[0];
   if (!l) return undefined;
-  const internal = l.href.startsWith('/demos/') || /^https:\/\/(parallelparts|classictriumphmalaga|safeplaydesk|licenseready)\./.test(l.href);
+  const internal = l.href.startsWith('/demos/') || /^https:\/\/(parallelparts|classictriumphmalaga|safeplaydesk|licenseready|franrob-projects)\./.test(l.href);
   return { label: internal ? 'Open site' : `Visit ${l.label}`.replace('Visit Docs', 'Visit Ably docs'), href: l.href };
 }
 
