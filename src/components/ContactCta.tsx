@@ -7,7 +7,7 @@ export default function ContactCta(): ReactNode {
     <section className={styles.cta} aria-labelledby="cta-h">
       <div>
         <h2 id="cta-h">Have a project in mind?</h2>
-        <p>Tell me what you are trying to do. I reply within two working days.</p>
+        <p>Tell us what you are trying to do. We reply within two working days.</p>
       </div>
       <Link className={`${styles.btn} ${styles.btnSolid}`} to="/contact">Start a project</Link>
     </section>

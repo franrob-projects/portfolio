@@ -30,7 +30,7 @@ export default function Contact(): ReactNode {
     <section id="contact" className={styles.contact} aria-labelledby="contact-h">
       <div>
         <h2 id="contact-h">Have a project in mind?</h2>
-        <p>Tell me what you are trying to do. I reply within two working days.</p>
+        <p>Tell us what you are trying to do. We reply within two working days.</p>
         <a className={styles.email} href={`mailto:${EMAIL}`}>{EMAIL}</a>
         <p style={{marginTop: '1.25rem'}}>
           <a className={`${styles.btn} ${styles.btnWa}`} href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Message Francis on WhatsApp, opens in a new tab">
