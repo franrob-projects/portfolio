@@ -4,7 +4,7 @@ import {CASE_STUDIES, CRMS} from '../data/work';
 import styles from '../css/showcase.module.css';
 
 // Later = on top. The three flagship pieces sit on top and in the middle.
-const FAN = ['viki-dashboard', 'classic-triumph-malaga', 'conply', 'parallel-parts', 'ably'];
+const FAN = ['viki-dashboard', 'classic-triumph-malaga', 'conply', 'parallel-parts', 'ably', 'solaz'];
 const bySlug = (s: string) => CASE_STUDIES.find(c => c.slug === s)!;
 // Home-page wording: short names and captions, VIKI shown as one product
 const SHORT: Record<string, {title?: string; kicker?: string}> = {
@@ -21,6 +21,7 @@ const SCATTER = [
   {x: 0.5, y: -3.5, r: 3},
   {x: 5.5, y: -8.5, r: 8},
   {x: 10.5, y: -4, r: 14},
+  {x: 0, y: 1.5, r: -2},
 ];
 const COLORS = ['#40d77c', '#ffd24a', '#ff7a59', '#6cc7ff', '#c084fc', '#ff8ad8'];
 const STARS = [
@@ -64,11 +65,11 @@ const FILTERS = ['All', 'Web', 'CRM', 'Product', 'Packaging', 'Content'] as cons
 
 /** Each filter leads with the work that best shows that discipline, then the rest in default order. */
 const LEAD: Record<string, string[]> = {
-  All: ['ably', 'conply', 'parallel-parts', 'classic-triumph-malaga', 'viki-dashboard'],
-  Web: ['parallel-parts', 'ably', 'classic-triumph-malaga', 'licence-ready', 'safeplay-desk', 'conply'],
+  All: ['solaz', 'ably', 'conply', 'parallel-parts', 'classic-triumph-malaga', 'viki-dashboard'],
+  Web: ['solaz', 'parallel-parts', 'ably', 'classic-triumph-malaga', 'licence-ready', 'safeplay-desk', 'conply'],
   Content: ['ably', 'conply', 'earth-and-hound', 'licence-ready', 'safeplay-desk'],
   Product: ['viki-dashboard', 'viki-auth'],
-  Packaging: ['earth-and-hound'],
+  Packaging: ['solaz', 'earth-and-hound'],
 };
 const CRM_LEAD = ['safeplay-desk', 'parallel-parts', 'classic-triumph-malaga', 'viki-dashboard'];
 const rank = (order: string[], slug: string) => { const i = order.indexOf(slug); return i === -1 ? order.length : i; };

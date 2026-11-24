@@ -33,6 +33,60 @@ export interface CaseStudyData {
 
 export const CASE_STUDIES: CaseStudyData[] = [
   {
+    slug: 'solaz',
+    kind: 'concept',
+    status: 'Live',
+    image: '/img/work/solaz.jpg',
+    title: 'Solaz',
+    kicker: 'Solar heat and heat pumps · Málaga',
+    summary:
+      'Brand, website and a full print and packaging set for a Málaga maker of solar collectors, heat pumps and hot water tanks.',
+    disciplines: ['Web', 'Packaging', 'Content'],
+    tags: ['Brand identity', 'Next.js', 'Responsive design', 'Brochure', 'Business cards', 'Posters', 'Packaging dieline', 'Trade stand'],
+    role: 'Designer, developer and writer',
+    links: [{ label: 'Open the working site', href: 'https://franrob-projects.github.io/solaz/' }],
+    sections: [
+      {
+        heading: 'The brief',
+        body: [
+          'A manufacturer of solar thermal collectors, air-to-water heat pumps and storage tanks, selling to homes, hotels and farms across Andalucía. The brand had to feel local and sunny, but still read as an engineering company that makes its own equipment.',
+        ],
+      },
+      {
+        heading: 'Brand',
+        body: [
+          'A green Solaz block with a yellow sun, deep pine for type and panels, and warm sand paper with olive-leaf shadows. Archivo ExtraBold in uppercase for headings keeps the industrial tone.',
+        ],
+      },
+      {
+        heading: 'Website',
+        body: [
+          'Twelve pages designed in Figma at desktop and mobile sizes, then built as a fast static site: products with technical callouts, spares, servicing, manufacturing, company and a quote form. Product renders sit on the brand paper so the range reads as one family.',
+        ],
+      },
+      {
+        heading: 'Print and packaging',
+        body: [
+          'A tri-fold A4 brochure, business cards, A2 and 50 × 70 posters, a reverse-tuck-end box with its dieline for the hydraulic kit, and a 3 × 3 pop-up trade stand with roll-ups and a counter. Every piece is set up with bleed, safe areas and a CutContour layer for the printer.',
+        ],
+      },
+      {
+        heading: 'Notes',
+        body: ['Solaz is a concept brand created by Franrob Design. The company details are fictional.'],
+      },
+    ],
+    samples: [
+      { title: 'Home page', caption: 'Desktop, 1440 px.', image: '/img/work/solaz.jpg' },
+      { title: 'Products', caption: 'Product range with technical callouts.', image: '/img/work/solaz-products.jpg' },
+      { title: 'Mobile', caption: 'Home page at 390 px.', image: '/img/work/solaz-mobile.jpg' },
+      { title: 'Tri-fold brochure', caption: 'A4 landscape, outside and inside.', image: '/img/work/solaz-brochure.jpg' },
+      { title: 'Business cards', caption: '85 × 55 mm, front and back.', image: '/img/work/solaz-cards.jpg' },
+      { title: 'Posters', caption: 'A2 and 50 × 70 cm.', image: '/img/work/solaz-posters.jpg' },
+      { title: 'Product box', caption: 'Reverse tuck end with dieline.', image: '/img/work/solaz-box.jpg' },
+      { title: 'Trade stand', caption: 'Pop-up wall, roll-ups and counter.', image: '/img/work/solaz-stand.jpg' },
+    ],
+  },
+  {
     slug: 'ably',
     image: '/img/work/ably-docs.jpg',
     wire: 'docs',

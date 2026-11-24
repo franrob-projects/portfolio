@@ -6,7 +6,7 @@ import ProjectCard from '../../components/ProjectCard';
 import Reveal from '../../components/Reveal';
 import {CASE_STUDIES, CRMS, openFor } from '../../data/work';
 
-const FEATURED_SLUGS = ['ably', 'conply', 'parallel-parts'];
+const FEATURED_SLUGS = ['solaz', 'ably', 'conply', 'parallel-parts'];
 const FEATURED = FEATURED_SLUGS.map(slug => CASE_STUDIES.find(c => c.slug === slug)!);
 const rest = (list: typeof CASE_STUDIES) => list.filter(c => !FEATURED_SLUGS.includes(c.slug));
 const WEB = rest(CASE_STUDIES.filter(c => c.kind === 'concept'));
