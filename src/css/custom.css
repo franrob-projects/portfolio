@@ -3,7 +3,7 @@
  */
 
 /* Import Fonts - Supabase style system */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* Circular Std font faces - Supabase's primary font */
 @font-face {
@@ -485,3 +485,11 @@ article img[class*='avatar'], article .avatar__photo { width: 40px; height: 40px
 
 /* Mobile: tighter gap above the footer */
 @media (max-width: 996px) { .footer.footer--dark { margin-top: 1.5rem; padding-top: 2rem; } }
+
+/* Franrob Design wordmark */
+.navbar__title {
+  font-family: 'Archivo', var(--ifm-heading-font-family);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
