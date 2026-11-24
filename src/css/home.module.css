@@ -10,9 +10,14 @@
 /* Graph paper across the whole page (32px squares, major line every 160px) */
 .ind::before {
   content: "";
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  width: 100vw;
   z-index: 0;
+  -webkit-mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 220px), transparent);
+  mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 220px), transparent);
   pointer-events: none;
   background-image:
     linear-gradient(to right, rgba(64, 215, 124, 0.13) 1px, transparent 1px),
@@ -121,3 +126,6 @@
 .ind [class*='screen_'],
 .ind [class*='cta_'] { position: relative; }
 .ind [class*='chipBtn'] { border-radius: 2px; }
+
+:global(.main-wrapper) { overflow-x: clip; }
+.hero :global(.lead) { max-width: 30rem; }
