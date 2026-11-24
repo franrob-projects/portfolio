@@ -75,7 +75,6 @@ const config: Config = {
           position: 'left',
           label: 'Docs & writing',
         },
-        {to: '/blog', label: 'Crypto', position: 'left'},
         {
           href: 'https://github.com/franrob-projects',
           label: 'GitHub',
