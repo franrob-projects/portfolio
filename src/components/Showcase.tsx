@@ -2,7 +2,6 @@ import {useState, type ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import {CASE_STUDIES, CRMS} from '../data/work';
 import styles from '../css/showcase.module.css';
-import FilterBar from './FilterBar';
 
 // Later = on top. The three flagship pieces sit on top and in the middle.
 const FAN = ['viki-dashboard', 'classic-triumph-malaga', 'conply', 'parallel-parts', 'ably', 'solaz'];
@@ -40,13 +39,18 @@ const DOTS = [
 export function Fan(): ReactNode {
   return (
     <div className={styles.fan}>
-      <div className="fr-crosshairs" aria-hidden="true"><i style={{left: "18%", top: "12%"}} /><i style={{left: "82%", top: "20%"}} /><i style={{left: "60%", top: "88%"}} /></div>
+      <div className={styles.sparks} aria-hidden="true">
+        {SPARKS.map((k, n) => (
+          <i key={n} style={{['--a' as string]: k.a + 'deg', ['--l' as string]: k.l + 'px', ['--d' as string]: k.d + 's', ['--w' as string]: k.w + 's'}} />
+        ))}
+        <b />
+      </div>
       {FAN.map((slug, n) => {
         const c = bySlug(slug);
         return (
           <Link key={slug} to={`/work/${slug}`} className={styles.fanCard} style={{['--x' as string]: SCATTER[n].x, ['--y' as string]: SCATTER[n].y, ['--r' as string]: SCATTER[n].r + 'deg', ['--z' as string]: n + 1}}>
             <span className={styles.fanBar}><i /><i /><i /></span>
-            <img className={styles.fanImg} src={c.image} alt={`${short(c).title} — ${short(c).kicker}`} width={1440} height={900} />
+            <img className={styles.fanImg} src={c.image} alt="" />
             <span className={styles.fanLabel}><b>{short(c).title}</b></span>
           </Link>
         );
@@ -55,7 +59,6 @@ export function Fan(): ReactNode {
   );
 }
 
-const SPEC_ROWS = [['sector', 'Sector'], ['deliverables', 'Deliverables'], ['stack', 'Stack'], ['languages', 'Languages'], ['outcome', 'Outcome']] as const;
 const FILTERS = ['All', 'Web', 'CRM', 'Product', 'Packaging', 'Content'] as const;
 
 /** Each filter leads with the work that best shows that discipline, then the rest in default order. */
@@ -77,15 +80,17 @@ export function Belt(): ReactNode {
   const crms = [...CRMS].sort((a, b) => rank(CRM_LEAD, a.slug) - rank(CRM_LEAD, b.slug));
   return (
     <>
-      <FilterBar options={FILTERS} value={f} onChange={setF} label="Filter work" controls="work-grid" format={k => k === 'Packaging' ? 'Print & packaging' : k} />
+      <div className={styles.chips} role="group" aria-label="Filter work">
+        {FILTERS.map(k => <button key={k} className={styles.chipBtn} aria-pressed={f === k} onClick={() => setF(k)}>{k === 'Packaging' ? 'Print & packaging' : k}</button>)}
+      </div>
       {f === 'CRM' ? (
         <>
           <p className={styles.sectionLead} style={{margin: '0 0 1rem'}}>Working CRMs built for the demo sites. Each opens a clickable screen with sample data.</p>
-          <div className={styles.screens} id="work-grid" role="tabpanel">
+          <div className={styles.screens}>
             {crms.map((c, i) => (
               <a key={c.slug} href={c.href} target={c.href.includes('/demos/') ? '_blank' : undefined} rel="noopener noreferrer" className={styles.screen} style={{animationDelay: `${i * 45}ms`}}>
                 <span className={styles.screenBar}><i /><i /><i /><em>{c.site} · {c.title}</em></span>
-                <span className={styles.view}><img src={c.image} alt={`${c.site} — CRM: ${c.title}`} loading="lazy" width={1440} height={900} /></span>
+                <span className={styles.view}><img src={c.image} alt={`${c.site} CRM: ${c.title}`} loading="lazy" /></span>
                 <span className={styles.screenInfo}><b>{c.site}: {c.title}</b><span>{c.summary}</span><span>{c.stack.join(' · ')}</span></span>
               </a>
             ))}
@@ -94,14 +99,10 @@ export function Belt(): ReactNode {
       ) : (
       <div className={styles.screens}>
         {list.map((c, i) => (
-          <Link key={f + c.slug} to={`/work/${c.slug}`} className={`${styles.screen} fr-spec`} style={{animationDelay: `${i * 45}ms`}}>
+          <Link key={f + c.slug} to={`/work/${c.slug}`} className={styles.screen} style={{animationDelay: `${i * 45}ms`}}>
             <span className={styles.screenBar}><i /><i /><i /><em /></span>
-            <span className={styles.view}><img src={c.image} alt={`${short(c).title} — ${c.kicker}`} loading="lazy" width={1440} height={900} /></span>
-            <span className={`${styles.screenInfo} fr-spec__caption`}><b>{short(c).title}</b><span>{short(c).kicker}</span></span>
-            <dl className="fr-spec__table">
-              {SPEC_ROWS.map(([k, label]) => <div key={k}><dt>{label}</dt><dd>{c.specs?.[k] ?? (k === 'outcome' ? 'See case study →' : '—') /* TODO: real outcomes per project */}</dd></div>)}
-            </dl>
-            <span className="fr-spec__dims" aria-hidden="true"><i data-l="W" /><i data-l="H" /></span>
+            <span className={styles.view}><img src={c.image} alt="" loading="lazy" /></span>
+            <span className={styles.screenInfo}><b>{short(c).title}</b><span>{short(c).kicker}</span></span>
           </Link>
         ))}
       </div>

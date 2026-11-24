@@ -293,7 +293,7 @@ export default function Projects(): ReactNode {
       <main className={styles.wrap}>
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Projects</div>
-          <h1>Things I build in the open.</h1>
+          <h1>Things we build in the open.</h1>
           <p>Open-source builds, docs tooling and contributions. Client and product work is on the <Link to="/work/">Work</Link> page.</p>
           <nav className={p.jump} aria-label="On this page">
             <a href="#built">Open-source builds <b>{PROJECTS.length}</b></a>
@@ -314,7 +314,7 @@ export default function Projects(): ReactNode {
 
         <div className={styles.sectionHead} id="prs">
           <h2>Open-source contributions</h2>
-          <span className={p.sub}>Docs PRs against products I use or want to make easier to use.</span>
+          <span className={p.sub}>Docs PRs against products we use or want to make easier to use.</span>
         </div>
         <div className={p.prs}>
           {CONTRIBUTIONS.map(c => <ContributionRow key={c.url} c={c} />)}

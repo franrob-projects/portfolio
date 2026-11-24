@@ -1,4 +1,3 @@
-import Heading from '@theme/Heading';
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import styles from '../../css/work.module.css';
@@ -52,7 +51,7 @@ export default function Work(): ReactNode {
           ))}
         </div>
 
-        <div className={styles.sectionHead} ><Heading as="h2" id="web">Web projects</Heading></div>
+        <div className={styles.sectionHead} id="web"><h2>Web projects</h2></div>
         <div className={styles.grid2}>
           {WEB.map((s, i) => (
             <Reveal key={s.slug} delay={(i % 2) * 70}>
@@ -61,7 +60,7 @@ export default function Work(): ReactNode {
           ))}
         </div>
 
-        <div className={styles.sectionHead} ><Heading as="h2" id="print">Print &amp; packaging</Heading></div>
+        <div className={styles.sectionHead} id="print"><h2>Print &amp; packaging</h2></div>
         <div className={styles.grid3}>
           {PRINT.map((c, i) => (
             <Reveal key={c.slug} delay={i * 70}>

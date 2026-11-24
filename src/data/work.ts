@@ -29,14 +29,11 @@ export interface CaseStudyData {
   pipeline?: { stages: { name: string; cards: { title: string; meta: string }[] }[]; note: string };
   /** Optional tone examples: message templates written in this case study's voice. */
   templates?: { label: string; text: string }[];
-  /** Spec table shown on hover/focus in the home grid. Missing fields show TODO. */
-  specs?: Partial<Record<'sector' | 'deliverables' | 'stack' | 'languages' | 'outcome', string>>;
 }
 
 export const CASE_STUDIES: CaseStudyData[] = [
   {
     slug: 'solaz',
-    specs: { sector: 'Renewable heating', deliverables: 'Brand, site, print, packaging', stack: 'Next.js, static', languages: 'EN / ES' },
     kind: 'concept',
     status: 'Live',
     image: '/img/work/solaz.jpg',
@@ -91,7 +88,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'ably',
-    specs: { sector: 'Realtime infrastructure', deliverables: 'Docs, nav, product pages', stack: 'Gatsby, MDX', languages: 'EN' },
     image: '/img/work/ably-docs.jpg',
     wire: 'docs',
     title: 'Ably',
@@ -175,7 +171,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'safeplay-desk',
-    specs: { sector: 'Regulated gambling', deliverables: 'Site, CRM', stack: 'React, TypeScript', languages: 'EN' },
     kind: 'concept',
     image: '/img/work/safeplay-ui.jpg',
     title: 'SafePlay Desk',
@@ -223,7 +218,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'licence-ready',
-    specs: { sector: 'Regulated gambling', deliverables: 'Site, workspace', stack: 'React, TypeScript', languages: 'EN' },
     kind: 'concept',
     image: '/img/work/licence-ready-ui.jpg',
     title: 'LicenceReady',
@@ -267,7 +261,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'classic-triumph-malaga',
-    specs: { sector: 'Tourism', deliverables: 'Site, CRM', stack: 'React, TypeScript', languages: 'EN / ES' },
     kind: 'concept',
     image: '/img/work/classic-triumph-figma.jpg',
     title: 'Classic Triumph Malaga',
@@ -314,7 +307,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'parallel-parts',
-    specs: { sector: 'E-commerce', deliverables: 'Store, CRM', stack: 'React, TypeScript', languages: 'EN' },
     kind: 'concept',
     image: '/img/work/parallel-parts.jpg',
     title: 'Parallel Parts',
@@ -362,7 +354,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'conply',
-    specs: { sector: 'Compliance training', deliverables: 'Product site, content', stack: 'React', languages: 'EN' },
     image: '/img/work/conply.jpg',
     wire: 'product',
     title: 'Conply',
@@ -408,7 +399,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'earth-and-hound',
-    specs: { sector: 'Consumer goods', deliverables: 'Packaging, brand', stack: 'Figma', languages: 'EN' },
     kind: 'product',
     image: '/img/work/earth-hound-print.jpg',
     title: 'Earth & Hound',
@@ -454,7 +444,6 @@ export const CASE_STUDIES: CaseStudyData[] = [
   },
   {
     slug: 'viki-dashboard',
-    specs: { sector: 'SaaS', deliverables: 'Dashboard, onboarding', stack: 'Figma, React', languages: 'EN / ES' },
     kind: 'product',
     image: '/img/work/viki-dash.jpg',
     title: 'VIKI Dashboard',

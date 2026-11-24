@@ -116,11 +116,3 @@
 .waIcon svg { width: 18px; height: 18px; }
 .wa { border-color: rgba(37, 211, 102, 0.6) !important; color: #25d366 !important; }
 .wa svg { width: 16px; height: 16px; }
-
-.h2 { margin: 0 0 var(--s-3); }
-.marks { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-.marks i { position: absolute; width: 17px; height: 17px; margin: -8px 0 0 -8px; }
-.marks i::before, .marks i::after { content: ""; position: absolute; background: rgba(255, 255, 255, 0.18); }
-.marks i::before { left: 8px; top: 0; width: 1px; height: 17px; }
-.marks i::after { top: 8px; left: 0; height: 1px; width: 17px; }
-@media (max-width: 767px) { .marks { display: none; } }
