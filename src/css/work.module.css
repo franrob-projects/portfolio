@@ -79,7 +79,7 @@ a.card:hover .ext { color: var(--accent); transform: translate(1px, -1px); }
 .wire { width: 100%; height: 100%; display: block; }
 
 /* Reveal */
-.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease, transform 0.6s ease; height: 100%; }
+.reveal { opacity: 0; transform: translateY(8px); transition: opacity var(--t-reveal, 600ms) var(--ease, ease), transform var(--t-reveal, 600ms) var(--ease, ease); }
 .revealIn { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .card, .btn { transition: none; } }
 

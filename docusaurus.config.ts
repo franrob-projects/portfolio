@@ -55,6 +55,10 @@ const config: Config = {
     ],
   ],
 
+  customFields: {
+    buildRev: new Date().toISOString().slice(0, 7).replace('-', '.'),
+  },
+
   themeConfig: {
     image: 'img/og-card-2026.png',
     colorMode: {
@@ -78,11 +82,6 @@ const config: Config = {
           label: 'Docs & writing',
         },
         {
-          href: 'https://github.com/franrob-projects',
-          label: 'GitHub',
-          position: 'right',
-        },
-        {
           to: '/contact',
           label: "Let's talk",
           position: 'right',
@@ -94,7 +93,8 @@ const config: Config = {
       style: 'dark',
       links: [
         {title: 'Work', items: [{label: 'Selected work', to: '/work'}, {label: 'Projects', to: '/projects'}, {label: 'Podcast', to: '/podcast'}, {label: 'Docs & writing', to: '/docs/intro'}]},
-        {title: 'Contact', items: [{label: 'Contact page', to: '/contact'}, {label: 'francisroberts@live.com', href: 'mailto:francisroberts@live.com'}, {label: 'WhatsApp', href: 'https://wa.me/34678348065'}]},
+        {title: 'Contact', items: [{label: 'Contact page', to: '/contact'}, // TODO: hello@franrob.design is a placeholder until the mailbox exists
+          {label: 'hello@franrob.design', href: 'mailto:hello@franrob.design'}, {label: 'WhatsApp', href: 'https://wa.me/34678348065'}]},
         {title: 'More', items: [{label: 'Privacy', to: '/privacy'}, {label: 'GitHub', href: 'https://github.com/franrob-projects'}]},
       ],
       copyright: `© ${new Date().getFullYear()} Franrob Design · Fran Roberts, Málaga, Spain.`,
