@@ -15,7 +15,7 @@ const MORE = rest(CASE_STUDIES.filter(c => c.kind !== 'concept' && c.kind !== 'p
 
 export default function Work(): ReactNode {
   return (
-    <Layout title="Work | Fran Roberts" description="Web, CRM and content design work: Ably, Conply, VIKI and regulation-support sites for iGaming.">
+    <Layout title="Work" description="Web, CRM and content design work: Ably, Conply, VIKI and regulation-support sites for iGaming.">
       <main className={styles.wrap}>
         <header className={`${styles.hero} ${styles.workHero}`}>
           <div className={styles.eyebrow}>Selected work</div>
