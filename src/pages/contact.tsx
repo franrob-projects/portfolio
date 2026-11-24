@@ -14,7 +14,7 @@ const FACTS: [string, string][] = [
 
 export default function ContactPage(): ReactNode {
   return (
-    <Layout title="Contact | Fran Roberts" description="Contact Fran Roberts for web design, CRM and content work. Email, WhatsApp or a short project brief.">
+    <Layout title="Contact" description="Contact Franrob Design for web design, CRM and content work. Email, WhatsApp or a short project brief.">
       <main className={styles.wrap}>
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Contact</div>

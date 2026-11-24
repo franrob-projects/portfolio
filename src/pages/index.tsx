@@ -16,16 +16,17 @@ const EXPLORE: [string, string, string][] = [
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Fran Roberts | Web, CRM and content designer"
-      description="Web, CRM and content designer. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
+      title="Web, CRM and content design"
+      description="Franrob Design: web, CRM and content design by Fran Roberts in Málaga. Work for Ably, Conply and VIKI, plus regulation-support sites for the iGaming sector.">
       <main className={styles.wrap}>
         <header className={styles.heroSplit}>
           <div>
-            <div className={styles.eyebrow}>Web, CRM and content design · Málaga</div>
+            <div className={styles.eyebrow}>Franrob Design · Web, CRM and content design · Málaga</div>
             <h1>I design the site: graphics, words and infrastructure.</h1>
             <p className="lead">
-              Sites and landing pages, CRM pipelines, and the copy that goes in both. Built for
-              technical and regulated products.
+              Franrob Design is the web, CRM and content design studio of Fran Roberts. Sites and
+              landing pages, CRM pipelines, and the copy that goes in both, built for technical and
+              regulated products.
             </p>
             <div className={styles.actions}>
               <Link className={`${styles.btn} ${styles.btnSolid}`} to="/work">See the work</Link>

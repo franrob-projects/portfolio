@@ -151,7 +151,7 @@ const DOCS_ENGINEERING_PROJECTS: Project[] = [
       { label: 'GitHub Pages', colour: '#ffffff' },
     ],
     github: 'https://github.com/franrob-projects/portfolio',
-    live: 'https://franroberts.site/',
+    live: 'https://franrob.design/',
   },
   {
     title: 'CI/CD Pipelines for TypeScript, React, Docusaurus, static generators',
@@ -287,7 +287,7 @@ function ContributionRow({ c }: { c: Contribution }) {
 export default function Projects(): ReactNode {
   return (
     <Layout
-      title="Projects | Fran Roberts"
+      title="Projects"
       description="Open-source builds, docs tooling and documentation contributions by Fran Roberts"
     >
       <main className={styles.wrap}>
