@@ -99,7 +99,7 @@ export function Belt(): ReactNode {
             <span className={styles.view}><img src={c.image} alt={`${short(c).title} — ${c.kicker}`} loading="lazy" width={1440} height={900} /></span>
             <span className={`${styles.screenInfo} fr-spec__caption`}><b>{short(c).title}</b><span>{short(c).kicker}</span></span>
             <dl className="fr-spec__table">
-              {SPEC_ROWS.map(([k, label]) => <div key={k}><dt>{label}</dt><dd>{c.specs?.[k] ?? 'TODO'}</dd></div>)}
+              {SPEC_ROWS.map(([k, label]) => <div key={k}><dt>{label}</dt><dd>{c.specs?.[k] ?? (k === 'outcome' ? 'See case study →' : '—') /* TODO: real outcomes per project */}</dd></div>)}
             </dl>
             <span className="fr-spec__dims" aria-hidden="true"><i data-l="W" /><i data-l="H" /></span>
           </Link>
