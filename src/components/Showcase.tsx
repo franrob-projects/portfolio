@@ -76,7 +76,7 @@ export function Belt(): ReactNode {
   return (
     <>
       <div className={styles.chips} role="group" aria-label="Filter work">
-        {FILTERS.map(k => <button key={k} className={styles.chipBtn} aria-pressed={f === k} onClick={() => setF(k)}>{k}</button>)}
+        {FILTERS.map(k => <button key={k} className={styles.chipBtn} aria-pressed={f === k} onClick={() => setF(k)}>{k === 'Packaging' ? 'Print & packaging' : k}</button>)}
       </div>
       {f === 'CRM' ? (
         <>
@@ -123,8 +123,8 @@ export function Trio(): ReactNode {
           <rect className={`${styles.c2} ${styles.floaty}`} x="24" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.c1} ${styles.floaty} ${styles.f2}`} x="132" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.ln} ${styles.floaty} ${styles.f3}`} x="240" y="160" width="100" height="24" rx="6" />
           <path className={styles.cursor} d="M300 170l0 20 5-5 4 9 4-2-4-9 7 0z" fill="#fff" />
         </svg>
-        <h3>Sites that <em>ship</em></h3>
-        <p>React and TypeScript builds on static hosting, with typed content, a bilingual switch and checkout flows wired to payment links.</p>
+        <h3>Websites <em>front to back</em></h3>
+        <p>Fast sites with the backend done properly: hosting, databases, CMS, payments and integrations, in English and Spanish.</p>
       </div>
       <div className={`${styles.tcard} ${styles.t2}`}>
         <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="CRM pipeline stages">
@@ -141,10 +141,10 @@ export function Trio(): ReactNode {
           <circle className={`${styles.c2} ${styles.pulse}`} cx="338" cy="30" r="6" />
         </svg>
         <h3>CRMs <em>with logic</em></h3>
-        <p>Pipelines, queues and batch tracking where the rules are real: tier overrides, service-due flags, order-to-batch links.</p>
+        <p>Pipelines, queues and order tracking built around how your business actually runs.</p>
       </div>
       <div className={`${styles.tcard} ${styles.t3}`}>
-        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="Lines of copy being written">
+        <svg className={styles.tart} viewBox="0 0 360 200" role="img" aria-label="Brand and copy being laid out">
           <rect className={styles.pan} x="6" y="6" width="348" height="188" rx="12" />
           <text x="22" y="64" fontSize="56" fontWeight="700" className={styles.c2} opacity=".95">“</text>
           <rect className={`${styles.c1} ${styles.grow}`} x="62" y="44" width="250" height="12" rx="5" />
@@ -154,8 +154,8 @@ export function Trio(): ReactNode {
           <rect className={styles.caret} x="222" y="120" width="3" height="16" fill="#fff" />
           <rect className={`${styles.c1} ${styles.floaty}`} x="24" y="154" width="70" height="22" rx="11" /><rect className={`${styles.c2} ${styles.floaty} ${styles.f2}`} x="102" y="154" width="54" height="22" rx="11" /><rect className={`${styles.ln} ${styles.floaty} ${styles.f3}`} x="164" y="154" width="40" height="22" rx="11" />
         </svg>
-        <h3>Docs <em>as code</em></h3>
-        <p>Docusaurus and Markdown pipelines, diagrams and AI-tagged content, written in English and Spanish.</p>
+        <h3>Brand, print <em>&amp; wording</em></h3>
+        <p>Rebrands, graphic design, print and display boards, with copy that is clear, technical and accurate.</p>
       </div>
     </div>
   );
