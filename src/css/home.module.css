@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&display=swap');
+
+/* Home page: modern industrial layer on top of the site design system */
+.ind {
+  counter-reset: sec;
+  --steel: #8b9590;
+  --hazard: #f2b705;
+}
+
+/* Heavy, uppercase engineering headings */
+.ind h1,
+.ind h2,
+.ind h3 {
+  font-family: 'Archivo', 'Circular Std', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.ind h1 { font-size: clamp(2rem, 4.2vw, 2.9rem); line-height: 1.04; max-width: 17ch; overflow-wrap: normal; word-break: normal; hyphens: none; }
+.ind h2 { font-size: 2.1rem; line-height: 1.05; }
+.ind h3 { font-size: 1.15rem; letter-spacing: 0.01em; }
+
+/* Hero on blueprint paper */
+.hero {
+  position: relative;
+  margin: 0 -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-image:
+    linear-gradient(180deg, transparent 65%, #0b0d0c 100%),
+    linear-gradient(to right, rgba(64, 215, 124, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(64, 215, 124, 0.10) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 96px 96px, 96px 96px, 24px 24px, 24px 24px;
+}
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 0 solid var(--steel);
+}
+.hero::before { top: 18px; left: 24px; border-top-width: 2px; border-left-width: 2px; }
+.hero::after { top: 18px; right: 24px; border-top-width: 2px; border-right-width: 2px; }
+
+/* Spec label in the eyebrow */
+.tag {
+  display: inline-block;
+  margin-right: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  background: var(--ifm-color-primary);
+  color: #06130b;
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.ind [class*='eyebrow'] { font-family: var(--ifm-font-family-monospace); }
+
+/* "Built for" strip with a hazard rule */
+.strip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin: 0 0 3rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line-strong, rgba(255,255,255,.24));
+  border-bottom: 1px solid var(--line, rgba(255,255,255,.12));
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.strip::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 120px;
+  height: 6px;
+  transform: translateY(-100%);
+  background: repeating-linear-gradient(-45deg, var(--hazard) 0 8px, transparent 8px 16px);
+}
+.strip > span { color: var(--steel); }
+.strip ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 0; padding: 0; list-style: none; }
+.strip li { color: #eef2ef; }
+.strip li::before { content: "▪"; color: var(--ifm-color-primary); margin-right: 0.5rem; }
+
+/* Numbered section codes */
+.ind [class*='sectionHead'] h2::before {
+  counter-increment: sec;
+  content: counter(sec, decimal-leading-zero) " /";
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--ifm-color-primary);
+}
+.ind [class*='sectionHead'] { border-top: 2px solid rgba(255, 255, 255, 0.24); padding-top: 1.25rem; }
+
+/* Machined edges instead of soft rounded cards */
+.ind [class*='card'],
+.ind [class*='tcard'],
+.ind [class*='btn'],
+.ind [class*='cta'] { border-radius: 3px !important; }
+.ind [class*='btn'] { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8125rem; }
+
+@media (max-width: 996px) {
+  .ind h1 { font-size: 1.9rem; }
+  .ind h2 { font-size: 1.6rem; }
+  .hero::before, .hero::after { display: none; }
+}
