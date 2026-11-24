@@ -25,7 +25,7 @@ export default function Home(): ReactNode {
         <header className={`${styles.heroSplit} ${home.hero}`}>
           <div>
             <div className={styles.eyebrow}><span className={home.tag}>Franrob Design</span>Web, CRM and content design · Málaga</div>
-            <h1>I design the site: graphics, words and infrastructure.</h1>
+            <h1>We design the site: graphics, words and infrastructure.</h1>
             <p className="lead">
               Franrob Design is the web, CRM and content design studio of Fran Roberts. Sites and
               landing pages, CRM pipelines, and the copy that goes in both, built for technical and
@@ -51,7 +51,7 @@ export default function Home(): ReactNode {
 
         <div className={styles.sectionHead}>
           <div>
-            <h2>What I make</h2>
+            <h2>What we make</h2>
             <p className={styles.sectionLead}>Websites, CRM design, product design, packaging and content. Open any screen to read the case study.</p>
           </div>
           <Link to="/work" className={styles.textLink}>All work →</Link>

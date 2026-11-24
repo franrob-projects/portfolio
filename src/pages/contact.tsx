@@ -19,7 +19,7 @@ export default function ContactPage(): ReactNode {
         <header className={styles.hero}>
           <div className={styles.eyebrow}>Contact</div>
           <h1>Let’s talk about your project.</h1>
-          <p className="lead">Send a short brief, or message me directly. I’ll tell you what I’d do, how long it takes and roughly what it costs.</p>
+          <p className="lead">Send a short brief, or message us directly. We’ll tell you what we’d do, how long it takes and roughly what it costs.</p>
         </header>
 
         <Contact />
