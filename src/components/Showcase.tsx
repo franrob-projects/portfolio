@@ -6,7 +6,13 @@ import styles from '../css/showcase.module.css';
 // Later = on top. The three flagship pieces sit on top and in the middle.
 const FAN = ['viki-dashboard', 'classic-triumph-malaga', 'conply', 'parallel-parts', 'ably'];
 const bySlug = (s: string) => CASE_STUDIES.find(c => c.slug === s)!;
-const label = (d: string[]) => d.join(' · ');
+// Home-page wording: short names and captions, VIKI shown as one product
+const SHORT: Record<string, {title?: string; kicker?: string}> = {
+  'ably': {kicker: 'Docs and web · realtime platform'},
+  'conply': {kicker: 'SaaS · compliance training'},
+  'viki-dashboard': {title: 'VIKI', kicker: 'Product design · dashboard, auth and onboarding'},
+};
+const short = (c: {slug: string; title: string; kicker: string}) => ({title: SHORT[c.slug]?.title ?? c.title, kicker: SHORT[c.slug]?.kicker ?? c.kicker});
 
 // x / y in rem (y negative = raised), r in degrees: a loose, hand-tossed scatter
 const SCATTER = [
@@ -46,7 +52,7 @@ export function Fan(): ReactNode {
           <Link key={slug} to={`/work/${slug}`} className={styles.fanCard} style={{['--x' as string]: SCATTER[n].x, ['--y' as string]: SCATTER[n].y, ['--r' as string]: SCATTER[n].r + 'deg', ['--z' as string]: n + 1}}>
             <span className={styles.fanBar}><i /><i /><i /></span>
             <img className={styles.fanImg} src={c.image} alt="" />
-            <span className={styles.fanLabel}><b>{c.title}</b><span>{label(c.disciplines)}</span></span>
+            <span className={styles.fanLabel}><b>{short(c).title}</b></span>
           </Link>
         );
       })}
@@ -69,7 +75,7 @@ const rank = (order: string[], slug: string) => { const i = order.indexOf(slug);
 
 export function Belt(): ReactNode {
   const [f, setF] = useState<(typeof FILTERS)[number]>('All');
-  const all = CASE_STUDIES.filter(c => c.image && c.slug !== 'viki');
+  const all = CASE_STUDIES.filter(c => c.image && c.slug !== 'viki' && c.slug !== 'viki-auth');
   const lead = LEAD[f] ?? [];
   const list = all.filter(c => f === 'All' || (c.disciplines as string[]).includes(f)).sort((a, b) => rank(lead, a.slug) - rank(lead, b.slug));
   const crms = [...CRMS].sort((a, b) => rank(CRM_LEAD, a.slug) - rank(CRM_LEAD, b.slug));
@@ -95,9 +101,9 @@ export function Belt(): ReactNode {
       <div className={styles.screens}>
         {list.map((c, i) => (
           <Link key={f + c.slug} to={`/work/${c.slug}`} className={styles.screen} style={{animationDelay: `${i * 45}ms`}}>
-            <span className={styles.screenBar}><i /><i /><i /><em>{c.title}</em></span>
+            <span className={styles.screenBar}><i /><i /><i /><em /></span>
             <span className={styles.view}><img src={c.image} alt="" loading="lazy" /></span>
-            <span className={styles.screenInfo}><b>{c.title}</b><span>{c.kicker}</span></span>
+            <span className={styles.screenInfo}><b>{short(c).title}</b><span>{short(c).kicker}</span></span>
           </Link>
         ))}
       </div>
@@ -121,7 +127,6 @@ export function Trio(): ReactNode {
           <path className={`${styles.c1s} ${styles.draw}`} d="M228 128l22-26 18 14 24-34 32 46" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
           <circle className={`${styles.c2} ${styles.pulse}`} cx="292" cy="94" r="5" />
           <rect className={`${styles.c2} ${styles.floaty}`} x="24" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.c1} ${styles.floaty} ${styles.f2}`} x="132" y="160" width="96" height="24" rx="6" opacity=".85" /><rect className={`${styles.ln} ${styles.floaty} ${styles.f3}`} x="240" y="160" width="100" height="24" rx="6" />
-          <path className={styles.cursor} d="M300 170l0 20 5-5 4 9 4-2-4-9 7 0z" fill="#fff" />
         </svg>
         <h3>Websites <em>front to back</em></h3>
         <p>Fast sites with the backend done properly: hosting, databases, CMS, payments and integrations, in English and Spanish.</p>
