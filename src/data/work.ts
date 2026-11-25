@@ -44,7 +44,7 @@ export const CASE_STUDIES: CaseStudyData[] = [
     disciplines: ['Web', 'Packaging', 'Content'],
     tags: ['Brand identity', 'Next.js', 'Responsive design', 'Brochure', 'Business cards', 'Posters', 'Packaging dieline', 'Trade stand'],
     role: 'Designer, developer and writer',
-    links: [{ label: 'Open the working site', href: 'https://franrob-projects.github.io/solaz/' }],
+    links: [{ label: 'Open the working site', href: 'https://solaz.fit/' }],
     sections: [
       {
         heading: 'The brief',
