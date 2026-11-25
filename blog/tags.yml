@@ -37,3 +37,13 @@ nft:
   label: NFT
   permalink: /nft
   description: Non-fungible tokens and standards
+
+docs:
+  label: Docs
+  permalink: /docs
+  description: Documentation work
+
+open-source:
+  label: Open source
+  permalink: /open-source
+  description: Open-source contributions

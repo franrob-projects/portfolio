@@ -537,3 +537,103 @@ main h1, main h2, .hero__title {
 main [class*='card_'], main [class*='btn_'], main [class*='cta_'], main [class*='chip'] { border-radius: 3px !important; }
 main [class*='btn_'] { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8125rem; }
 main [class*='eyebrow'] { font-family: var(--ifm-font-family-monospace); }
+
+/* ===== Landing v2 (Figma): nav, shared panels and hover scan ===== */
+.navbar .navbar__item.navbar-cta {
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 2px;
+  box-shadow: none;
+}
+.nav-lang {
+  display: inline-block;
+  padding: 0 0.75rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #a3aea8;
+}
+@media (max-width: 996px) { .nav-lang { display: none; } }
+
+/* A green scan line sweeps once across cards on hover */
+[class*='screen_'], [class*='tcard_'], [class*='shot_'] { isolation: isolate; }
+[class*='screen_']::before, [class*='tcard_']::before, [class*='shot_']::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2px;
+  z-index: 5;
+  background: linear-gradient(90deg, transparent, #40d77c 30%, #b6ffd2 50%, #40d77c 70%, transparent);
+  box-shadow: 0 0 12px 2px rgba(64, 215, 124, 0.45);
+  opacity: 0;
+  pointer-events: none;
+}
+[class*='screen_']:hover::before, [class*='tcard_']:hover::before, [class*='shot_']:hover::before,
+[class*='screen_']:focus-visible::before, [class*='shot_']:focus-visible::before {
+  animation: fr-scan 900ms cubic-bezier(0.4, 0, 0.2, 1) 1;
+}
+@keyframes fr-scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: calc(100% - 2px); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [class*='screen_']::before, [class*='tcard_']::before, [class*='shot_']::before { display: none; }
+}
+
+/* Landing v2 rollout: square, machined edges everywhere */
+[class*='jump_'] > a,
+[class*='openPill_'],
+[class*='tag_'],
+[class*='pr_'],
+[class*='state_'],
+[class*='contact_'],
+[class*='frame_'],
+[class*='facts_'],
+[class*='video_'],
+[class*='shell_'],
+[class*='card_'],
+[class*='screen_'],
+[class*='tcard_'],
+[class*='chipBtn_'],
+[class*='btn_'],
+[class*='cta_'] { border-radius: 2px !important; }
+[class*='jump_'] > a { font-family: var(--ifm-font-family-monospace); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+[class*='jump_'] > a:hover { border-color: #40d77c; color: #40d77c; }
+[class*='openPill_'] { font-family: var(--ifm-font-family-monospace); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* Panels share the landing surface and green corner marks */
+[class*='shell_'], [class*='contact_'] {
+  background: #121714 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+[class*='shell_'] { position: relative; transition: border-color 150ms ease, transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+[class*='shell_']:hover { border-color: rgba(64, 215, 124, 0.6) !important; transform: translateY(-3px); }
+[class*='shell_']::after, [class*='contact_']::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3; --b: #40d77c;
+  background:
+    linear-gradient(var(--b), var(--b)) top left / 10px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) top left / 2px 10px no-repeat,
+    linear-gradient(var(--b), var(--b)) top right / 10px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) top right / 2px 10px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom left / 10px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom left / 2px 10px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom right / 10px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom right / 2px 10px no-repeat;
+}
+[class*='contact_'] { position: relative; }
+[class*='shell_'] { isolation: isolate; }
+[class*='shell_']::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; z-index: 5; opacity: 0; pointer-events: none;
+  background: linear-gradient(90deg, transparent, #40d77c 30%, #b6ffd2 50%, #40d77c 70%, transparent);
+  box-shadow: 0 0 12px 2px rgba(64, 215, 124, 0.45);
+}
+[class*='shell_']:hover::before { animation: fr-scan 900ms cubic-bezier(0.4, 0, 0.2, 1) 1; }
+@media (prefers-reduced-motion: reduce) {
+  [class*='shell_'] { transition: none; }
+  [class*='shell_']:hover { transform: none; }
+  [class*='shell_']::before { display: none; }
+}

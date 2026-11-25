@@ -67,27 +67,11 @@ const config: Config = {
       logo: {alt: 'Franrob Design logo', src: 'img/monogram.svg'},
       items: [
         {to: '/work', label: 'Work', position: 'left'},
-        {to: '/work#web', label: 'Infra', position: 'left', activeBaseRegex: '^$'},
-        {to: '/work#print', label: 'Print', position: 'left', activeBaseRegex: '^$'},
-        {to: '/projects', label: 'Projects', position: 'left'},
-        {to: '/podcast', label: 'Podcast', position: 'left'},
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs & writing',
-        },
-        {
-          href: 'https://github.com/franrob-projects',
-          label: 'GitHub',
-          position: 'right',
-        },
-        {
-          to: '/contact',
-          label: "Let's talk",
-          position: 'right',
-          className: 'navbar-cta',
-        },
+        {to: '/#services', label: 'Services', position: 'left', activeBaseRegex: '^$'},
+        {to: '/#about', label: 'About', position: 'left', activeBaseRegex: '^$'},
+        {to: '/contact', label: 'Contact', position: 'left'},
+        {type: 'html', position: 'right', value: '<span class="nav-lang" title="I work in English and Spanish">EN / ES</span>'},
+        {to: '/contact', label: 'Start a project', position: 'right', className: 'navbar-cta'},
       ],
     },
     footer: {
