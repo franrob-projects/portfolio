@@ -78,7 +78,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {title: 'Work', items: [{label: 'Selected work', to: '/work'}, {label: 'Projects', to: '/projects'}, {label: 'Podcast', to: '/podcast'}, {label: 'Docs & writing', to: '/docs/intro'}]},
-        {title: 'Contact', items: [{label: 'Contact page', to: '/contact'}, {label: 'francisroberts@live.com', href: 'mailto:francisroberts@live.com'}, {label: 'WhatsApp', href: 'https://wa.me/34678348065'}]},
+        {title: 'Contact', items: [{label: 'Contact page', to: '/contact'}, {label: 'fran@franrob.design', href: 'mailto:fran@franrob.design'}, {label: 'WhatsApp', href: 'https://wa.me/34678348065'}]},
         {title: 'More', items: [{label: 'Privacy', to: '/privacy'}, {label: 'GitHub', href: 'https://github.com/franrob-projects'}]},
       ],
       copyright: `© ${new Date().getFullYear()} Franrob Design · Fran Roberts, Málaga, Spain.`,

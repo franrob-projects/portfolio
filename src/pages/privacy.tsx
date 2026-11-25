@@ -23,7 +23,7 @@ export default function Privacy(): ReactNode {
           <h2>Other sites</h2>
           <p>Some pages link to other sites, such as GitHub and WhatsApp. They have their own privacy policies.</p>
           <h2>Contact</h2>
-          <p>Francis Roberts, Málaga, Spain. <a href="mailto:francisroberts@live.com">francisroberts@live.com</a></p>
+          <p>Francis Roberts, Málaga, Spain. <a href="mailto:fran@franrob.design">fran@franrob.design</a></p>
           <p style={{color: 'var(--meta)'}}>Last updated: 18 November 2026.</p>
         </div>
       </main>

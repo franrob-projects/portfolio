@@ -1,7 +1,7 @@
 import type {FormEvent, ReactNode} from 'react';
 import styles from '../css/work.module.css';
 
-const EMAIL = 'francisroberts@live.com';
+const EMAIL = 'fran@franrob.design';
 export const WHATSAPP = 'https://wa.me/34678348065?text=' + encodeURIComponent('Hi Francis, I found you through your portfolio.');
 
 export function WaIcon() {
